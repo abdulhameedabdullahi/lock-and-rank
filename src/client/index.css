@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --color-paper: #f3ecdf;
+  --color-card: #fffaf4;
+  --color-ink: #1a140f;
+  --color-ink-soft: #5c5148;
+  --color-line: #ddcfc0;
+  --color-tangerine: #ef5a12;
+  --color-tangerine-deep: #c2410c;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+button {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+@layer components {
+  .chunk {
+    border: 2px solid var(--color-ink);
+    background: var(--color-card);
+    box-shadow: 4px 4px 0 var(--color-ink);
+  }
+
+  .press {
+    min-height: 44px;
+  }
+
+  .rise {
+    animation: rise 0.35s ease both;
+  }
+}
+
+.press:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-paper: #1a1310;
+    --color-card: #241c14;
+    --color-ink: #f0e9dc;
+    --color-ink-soft: #b8a89a;
+    --color-line: #3a2a1e;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .press:active {
+    transform: none;
+  }
+}

@@ -1,0 +1,4382 @@
+[
+  {
+    "topicId": "mix",
+    "category": "Mountain height",
+    "rule": "Tallest to shortest",
+    "unit": "m",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "everest",
+        "name": "Everest",
+        "emoji": "🏔️",
+        "value": 8849,
+        "source": "Nepal/Tibet. Official height 8,848.86 m rounded to 8849."
+      },
+      {
+        "id": "cho-oyu",
+        "name": "Cho Oyu",
+        "emoji": "⛰️",
+        "value": 8188,
+        "source": "Nepal/Tibet. 8,188 m. 6th highest mountain in the world."
+      },
+      {
+        "id": "kilimanjaro",
+        "name": "Kilimanjaro",
+        "emoji": "🌋",
+        "value": 5895,
+        "source": "Tanzania. 5,895 m."
+      },
+      {
+        "id": "mont-blanc",
+        "name": "Mont Blanc",
+        "emoji": "🏔️",
+        "value": 4808,
+        "source": "France/Italy. 4,808 m."
+      },
+      {
+        "id": "fuji",
+        "name": "Mount Fuji",
+        "emoji": "🗻",
+        "value": 3776,
+        "source": "Japan. 3,776 m."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Country area",
+    "rule": "Largest to smallest",
+    "unit": "km²",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "russia",
+        "name": "Russia",
+        "emoji": "🇷🇺",
+        "value": 17098246,
+        "source": "World Bank. 17,098,246 km²."
+      },
+      {
+        "id": "canada",
+        "name": "Canada",
+        "emoji": "🇨🇦",
+        "value": 9984670,
+        "source": "Statistics Canada. 9,984,670 km²."
+      },
+      {
+        "id": "brazil",
+        "name": "Brazil",
+        "emoji": "🇧🇷",
+        "value": 8515767,
+        "source": "IBGE. 8,515,767 km²."
+      },
+      {
+        "id": "australia",
+        "name": "Australia",
+        "emoji": "🇦🇺",
+        "value": 7692024,
+        "source": "ABS. 7,692,024 km²."
+      },
+      {
+        "id": "india",
+        "name": "India",
+        "emoji": "🇮🇳",
+        "value": 3287263,
+        "source": "Survey of India. 3,287,263 km²."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Planet diameter",
+    "rule": "Largest to smallest",
+    "unit": "km",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "jupiter",
+        "name": "Jupiter",
+        "emoji": "🪐",
+        "value": 139820,
+        "source": "NASA. 139,820 km equatorial diameter."
+      },
+      {
+        "id": "saturn",
+        "name": "Saturn",
+        "emoji": "💫",
+        "value": 116460,
+        "source": "NASA. 116,460 km equatorial diameter."
+      },
+      {
+        "id": "earth",
+        "name": "Earth",
+        "emoji": "🌍",
+        "value": 12742,
+        "source": "NASA. 12,742 km mean diameter."
+      },
+      {
+        "id": "mars",
+        "name": "Mars",
+        "emoji": "🔴",
+        "value": 6779,
+        "source": "NASA. 6,779 km mean diameter."
+      },
+      {
+        "id": "mercury",
+        "name": "Mercury",
+        "emoji": "☿️",
+        "value": 4879,
+        "source": "NASA. 4,879 km mean diameter."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Country population",
+    "rule": "Most to fewest",
+    "unit": "million",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "india-pop",
+        "name": "India",
+        "emoji": "🇮🇳",
+        "value": 1450,
+        "source": "UN 2024 estimate. ~1,450 million."
+      },
+      {
+        "id": "usa-pop",
+        "name": "USA",
+        "emoji": "🇺🇸",
+        "value": 340,
+        "source": "US Census 2024 estimate. ~340 million."
+      },
+      {
+        "id": "nigeria-pop",
+        "name": "Nigeria",
+        "emoji": "🇳🇬",
+        "value": 230,
+        "source": "UN 2024 estimate. ~230 million."
+      },
+      {
+        "id": "japan-pop",
+        "name": "Japan",
+        "emoji": "🇯🇵",
+        "value": 124,
+        "source": "Japan Statistics 2024. ~124 million."
+      },
+      {
+        "id": "egypt-pop",
+        "name": "Egypt",
+        "emoji": "🇪🇬",
+        "value": 112,
+        "source": "Egypt CAPMAS 2024. ~112 million."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Invention year",
+    "rule": "Earliest to latest",
+    "unit": "year",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "telephone",
+        "name": "Telephone",
+        "emoji": "☎️",
+        "value": 1876,
+        "source": "Bell patent filed 1876."
+      },
+      {
+        "id": "airplane",
+        "name": "Airplane",
+        "emoji": "✈️",
+        "value": 1903,
+        "source": "Wright brothers first flight, 1903."
+      },
+      {
+        "id": "penicillin",
+        "name": "Penicillin",
+        "emoji": "💊",
+        "value": 1928,
+        "source": "Fleming discovered penicillin, 1928."
+      },
+      {
+        "id": "web",
+        "name": "World Wide Web",
+        "emoji": "🌐",
+        "value": 1989,
+        "source": "Berners-Lee proposal, 1989."
+      },
+      {
+        "id": "iphone",
+        "name": "iPhone",
+        "emoji": "📱",
+        "value": 2007,
+        "source": "Apple announced iPhone, January 2007."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Animal top speed",
+    "rule": "Fastest to slowest",
+    "unit": "km/h",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "cheetah-spd",
+        "name": "Cheetah",
+        "emoji": "🐆",
+        "value": 112,
+        "source": "National Geographic. Up to 112 km/h in short bursts."
+      },
+      {
+        "id": "pronghorn-spd",
+        "name": "Pronghorn",
+        "emoji": "🦌",
+        "value": 88,
+        "source": "Wildlife biologists. Sustained 88 km/h."
+      },
+      {
+        "id": "lion-spd",
+        "name": "Lion",
+        "emoji": "🦁",
+        "value": 80,
+        "source": "Safari wildlife estimates. Up to 80 km/h."
+      },
+      {
+        "id": "grizzly-spd",
+        "name": "Grizzly Bear",
+        "emoji": "🐻",
+        "value": 56,
+        "source": "NPS data. Up to 56 km/h in a sprint."
+      },
+      {
+        "id": "elephant-spd",
+        "name": "African Elephant",
+        "emoji": "🐘",
+        "value": 25,
+        "source": "Wildlife studies. Up to 25 km/h."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Landmark height",
+    "rule": "Tallest to shortest",
+    "unit": "m",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "burj-khalifa",
+        "name": "Burj Khalifa",
+        "emoji": "🏙️",
+        "value": 828,
+        "source": "Dubai, UAE. 828 m to tip."
+      },
+      {
+        "id": "taipei-101",
+        "name": "Taipei 101",
+        "emoji": "🌆",
+        "value": 508,
+        "source": "Taipei, Taiwan. 508 m."
+      },
+      {
+        "id": "empire-state",
+        "name": "Empire State",
+        "emoji": "🏢",
+        "value": 443,
+        "source": "New York, USA. 443 m to roof."
+      },
+      {
+        "id": "eiffel-tower",
+        "name": "Eiffel Tower",
+        "emoji": "🗼",
+        "value": 330,
+        "source": "Paris, France. 330 m including antenna."
+      },
+      {
+        "id": "big-ben",
+        "name": "Big Ben",
+        "emoji": "🕰️",
+        "value": 96,
+        "source": "London, UK. 96 m to top of belfry."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "River length",
+    "rule": "Longest to shortest",
+    "unit": "km",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "nile",
+        "name": "Nile",
+        "emoji": "🇪🇬",
+        "value": 6650,
+        "source": "Traditional measurement. ~6,650 km."
+      },
+      {
+        "id": "huanghe",
+        "name": "Huang He (Yellow R.)",
+        "emoji": "🟡",
+        "value": 5464,
+        "source": "China. ~5,464 km. Second longest river in China."
+      },
+      {
+        "id": "congo",
+        "name": "Congo",
+        "emoji": "🌿",
+        "value": 4700,
+        "source": "Africa. ~4,700 km. World's deepest river."
+      },
+      {
+        "id": "mississippi",
+        "name": "Mississippi",
+        "emoji": "🇺🇸",
+        "value": 3730,
+        "source": "USGS. ~3,730 km."
+      },
+      {
+        "id": "thames",
+        "name": "Thames",
+        "emoji": "🇬🇧",
+        "value": 346,
+        "source": "UK Environment Agency. 346 km."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Planet orbital period",
+    "rule": "Longest to shortest",
+    "unit": "days",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "jupiter-orbit",
+        "name": "Jupiter",
+        "emoji": "🪐",
+        "value": 4333,
+        "source": "NASA. 4,333 Earth days."
+      },
+      {
+        "id": "mars-orbit",
+        "name": "Mars",
+        "emoji": "🔴",
+        "value": 687,
+        "source": "NASA. 687 Earth days."
+      },
+      {
+        "id": "earth-orbit",
+        "name": "Earth",
+        "emoji": "🌍",
+        "value": 365,
+        "source": "NASA. 365.25 Earth days (rounded)."
+      },
+      {
+        "id": "venus-orbit",
+        "name": "Venus",
+        "emoji": "🌟",
+        "value": 225,
+        "source": "NASA. 225 Earth days."
+      },
+      {
+        "id": "mercury-orbit",
+        "name": "Mercury",
+        "emoji": "☿️",
+        "value": 88,
+        "source": "NASA. 88 Earth days."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Country coastline",
+    "rule": "Longest to shortest",
+    "unit": "km",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "canada-coast",
+        "name": "Canada",
+        "emoji": "🇨🇦",
+        "value": 202080,
+        "source": "Natural Resources Canada. 202,080 km including islands."
+      },
+      {
+        "id": "norway-coast",
+        "name": "Norway",
+        "emoji": "🇳🇴",
+        "value": 83281,
+        "source": "Norwegian Mapping Authority. 83,281 km."
+      },
+      {
+        "id": "indonesia-coast",
+        "name": "Indonesia",
+        "emoji": "🇮🇩",
+        "value": 54716,
+        "source": "BIG Indonesia. 54,716 km."
+      },
+      {
+        "id": "russia-coast",
+        "name": "Russia",
+        "emoji": "🇷🇺",
+        "value": 37653,
+        "source": "Rosstat. 37,653 km."
+      },
+      {
+        "id": "brazil-coast",
+        "name": "Brazil",
+        "emoji": "🇧🇷",
+        "value": 7491,
+        "source": "IBGE. 7,491 km."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Nobel Prize winners",
+    "rule": "Most to fewest",
+    "unit": "laureates",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "usa-nobel",
+        "name": "United States",
+        "emoji": "🇺🇸",
+        "value": 403,
+        "source": "Nobel Prize org. ~403 US laureates through 2023."
+      },
+      {
+        "id": "uk-nobel",
+        "name": "United Kingdom",
+        "emoji": "🇬🇧",
+        "value": 134,
+        "source": "Nobel Prize org. ~134 UK laureates through 2023."
+      },
+      {
+        "id": "germany-nobel",
+        "name": "Germany",
+        "emoji": "🇩🇪",
+        "value": 108,
+        "source": "Nobel Prize org. ~108 German laureates through 2023."
+      },
+      {
+        "id": "france-nobel",
+        "name": "France",
+        "emoji": "🇫🇷",
+        "value": 69,
+        "source": "Nobel Prize org. ~69 French laureates through 2023."
+      },
+      {
+        "id": "japan-nobel",
+        "name": "Japan",
+        "emoji": "🇯🇵",
+        "value": 29,
+        "source": "Nobel Prize org. ~29 Japanese laureates through 2023."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Animal lifespan",
+    "rule": "Longest to shortest",
+    "unit": "years",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "tortoise-life",
+        "name": "Tortoise",
+        "emoji": "🐢",
+        "value": 150,
+        "source": "Aldabra tortoises reliably reach 150+ years."
+      },
+      {
+        "id": "elephant-life",
+        "name": "Asian Elephant",
+        "emoji": "🐘",
+        "value": 70,
+        "source": "Wildlife studies. Wild Asian elephants ~60-70 years."
+      },
+      {
+        "id": "chimp-life",
+        "name": "Chimpanzee",
+        "emoji": "🐒",
+        "value": 60,
+        "source": "Primatology research. Up to 60 years in wild."
+      },
+      {
+        "id": "horse-life",
+        "name": "Horse",
+        "emoji": "🐴",
+        "value": 30,
+        "source": "Veterinary consensus. ~25-30 years typical."
+      },
+      {
+        "id": "cat-life",
+        "name": "House Cat",
+        "emoji": "🐱",
+        "value": 15,
+        "source": "Veterinary consensus. ~12-18 years typical."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Food calories",
+    "rule": "Most to fewest",
+    "unit": "kcal",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "butter-cal",
+        "name": "Butter",
+        "emoji": "🧈",
+        "value": 717,
+        "source": "USDA. 717 kcal per 100g."
+      },
+      {
+        "id": "chocolate-cal",
+        "name": "Dark Chocolate",
+        "emoji": "🍫",
+        "value": 546,
+        "source": "USDA. ~546 kcal per 100g (70-85% cocoa)."
+      },
+      {
+        "id": "rice-cal",
+        "name": "White Rice (cooked)",
+        "emoji": "🍚",
+        "value": 130,
+        "source": "USDA. 130 kcal per 100g cooked."
+      },
+      {
+        "id": "apple-cal",
+        "name": "Apple",
+        "emoji": "🍎",
+        "value": 52,
+        "source": "USDA. 52 kcal per 100g."
+      },
+      {
+        "id": "broccoli-cal",
+        "name": "Broccoli",
+        "emoji": "🥦",
+        "value": 34,
+        "source": "USDA. 34 kcal per 100g."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Space milestone year",
+    "rule": "Earliest to latest",
+    "unit": "year",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "sputnik-yr",
+        "name": "Sputnik 1 launched",
+        "emoji": "🛰️",
+        "value": 1957,
+        "source": "USSR launched Sputnik 1, October 4 1957."
+      },
+      {
+        "id": "moon-yr",
+        "name": "First Moon landing",
+        "emoji": "🌕",
+        "value": 1969,
+        "source": "Apollo 11, July 20 1969."
+      },
+      {
+        "id": "viking-yr",
+        "name": "Mars Viking lander",
+        "emoji": "🔭",
+        "value": 1976,
+        "source": "Viking 1 landed on Mars, July 20 1976."
+      },
+      {
+        "id": "hubble-yr",
+        "name": "Hubble launched",
+        "emoji": "🌌",
+        "value": 1990,
+        "source": "Hubble Space Telescope launched April 24 1990."
+      },
+      {
+        "id": "iss-yr",
+        "name": "ISS first module",
+        "emoji": "🚀",
+        "value": 1998,
+        "source": "Zarya module launched November 20 1998."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Lake depth",
+    "rule": "Deepest to shallowest",
+    "unit": "m",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "baikal-depth",
+        "name": "Lake Baikal",
+        "emoji": "🇷🇺",
+        "value": 1642,
+        "source": "Russia. Max depth 1,642 m."
+      },
+      {
+        "id": "tanganyika-depth",
+        "name": "Lake Tanganyika",
+        "emoji": "🌊",
+        "value": 1470,
+        "source": "East Africa. Max depth 1,470 m."
+      },
+      {
+        "id": "caspian-depth",
+        "name": "Caspian Sea",
+        "emoji": "🌊",
+        "value": 1025,
+        "source": "Max depth 1,025 m in southern basin."
+      },
+      {
+        "id": "crater-depth",
+        "name": "Crater Lake",
+        "emoji": "🌋",
+        "value": 594,
+        "source": "Oregon, USA. Max depth 594 m."
+      },
+      {
+        "id": "titicaca-depth",
+        "name": "Lake Titicaca",
+        "emoji": "🇵🇪",
+        "value": 281,
+        "source": "Peru/Bolivia. Max depth 281 m."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Historic battle year",
+    "rule": "Earliest to latest",
+    "unit": "year",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "hastings-yr",
+        "name": "Battle of Hastings",
+        "emoji": "⚔️",
+        "value": 1066,
+        "source": "Norman conquest of England, 1066."
+      },
+      {
+        "id": "agincourt-yr",
+        "name": "Battle of Agincourt",
+        "emoji": "🏹",
+        "value": 1415,
+        "source": "English victory over France, October 25 1415."
+      },
+      {
+        "id": "waterloo-yr",
+        "name": "Battle of Waterloo",
+        "emoji": "👑",
+        "value": 1815,
+        "source": "Napoleon's final defeat, June 18 1815."
+      },
+      {
+        "id": "somme-yr",
+        "name": "Battle of the Somme",
+        "emoji": "🪖",
+        "value": 1916,
+        "source": "WWI, July–November 1916."
+      },
+      {
+        "id": "stalingrad-yr",
+        "name": "Battle of Stalingrad",
+        "emoji": "🏴",
+        "value": 1943,
+        "source": "WWII, ended February 2 1943."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Highest peak by continent",
+    "rule": "Tallest to shortest",
+    "unit": "m",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "everest-cont",
+        "name": "Everest (Asia)",
+        "emoji": "🏔️",
+        "value": 8849,
+        "source": "Nepal/Tibet. 8,849 m."
+      },
+      {
+        "id": "aconcagua",
+        "name": "Aconcagua (S. America)",
+        "emoji": "⛰️",
+        "value": 6961,
+        "source": "Argentina. 6,961 m."
+      },
+      {
+        "id": "denali",
+        "name": "Denali (N. America)",
+        "emoji": "🗻",
+        "value": 6190,
+        "source": "Alaska, USA. 6,190 m."
+      },
+      {
+        "id": "vinson-cont",
+        "name": "Vinson (Antarctica)",
+        "emoji": "🧊",
+        "value": 4892,
+        "source": "Antarctica. 4,892 m. Highest peak in Antarctica."
+      },
+      {
+        "id": "kosciuszko-cont",
+        "name": "Kosciuszko (Australia)",
+        "emoji": "🦘",
+        "value": 2228,
+        "source": "Australia. 2,228 m. Highest peak on the Australian mainland."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Country GDP",
+    "rule": "Largest to smallest",
+    "unit": "bn USD",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "usa-gdp",
+        "name": "United States",
+        "emoji": "🇺🇸",
+        "value": 25500,
+        "source": "IMF 2022. ~$25.5 trillion."
+      },
+      {
+        "id": "china-gdp",
+        "name": "China",
+        "emoji": "🇨🇳",
+        "value": 18000,
+        "source": "IMF 2022. ~$18.0 trillion."
+      },
+      {
+        "id": "japan-gdp",
+        "name": "Japan",
+        "emoji": "🇯🇵",
+        "value": 4200,
+        "source": "IMF 2022. ~$4.2 trillion."
+      },
+      {
+        "id": "france-gdp",
+        "name": "France",
+        "emoji": "🇫🇷",
+        "value": 2800,
+        "source": "IMF 2022. ~$2.8 trillion."
+      },
+      {
+        "id": "brazil-gdp",
+        "name": "Brazil",
+        "emoji": "🇧🇷",
+        "value": 1900,
+        "source": "IMF 2022. ~$1.9 trillion."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Country founding year",
+    "rule": "Oldest to newest",
+    "unit": "year",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "san-marino-yr",
+        "name": "San Marino",
+        "emoji": "🇸🇲",
+        "value": 301,
+        "source": "Traditional founding 301 AD, oldest republic."
+      },
+      {
+        "id": "france-yr",
+        "name": "France",
+        "emoji": "🇫🇷",
+        "value": 843,
+        "source": "Treaty of Verdun 843 AD."
+      },
+      {
+        "id": "uk-yr",
+        "name": "United Kingdom",
+        "emoji": "🇬🇧",
+        "value": 1707,
+        "source": "Acts of Union, 1707."
+      },
+      {
+        "id": "usa-yr",
+        "name": "United States",
+        "emoji": "🇺🇸",
+        "value": 1776,
+        "source": "Declaration of Independence, 1776."
+      },
+      {
+        "id": "singapore-yr",
+        "name": "Singapore",
+        "emoji": "🇸🇬",
+        "value": 1965,
+        "source": "Independence from Malaysia, August 9 1965."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Time zones per country",
+    "rule": "Most to fewest",
+    "unit": "zones",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "russia-tz",
+        "name": "Russia",
+        "emoji": "🇷🇺",
+        "value": 11,
+        "source": "Russia spans 11 official time zones."
+      },
+      {
+        "id": "usa-tz",
+        "name": "United States",
+        "emoji": "🇺🇸",
+        "value": 9,
+        "source": "USA (incl. territories) has 9 time zones."
+      },
+      {
+        "id": "canada-tz",
+        "name": "Canada",
+        "emoji": "🇨🇦",
+        "value": 6,
+        "source": "Canada spans 6 time zones."
+      },
+      {
+        "id": "brazil-tz",
+        "name": "Brazil",
+        "emoji": "🇧🇷",
+        "value": 4,
+        "source": "Brazil has 4 time zones including islands."
+      },
+      {
+        "id": "china-tz",
+        "name": "China",
+        "emoji": "🇨🇳",
+        "value": 1,
+        "source": "China uses a single official time zone (UTC+8)."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Speed of sound",
+    "rule": "Fastest to slowest",
+    "unit": "m/s",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "diamond-sound",
+        "name": "Diamond",
+        "emoji": "💎",
+        "value": 12000,
+        "source": "~12,000 m/s in diamond (varies by cut)."
+      },
+      {
+        "id": "steel-sound",
+        "name": "Steel",
+        "emoji": "⚙️",
+        "value": 5100,
+        "source": "~5,100 m/s in structural steel."
+      },
+      {
+        "id": "wood-sound",
+        "name": "Oak Wood",
+        "emoji": "🪵",
+        "value": 3850,
+        "source": "~3,850 m/s along the grain in oak."
+      },
+      {
+        "id": "water-sound",
+        "name": "Water",
+        "emoji": "💧",
+        "value": 1480,
+        "source": "~1,480 m/s at 20°C."
+      },
+      {
+        "id": "air-sound",
+        "name": "Air",
+        "emoji": "💨",
+        "value": 343,
+        "source": "~343 m/s at 20°C sea level."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Famous book publication",
+    "rule": "Earliest to latest",
+    "unit": "year",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "quixote-yr",
+        "name": "Don Quixote",
+        "emoji": "📖",
+        "value": 1605,
+        "source": "Cervantes, Part I published 1605."
+      },
+      {
+        "id": "crusoe-yr",
+        "name": "Robinson Crusoe",
+        "emoji": "🏝️",
+        "value": 1719,
+        "source": "Daniel Defoe, 1719."
+      },
+      {
+        "id": "pride-yr",
+        "name": "Pride & Prejudice",
+        "emoji": "💌",
+        "value": 1813,
+        "source": "Jane Austen, 1813."
+      },
+      {
+        "id": "1984-yr",
+        "name": "1984",
+        "emoji": "👁️",
+        "value": 1949,
+        "source": "George Orwell, 1949."
+      },
+      {
+        "id": "hp-yr",
+        "name": "Harry Potter",
+        "emoji": "🧙",
+        "value": 1997,
+        "source": "J.K. Rowling, Philosopher's Stone, 1997."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Planet distance from Sun",
+    "rule": "Farthest to nearest",
+    "unit": "M km",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "neptune-dist",
+        "name": "Neptune",
+        "emoji": "🌊",
+        "value": 4495,
+        "source": "NASA. Average 4,495 million km from Sun."
+      },
+      {
+        "id": "uranus-dist",
+        "name": "Uranus",
+        "emoji": "☁️",
+        "value": 2871,
+        "source": "NASA. Average 2,871 million km from Sun."
+      },
+      {
+        "id": "saturn-dist",
+        "name": "Saturn",
+        "emoji": "🪐",
+        "value": 1432,
+        "source": "NASA. Average 1,432 million km from Sun."
+      },
+      {
+        "id": "jupiter-dist",
+        "name": "Jupiter",
+        "emoji": "🌟",
+        "value": 778,
+        "source": "NASA. Average 778 million km from Sun."
+      },
+      {
+        "id": "mars-dist",
+        "name": "Mars",
+        "emoji": "🔴",
+        "value": 228,
+        "source": "NASA. Average 228 million km from Sun."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Vehicle top speed",
+    "rule": "Fastest to slowest",
+    "unit": "km/h",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "sr71-spd",
+        "name": "SR-71 Blackbird",
+        "emoji": "🛸",
+        "value": 3540,
+        "source": "USAF/NASA. 3,540 km/h official record."
+      },
+      {
+        "id": "concorde-spd",
+        "name": "Concorde",
+        "emoji": "✈️",
+        "value": 2179,
+        "source": "Mach 2.04, ~2,179 km/h cruising."
+      },
+      {
+        "id": "maglev-spd",
+        "name": "Maglev Train",
+        "emoji": "🚄",
+        "value": 603,
+        "source": "SCMaglev speed record, April 2015. 603 km/h."
+      },
+      {
+        "id": "f1-spd",
+        "name": "Formula 1 Car",
+        "emoji": "🏎️",
+        "value": 372,
+        "source": "Honda F1 record 372 km/h, 2006."
+      },
+      {
+        "id": "bolt-spd",
+        "name": "Usain Bolt (sprint)",
+        "emoji": "🏃",
+        "value": 44,
+        "source": "Peak speed during 100 m world record, 2009."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Metal melting point",
+    "rule": "Highest to lowest",
+    "unit": "°C",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "tungsten-melt",
+        "name": "Tungsten",
+        "emoji": "⚙️",
+        "value": 3422,
+        "source": "Highest melting point of all metals. 3,422°C."
+      },
+      {
+        "id": "iron-melt",
+        "name": "Iron",
+        "emoji": "🔩",
+        "value": 1538,
+        "source": "1,538°C melting point."
+      },
+      {
+        "id": "gold-melt",
+        "name": "Gold",
+        "emoji": "🥇",
+        "value": 1064,
+        "source": "1,064°C melting point."
+      },
+      {
+        "id": "silver-melt",
+        "name": "Silver",
+        "emoji": "🥈",
+        "value": 962,
+        "source": "961.8°C melting point (rounded to 962)."
+      },
+      {
+        "id": "tin-melt",
+        "name": "Tin",
+        "emoji": "🫙",
+        "value": 232,
+        "source": "231.9°C melting point (rounded to 232)."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Bird wingspan",
+    "rule": "Longest to shortest",
+    "unit": "cm",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "albatross-wing",
+        "name": "Wandering Albatross",
+        "emoji": "🕊️",
+        "value": 350,
+        "source": "Largest wingspan of any living bird. Up to 350 cm."
+      },
+      {
+        "id": "pelican-wing",
+        "name": "Dalmatian Pelican",
+        "emoji": "🦆",
+        "value": 295,
+        "source": "Up to 295 cm wingspan."
+      },
+      {
+        "id": "swan-wing",
+        "name": "Mute Swan",
+        "emoji": "🦢",
+        "value": 238,
+        "source": "Up to 238 cm wingspan."
+      },
+      {
+        "id": "eagle-wing",
+        "name": "Bald Eagle",
+        "emoji": "🦅",
+        "value": 213,
+        "source": "Up to 213 cm wingspan."
+      },
+      {
+        "id": "crow-wing",
+        "name": "Common Crow",
+        "emoji": "🐦",
+        "value": 100,
+        "source": "~100 cm wingspan."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Annual rainfall",
+    "rule": "Most to fewest",
+    "unit": "mm/yr",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "mawsynram-rain",
+        "name": "Mawsynram, India",
+        "emoji": "🌧️",
+        "value": 11871,
+        "source": "World's wettest place. ~11,871 mm/yr average."
+      },
+      {
+        "id": "amazon-rain",
+        "name": "Amazon Rainforest",
+        "emoji": "🌳",
+        "value": 2400,
+        "source": "Average ~2,400 mm/yr across the basin."
+      },
+      {
+        "id": "london-rain",
+        "name": "London, UK",
+        "emoji": "☂️",
+        "value": 601,
+        "source": "Met Office. ~601 mm/yr."
+      },
+      {
+        "id": "cairo-rain",
+        "name": "Cairo, Egypt",
+        "emoji": "☀️",
+        "value": 25,
+        "source": "~25 mm/yr on average."
+      },
+      {
+        "id": "atacama-rain",
+        "name": "Atacama Desert",
+        "emoji": "🏜️",
+        "value": 1,
+        "source": "World's driest non-polar desert. ~1 mm/yr in core."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Atomic number",
+    "rule": "Lowest to highest",
+    "unit": "protons",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "hydrogen-z",
+        "name": "Hydrogen",
+        "emoji": "💧",
+        "value": 1,
+        "source": "Atomic number 1. Lightest element."
+      },
+      {
+        "id": "carbon-z",
+        "name": "Carbon",
+        "emoji": "💎",
+        "value": 6,
+        "source": "Atomic number 6."
+      },
+      {
+        "id": "iron-z",
+        "name": "Iron",
+        "emoji": "🔩",
+        "value": 26,
+        "source": "Atomic number 26."
+      },
+      {
+        "id": "gold-z",
+        "name": "Gold",
+        "emoji": "🥇",
+        "value": 79,
+        "source": "Atomic number 79."
+      },
+      {
+        "id": "uranium-z",
+        "name": "Uranium",
+        "emoji": "☢️",
+        "value": 92,
+        "source": "Atomic number 92. Heaviest naturally occurring element."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Distance from New York",
+    "rule": "Farthest to nearest",
+    "unit": "km",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "sydney-dist",
+        "name": "Sydney",
+        "emoji": "🇦🇺",
+        "value": 16000,
+        "source": "~16,000 km great-circle distance."
+      },
+      {
+        "id": "tokyo-dist",
+        "name": "Tokyo",
+        "emoji": "🇯🇵",
+        "value": 10838,
+        "source": "~10,838 km great-circle distance."
+      },
+      {
+        "id": "london-dist",
+        "name": "London",
+        "emoji": "🇬🇧",
+        "value": 5570,
+        "source": "~5,570 km great-circle distance."
+      },
+      {
+        "id": "mexico-dist",
+        "name": "Mexico City",
+        "emoji": "🇲🇽",
+        "value": 3360,
+        "source": "~3,360 km great-circle distance."
+      },
+      {
+        "id": "toronto-dist",
+        "name": "Toronto",
+        "emoji": "🇨🇦",
+        "value": 550,
+        "source": "~550 km great-circle distance."
+      }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Climate temperatures",
+    "rule": "Hottest to coldest",
+    "unit": "°C",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "deathvalley-temp",
+        "name": "Death Valley (record)",
+        "emoji": "☀️",
+        "value": 57,
+        "source": "Furnace Creek, California. 56.7°C on July 10 1913, rounded to 57."
+      },
+      {
+        "id": "sahara-temp",
+        "name": "Sahara Desert midday",
+        "emoji": "🌵",
+        "value": 40,
+        "source": "Typical summer midday air temperature in central Sahara."
+      },
+      {
+        "id": "amazon-temp",
+        "name": "Amazon Rainforest avg",
+        "emoji": "🌳",
+        "value": 27,
+        "source": "Annual average temperature ~27°C."
+      },
+      {
+        "id": "london-temp",
+        "name": "London annual avg",
+        "emoji": "☁️",
+        "value": 12,
+        "source": "Met Office. Annual average ~12°C."
+      },
+      {
+        "id": "vostok-temp",
+        "name": "Vostok Station (coldest)",
+        "emoji": "🧊",
+        "value": -89,
+        "source": "Antarctica. Record low −89.2°C on July 21 1983, rounded to −89."
+      }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Social media launch years",
+    "rule": "Oldest to newest launch year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "t-facebook",
+        "name": "Facebook",
+        "emoji": "📘",
+        "value": 2004,
+        "source": "thefacebook.com launched February 4, 2004 by Mark Zuckerberg."
+      },
+      {
+        "id": "t-twitter",
+        "name": "Twitter",
+        "emoji": "🐦",
+        "value": 2006,
+        "source": "First tweet sent March 21, 2006. Public launch July 2006."
+      },
+      {
+        "id": "t-instagram",
+        "name": "Instagram",
+        "emoji": "📸",
+        "value": 2010,
+        "source": "Launched October 6, 2010 on iOS by Kevin Systrom and Mike Krieger."
+      },
+      {
+        "id": "t-snapchat",
+        "name": "Snapchat",
+        "emoji": "👻",
+        "value": 2011,
+        "source": "Launched as Picaboo in July 2011, renamed Snapchat in September 2011."
+      },
+      {
+        "id": "t-tiktok",
+        "name": "TikTok",
+        "emoji": "🎵",
+        "value": 2016,
+        "source": "ByteDance launched Douyin (Chinese version) September 2016. International TikTok: 2017."
+      }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Big tech IPO years",
+    "rule": "Oldest to newest stock market debut",
+    "unit": "year",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "ipo-apple",
+        "name": "Apple",
+        "emoji": "🍎",
+        "value": 1980,
+        "source": "Apple IPO on NASDAQ: December 12, 1980."
+      },
+      {
+        "id": "ipo-amazon",
+        "name": "Amazon",
+        "emoji": "📦",
+        "value": 1997,
+        "source": "Amazon IPO on NASDAQ: May 15, 1997."
+      },
+      {
+        "id": "ipo-google",
+        "name": "Google",
+        "emoji": "🔍",
+        "value": 2004,
+        "source": "Google IPO on NASDAQ: August 19, 2004."
+      },
+      {
+        "id": "ipo-alibaba",
+        "name": "Alibaba",
+        "emoji": "🛒",
+        "value": 2014,
+        "source": "Alibaba IPO on NYSE: September 19, 2014. Largest IPO at the time."
+      },
+      {
+        "id": "ipo-snap",
+        "name": "Snap",
+        "emoji": "🤳",
+        "value": 2017,
+        "source": "Snap Inc. IPO on NYSE: March 2, 2017."
+      }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Programming language release years",
+    "rule": "Oldest to newest first release",
+    "unit": "year",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "lang-fortran",
+        "name": "FORTRAN",
+        "emoji": "💾",
+        "value": 1957,
+        "source": "IBM FORTRAN I delivered to users in April 1957. First high-level language."
+      },
+      {
+        "id": "lang-c",
+        "name": "C",
+        "emoji": "⌨️",
+        "value": 1972,
+        "source": "Dennis Ritchie developed C at Bell Labs in 1972."
+      },
+      {
+        "id": "lang-python",
+        "name": "Python",
+        "emoji": "🐍",
+        "value": 1991,
+        "source": "Python 0.9.0 released by Guido van Rossum on February 20, 1991."
+      },
+      {
+        "id": "lang-java",
+        "name": "Java",
+        "emoji": "☕",
+        "value": 1995,
+        "source": "Java first announced by Sun Microsystems on May 23, 1995. JDK 1.0 released January 1996."
+      },
+      {
+        "id": "lang-rust",
+        "name": "Rust",
+        "emoji": "⚙️",
+        "value": 2015,
+        "source": "Rust 1.0 (stable) released by Mozilla on May 15, 2015."
+      }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Web browser launch years",
+    "rule": "Oldest to newest first stable release",
+    "unit": "year",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "browser-netscape",
+        "name": "Netscape Navigator",
+        "emoji": "🌐",
+        "value": 1994,
+        "source": "Netscape Navigator 1.0 released October 1994 by Netscape Communications."
+      },
+      {
+        "id": "browser-ie",
+        "name": "Internet Explorer",
+        "emoji": "🔵",
+        "value": 1995,
+        "source": "Internet Explorer 1.0 released August 1995, bundled with Windows 95 Plus!."
+      },
+      {
+        "id": "browser-safari",
+        "name": "Safari",
+        "emoji": "🧭",
+        "value": 2003,
+        "source": "Apple released Safari 1.0 on June 23, 2003."
+      },
+      {
+        "id": "browser-firefox",
+        "name": "Firefox",
+        "emoji": "🦊",
+        "value": 2004,
+        "source": "Mozilla Firefox 1.0 released November 9, 2004."
+      },
+      {
+        "id": "browser-chrome",
+        "name": "Google Chrome",
+        "emoji": "🌈",
+        "value": 2008,
+        "source": "Google Chrome 1.0 released December 11, 2008."
+      }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Anime TV premiere years",
+    "rule": "Oldest to newest premiere year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "an-astroboy",
+        "name": "Astro Boy",
+        "emoji": "🤖",
+        "value": 1963,
+        "source": "Tetsuwan Atom premiered January 1, 1963 on Fuji TV, Japan."
+      },
+      {
+        "id": "an-dragonball",
+        "name": "Dragon Ball",
+        "emoji": "⭐",
+        "value": 1986,
+        "source": "Dragon Ball premiered February 26, 1986 on Fuji TV, Japan."
+      },
+      {
+        "id": "an-sailormoon",
+        "name": "Sailor Moon",
+        "emoji": "🌙",
+        "value": 1992,
+        "source": "Bishoujo Senshi Sailor Moon premiered March 7, 1992 on TV Asahi, Japan."
+      },
+      {
+        "id": "an-naruto",
+        "name": "Naruto",
+        "emoji": "🍥",
+        "value": 2002,
+        "source": "Naruto premiered October 3, 2002 on TV Tokyo, Japan."
+      },
+      {
+        "id": "an-aot",
+        "name": "Attack on Titan",
+        "emoji": "⚔️",
+        "value": 2013,
+        "source": "Shingeki no Kyojin premiered April 7, 2013 on MBS, Japan."
+      }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Anime original episode counts",
+    "rule": "Fewest to most episodes in original TV run",
+    "unit": "episodes",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "ep-bebop",
+        "name": "Cowboy Bebop",
+        "emoji": "🚀",
+        "value": 26,
+        "source": "Cowboy Bebop original run: 26 episodes (1998–1999, Space Shower TV/WOWOW)."
+      },
+      {
+        "id": "ep-deathnote",
+        "name": "Death Note",
+        "emoji": "📓",
+        "value": 37,
+        "source": "Death Note: 37 episodes (2006–2007, NTV)."
+      },
+      {
+        "id": "ep-fmab",
+        "name": "FMA: Brotherhood",
+        "emoji": "⚗️",
+        "value": 64,
+        "source": "Fullmetal Alchemist: Brotherhood: 64 episodes (2009–2010, MBS/TBS)."
+      },
+      {
+        "id": "ep-naruto",
+        "name": "Naruto",
+        "emoji": "🍥",
+        "value": 220,
+        "source": "Naruto original series: 220 episodes (2002–2007, TV Tokyo). Excludes Shippuden."
+      },
+      {
+        "id": "ep-dbz",
+        "name": "Dragon Ball Z",
+        "emoji": "💥",
+        "value": 291,
+        "source": "Dragon Ball Z: 291 episodes (1989–1996, Fuji TV)."
+      }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Completed manga volumes",
+    "rule": "Fewest to most volumes in completed series",
+    "unit": "volumes",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "mg-deathnote",
+        "name": "Death Note",
+        "emoji": "📓",
+        "value": 12,
+        "source": "Death Note: 12 tankōbon volumes (Shueisha, 2003–2006)."
+      },
+      {
+        "id": "mg-fma",
+        "name": "Fullmetal Alchemist",
+        "emoji": "⚗️",
+        "value": 27,
+        "source": "Fullmetal Alchemist: 27 tankōbon volumes (Square Enix, 2001–2010)."
+      },
+      {
+        "id": "mg-dragonball",
+        "name": "Dragon Ball",
+        "emoji": "⭐",
+        "value": 42,
+        "source": "Dragon Ball manga: 42 volumes (Shueisha, 1984–1995). Covers both original and Z arcs."
+      },
+      {
+        "id": "mg-naruto",
+        "name": "Naruto",
+        "emoji": "🍥",
+        "value": 72,
+        "source": "Naruto: 72 tankōbon volumes (Shueisha, 1999–2015)."
+      },
+      {
+        "id": "mg-golgo13",
+        "name": "Golgo 13",
+        "emoji": "🎯",
+        "value": 202,
+        "source": "Golgo 13 (Takao Saito): 202 volumes (Shogakukan, 1969–2021). Japan's longest-running manga."
+      }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Anime film release years",
+    "rule": "Oldest to newest theatrical release year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "af-akira",
+        "name": "Akira",
+        "emoji": "🏍️",
+        "value": 1988,
+        "source": "Akira theatrical release: July 16, 1988 (Japan, Toho)."
+      },
+      {
+        "id": "af-gits",
+        "name": "Ghost in the Shell",
+        "emoji": "🤖",
+        "value": 1995,
+        "source": "Ghost in the Shell theatrical release: November 18, 1995 (Japan, Toho)."
+      },
+      {
+        "id": "af-spirited",
+        "name": "Spirited Away",
+        "emoji": "🏮",
+        "value": 2001,
+        "source": "Sen to Chihiro theatrical release: July 20, 2001 (Japan, Studio Ghibli / Toho)."
+      },
+      {
+        "id": "af-yourname",
+        "name": "Your Name",
+        "emoji": "☄️",
+        "value": 2016,
+        "source": "Kimi no Na wa theatrical release: August 26, 2016 (Japan, CoMix Wave Films)."
+      },
+      {
+        "id": "af-mugen",
+        "name": "Demon Slayer Mugen Train",
+        "emoji": "🚂",
+        "value": 2020,
+        "source": "Kimetsu no Yaiba: Mugen Ressha-Hen theatrical release: October 16, 2020 (Japan, Ufotable)."
+      }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Oscar Best Picture winner years",
+    "rule": "Oldest to newest US release year",
+    "unit": "year",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "mv-casablanca",
+        "name": "Casablanca",
+        "emoji": "🎬",
+        "value": 1942,
+        "source": "Casablanca (1942) won Best Picture at the 16th Academy Awards (March 1944)."
+      },
+      {
+        "id": "mv-godfather",
+        "name": "The Godfather",
+        "emoji": "🌹",
+        "value": 1972,
+        "source": "The Godfather (1972) won Best Picture at the 45th Academy Awards (March 1973)."
+      },
+      {
+        "id": "mv-schindlers",
+        "name": "Schindler's List",
+        "emoji": "🕯️",
+        "value": 1993,
+        "source": "Schindler's List (1993) won Best Picture at the 66th Academy Awards (March 1994)."
+      },
+      {
+        "id": "mv-rotk",
+        "name": "The Return of the King",
+        "emoji": "💍",
+        "value": 2003,
+        "source": "The Lord of the Rings: The Return of the King (2003) won Best Picture at the 76th Academy Awards (2004)."
+      },
+      {
+        "id": "mv-parasite",
+        "name": "Parasite",
+        "emoji": "🏠",
+        "value": 2019,
+        "source": "Parasite (2019) won Best Picture at the 92nd Academy Awards (2020), first non-English film to win."
+      }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Film runtimes",
+    "rule": "Shortest to longest runtime",
+    "unit": "min",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "rt-toystory",
+        "name": "Toy Story",
+        "emoji": "🤠",
+        "value": 81,
+        "source": "Toy Story (1995): 81 minutes. Source: Pixar/Disney press materials."
+      },
+      {
+        "id": "rt-homealone",
+        "name": "Home Alone",
+        "emoji": "😱",
+        "value": 103,
+        "source": "Home Alone (1990): 103 minutes."
+      },
+      {
+        "id": "rt-darkknight",
+        "name": "The Dark Knight",
+        "emoji": "🦇",
+        "value": 152,
+        "source": "The Dark Knight (2008): 152 minutes."
+      },
+      {
+        "id": "rt-endgame",
+        "name": "Avengers: Endgame",
+        "emoji": "⏱️",
+        "value": 181,
+        "source": "Avengers: Endgame (2019): 181 minutes."
+      },
+      {
+        "id": "rt-rotk",
+        "name": "The Return of the King",
+        "emoji": "💍",
+        "value": 201,
+        "source": "The Lord of the Rings: The Return of the King (2003): 201 minutes theatrical cut."
+      }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Academy Award wins",
+    "rule": "Fewest to most total Oscars won",
+    "unit": "Oscars",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "os-parasite",
+        "name": "Parasite",
+        "emoji": "🏠",
+        "value": 4,
+        "source": "Parasite (2019): 4 wins (Best Picture, Director, Original Screenplay, International Feature Film)."
+      },
+      {
+        "id": "os-silencelambs",
+        "name": "The Silence of the Lambs",
+        "emoji": "🐑",
+        "value": 5,
+        "source": "The Silence of the Lambs (1991): 5 wins (Picture, Director, Actor, Actress, Adapted Screenplay). The 'Big Five' sweep."
+      },
+      {
+        "id": "os-schindlers",
+        "name": "Schindler's List",
+        "emoji": "🕯️",
+        "value": 7,
+        "source": "Schindler's List (1993): 7 wins at the 66th Academy Awards (1994)."
+      },
+      {
+        "id": "os-westsidestory",
+        "name": "West Side Story",
+        "emoji": "🕺",
+        "value": 10,
+        "source": "West Side Story (1961): 10 wins at the 34th Academy Awards (1962)."
+      },
+      {
+        "id": "os-titanic",
+        "name": "Titanic",
+        "emoji": "🚢",
+        "value": 11,
+        "source": "Titanic (1997): 11 wins at the 70th Academy Awards (1998). Tied the all-time record."
+      }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Disney animated film release years",
+    "rule": "Oldest to newest US theatrical release year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "dis-snowwhite",
+        "name": "Snow White",
+        "emoji": "🍎",
+        "value": 1937,
+        "source": "Snow White and the Seven Dwarfs premiered December 21, 1937 (US, Walt Disney Productions)."
+      },
+      {
+        "id": "dis-cinderella",
+        "name": "Cinderella",
+        "emoji": "👠",
+        "value": 1950,
+        "source": "Cinderella (Disney): wide release March 4, 1950."
+      },
+      {
+        "id": "dis-littlemermaid",
+        "name": "The Little Mermaid",
+        "emoji": "🧜",
+        "value": 1989,
+        "source": "The Little Mermaid (Disney): US release November 15, 1989."
+      },
+      {
+        "id": "dis-lionking",
+        "name": "The Lion King",
+        "emoji": "🦁",
+        "value": 1994,
+        "source": "The Lion King (Disney): US wide release June 24, 1994."
+      },
+      {
+        "id": "dis-frozen",
+        "name": "Frozen",
+        "emoji": "❄️",
+        "value": 2013,
+        "source": "Frozen (Disney): US release November 27, 2013."
+      }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Classic game release years",
+    "rule": "Oldest to newest original release year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "gm-pacman",
+        "name": "Pac-Man",
+        "emoji": "🟡",
+        "value": 1980,
+        "source": "Pac-Man arcade release: May 22, 1980 (Japan, Namco)."
+      },
+      {
+        "id": "gm-smb",
+        "name": "Super Mario Bros.",
+        "emoji": "🍄",
+        "value": 1985,
+        "source": "Super Mario Bros.: September 13, 1985 (Japan, NES, Nintendo)."
+      },
+      {
+        "id": "gm-zelda",
+        "name": "The Legend of Zelda",
+        "emoji": "🗡️",
+        "value": 1986,
+        "source": "The Legend of Zelda: February 21, 1986 (Japan, Famicom Disk System, Nintendo)."
+      },
+      {
+        "id": "gm-sf2",
+        "name": "Street Fighter II",
+        "emoji": "👊",
+        "value": 1991,
+        "source": "Street Fighter II: The World Warrior arcade release: March 1991 (Capcom)."
+      },
+      {
+        "id": "gm-doom",
+        "name": "Doom",
+        "emoji": "👹",
+        "value": 1993,
+        "source": "Doom: December 10, 1993 (PC, id Software). Shareware release via download."
+      }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Iconic multiplayer game release years",
+    "rule": "Oldest to newest original release year",
+    "unit": "year",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "gm-halflife",
+        "name": "Half-Life",
+        "emoji": "⚡",
+        "value": 1998,
+        "source": "Half-Life: November 19, 1998 (PC, Valve)."
+      },
+      {
+        "id": "gm-vice-city",
+        "name": "GTA: Vice City",
+        "emoji": "🌴",
+        "value": 2002,
+        "source": "Grand Theft Auto: Vice City: October 29, 2002 (PS2, Rockstar Games)."
+      },
+      {
+        "id": "gm-halo2",
+        "name": "Halo 2",
+        "emoji": "🪖",
+        "value": 2004,
+        "source": "Halo 2: November 9, 2004 (Xbox, Bungie / Microsoft)."
+      },
+      {
+        "id": "gm-skyrim",
+        "name": "Skyrim",
+        "emoji": "🐉",
+        "value": 2011,
+        "source": "The Elder Scrolls V: Skyrim: November 11, 2011 (PC/PS3/Xbox 360, Bethesda)."
+      },
+      {
+        "id": "gm-witcher3",
+        "name": "The Witcher 3",
+        "emoji": "🗺️",
+        "value": 2015,
+        "source": "The Witcher 3: Wild Hunt: May 19, 2015 (PC/PS4/Xbox One, CD Projekt Red)."
+      }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Nintendo console launch years",
+    "rule": "Oldest to newest US launch year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "gc-nes",
+        "name": "NES",
+        "emoji": "🕹️",
+        "value": 1985,
+        "source": "NES (Nintendo Entertainment System): US launch October 18, 1985."
+      },
+      {
+        "id": "gc-snes",
+        "name": "Super NES",
+        "emoji": "🎮",
+        "value": 1991,
+        "source": "Super Nintendo Entertainment System: US launch August 23, 1991."
+      },
+      {
+        "id": "gc-n64",
+        "name": "Nintendo 64",
+        "emoji": "🎲",
+        "value": 1996,
+        "source": "Nintendo 64: US launch September 29, 1996."
+      },
+      {
+        "id": "gc-gamecube",
+        "name": "GameCube",
+        "emoji": "💿",
+        "value": 2001,
+        "source": "Nintendo GameCube: US launch November 18, 2001."
+      },
+      {
+        "id": "gc-wii",
+        "name": "Wii",
+        "emoji": "🏓",
+        "value": 2006,
+        "source": "Nintendo Wii: US launch November 19, 2006."
+      }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Classic RPG release years",
+    "rule": "Oldest to newest original release year",
+    "unit": "year",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "rpg-ff7",
+        "name": "Final Fantasy VII",
+        "emoji": "🌌",
+        "value": 1997,
+        "source": "Final Fantasy VII: January 31, 1997 (Japan, PlayStation, Square)."
+      },
+      {
+        "id": "rpg-bg2",
+        "name": "Baldur's Gate II",
+        "emoji": "🧙",
+        "value": 2000,
+        "source": "Baldur's Gate II: Shadows of Amn: September 21, 2000 (PC, BioWare / Interplay)."
+      },
+      {
+        "id": "rpg-wow",
+        "name": "World of Warcraft",
+        "emoji": "🌍",
+        "value": 2004,
+        "source": "World of Warcraft: November 23, 2004 (PC, Blizzard Entertainment)."
+      },
+      {
+        "id": "rpg-darksouls",
+        "name": "Dark Souls",
+        "emoji": "💀",
+        "value": 2011,
+        "source": "Dark Souls: September 22, 2011 (Japan, PS3/Xbox 360, FromSoftware)."
+      },
+      {
+        "id": "rpg-eldenring",
+        "name": "Elden Ring",
+        "emoji": "🌑",
+        "value": 2022,
+        "source": "Elden Ring: February 25, 2022 (PS4/5, Xbox, PC, FromSoftware / Bandai Namco)."
+      }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "FIFA World Cup wins",
+    "rule": "Fewest to most World Cup wins",
+    "unit": "World Cups",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "wc-england",
+        "name": "England",
+        "emoji": "🦁",
+        "value": 1,
+        "source": "England: 1 World Cup win (1966, as host nation)."
+      },
+      {
+        "id": "wc-france",
+        "name": "France",
+        "emoji": "⚜️",
+        "value": 2,
+        "source": "France: 2 World Cup wins (1998, 2018)."
+      },
+      {
+        "id": "wc-argentina",
+        "name": "Argentina",
+        "emoji": "🌟",
+        "value": 3,
+        "source": "Argentina: 3 World Cup wins (1978, 1986, 2022)."
+      },
+      {
+        "id": "wc-germany",
+        "name": "Germany",
+        "emoji": "🦅",
+        "value": 4,
+        "source": "Germany (inc. West Germany): 4 World Cup wins (1954, 1974, 1990, 2014)."
+      },
+      {
+        "id": "wc-brazil",
+        "name": "Brazil",
+        "emoji": "💚",
+        "value": 5,
+        "source": "Brazil: 5 World Cup wins (1958, 1962, 1970, 1994, 2002). Most all time."
+      }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "Career Ballon d'Or wins",
+    "rule": "Fewest to most career Ballon d'Or awards",
+    "unit": "Ballon d'Ors",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "bd-zidane",
+        "name": "Zinedine Zidane",
+        "emoji": "👑",
+        "value": 1,
+        "source": "Zidane: 1 Ballon d'Or (1998)."
+      },
+      {
+        "id": "bd-r9",
+        "name": "Ronaldo Nazário",
+        "emoji": "⚡",
+        "value": 2,
+        "source": "Ronaldo Nazário (R9): 2 Ballon d'Ors (1997, 2002)."
+      },
+      {
+        "id": "bd-cruyff",
+        "name": "Johan Cruyff",
+        "emoji": "🌷",
+        "value": 3,
+        "source": "Johan Cruyff: 3 Ballon d'Ors (1971, 1973, 1974)."
+      },
+      {
+        "id": "bd-cr7",
+        "name": "Cristiano Ronaldo",
+        "emoji": "💪",
+        "value": 5,
+        "source": "Cristiano Ronaldo: 5 Ballon d'Ors (2008, 2011, 2013, 2014, 2017)."
+      },
+      {
+        "id": "bd-messi",
+        "name": "Lionel Messi",
+        "emoji": "🐐",
+        "value": 8,
+        "source": "Lionel Messi: 8 Ballon d'Ors (2009, 2010, 2011, 2012, 2015, 2019, 2021, 2023)."
+      }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "Football club founding years",
+    "rule": "Oldest to newest founding year",
+    "unit": "year",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "cl-manutd",
+        "name": "Manchester United",
+        "emoji": "🔴",
+        "value": 1878,
+        "source": "Founded as Newton Heath LYR FC in 1878. Renamed Manchester United in 1902."
+      },
+      {
+        "id": "cl-arsenal",
+        "name": "Arsenal",
+        "emoji": "💣",
+        "value": 1886,
+        "source": "Founded as Dial Square FC in 1886 by workers at the Royal Arsenal, Woolwich."
+      },
+      {
+        "id": "cl-barcelona",
+        "name": "FC Barcelona",
+        "emoji": "🔵",
+        "value": 1899,
+        "source": "FC Barcelona founded October 29, 1899 by Joan Gamper."
+      },
+      {
+        "id": "cl-bayernmunich",
+        "name": "Bayern Munich",
+        "emoji": "⚽",
+        "value": 1900,
+        "source": "FC Bayern München founded February 27, 1900."
+      },
+      {
+        "id": "cl-realmadrid",
+        "name": "Real Madrid",
+        "emoji": "👑",
+        "value": 1902,
+        "source": "Real Madrid Club de Fútbol founded March 6, 1902."
+      }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "Career World Cup goals",
+    "rule": "Fewest to most World Cup goals scored",
+    "unit": "goals",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "wcg-lineker",
+        "name": "Gary Lineker",
+        "emoji": "🇬🇧",
+        "value": 10,
+        "source": "Gary Lineker: 10 World Cup goals (1986: 6 goals — Golden Boot; 1990: 4 goals)."
+      },
+      {
+        "id": "wcg-kocsis",
+        "name": "Sándor Kocsis",
+        "emoji": "🇭🇺",
+        "value": 11,
+        "source": "Sándor Kocsis: 11 goals in one tournament (1954). Still the single-tournament record holder alongside Fontaine."
+      },
+      {
+        "id": "wcg-pele",
+        "name": "Pelé",
+        "emoji": "🌟",
+        "value": 12,
+        "source": "Pelé: 12 World Cup goals (1958: 6, 1962: 1, 1966: 1, 1970: 4)."
+      },
+      {
+        "id": "wcg-fontaine",
+        "name": "Just Fontaine",
+        "emoji": "🇫🇷",
+        "value": 13,
+        "source": "Just Fontaine: 13 goals in just one World Cup (1958). Still the single-tournament record."
+      },
+      {
+        "id": "wcg-klose",
+        "name": "Miroslav Klose",
+        "emoji": "🥇",
+        "value": 16,
+        "source": "Miroslav Klose: 16 World Cup goals (2002, 2006, 2010, 2014). All-time record."
+      }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Pop and R&B album release years",
+    "rule": "Oldest to newest release year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "mu-thriller",
+        "name": "Thriller",
+        "emoji": "🕺",
+        "value": 1982,
+        "source": "Thriller (Michael Jackson): released November 30, 1982 (Epic Records)."
+      },
+      {
+        "id": "mu-purplerain",
+        "name": "Purple Rain",
+        "emoji": "🎸",
+        "value": 1984,
+        "source": "Purple Rain (Prince): released June 25, 1984 (Warner Bros.)."
+      },
+      {
+        "id": "mu-miseducation",
+        "name": "Lauryn Hill Miseducation",
+        "emoji": "🎤",
+        "value": 1998,
+        "source": "The Miseducation of Lauryn Hill: released August 25, 1998 (Ruffhouse / Columbia)."
+      },
+      {
+        "id": "mu-21adele",
+        "name": "21",
+        "emoji": "🎼",
+        "value": 2011,
+        "source": "21 (Adele): released January 24, 2011 (XL Recordings / Columbia)."
+      },
+      {
+        "id": "mu-lemonade",
+        "name": "Lemonade",
+        "emoji": "🍋",
+        "value": 2016,
+        "source": "Lemonade (Beyoncé): released April 23, 2016 (Parkwood / Columbia)."
+      }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Rock album release years",
+    "rule": "Oldest to newest release year",
+    "unit": "year",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "ro-sgtpepper",
+        "name": "Sgt. Pepper's",
+        "emoji": "🎺",
+        "value": 1967,
+        "source": "Sgt. Pepper's Lonely Hearts Club Band (The Beatles): released June 1, 1967 (Parlophone)."
+      },
+      {
+        "id": "ro-ledzep4",
+        "name": "Led Zeppelin IV",
+        "emoji": "🔔",
+        "value": 1971,
+        "source": "Led Zeppelin IV: released November 8, 1971 (Atlantic Records)."
+      },
+      {
+        "id": "ro-rumours",
+        "name": "Rumours",
+        "emoji": "💨",
+        "value": 1977,
+        "source": "Rumours (Fleetwood Mac): released February 4, 1977 (Warner Bros.)."
+      },
+      {
+        "id": "ro-backinblack",
+        "name": "Back in Black",
+        "emoji": "🖤",
+        "value": 1980,
+        "source": "Back in Black (AC/DC): released July 25, 1980 (Albert Productions / Atlantic)."
+      },
+      {
+        "id": "ro-nevermind",
+        "name": "Nevermind",
+        "emoji": "👶",
+        "value": 1991,
+        "source": "Nevermind (Nirvana): released September 24, 1991 (DGC Records)."
+      }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Hip-hop album release years",
+    "rule": "Oldest to newest release year",
+    "unit": "year",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "hh-soc",
+        "name": "Straight Outta Compton",
+        "emoji": "🎙️",
+        "value": 1988,
+        "source": "Straight Outta Compton (N.W.A): released August 8, 1988 (Ruthless Records)."
+      },
+      {
+        "id": "hh-illmatic",
+        "name": "Illmatic",
+        "emoji": "🗽",
+        "value": 1994,
+        "source": "Illmatic (Nas): released April 19, 1994 (Columbia Records)."
+      },
+      {
+        "id": "hh-blueprint",
+        "name": "The Blueprint",
+        "emoji": "📐",
+        "value": 2001,
+        "source": "The Blueprint (Jay-Z): released September 11, 2001 (Roc-A-Fella / Def Jam)."
+      },
+      {
+        "id": "hh-gkmc",
+        "name": "good kid, m.A.A.d city",
+        "emoji": "🏙️",
+        "value": 2012,
+        "source": "good kid, m.A.A.d city (Kendrick Lamar): released October 22, 2012 (Aftermath / Interscope)."
+      },
+      {
+        "id": "hh-clb",
+        "name": "Certified Lover Boy",
+        "emoji": "🌹",
+        "value": 2021,
+        "source": "Certified Lover Boy (Drake): released September 3, 2021 (OVO Sound / Republic)."
+      }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Rock act formation years",
+    "rule": "Oldest to newest formation year",
+    "unit": "year",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "rf-beatles",
+        "name": "The Beatles",
+        "emoji": "🎸",
+        "value": 1960,
+        "source": "The Beatles formed in Liverpool in August 1960 (evolved from The Quarrymen, 1956)."
+      },
+      {
+        "id": "rf-ledzep",
+        "name": "Led Zeppelin",
+        "emoji": "🔔",
+        "value": 1968,
+        "source": "Led Zeppelin formed in London in July 1968 by Jimmy Page."
+      },
+      {
+        "id": "rf-queen",
+        "name": "Queen",
+        "emoji": "👑",
+        "value": 1970,
+        "source": "Queen formed in London in 1970 when Freddie Mercury joined Brian May and Roger Taylor."
+      },
+      {
+        "id": "rf-metallica",
+        "name": "Metallica",
+        "emoji": "🤘",
+        "value": 1981,
+        "source": "Metallica formed in Los Angeles in October 1981 by Lars Ulrich and James Hetfield."
+      },
+      {
+        "id": "rf-nirvana",
+        "name": "Nirvana",
+        "emoji": "🌊",
+        "value": 1987,
+        "source": "Nirvana formed in Aberdeen, Washington in 1987 by Kurt Cobain and Krist Novoselic."
+      }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Scientific milestone years",
+    "rule": "Oldest to newest milestone year",
+    "unit": "year",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "sc-principia",
+        "name": "Newton's Principia",
+        "emoji": "🍎",
+        "value": 1687,
+        "source": "Isaac Newton published Philosophiæ Naturalis Principia Mathematica in July 1687."
+      },
+      {
+        "id": "sc-periodic",
+        "name": "Periodic Table",
+        "emoji": "🧪",
+        "value": 1869,
+        "source": "Dmitri Mendeleev published his periodic table in March 1869."
+      },
+      {
+        "id": "sc-relativity",
+        "name": "Special Relativity",
+        "emoji": "💡",
+        "value": 1905,
+        "source": "Albert Einstein published 'On the Electrodynamics of Moving Bodies' (special relativity) in June 1905."
+      },
+      {
+        "id": "sc-dna",
+        "name": "DNA Double Helix",
+        "emoji": "🧬",
+        "value": 1953,
+        "source": "Watson & Crick published the DNA double-helix structure in Nature on April 25, 1953."
+      },
+      {
+        "id": "sc-higgs",
+        "name": "Higgs Boson",
+        "emoji": "⚛️",
+        "value": 2012,
+        "source": "CERN confirmed the Higgs boson discovery on July 4, 2012."
+      }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Human spaceflight milestone years",
+    "rule": "Oldest to newest milestone year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "sf-gagarin",
+        "name": "Gagarin (first human)",
+        "emoji": "🚀",
+        "value": 1961,
+        "source": "Yuri Gagarin became the first human in space on April 12, 1961 (Vostok 1, USSR)."
+      },
+      {
+        "id": "sf-tereshkova",
+        "name": "Tereshkova (first woman)",
+        "emoji": "👩‍🚀",
+        "value": 1963,
+        "source": "Valentina Tereshkova became the first woman in space on June 16, 1963 (Vostok 6, USSR)."
+      },
+      {
+        "id": "sf-leonov",
+        "name": "Leonov (first spacewalk)",
+        "emoji": "🌌",
+        "value": 1965,
+        "source": "Alexei Leonov performed the first spacewalk on March 18, 1965 (Voskhod 2, USSR)."
+      },
+      {
+        "id": "sf-columbia",
+        "name": "Space Shuttle Columbia",
+        "emoji": "🛸",
+        "value": 1981,
+        "source": "Space Shuttle Columbia (STS-1) launched April 12, 1981. First Space Shuttle flight."
+      },
+      {
+        "id": "sf-tito",
+        "name": "Tito (first tourist)",
+        "emoji": "🎟️",
+        "value": 2001,
+        "source": "Dennis Tito became the first paying space tourist on April 28, 2001 (ISS via Soyuz TM-32)."
+      }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Chemical element discovery years",
+    "rule": "Oldest to newest discovery year",
+    "unit": "year",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "el-hydrogen",
+        "name": "Hydrogen",
+        "emoji": "🫧",
+        "value": 1766,
+        "source": "Henry Cavendish described hydrogen as a distinct substance in 1766."
+      },
+      {
+        "id": "el-oxygen",
+        "name": "Oxygen",
+        "emoji": "💨",
+        "value": 1774,
+        "source": "Joseph Priestley isolated oxygen in August 1774. Carl Wilhelm Scheele discovered it independently."
+      },
+      {
+        "id": "el-aluminium",
+        "name": "Aluminium",
+        "emoji": "🥤",
+        "value": 1825,
+        "source": "Hans Christian Ørsted isolated aluminium for the first time in 1825."
+      },
+      {
+        "id": "el-neon",
+        "name": "Neon",
+        "emoji": "🌟",
+        "value": 1898,
+        "source": "Neon discovered by William Ramsay and Morris Travers in June 1898."
+      },
+      {
+        "id": "el-plutonium",
+        "name": "Plutonium",
+        "emoji": "☢️",
+        "value": 1940,
+        "source": "Plutonium first synthesised by Glenn T. Seaborg et al. on December 14, 1940 (Berkeley)."
+      }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Space probe milestone years",
+    "rule": "Oldest to newest mission milestone year",
+    "unit": "year",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "sp-voyager1",
+        "name": "Voyager 1 launched",
+        "emoji": "🛸",
+        "value": 1977,
+        "source": "Voyager 1 launched by NASA on September 5, 1977. Now in interstellar space."
+      },
+      {
+        "id": "sp-cassini",
+        "name": "Cassini launched",
+        "emoji": "🪐",
+        "value": 1997,
+        "source": "Cassini–Huygens spacecraft launched October 15, 1997 (NASA/ESA). Reached Saturn 2004."
+      },
+      {
+        "id": "sp-opportunity",
+        "name": "Opportunity rover landed",
+        "emoji": "🤖",
+        "value": 2004,
+        "source": "Mars Exploration Rover Opportunity landed on Mars on January 25, 2004 (NASA)."
+      },
+      {
+        "id": "sp-curiosity",
+        "name": "Curiosity rover landed",
+        "emoji": "🔬",
+        "value": 2012,
+        "source": "Mars Science Laboratory Curiosity rover landed on Mars on August 6, 2012 (NASA)."
+      },
+      {
+        "id": "sp-jwst",
+        "name": "JWST launched",
+        "emoji": "🔭",
+        "value": 2021,
+        "source": "James Webb Space Telescope launched December 25, 2021 (NASA/ESA/CSA)."
+      }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "Waterfall heights",
+    "rule": "Shortest to tallest waterfall drop",
+    "unit": "m",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "wf-niagara",
+        "name": "Niagara (Horseshoe)",
+        "emoji": "💧",
+        "value": 57,
+        "source": "Horseshoe Falls (Niagara): ~57 m drop. Tallest of the three Niagara waterfalls."
+      },
+      {
+        "id": "wf-iguazu",
+        "name": "Iguazú Falls",
+        "emoji": "🌿",
+        "value": 82,
+        "source": "Iguazú Falls (Argentina/Brazil): main drop ~82 m. Total system spans ~2.7 km wide."
+      },
+      {
+        "id": "wf-victoria",
+        "name": "Victoria Falls",
+        "emoji": "🌊",
+        "value": 108,
+        "source": "Victoria Falls (Zimbabwe/Zambia): 108 m high, widest curtain of falling water on Earth."
+      },
+      {
+        "id": "wf-vinnufossen",
+        "name": "Vinnufossen",
+        "emoji": "🏔️",
+        "value": 860,
+        "source": "Vinnufossen (Norway, Møre og Romsdal): 860 m total drop. One of the world's tallest waterfalls."
+      },
+      {
+        "id": "wf-angel",
+        "name": "Angel Falls",
+        "emoji": "☁️",
+        "value": 979,
+        "source": "Angel Falls (Venezuela, Canaima NP): 979 m total height, 807 m longest single drop. World's highest waterfall."
+      }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "Desert areas",
+    "rule": "Smallest to largest desert area",
+    "unit": "km²",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "ds-patagonian",
+        "name": "Patagonian Desert",
+        "emoji": "🌵",
+        "value": 673000,
+        "source": "Patagonian Desert (Argentina/Chile): ~673,000 km². Largest desert in South America."
+      },
+      {
+        "id": "ds-gobi",
+        "name": "Gobi Desert",
+        "emoji": "🏜️",
+        "value": 1295000,
+        "source": "Gobi Desert (China/Mongolia): ~1,295,000 km²."
+      },
+      {
+        "id": "ds-arabian",
+        "name": "Arabian Desert",
+        "emoji": "☀️",
+        "value": 2330000,
+        "source": "Arabian Desert (Arabian Peninsula): ~2,330,000 km². Largest hot desert outside Africa."
+      },
+      {
+        "id": "ds-sahara",
+        "name": "Sahara",
+        "emoji": "🌞",
+        "value": 9200000,
+        "source": "Sahara Desert (North Africa): ~9,200,000 km². World's largest hot desert."
+      },
+      {
+        "id": "ds-antarctic",
+        "name": "Antarctic Desert",
+        "emoji": "🧊",
+        "value": 14200000,
+        "source": "Antarctic Desert: ~14,200,000 km². World's largest desert (cold desert)."
+      }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "Island areas",
+    "rule": "Smallest to largest island area",
+    "unit": "km²",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "is-corsica",
+        "name": "Corsica",
+        "emoji": "🏝️",
+        "value": 8680,
+        "source": "Corsica (France, Mediterranean): 8,680 km²."
+      },
+      {
+        "id": "is-srilanka",
+        "name": "Sri Lanka",
+        "emoji": "🌴",
+        "value": 65610,
+        "source": "Sri Lanka (South Asia): 65,610 km²."
+      },
+      {
+        "id": "is-madagascar",
+        "name": "Madagascar",
+        "emoji": "🦎",
+        "value": 587041,
+        "source": "Madagascar: 587,041 km². 4th largest island in the world."
+      },
+      {
+        "id": "is-borneo",
+        "name": "Borneo",
+        "emoji": "🌳",
+        "value": 743330,
+        "source": "Borneo (Southeast Asia, shared by Indonesia/Malaysia/Brunei): 743,330 km². 3rd largest island."
+      },
+      {
+        "id": "is-greenland",
+        "name": "Greenland",
+        "emoji": "🧊",
+        "value": 2130800,
+        "source": "Greenland (Denmark/self-governing): 2,130,800 km². World's largest island."
+      }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "Ocean deepest points",
+    "rule": "Shallowest to deepest ocean point",
+    "unit": "m",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "od-northsea",
+        "name": "North Sea",
+        "emoji": "🌊",
+        "value": 700,
+        "source": "North Sea deepest point: ~700 m (Norwegian Trench / Skagerrak). Surprisingly shallow."
+      },
+      {
+        "id": "od-arctic",
+        "name": "Arctic Ocean",
+        "emoji": "🧊",
+        "value": 5550,
+        "source": "Arctic Ocean deepest point: ~5,550 m (Molloy Deep, Fram Strait)."
+      },
+      {
+        "id": "od-indian",
+        "name": "Indian Ocean",
+        "emoji": "🐳",
+        "value": 7187,
+        "source": "Indian Ocean deepest point: ~7,187 m (Java/Sunda Trench). Note: depth estimates vary by survey."
+      },
+      {
+        "id": "od-atlantic",
+        "name": "Atlantic Ocean",
+        "emoji": "🚢",
+        "value": 8376,
+        "source": "Atlantic Ocean deepest point: ~8,376 m (Milwaukee Deep, Puerto Rico Trench)."
+      },
+      {
+        "id": "od-pacific",
+        "name": "Pacific Ocean",
+        "emoji": "🌏",
+        "value": 10935,
+        "source": "Pacific Ocean deepest point: ~10,935 m (Challenger Deep, Mariana Trench). Deepest on Earth."
+      }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "NBA championship wins",
+    "rule": "Fewest to most NBA titles (through 2022)",
+    "unit": "NBA titles",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "bk-knicks-titles",
+        "name": "New York Knicks",
+        "emoji": "🗽",
+        "value": 2,
+        "source": "New York Knicks: 2 NBA championships (1970, 1973)."
+      },
+      {
+        "id": "bk-spurs-titles",
+        "name": "San Antonio Spurs",
+        "emoji": "🤠",
+        "value": 5,
+        "source": "San Antonio Spurs: 5 NBA championships (1999, 2003, 2005, 2007, 2014)."
+      },
+      {
+        "id": "bk-gsw-titles",
+        "name": "Golden State Warriors",
+        "emoji": "🌁",
+        "value": 7,
+        "source": "Golden State Warriors: 7 NBA championships (1947, 1956, 1975, 2015, 2017, 2018, 2022)."
+      },
+      {
+        "id": "bk-pistons-titles",
+        "name": "Detroit Pistons",
+        "emoji": "🔧",
+        "value": 3,
+        "source": "Detroit Pistons: 3 NBA championships (1989, 1990, 2004)."
+      },
+      {
+        "id": "bk-bulls-titles",
+        "name": "Chicago Bulls",
+        "emoji": "🐂",
+        "value": 6,
+        "source": "Chicago Bulls: 6 NBA championships (1991, 1992, 1993, 1996, 1997, 1998)."
+      }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "Year of first NBA championship",
+    "rule": "Oldest to newest first title year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "bk-heat-first",
+        "name": "Miami Heat",
+        "emoji": "🔥",
+        "value": 2006,
+        "source": "Miami Heat won their first NBA title in 2006, defeating the Dallas Mavericks."
+      },
+      {
+        "id": "bk-raptors-first",
+        "name": "Toronto Raptors",
+        "emoji": "🦖",
+        "value": 2019,
+        "source": "Toronto Raptors won their first (and only) NBA title in 2019, defeating the Golden State Warriors."
+      },
+      {
+        "id": "bk-spurs-first",
+        "name": "San Antonio Spurs",
+        "emoji": "🤠",
+        "value": 1999,
+        "source": "San Antonio Spurs won their first NBA title in 1999, defeating the New York Knicks."
+      },
+      {
+        "id": "bk-mavs-first",
+        "name": "Dallas Mavericks",
+        "emoji": "🤘",
+        "value": 2011,
+        "source": "Dallas Mavericks won their first NBA title in 2011, defeating the Miami Heat. Dirk Nowitzki Finals MVP."
+      },
+      {
+        "id": "bk-cavs-first",
+        "name": "Cleveland Cavaliers",
+        "emoji": "⚔️",
+        "value": 2016,
+        "source": "Cleveland Cavaliers won their first NBA title in 2016, defeating the Golden State Warriors 4-3. LeBron James Finals MVP."
+      }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "NBA Draft year of #1 overall picks",
+    "rule": "Oldest to newest draft year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "bk-lebron-draft",
+        "name": "LeBron James",
+        "emoji": "👑",
+        "value": 2003,
+        "source": "LeBron James: #1 overall pick in 2003 NBA Draft by Cleveland Cavaliers."
+      },
+      {
+        "id": "bk-zion-draft",
+        "name": "Zion Williamson",
+        "emoji": "⚡",
+        "value": 2019,
+        "source": "Zion Williamson: #1 overall pick in 2019 NBA Draft by New Orleans Pelicans."
+      },
+      {
+        "id": "bk-magic-draft",
+        "name": "Magic Johnson",
+        "emoji": "✨",
+        "value": 1979,
+        "source": "Magic Johnson: #1 overall pick in 1979 NBA Draft by Los Angeles Lakers."
+      },
+      {
+        "id": "bk-ewing-draft",
+        "name": "Patrick Ewing",
+        "emoji": "🏀",
+        "value": 1985,
+        "source": "Patrick Ewing: #1 overall pick in 1985 NBA Draft by New York Knicks (first lottery pick)."
+      },
+      {
+        "id": "bk-hakeem-draft",
+        "name": "Hakeem Olajuwon",
+        "emoji": "🕊️",
+        "value": 1984,
+        "source": "Hakeem Olajuwon: #1 overall pick in 1984 NBA Draft by Houston Rockets."
+      }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "Year of last NBA championship",
+    "rule": "Oldest to newest most recent title (through 2022)",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "bk-spurs-last",
+        "name": "San Antonio Spurs",
+        "emoji": "🤠",
+        "value": 2014,
+        "source": "San Antonio Spurs last won the NBA title in 2014, defeating the Miami Heat 4-1."
+      },
+      {
+        "id": "bk-bulls-last",
+        "name": "Chicago Bulls",
+        "emoji": "🐂",
+        "value": 1998,
+        "source": "Chicago Bulls last won the NBA title in 1998 (Jordan's final title with the Bulls)."
+      },
+      {
+        "id": "bk-bucks-last",
+        "name": "Milwaukee Bucks",
+        "emoji": "🦌",
+        "value": 2021,
+        "source": "Milwaukee Bucks won the NBA title in 2021, defeating the Phoenix Suns 4-2. Giannis Antetokounmpo Finals MVP."
+      },
+      {
+        "id": "bk-mavs-last",
+        "name": "Dallas Mavericks",
+        "emoji": "🤘",
+        "value": 2011,
+        "source": "Dallas Mavericks won the NBA title in 2011 (their only championship)."
+      },
+      {
+        "id": "bk-pistons-last",
+        "name": "Detroit Pistons",
+        "emoji": "🔧",
+        "value": 2004,
+        "source": "Detroit Pistons last won the NBA title in 2004, defeating the Los Angeles Lakers 4-1."
+      }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "Career NBA points (retired legends)",
+    "rule": "Fewest to most career points scored",
+    "unit": "pts",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "bk-kobe-pts",
+        "name": "Kobe Bryant",
+        "emoji": "🐍",
+        "value": 33643,
+        "source": "Kobe Bryant: 33,643 career points (1996–2016, Los Angeles Lakers). Basketball-Reference."
+      },
+      {
+        "id": "bk-pippen-pts",
+        "name": "Scottie Pippen",
+        "emoji": "🌹",
+        "value": 18940,
+        "source": "Scottie Pippen: 18,940 career points across 17 seasons (1987–2004). Basketball-Reference."
+      },
+      {
+        "id": "bk-malone-pts",
+        "name": "Karl Malone",
+        "emoji": "🚂",
+        "value": 36928,
+        "source": "Karl Malone: 36,928 career points (1985–2004). Second-highest total in NBA history."
+      },
+      {
+        "id": "bk-shaq-pts",
+        "name": "Shaquille O'Neal",
+        "emoji": "🦁",
+        "value": 28596,
+        "source": "Shaquille O'Neal: 28,596 career points (1992–2011). Basketball-Reference."
+      },
+      {
+        "id": "bk-ewing-pts",
+        "name": "Patrick Ewing",
+        "emoji": "🏀",
+        "value": 24815,
+        "source": "Patrick Ewing: 24,815 career points (1985–2002). Basketball-Reference."
+      }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "Career NBA points per game",
+    "rule": "Lowest to highest career PPG (retired players)",
+    "unit": "ppg",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "bk-ewing-ppg",
+        "name": "Patrick Ewing",
+        "emoji": "🏀",
+        "value": 21.8,
+        "source": "Patrick Ewing: 21.8 career PPG (1985–2002). Basketball-Reference."
+      },
+      {
+        "id": "bk-baylor-ppg",
+        "name": "Elgin Baylor",
+        "emoji": "⭐",
+        "value": 27.4,
+        "source": "Elgin Baylor: 27.4 career PPG (1958–1972, Los Angeles Lakers). One of the highest all-time."
+      },
+      {
+        "id": "bk-magic-ppg",
+        "name": "Magic Johnson",
+        "emoji": "✨",
+        "value": 19.5,
+        "source": "Magic Johnson: 19.5 career PPG (1979–1996, Los Angeles Lakers). Basketball-Reference."
+      },
+      {
+        "id": "bk-kobe-ppg",
+        "name": "Kobe Bryant",
+        "emoji": "🐍",
+        "value": 25.0,
+        "source": "Kobe Bryant: 25.0 career PPG (1996–2016, Los Angeles Lakers). Basketball-Reference."
+      },
+      {
+        "id": "bk-pippen-ppg",
+        "name": "Scottie Pippen",
+        "emoji": "🌹",
+        "value": 16.1,
+        "source": "Scottie Pippen: 16.1 career PPG (1987–2004). Basketball-Reference."
+      }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "Career NBA total rebounds",
+    "rule": "Fewest to most career rebounds (retired bigs)",
+    "unit": "rebounds",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "bk-wilt-reb",
+        "name": "Wilt Chamberlain",
+        "emoji": "💪",
+        "value": 23924,
+        "source": "Wilt Chamberlain: 23,924 career rebounds (1959–1973). NBA all-time record."
+      },
+      {
+        "id": "bk-ewing-reb",
+        "name": "Patrick Ewing",
+        "emoji": "🏀",
+        "value": 11607,
+        "source": "Patrick Ewing: 11,607 career rebounds (1985–2002). Basketball-Reference."
+      },
+      {
+        "id": "bk-russell-reb",
+        "name": "Bill Russell",
+        "emoji": "🏆",
+        "value": 21620,
+        "source": "Bill Russell: 21,620 career rebounds (1956–1969, Boston Celtics). NBA.com."
+      },
+      {
+        "id": "bk-malone-reb",
+        "name": "Karl Malone",
+        "emoji": "🚂",
+        "value": 14968,
+        "source": "Karl Malone: 14,968 career rebounds (1985–2004). Basketball-Reference."
+      },
+      {
+        "id": "bk-shaq-reb",
+        "name": "Shaquille O'Neal",
+        "emoji": "🦁",
+        "value": 13099,
+        "source": "Shaquille O'Neal: 13,099 career rebounds (1992–2011). Basketball-Reference."
+      }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "Career NBA total assists",
+    "rule": "Fewest to most career assists (retired playmakers)",
+    "unit": "assists",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "bk-stockton-ast",
+        "name": "John Stockton",
+        "emoji": "🧠",
+        "value": 15806,
+        "source": "John Stockton: 15,806 career assists (1984–2003, Utah Jazz). All-time NBA record."
+      },
+      {
+        "id": "bk-drexler-ast",
+        "name": "Clyde Drexler",
+        "emoji": "🦅",
+        "value": 6125,
+        "source": "Clyde Drexler: ~6,125 career assists (1983–1998). Basketball-Reference."
+      },
+      {
+        "id": "bk-kidd-ast",
+        "name": "Jason Kidd",
+        "emoji": "🎯",
+        "value": 12091,
+        "source": "Jason Kidd: 12,091 career assists (1994–2013). Second all-time behind Stockton."
+      },
+      {
+        "id": "bk-payton-ast",
+        "name": "Gary Payton",
+        "emoji": "🧤",
+        "value": 8966,
+        "source": "Gary Payton: 8,966 career assists (1990–2007). One of the top all-time."
+      },
+      {
+        "id": "bk-magic-ast",
+        "name": "Magic Johnson",
+        "emoji": "✨",
+        "value": 10141,
+        "source": "Magic Johnson: 10,141 career assists (1979–1996, Los Angeles Lakers). Basketball-Reference."
+      }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "NBA championship wins as head coach",
+    "rule": "Fewest to most titles won as coach",
+    "unit": "championships",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "bk-riley-ch",
+        "name": "Pat Riley",
+        "emoji": "💼",
+        "value": 5,
+        "source": "Pat Riley: 5 championships as head coach (Lakers 1982, 1985, 1987, 1988; Heat 2006)."
+      },
+      {
+        "id": "bk-brown-ch",
+        "name": "Larry Brown",
+        "emoji": "🔑",
+        "value": 1,
+        "source": "Larry Brown: 1 NBA championship as head coach (Detroit Pistons 2004)."
+      },
+      {
+        "id": "bk-jackson-ch",
+        "name": "Phil Jackson",
+        "emoji": "🧘",
+        "value": 11,
+        "source": "Phil Jackson: 11 NBA championships as head coach (Chicago Bulls 1991–93, 1996–98; Lakers 2000–02, 2009–10)."
+      },
+      {
+        "id": "bk-auerbach-ch",
+        "name": "Red Auerbach",
+        "emoji": "🚬",
+        "value": 9,
+        "source": "Red Auerbach: 9 championships as head coach of Boston Celtics (1957, 1959–1966)."
+      },
+      {
+        "id": "bk-daly-ch",
+        "name": "Chuck Daly",
+        "emoji": "🕴️",
+        "value": 2,
+        "source": "Chuck Daly: 2 NBA championships as head coach (Detroit Pistons 1989, 1990)."
+      }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "Career NBA Finals MVP awards",
+    "rule": "Fewest to most Finals MVP trophies",
+    "unit": "Finals MVPs",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "bk-lebron-fmvp",
+        "name": "LeBron James",
+        "emoji": "👑",
+        "value": 4,
+        "source": "LeBron James: 4 Finals MVPs through 2022 (2012, 2013, 2016, 2020)."
+      },
+      {
+        "id": "bk-wade-fmvp",
+        "name": "Dwyane Wade",
+        "emoji": "🔥",
+        "value": 1,
+        "source": "Dwyane Wade: 1 Finals MVP (2006, Miami Heat defeated Dallas Mavericks)."
+      },
+      {
+        "id": "bk-jordan-fmvp",
+        "name": "Michael Jordan",
+        "emoji": "🐐",
+        "value": 6,
+        "source": "Michael Jordan: 6 Finals MVPs (1991, 1992, 1993, 1996, 1997, 1998). Every time he won a ring."
+      },
+      {
+        "id": "bk-kareem-fmvp",
+        "name": "Kareem Abdul-Jabbar",
+        "emoji": "🏆",
+        "value": 2,
+        "source": "Kareem Abdul-Jabbar: 2 Finals MVPs (1971 Bucks, 1985 Lakers)."
+      },
+      {
+        "id": "bk-magic-fmvp",
+        "name": "Magic Johnson",
+        "emoji": "✨",
+        "value": 3,
+        "source": "Magic Johnson: 3 Finals MVPs (1980, 1982, 1987 — all with Los Angeles Lakers)."
+      }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Top speeds of animals",
+    "rule": "Slowest to fastest top speed",
+    "unit": "km/h",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "wf-lion-spd",
+        "name": "Lion",
+        "emoji": "🦁",
+        "value": 80,
+        "source": "Lion: top speed ~80 km/h in short bursts. African Wildlife Foundation."
+      },
+      {
+        "id": "wf-sloth-spd",
+        "name": "Three-toed sloth",
+        "emoji": "🦥",
+        "value": 0.27,
+        "source": "Three-toed sloth: max speed ~0.27 km/h (4.5 m/min) on the ground. Smithsonian's National Zoo."
+      },
+      {
+        "id": "wf-falcon-spd",
+        "name": "Peregrine falcon",
+        "emoji": "🦅",
+        "value": 389,
+        "source": "Peregrine falcon: 389 km/h in a stoop (dive). Guinness World Records — fastest animal on Earth."
+      },
+      {
+        "id": "wf-cat-spd",
+        "name": "Domestic cat",
+        "emoji": "🐱",
+        "value": 48,
+        "source": "Domestic cat: top speed ~48 km/h over short distances."
+      },
+      {
+        "id": "wf-horse-spd",
+        "name": "Racehorse",
+        "emoji": "🐎",
+        "value": 70,
+        "source": "Thoroughbred racehorse: top speed ~70 km/h. Secretariat's timed furlongs imply ~70 km/h."
+      }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Height of world's tallest structures",
+    "rule": "Shortest to tallest structure height",
+    "unit": "m",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "wf-burj-ht",
+        "name": "Burj Khalifa",
+        "emoji": "🏙️",
+        "value": 828,
+        "source": "Burj Khalifa (Dubai): 828 m to tip. World's tallest building (completed 2010)."
+      },
+      {
+        "id": "wf-eiffel-ht",
+        "name": "Eiffel Tower",
+        "emoji": "🗼",
+        "value": 330,
+        "source": "Eiffel Tower (Paris): 330 m including antenna added in 1957. Original structure 300 m."
+      },
+      {
+        "id": "wf-cntower-ht",
+        "name": "CN Tower",
+        "emoji": "📡",
+        "value": 553,
+        "source": "CN Tower (Toronto): 553 m. World's tallest free-standing structure 1976–2010."
+      },
+      {
+        "id": "wf-empire-ht",
+        "name": "Empire State Building",
+        "emoji": "🏢",
+        "value": 443,
+        "source": "Empire State Building (New York): 443 m to roof (448 m to tip). Completed 1931."
+      },
+      {
+        "id": "wf-shanghai-ht",
+        "name": "Shanghai Tower",
+        "emoji": "🌆",
+        "value": 632,
+        "source": "Shanghai Tower: 632 m to tip. Second tallest building in the world (completed 2015)."
+      }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Animal lifespans",
+    "rule": "Shortest to longest average lifespan",
+    "unit": "years",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "wf-shark-life",
+        "name": "Greenland shark",
+        "emoji": "🦈",
+        "value": 400,
+        "source": "Greenland shark: median estimated lifespan ~400 years (range 272–512). Science, 2016."
+      },
+      {
+        "id": "wf-fly-life",
+        "name": "House fly",
+        "emoji": "🪰",
+        "value": 0.1,
+        "source": "House fly (Musca domestica): average adult lifespan ~25–30 days (~0.1 years)."
+      },
+      {
+        "id": "wf-tortoise-life",
+        "name": "Giant tortoise",
+        "emoji": "🐢",
+        "value": 150,
+        "source": "Galápagos giant tortoise: average lifespan >100 years; documented individuals exceed 150 years."
+      },
+      {
+        "id": "wf-elephant-life",
+        "name": "African elephant",
+        "emoji": "🐘",
+        "value": 70,
+        "source": "African elephant: average wild lifespan ~70 years. San Diego Zoo Wildlife Alliance."
+      },
+      {
+        "id": "wf-dog-life",
+        "name": "Dog",
+        "emoji": "🐕",
+        "value": 12,
+        "source": "Domestic dog: average lifespan 10–13 years; widely cited as ~12 years."
+      }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Large animal weights",
+    "rule": "Lightest to heaviest weight",
+    "unit": "kg",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      {
+        "id": "wf-elephant-wt",
+        "name": "African elephant",
+        "emoji": "🐘",
+        "value": 6000,
+        "source": "African bush elephant: average adult male ~6,000 kg. Heaviest land animal."
+      },
+      {
+        "id": "wf-whale-wt",
+        "name": "Blue whale",
+        "emoji": "🐋",
+        "value": 150000,
+        "source": "Blue whale: average adult ~150,000 kg (150 tonnes). Largest animal ever known."
+      },
+      {
+        "id": "wf-chimp-wt",
+        "name": "Chimpanzee",
+        "emoji": "🐒",
+        "value": 60,
+        "source": "Common chimpanzee: average adult male ~60 kg."
+      },
+      {
+        "id": "wf-hippo-wt",
+        "name": "Hippopotamus",
+        "emoji": "🦛",
+        "value": 3000,
+        "source": "Common hippopotamus: average adult ~3,000 kg. Third largest land animal."
+      },
+      {
+        "id": "wf-lion-wt",
+        "name": "Lion",
+        "emoji": "🦁",
+        "value": 180,
+        "source": "African lion: average adult male ~180 kg."
+      }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Diameter of solar system bodies",
+    "rule": "Smallest to largest equatorial diameter",
+    "unit": "km",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "wf-jupiter-dia",
+        "name": "Jupiter",
+        "emoji": "🪐",
+        "value": 139820,
+        "source": "Jupiter equatorial diameter: 139,820 km. NASA planetary fact sheet."
+      },
+      {
+        "id": "wf-earth-dia",
+        "name": "Earth",
+        "emoji": "🌍",
+        "value": 12742,
+        "source": "Earth mean diameter: 12,742 km. NASA."
+      },
+      {
+        "id": "wf-sun-dia",
+        "name": "Sun",
+        "emoji": "☀️",
+        "value": 1391000,
+        "source": "Sun mean diameter: 1,391,000 km. 109 times Earth's diameter. NASA."
+      },
+      {
+        "id": "wf-saturn-dia",
+        "name": "Saturn",
+        "emoji": "🪐",
+        "value": 116460,
+        "source": "Saturn equatorial diameter: 116,460 km. NASA planetary fact sheet."
+      },
+      {
+        "id": "wf-uranus-dia",
+        "name": "Uranus",
+        "emoji": "🌀",
+        "value": 51118,
+        "source": "Uranus equatorial diameter: 51,118 km. NASA planetary fact sheet."
+      }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Volume of world's largest lakes",
+    "rule": "Smallest to largest lake volume",
+    "unit": "km³",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "wf-caspian-vol",
+        "name": "Caspian Sea",
+        "emoji": "🌊",
+        "value": 78200,
+        "source": "Caspian Sea: ~78,200 km³. World's largest lake by volume (and area). Landlocked."
+      },
+      {
+        "id": "wf-erie-vol",
+        "name": "Lake Erie",
+        "emoji": "💧",
+        "value": 484,
+        "source": "Lake Erie: 484 km³. Shallowest of the Great Lakes. EPA Great Lakes Atlas."
+      },
+      {
+        "id": "wf-superior-vol",
+        "name": "Lake Superior",
+        "emoji": "🏔️",
+        "value": 12100,
+        "source": "Lake Superior: 12,100 km³. Largest Great Lake by surface area. EPA Great Lakes Atlas."
+      },
+      {
+        "id": "wf-michigan-vol",
+        "name": "Lake Michigan",
+        "emoji": "🌬️",
+        "value": 4920,
+        "source": "Lake Michigan: 4,920 km³. Only Great Lake entirely within the USA. EPA."
+      },
+      {
+        "id": "wf-huron-vol",
+        "name": "Lake Huron",
+        "emoji": "🇨🇦",
+        "value": 3540,
+        "source": "Lake Huron: 3,540 km³. Second largest Great Lake by surface area. EPA."
+      }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Animal gestation periods",
+    "rule": "Shortest to longest gestation period",
+    "unit": "days",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "wf-elephant-gest",
+        "name": "African elephant",
+        "emoji": "🐘",
+        "value": 660,
+        "source": "African elephant: gestation ~22 months (~660 days). Longest of any land mammal."
+      },
+      {
+        "id": "wf-dog-gest",
+        "name": "Dog",
+        "emoji": "🐕",
+        "value": 63,
+        "source": "Domestic dog: gestation ~63 days (58–68 day range). AKC."
+      },
+      {
+        "id": "wf-rhino-gest",
+        "name": "Black rhinoceros",
+        "emoji": "🦏",
+        "value": 450,
+        "source": "Black rhinoceros: gestation ~15 months (~450 days). WWF."
+      },
+      {
+        "id": "wf-hamster-gest",
+        "name": "Golden hamster",
+        "emoji": "🐹",
+        "value": 16,
+        "source": "Golden (Syrian) hamster: gestation 15–17 days, typically 16 days. One of the shortest mammal gestations."
+      },
+      {
+        "id": "wf-lion-gest",
+        "name": "Lion",
+        "emoji": "🦁",
+        "value": 110,
+        "source": "Lion: gestation ~110 days (105–113 day range). African Wildlife Foundation."
+      }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Launch mass of famous spacecraft",
+    "rule": "Lightest to heaviest launch mass",
+    "unit": "kg",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      {
+        "id": "wf-sputnik-mass",
+        "name": "Sputnik 1",
+        "emoji": "🛰️",
+        "value": 83.6,
+        "source": "Sputnik 1: 83.6 kg. World's first artificial satellite, launched October 4, 1957 (USSR)."
+      },
+      {
+        "id": "wf-hubble-mass",
+        "name": "Hubble Space Telescope",
+        "emoji": "🔭",
+        "value": 11110,
+        "source": "Hubble Space Telescope: 11,110 kg at launch (April 24, 1990, STS-31). NASA."
+      },
+      {
+        "id": "wf-saturnv-mass",
+        "name": "Saturn V rocket",
+        "emoji": "🚀",
+        "value": 2938000,
+        "source": "Saturn V fully fueled at liftoff: ~2,938,000 kg (Apollo missions). NASA Technical Reports."
+      },
+      {
+        "id": "wf-iss-mass",
+        "name": "Space Station (ISS)",
+        "emoji": "🌐",
+        "value": 420000,
+        "source": "International Space Station: ~420,000 kg total mass (as of 2021). NASA."
+      },
+      {
+        "id": "wf-shuttle-mass",
+        "name": "Space Shuttle (launch)",
+        "emoji": "🛸",
+        "value": 2041000,
+        "source": "Space Shuttle (orbiter + external tank + SRBs) at liftoff: ~2,041,000 kg. NASA STS press kit."
+      }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Natural satellites of planets",
+    "rule": "Fewest to most confirmed moons (2022)",
+    "unit": "moons",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "wf-saturn-moons",
+        "name": "Saturn",
+        "emoji": "🪐",
+        "value": 83,
+        "source": "Saturn: 83 confirmed moons as of 2022. Most of any planet. Source: IAU/NASA."
+      },
+      {
+        "id": "wf-earth-moons",
+        "name": "Earth",
+        "emoji": "🌍",
+        "value": 1,
+        "source": "Earth: 1 natural satellite — the Moon."
+      },
+      {
+        "id": "wf-neptune-moons",
+        "name": "Neptune",
+        "emoji": "🔵",
+        "value": 14,
+        "source": "Neptune: 14 confirmed moons as of 2022, including Triton (retrograde orbit)."
+      },
+      {
+        "id": "wf-mars-moons",
+        "name": "Mars",
+        "emoji": "🔴",
+        "value": 2,
+        "source": "Mars: 2 moons — Phobos and Deimos. Discovered by Asaph Hall in 1877."
+      },
+      {
+        "id": "wf-uranus-moons",
+        "name": "Uranus",
+        "emoji": "🌀",
+        "value": 27,
+        "source": "Uranus: 27 confirmed moons as of 2022, all named after Shakespeare and Alexander Pope characters."
+      }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Diameter of Earth impact craters",
+    "rule": "Smallest to largest crater diameter",
+    "unit": "km",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      {
+        "id": "wf-chicxulub-cr",
+        "name": "Chicxulub, Mexico",
+        "emoji": "☄️",
+        "value": 150,
+        "source": "Chicxulub crater (Yucatán, Mexico): ~150 km diameter. Impact 66 Mya caused dinosaur extinction."
+      },
+      {
+        "id": "wf-barringer-cr",
+        "name": "Barringer, Arizona",
+        "emoji": "🕳️",
+        "value": 1.2,
+        "source": "Barringer Meteor Crater (Arizona, USA): 1.186 km diameter. ~50,000 years old. Best-preserved crater on Earth."
+      },
+      {
+        "id": "wf-vredefort-cr",
+        "name": "Vredefort, S. Africa",
+        "emoji": "💥",
+        "value": 300,
+        "source": "Vredefort crater (South Africa): ~300 km original diameter. ~2 billion years old. Largest confirmed crater on Earth."
+      },
+      {
+        "id": "wf-popigai-cr",
+        "name": "Popigai, Russia",
+        "emoji": "🧊",
+        "value": 100,
+        "source": "Popigai crater (Siberia, Russia): ~100 km diameter. ~36 million years old. Contains impact diamonds."
+      },
+      {
+        "id": "wf-sudbury-cr",
+        "name": "Sudbury, Canada",
+        "emoji": "🇨🇦",
+        "value": 130,
+        "source": "Sudbury Basin (Ontario, Canada): ~130 km diameter. ~1.85 billion years old. Major nickel source."
+      }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "CPU clock speed milestones",
+    "rule": "Slowest to fastest clock speed",
+    "unit": "MHz",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "tech-pentium4-mhz", "name": "Intel Pentium 4", "emoji": "⚡", "value": 3600, "source": "Intel Pentium 4 Prescott (2004): up to 3.6 GHz = 3600 MHz. Intel ARK." },
+      { "id": "tech-8086-mhz", "name": "Intel 8086", "emoji": "🖥️", "value": 5, "source": "Intel 8086 (1978): 5 MHz original clock speed. Intel datasheets." },
+      { "id": "tech-pentium-mhz", "name": "Intel Pentium", "emoji": "💻", "value": 66, "source": "Original Intel Pentium (1993): launched at 66 MHz. Intel processor history." },
+      { "id": "tech-4004-mhz", "name": "Intel 4004", "emoji": "🔬", "value": 0.74, "source": "Intel 4004 (1971): 740 kHz = 0.74 MHz. World's first microprocessor. Intel Museum." },
+      { "id": "tech-386dx-mhz", "name": "Intel 386 DX", "emoji": "🖱️", "value": 16, "source": "Intel 386 DX (1985): launched at 16 MHz. Intel ARK." }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Storage capacity of classic media",
+    "rule": "Smallest to largest storage capacity",
+    "unit": "MB",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "tech-dvd-mb", "name": "DVD (single-layer)", "emoji": "💿", "value": 4700, "source": "DVD-5 single-layer disc: 4.7 GB = 4700 MB. DVD Forum specification." },
+      { "id": "tech-cdr-mb", "name": "CD-ROM", "emoji": "💽", "value": 700, "source": "Standard 80-min CD-R: 700 MB capacity. Orange Book standard." },
+      { "id": "tech-bluray-mb", "name": "Blu-ray DL (50 GB)", "emoji": "🔵", "value": 50000, "source": "Dual-layer Blu-ray disc: 50 GB = 50,000 MB. Blu-ray Disc Association." },
+      { "id": "tech-floppy-mb", "name": "Floppy disk (3.5 in)", "emoji": "💾", "value": 1.44, "source": "3.5-inch HD floppy disk: 1.44 MB. IBM PC standard from 1987." },
+      { "id": "tech-zip-mb", "name": "Zip disk (100 MB)", "emoji": "📀", "value": 100, "source": "Iomega Zip disk 100 MB version (1994): 100 MB capacity. Iomega product spec." }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Transistors in landmark CPUs",
+    "rule": "Fewest to most transistors",
+    "unit": "thousands",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "tech-pentium-trans", "name": "Intel Pentium", "emoji": "🔥", "value": 3100, "source": "Intel Pentium (1993): 3.1 million = 3,100 thousand transistors. Intel press release." },
+      { "id": "tech-4004-trans", "name": "Intel 4004", "emoji": "🔬", "value": 2.3, "source": "Intel 4004 (1971): 2,300 transistors = 2.3 thousand. Intel Museum." },
+      { "id": "tech-386-trans", "name": "Intel 386", "emoji": "🖥️", "value": 275, "source": "Intel 386 (1985): 275,000 transistors = 275 thousand. Intel datasheets." },
+      { "id": "tech-core2quad-trans", "name": "Intel Core 2 Quad", "emoji": "⚙️", "value": 582000, "source": "Intel Core 2 Quad Q9000 (2008): 582 million = 582,000 thousand transistors. Intel ARK." },
+      { "id": "tech-8086-trans", "name": "Intel 8086", "emoji": "💡", "value": 29, "source": "Intel 8086 (1978): 29,000 transistors = 29 thousand. Intel processor history." }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Weight of Apple products",
+    "rule": "Lightest to heaviest weight",
+    "unit": "grams",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "tech-macpro-g", "name": "Mac Pro (2019)", "emoji": "🖥️", "value": 18100, "source": "Mac Pro tower (2019): 18.1 kg = 18,100 g. Apple spec sheet." },
+      { "id": "tech-ipodnano-g", "name": "iPod Nano (1st gen)", "emoji": "🎵", "value": 42, "source": "iPod nano 1st generation (2005): 42 g. Apple tech specs." },
+      { "id": "tech-imac24-g", "name": "iMac 24-inch (2021)", "emoji": "🖥️", "value": 4460, "source": "iMac 24-inch M1 (2021): 4.46 kg = 4,460 g. Apple tech specs." },
+      { "id": "tech-mbpro15-g", "name": "MacBook Pro 15 2018", "emoji": "💻", "value": 1830, "source": "MacBook Pro 15-inch (2018): 1.83 kg = 1,830 g. Apple tech specs." },
+      { "id": "tech-mbairorig-g", "name": "MacBook Air (orig.)", "emoji": "🌬️", "value": 1360, "source": "MacBook Air original (Jan 2008): 1.36 kg = 1,360 g. Apple tech specs." }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Max storage at product launch",
+    "rule": "Smallest to largest launch storage",
+    "unit": "MB",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "tech-iphone14pro-mb", "name": "iPhone 14 Pro (1 TB)", "emoji": "📱", "value": 1000000, "source": "iPhone 14 Pro Max (2022): top-tier 1 TB model = 1,000,000 MB. Apple spec sheet." },
+      { "id": "tech-iphone07-mb", "name": "iPhone (2007, 8 GB)", "emoji": "📲", "value": 8000, "source": "Original iPhone (2007): max 8 GB model = 8,000 MB. Apple product page archive." },
+      { "id": "tech-ipadpro-mb", "name": "iPad Pro (256 GB)", "emoji": "📋", "value": 256000, "source": "iPad Pro 1st gen (2016): top model 256 GB = 256,000 MB. Apple spec sheet." },
+      { "id": "tech-iphone3gs-mb", "name": "iPhone 3GS (32 GB)", "emoji": "📵", "value": 32000, "source": "iPhone 3GS (2009): top model 32 GB = 32,000 MB. Apple product page archive." },
+      { "id": "tech-ipod1gen-mb", "name": "iPod (1st gen, 5 GB)", "emoji": "🎧", "value": 5000, "source": "iPod 1st generation (2001): 5 GB model = 5,000 MB. Apple spec sheet." }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Process node size of CPUs",
+    "rule": "Smallest to largest process node",
+    "unit": "nm",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      { "id": "tech-m1-nm", "name": "Apple M1 chip", "emoji": "🍎", "value": 5, "source": "Apple M1 (2020): fabricated on TSMC 5 nm process. Apple press release Nov 2020." },
+      { "id": "tech-4004-nm", "name": "Intel 4004 (1971)", "emoji": "🔬", "value": 10000, "source": "Intel 4004 (1971): ~10,000 nm (10 µm) process. Intel Museum." },
+      { "id": "tech-pentiumpro-nm", "name": "Pentium Pro (1995)", "emoji": "💡", "value": 500, "source": "Intel Pentium Pro (1995): 500 nm (0.5 µm) process. Intel ARK." },
+      { "id": "tech-corei7-nm", "name": "Core i7-2600", "emoji": "⚡", "value": 32, "source": "Intel Core i7-2600 Sandy Bridge (2011): 32 nm process. Intel ARK." },
+      { "id": "tech-8086-nm", "name": "Intel 8086 (1978)", "emoji": "🖥️", "value": 3000, "source": "Intel 8086 (1978): ~3,000 nm (3 µm) process. Intel processor history." }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Manga series debut year",
+    "rule": "Oldest to newest debut year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "an-aot-year", "name": "Attack on Titan", "emoji": "⚔️", "value": 2009, "source": "Attack on Titan manga debuted in Bessatsu Shōnen Magazine September 2009. Completed 2021." },
+      { "id": "an-dragonball-year", "name": "Dragon Ball", "emoji": "🐉", "value": 1984, "source": "Dragon Ball manga began in Weekly Shōnen Jump November 20, 1984. Completed 1995." },
+      { "id": "an-naruto-year", "name": "Naruto", "emoji": "🍥", "value": 1999, "source": "Naruto manga debuted in Weekly Shōnen Jump September 21, 1999. Completed 2014." },
+      { "id": "an-onepiece-year", "name": "One Piece", "emoji": "☠️", "value": 1997, "source": "One Piece manga debuted in Weekly Shōnen Jump July 22, 1997. Ongoing." },
+      { "id": "an-bleach-year", "name": "Bleach", "emoji": "🌸", "value": 2001, "source": "Bleach manga debuted in Weekly Shōnen Jump August 7, 2001. Completed 2016." }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Episode count of completed anime",
+    "rule": "Fewest to most original episodes",
+    "unit": "episodes",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "an-dbz-eps", "name": "Dragon Ball Z", "emoji": "🐉", "value": 291, "source": "Dragon Ball Z (1989–1996): 291 episodes total. Toei Animation." },
+      { "id": "an-trigun-eps", "name": "Trigun", "emoji": "🌵", "value": 26, "source": "Trigun (1998): 26 episodes. Madhouse/Pioneer LDC." },
+      { "id": "an-bleach-eps", "name": "Bleach (TV series)", "emoji": "⚔️", "value": 366, "source": "Bleach original TV series (2004–2012): 366 episodes. TV Tokyo." },
+      { "id": "an-deathnote-eps", "name": "Death Note", "emoji": "📓", "value": 37, "source": "Death Note (2006–2007): 37 episodes. Madhouse." },
+      { "id": "an-yyh-eps", "name": "Yu Yu Hakusho", "emoji": "👻", "value": 112, "source": "Yu Yu Hakusho (1992–1994): 112 episodes. Pierrot." }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Ghibli film Japan box office",
+    "rule": "Lowest to highest Japan box office",
+    "unit": "billion yen",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "an-mononoke-bo", "name": "Princess Mononoke", "emoji": "🌳", "value": 19.3, "source": "Princess Mononoke (1997): ¥19.3 billion domestic Japan box office. Toho records." },
+      { "id": "an-nausicaa-bo", "name": "Nausicaa", "emoji": "🌪️", "value": 0.74, "source": "Nausicaä of the Valley of the Wind (1984): ¥0.74 billion Japan box office. Toho/Studio Ghibli." },
+      { "id": "an-spirited-bo", "name": "Spirited Away", "emoji": "🏮", "value": 30.8, "source": "Spirited Away (2001): ¥30.8 billion domestic Japan box office. Highest-grossing Japanese film at the time." },
+      { "id": "an-totoro-bo", "name": "My Neighbor Totoro", "emoji": "🌳", "value": 1.17, "source": "My Neighbor Totoro (1988): ¥1.17 billion domestic Japan box office. Toho/Studio Ghibli." },
+      { "id": "an-weathering-bo", "name": "Weathering with You", "emoji": "☔", "value": 14.0, "source": "Weathering with You (2019): ¥14.0 billion domestic Japan box office. CoMix Wave Films." }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Manga volumes in print",
+    "rule": "Fewest to most volumes",
+    "unit": "volumes",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "an-fma-vol2", "name": "Fullmetal Alchemist", "emoji": "⚗️", "value": 27, "source": "Fullmetal Alchemist manga: 27 volumes total (completed 2010). Square Enix." },
+      { "id": "an-jojo-vol", "name": "JoJo's Bizarre Adv.", "emoji": "💎", "value": 130, "source": "JoJo's Bizarre Adventure Parts 1–8: approximately 130 volumes combined (through 2022). Shueisha." },
+      { "id": "an-aot-vol", "name": "Attack on Titan", "emoji": "⚔️", "value": 34, "source": "Attack on Titan manga: 34 volumes total (completed 2021). Kodansha." },
+      { "id": "an-naruto-vol2", "name": "Naruto", "emoji": "🍥", "value": 72, "source": "Naruto manga: 72 volumes total (completed 2014). Shueisha." },
+      { "id": "an-dragonball-vol", "name": "Dragon Ball", "emoji": "🐉", "value": 42, "source": "Dragon Ball manga: 42 volumes total (completed 1995). Shueisha." }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Manga copies sold worldwide",
+    "rule": "Fewest to most copies sold",
+    "unit": "million copies",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "an-aot-sales", "name": "Attack on Titan", "emoji": "⚔️", "value": 100, "source": "Attack on Titan: 100 million copies sold worldwide as of 2021. Kodansha announcement." },
+      { "id": "an-fma-sales", "name": "Fullmetal Alchemist", "emoji": "⚗️", "value": 80, "source": "Fullmetal Alchemist: 80 million copies sold worldwide as of 2022. Square Enix." },
+      { "id": "an-dragonball-sales", "name": "Dragon Ball", "emoji": "🐉", "value": 250, "source": "Dragon Ball manga: 250 million+ copies sold worldwide as of 2019. Shueisha report." },
+      { "id": "an-demonslayer-sales", "name": "Demon Slayer", "emoji": "🗡️", "value": 150, "source": "Demon Slayer: Kimetsu no Yaiba: 150 million copies sold as of 2022. Shueisha." },
+      { "id": "an-bleach-sales", "name": "Bleach", "emoji": "🌸", "value": 120, "source": "Bleach manga: 120 million+ copies sold worldwide. Shueisha." }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Anime film production budget",
+    "rule": "Lowest to highest production budget",
+    "unit": "million USD",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      { "id": "an-akira-budget", "name": "Akira", "emoji": "🏍️", "value": 9, "source": "Akira (1988): production budget approximately $9 million USD (¥1.1 billion). TMS Entertainment." },
+      { "id": "an-grave-budget", "name": "Grave of the Fireflies", "emoji": "🕯️", "value": 1.6, "source": "Grave of the Fireflies (1988): production budget approximately $1.6 million USD. Studio Ghibli." },
+      { "id": "an-howls-budget", "name": "Howl's Moving Castle", "emoji": "🏰", "value": 24, "source": "Howl's Moving Castle (2004): production budget approximately $24 million USD. Studio Ghibli." },
+      { "id": "an-ghost-budget", "name": "Ghost in the Shell", "emoji": "🤖", "value": 3, "source": "Ghost in the Shell (1995): production budget approximately $3 million USD. Production I.G." },
+      { "id": "an-spirited-budget", "name": "Spirited Away", "emoji": "🏮", "value": 19, "source": "Spirited Away (2001): production budget approximately $19 million USD. Studio Ghibli." }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Worldwide box office gross",
+    "rule": "Lowest to highest box office gross",
+    "unit": "million USD",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "mv-avatar-bo", "name": "Avatar (2009)", "emoji": "🌿", "value": 2923, "source": "Avatar (2009): $2,923M worldwide gross (original release). Box Office Mojo." },
+      { "id": "mv-jaws-bo", "name": "Jaws (1975)", "emoji": "🦈", "value": 471, "source": "Jaws (1975): $471M worldwide gross. Box Office Mojo (adjusted)." },
+      { "id": "mv-titanic-bo", "name": "Titanic (1997)", "emoji": "🚢", "value": 2187, "source": "Titanic (1997): $2,187M worldwide gross (original release + 2012 rerelease). Box Office Mojo." },
+      { "id": "mv-et-bo", "name": "E.T. (1982)", "emoji": "👆", "value": 793, "source": "E.T. the Extra-Terrestrial (1982): $793M worldwide gross. Box Office Mojo." },
+      { "id": "mv-avengers-bo", "name": "The Avengers (2012)", "emoji": "🦸", "value": 1519, "source": "The Avengers (2012): $1,519M worldwide gross. Box Office Mojo." }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Film count in franchises",
+    "rule": "Fewest to most films in franchise",
+    "unit": "films",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "mv-jamesbond-ct", "name": "James Bond", "emoji": "🔫", "value": 25, "source": "James Bond (Eon Productions): 25 films from Dr. No (1962) to No Time to Die (2021)." },
+      { "id": "mv-bttf-ct", "name": "Back to the Future", "emoji": "⚡", "value": 3, "source": "Back to the Future trilogy: 3 films (1985, 1989, 1990). Universal Pictures." },
+      { "id": "mv-startrek-ct", "name": "Star Trek (orig. cast)", "emoji": "🖖", "value": 6, "source": "Star Trek original cast films I–VI (1979–1991): 6 films. Paramount Pictures." },
+      { "id": "mv-diehard-ct", "name": "Die Hard", "emoji": "💥", "value": 5, "source": "Die Hard franchise: 5 films (1988, 1990, 1995, 2007, 2013). 20th Century Fox." },
+      { "id": "mv-fastandfurious-ct", "name": "Fast & Furious", "emoji": "🚗", "value": 9, "source": "Fast & Furious main series: 9 films through F9 (2021). Universal Pictures." }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Year of classic horror films",
+    "rule": "Oldest to newest release year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "mv-getout-yr", "name": "Get Out", "emoji": "🏃", "value": 2017, "source": "Get Out (2017): directed by Jordan Peele. Won Oscar for Best Original Screenplay." },
+      { "id": "mv-psycho-yr", "name": "Psycho", "emoji": "🚿", "value": 1960, "source": "Psycho (1960): directed by Alfred Hitchcock. Universal Pictures." },
+      { "id": "mv-halloween-yr", "name": "Halloween", "emoji": "🎃", "value": 1978, "source": "Halloween (1978): directed by John Carpenter. Compass International Pictures." },
+      { "id": "mv-exorcist-yr", "name": "The Exorcist", "emoji": "😈", "value": 1973, "source": "The Exorcist (1973): directed by William Friedkin. Warner Bros." },
+      { "id": "mv-nightmare-yr", "name": "Nightmare on Elm Street", "emoji": "🔪", "value": 1984, "source": "A Nightmare on Elm Street (1984): directed by Wes Craven. New Line Cinema." }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Opening weekend box office",
+    "rule": "Lowest to highest opening weekend",
+    "unit": "million USD",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "mv-endgame-open", "name": "Avengers: Endgame", "emoji": "⚡", "value": 357.1, "source": "Avengers: Endgame (2019): $357.1M opening weekend (US). Box Office Mojo." },
+      { "id": "mv-jurassic-open", "name": "Jurassic Park", "emoji": "🦕", "value": 47.1, "source": "Jurassic Park (1993): $47.1M opening weekend (US). Box Office Mojo." },
+      { "id": "mv-blackpanther-open", "name": "Black Panther", "emoji": "🐾", "value": 202, "source": "Black Panther (2018): $202M opening weekend (US). Box Office Mojo." },
+      { "id": "mv-tdk-open", "name": "The Dark Knight", "emoji": "🦇", "value": 158.4, "source": "The Dark Knight (2008): $158.4M opening weekend (US). Box Office Mojo." },
+      { "id": "mv-sw1-open", "name": "Star Wars Ep. I", "emoji": "⚔️", "value": 64.8, "source": "Star Wars Episode I: The Phantom Menace (1999): $64.8M opening weekend (US). Box Office Mojo." }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Pixar film worldwide gross",
+    "rule": "Lowest to highest worldwide gross",
+    "unit": "million USD",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "mv-nemo-gross", "name": "Finding Nemo", "emoji": "🐠", "value": 940, "source": "Finding Nemo (2003): $940M worldwide gross. Box Office Mojo." },
+      { "id": "mv-cars-gross", "name": "Cars", "emoji": "🏎️", "value": 462, "source": "Cars (2006): $462M worldwide gross. Box Office Mojo." },
+      { "id": "mv-ts3-gross", "name": "Toy Story 3", "emoji": "🤠", "value": 1066, "source": "Toy Story 3 (2010): $1,066M worldwide gross. Box Office Mojo." },
+      { "id": "mv-incredibles-gross", "name": "The Incredibles", "emoji": "🦸", "value": 631, "source": "The Incredibles (2004): $631M worldwide gross. Box Office Mojo." },
+      { "id": "mv-up-gross", "name": "Up", "emoji": "🎈", "value": 735, "source": "Up (2009): $735M worldwide gross. Box Office Mojo." }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Feature films directed (pre-2023)",
+    "rule": "Fewest to most feature films directed",
+    "unit": "films",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      { "id": "mv-hitchcock-films", "name": "Alfred Hitchcock", "emoji": "🎬", "value": 53, "source": "Alfred Hitchcock: 53 feature films directed (1925–1976). Including silent era." },
+      { "id": "mv-nolan-films", "name": "Christopher Nolan", "emoji": "🎥", "value": 12, "source": "Christopher Nolan: 12 feature films directed (1998–2023). Includes Following through Oppenheimer." },
+      { "id": "mv-spielberg-films", "name": "Steven Spielberg", "emoji": "🎞️", "value": 36, "source": "Steven Spielberg: 36 feature films directed (1971–2022) including Duel." },
+      { "id": "mv-scorsese-films", "name": "Martin Scorsese", "emoji": "🎦", "value": 25, "source": "Martin Scorsese: 25 feature films directed (1967–2019) through The Irishman." },
+      { "id": "mv-kubrick-films", "name": "Stanley Kubrick", "emoji": "🎭", "value": 13, "source": "Stanley Kubrick: 13 feature films directed (1953–1999)." }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Best-selling games of all time",
+    "rule": "Fewest to most copies sold",
+    "unit": "million copies",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "gm-wii-sports-sales", "name": "Wii Sports", "emoji": "🏓", "value": 83, "source": "Wii Sports (2006): 82.9M copies including bundled units as of 2021. Nintendo IR." },
+      { "id": "gm-pokemon-rb-sales", "name": "Pokémon Red/Blue", "emoji": "🎮", "value": 31, "source": "Pokémon Red/Blue (1996): 31.38M combined as of 2021. The Pokémon Company." },
+      { "id": "gm-minecraft-sales", "name": "Minecraft", "emoji": "⛏️", "value": 238, "source": "Minecraft (all versions, 2011): 238M copies sold as of 2022. Microsoft." },
+      { "id": "gm-smb-sales", "name": "Super Mario Bros", "emoji": "🍄", "value": 40, "source": "Super Mario Bros (NES, 1985): 40.24M copies. Nintendo sales data." },
+      { "id": "gm-mk8d-sales", "name": "Mario Kart 8 Deluxe", "emoji": "🏎️", "value": 60, "source": "Mario Kart 8 Deluxe (Switch, 2017): 60.1M as of Sep 2022. Nintendo IR." }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Console launch price (USD)",
+    "rule": "Cheapest to most expensive at launch",
+    "unit": "USD",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "gm-ps3-price", "name": "PlayStation 3", "emoji": "🕹️", "value": 499, "source": "PlayStation 3 (2006 US launch): $499 for 20 GB model. Sony press release." },
+      { "id": "gm-gameboy-price", "name": "Game Boy", "emoji": "🎮", "value": 89, "source": "Game Boy (1989 US launch): $89.99. Nintendo pricing." },
+      { "id": "gm-ps1-price", "name": "PlayStation", "emoji": "🎮", "value": 299, "source": "PlayStation 1 (1995 US launch): $299. Sony press release." },
+      { "id": "gm-atari-price", "name": "Atari 2600", "emoji": "👾", "value": 199, "source": "Atari 2600 (1977 US launch): $199. Atari press materials." },
+      { "id": "gm-nes-price", "name": "NES Deluxe Set", "emoji": "🎮", "value": 179, "source": "Nintendo NES Deluxe Set (1985 US launch): $179.99. Nintendo pricing." }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Video game franchise total sales",
+    "rule": "Fewest to most copies sold (millions)",
+    "unit": "million copies",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "gm-mario-franchise", "name": "Mario", "emoji": "🍄", "value": 800, "source": "Mario franchise (all games): 800M+ copies as of 2022. Nintendo IR." },
+      { "id": "gm-ff-franchise", "name": "Final Fantasy", "emoji": "⚔️", "value": 164, "source": "Final Fantasy franchise: 164M copies sold as of 2022. Square Enix annual report." },
+      { "id": "gm-pokemon-franchise", "name": "Pokémon", "emoji": "⚡", "value": 440, "source": "Pokémon main series games: 440M copies sold as of 2022. The Pokémon Company." },
+      { "id": "gm-fifa-franchise", "name": "FIFA (EA series)", "emoji": "⚽", "value": 325, "source": "EA FIFA franchise: 325M copies through FIFA 21. EA financial disclosures." },
+      { "id": "gm-minecraft-franchise", "name": "Minecraft", "emoji": "⛏️", "value": 238, "source": "Minecraft (all platforms): 238M copies as of 2022. Microsoft." }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Max display resolution by console",
+    "rule": "Lowest to highest display resolution",
+    "unit": "horizontal pixels",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "gm-ps3-res", "name": "PlayStation 3", "emoji": "📺", "value": 1920, "source": "PlayStation 3 (2006): 1920×1080p HD output capability. Sony technical specs." },
+      { "id": "gm-atari-res", "name": "Atari 2600", "emoji": "👾", "value": 160, "source": "Atari 2600: 160×192 pixel display resolution. Atari technical manual." },
+      { "id": "gm-nes-res", "name": "NES", "emoji": "🎮", "value": 256, "source": "Nintendo NES: 256×240 pixel resolution. Nintendo hardware specifications." },
+      { "id": "gm-ps2-res", "name": "PlayStation 2", "emoji": "🕹️", "value": 640, "source": "PlayStation 2: 640×480 standard maximum. Sony technical specs." },
+      { "id": "gm-ps1-res", "name": "PlayStation", "emoji": "🎮", "value": 320, "source": "PlayStation 1: 320×240 standard resolution (up to 640×480 in some modes). Sony hardware specs." }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Nintendo console units sold",
+    "rule": "Fewest to most units sold (millions)",
+    "unit": "million units",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "gm-ds-sales", "name": "Nintendo DS", "emoji": "🎮", "value": 154, "source": "Nintendo DS: 154.02M units sold (all models). Nintendo IR as of 2022." },
+      { "id": "gm-gamecube-sales", "name": "GameCube", "emoji": "🟣", "value": 21.74, "source": "Nintendo GameCube: 21.74M units sold. Nintendo IR." },
+      { "id": "gm-wii-sales", "name": "Wii", "emoji": "🕹️", "value": 101.63, "source": "Nintendo Wii: 101.63M units sold. Nintendo IR." },
+      { "id": "gm-n64-sales", "name": "Nintendo 64", "emoji": "🟡", "value": 33, "source": "Nintendo 64: 32.93M units sold (rounded to 33M). Nintendo IR." },
+      { "id": "gm-nes-sales", "name": "NES", "emoji": "⬛", "value": 61.91, "source": "Nintendo Entertainment System: 61.91M units sold. Nintendo IR." }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "PC game RAM requirement at launch",
+    "rule": "Lowest to highest RAM requirement",
+    "unit": "MB",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      { "id": "gm-doom-ram", "name": "Doom (1993)", "emoji": "👹", "value": 4, "source": "Doom (1993): minimum 4 MB RAM. id Software README.TXT." },
+      { "id": "gm-crysis-ram", "name": "Crysis (2007)", "emoji": "🌴", "value": 1000, "source": "Crysis (2007): minimum 1 GB = 1,000 MB RAM. Crytek system requirements." },
+      { "id": "gm-wc3-ram", "name": "Warcraft III", "emoji": "⚔️", "value": 128, "source": "Warcraft III: Reign of Chaos (2002): minimum 128 MB RAM. Blizzard system requirements." },
+      { "id": "gm-hl-ram", "name": "Half-Life", "emoji": "🔧", "value": 24, "source": "Half-Life (1998): minimum 24 MB RAM. Valve system requirements." },
+      { "id": "gm-css-ram", "name": "CS: Source", "emoji": "🔫", "value": 256, "source": "Counter-Strike: Source (2004): minimum 256 MB RAM. Valve system requirements." }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "Record football transfer fees",
+    "rule": "Lowest to highest transfer fee",
+    "unit": "million EUR",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "sc-neymar-fee", "name": "Neymar", "emoji": "🇧🇷", "value": 222, "source": "Neymar: €222M to PSG (2017). World record transfer fee. FIFA transfer records." },
+      { "id": "sc-figo-fee", "name": "Luis Figo", "emoji": "🇵🇹", "value": 60, "source": "Luis Figo: €60M to Real Madrid (2000). World record at the time." },
+      { "id": "sc-pogba-fee", "name": "Paul Pogba", "emoji": "🇫🇷", "value": 105, "source": "Paul Pogba: €105M to Manchester United (2016). World record at the time." },
+      { "id": "sc-zidane-fee", "name": "Zinedine Zidane", "emoji": "✨", "value": 73.5, "source": "Zinedine Zidane: €73.5M to Real Madrid (2001). World record at the time." },
+      { "id": "sc-cr7-fee", "name": "Cristiano Ronaldo", "emoji": "⚡", "value": 94, "source": "Cristiano Ronaldo: €94M to Real Madrid (2009). World record at the time." }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "UEFA Champions League titles",
+    "rule": "Fewest to most European Cup/CL titles",
+    "unit": "titles",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "sc-ajax-ucl", "name": "Ajax", "emoji": "🇳🇱", "value": 4, "source": "Ajax: 4 European Cup/Champions League titles (1971, 1972, 1973, 1995)." },
+      { "id": "sc-realmadrid-ucl", "name": "Real Madrid", "emoji": "👑", "value": 14, "source": "Real Madrid: 14 UEFA Champions League titles through 2022. Record holders." },
+      { "id": "sc-acmilan-ucl", "name": "AC Milan", "emoji": "🔴", "value": 7, "source": "AC Milan: 7 European Cup/Champions League titles (1963, 1969, 1989, 1990, 1994, 2003, 2007)." },
+      { "id": "sc-barcelona-ucl", "name": "Barcelona", "emoji": "🔵", "value": 5, "source": "FC Barcelona: 5 Champions League titles (1992, 2006, 2009, 2011, 2015)." },
+      { "id": "sc-bayern-ucl", "name": "Bayern Munich", "emoji": "🏆", "value": 6, "source": "Bayern Munich: 6 European Cup/Champions League titles (1974, 1975, 1976, 2001, 2013, 2020)." }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "FIFA World Cup host country year",
+    "rule": "Oldest to newest hosting year",
+    "unit": "year",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "sc-wc1998-yr", "name": "France (1998)", "emoji": "🇫🇷", "value": 1998, "source": "1998 FIFA World Cup hosted by France. France won the tournament." },
+      { "id": "sc-wc1930-yr", "name": "Uruguay (1930)", "emoji": "🇺🇾", "value": 1930, "source": "1930 FIFA World Cup — inaugural tournament, hosted by Uruguay. Uruguay won." },
+      { "id": "sc-wc2010-yr", "name": "South Africa (2010)", "emoji": "🇿🇦", "value": 2010, "source": "2010 FIFA World Cup hosted by South Africa. First on African continent." },
+      { "id": "sc-wc1970-yr", "name": "Mexico (1970)", "emoji": "🇲🇽", "value": 1970, "source": "1970 FIFA World Cup hosted by Mexico. Brazil won their 3rd title." },
+      { "id": "sc-wc1954-yr", "name": "West Germany (1954)", "emoji": "🇩🇪", "value": 1954, "source": "1954 FIFA World Cup hosted by Switzerland; West Germany won. (Note: host was Switzerland — 1954 host.)" }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "Top scorer in one World Cup",
+    "rule": "Fewest to most goals in tournament",
+    "unit": "goals",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "sc-fontaine-goals", "name": "Fontaine (1958)", "emoji": "🇫🇷", "value": 13, "source": "Just Fontaine (France, 1958): 13 goals in one tournament. All-time World Cup single-tournament record." },
+      { "id": "sc-kocsis-goals", "name": "Kocsis (1954)", "emoji": "🇭🇺", "value": 11, "source": "Sándor Kocsis (Hungary, 1954): 11 goals, helped Hungary to the final." },
+      { "id": "sc-muller-goals", "name": "Gerd Müller (1970)", "emoji": "🇩🇪", "value": 10, "source": "Gerd Müller (West Germany, 1970): 10 goals (Golden Boot), scored 4 in the semifinal." },
+      { "id": "sc-ronaldo-goals", "name": "Ronaldo (2002)", "emoji": "🇧🇷", "value": 8, "source": "Ronaldo (Brazil, 2002): 8 goals (Golden Boot), including 2 in the final. Brazil won." },
+      { "id": "sc-jairzinho-goals", "name": "Jairzinho (1970)", "emoji": "🇧🇷", "value": 7, "source": "Jairzinho (Brazil, 1970): 7 goals, scored in every match of the tournament." }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "La Liga titles per club",
+    "rule": "Fewest to most league titles",
+    "unit": "titles",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "sc-realmadrid-liga", "name": "Real Madrid", "emoji": "👑", "value": 35, "source": "Real Madrid: 35 La Liga titles through 2021-22 season (most in Spanish football history)." },
+      { "id": "sc-valencia-liga", "name": "Valencia", "emoji": "🦇", "value": 6, "source": "Valencia CF: 6 La Liga titles (most recent 2003-04)." },
+      { "id": "sc-atletico-liga", "name": "Atletico Madrid", "emoji": "🔴", "value": 11, "source": "Atlético de Madrid: 11 La Liga titles through 2020-21 season." },
+      { "id": "sc-bilbao-liga", "name": "Athletic Bilbao", "emoji": "🦁", "value": 8, "source": "Athletic Club Bilbao: 8 La Liga titles (most recent 1983-84)." },
+      { "id": "sc-barcelona-liga", "name": "Barcelona", "emoji": "🔵", "value": 26, "source": "FC Barcelona: 26 La Liga titles through 2021-22 season." }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "Career international caps (retired)",
+    "rule": "Fewest to most international caps",
+    "unit": "caps",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      { "id": "sc-matthaeus-caps", "name": "Lothar Matthäus", "emoji": "🇩🇪", "value": 150, "source": "Lothar Matthäus (Germany): 150 international caps (1980–2000). German record." },
+      { "id": "sc-cruyff-caps", "name": "Johan Cruyff", "emoji": "🇳🇱", "value": 48, "source": "Johan Cruyff (Netherlands): 48 international caps (1966–1977). Limited due to 1974 World Cup boycott." },
+      { "id": "sc-ahmedhasan-caps", "name": "Ahmed Hassan", "emoji": "🇪🇬", "value": 184, "source": "Ahmed Hassan (Egypt): 184 international caps (1995–2012). Men's world record at the time of his retirement." },
+      { "id": "sc-maradona-caps", "name": "Diego Maradona", "emoji": "🇦🇷", "value": 91, "source": "Diego Maradona (Argentina): 91 international caps (1977–1994)." },
+      { "id": "sc-zidane-caps", "name": "Zinedine Zidane", "emoji": "🇫🇷", "value": 108, "source": "Zinedine Zidane (France): 108 international caps (1994–2006). Two World Cup, one Euro." }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Best-selling albums of all time",
+    "rule": "Fewest to most copies sold (millions)",
+    "unit": "million copies",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "mu-thriller-sales", "name": "Thriller", "emoji": "👑", "value": 70, "source": "Thriller (Michael Jackson, 1982): ~70M copies sold. RIAA/industry estimates. Best-selling album ever." },
+      { "id": "mu-abbeyroad-sales", "name": "Abbey Road", "emoji": "🎸", "value": 31, "source": "Abbey Road (Beatles, 1969): ~31M copies sold. RIAA certified Diamond." },
+      { "id": "mu-bib-sales", "name": "Back in Black", "emoji": "🤘", "value": 50, "source": "Back in Black (AC/DC, 1980): ~50M copies sold. Second best-selling album." },
+      { "id": "mu-snf-sales", "name": "Saturday Night Fever", "emoji": "🕺", "value": 40, "source": "Saturday Night Fever soundtrack (1977): ~40M copies sold. RIAA certified." },
+      { "id": "mu-dsotm-sales", "name": "Dark Side of the Moon", "emoji": "🌑", "value": 45, "source": "Dark Side of the Moon (Pink Floyd, 1973): ~45M copies sold. Among best-selling albums." }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Weeks at #1 on US Hot 100",
+    "rule": "Fewest to most weeks at number one",
+    "unit": "weeks",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "mu-oldtownroad-wks", "name": "Old Town Road", "emoji": "🐎", "value": 19, "source": "Old Town Road (Lil Nas X ft. Billy Ray Cyrus, 2019): 19 weeks at #1. All-time US Hot 100 record." },
+      { "id": "mu-thatswhatillike-wks", "name": "That's What I Like", "emoji": "🎤", "value": 5, "source": "That's What I Like (Bruno Mars, 2017): 5 weeks at #1 on the Hot 100." },
+      { "id": "mu-despacito-wks", "name": "Despacito", "emoji": "🌴", "value": 16, "source": "Despacito (Luis Fonsi ft. Daddy Yankee, 2017): 16 weeks at #1 on Hot 100." },
+      { "id": "mu-fantasy-wks", "name": "Fantasy (Mariah)", "emoji": "🎵", "value": 8, "source": "Fantasy (Mariah Carey, 1995): 8 weeks at #1 on Hot 100." },
+      { "id": "mu-missingyou-wks", "name": "I'll Be Missing You", "emoji": "😔", "value": 11, "source": "I'll Be Missing You (Puff Daddy ft. Faith Evans, 1997): 11 weeks at #1 on Hot 100." }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "US Hot 100 #1 singles by artist",
+    "rule": "Fewest to most number-one singles",
+    "unit": "#1 singles",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "mu-mariah-num1", "name": "Mariah Carey", "emoji": "🎤", "value": 19, "source": "Mariah Carey: 19 US Hot 100 #1 singles (1990–2019). Most by any solo artist." },
+      { "id": "mu-boyz2men-num1", "name": "Boyz II Men", "emoji": "🎵", "value": 4, "source": "Boyz II Men: 4 US Hot 100 #1 singles. End of the Road, I'll Make Love to You, One Sweet Day, 4 Seasons." },
+      { "id": "mu-mj-num1", "name": "Michael Jackson", "emoji": "🌟", "value": 13, "source": "Michael Jackson: 13 US Hot 100 #1 singles across his career (1971–1995)." },
+      { "id": "mu-janet-num1", "name": "Janet Jackson", "emoji": "💫", "value": 10, "source": "Janet Jackson: 10 US Hot 100 #1 singles across her career." },
+      { "id": "mu-whitney-num1", "name": "Whitney Houston", "emoji": "🎼", "value": 11, "source": "Whitney Houston: 11 US Hot 100 #1 singles across her career." }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Studio albums released (pre-2023)",
+    "rule": "Fewest to most studio albums",
+    "unit": "albums",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "mu-elton-albums", "name": "Elton John", "emoji": "🎹", "value": 32, "source": "Elton John: 32 studio albums (1969–2021, through The Lockdown Sessions). Wikipedia discography." },
+      { "id": "mu-led-albums", "name": "Led Zeppelin", "emoji": "🎸", "value": 9, "source": "Led Zeppelin: 9 studio albums (1969–1979). Atlantic Records." },
+      { "id": "mu-bowie-albums", "name": "David Bowie", "emoji": "⚡", "value": 27, "source": "David Bowie: 27 studio albums (1967–2016, through Blackstar). Wikipedia discography." },
+      { "id": "mu-beatles-albums", "name": "The Beatles", "emoji": "🍎", "value": 13, "source": "The Beatles: 13 studio albums (1963–1970). Apple/EMI." },
+      { "id": "mu-stones-albums", "name": "The Rolling Stones", "emoji": "👅", "value": 24, "source": "The Rolling Stones: 24 studio albums (1964–2016, through Blue & Lonesome). Polydor/Interscope." }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Concert tour gross revenue",
+    "rule": "Lowest to highest tour gross (million $)",
+    "unit": "million USD",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "mu-u2360-gross", "name": "U2 (360° Tour)", "emoji": "🎸", "value": 736, "source": "U2 360° Tour (2009–2011): $736M gross. Pollstar all-time record at the time." },
+      { "id": "mu-eagles94-gross", "name": "Eagles (1994)", "emoji": "🦅", "value": 79.4, "source": "Eagles Hell Freezes Over tour (1994–96): $79.4M gross. Pollstar." },
+      { "id": "mu-mjbad-gross", "name": "MJ (Bad Tour)", "emoji": "🌟", "value": 125, "source": "Michael Jackson Bad tour (1987–89): ~$125M gross. Pollstar estimates." },
+      { "id": "mu-madonna08-gross", "name": "Madonna (2008)", "emoji": "💃", "value": 408, "source": "Madonna Sticky & Sweet tour (2008–09): $408M gross. Pollstar, one of highest-grossing tours ever." },
+      { "id": "mu-stones89-gross", "name": "Rolling Stones '89", "emoji": "👅", "value": 98, "source": "Rolling Stones Steel Wheels/Urban Jungle tour (1989–90): $98M gross. Pollstar." }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Length of iconic songs",
+    "rule": "Shortest to longest song duration",
+    "unit": "seconds",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      { "id": "mu-heyjude-secs", "name": "Hey Jude", "emoji": "🎵", "value": 431, "source": "Hey Jude (The Beatles, 1968): 7 minutes 11 seconds = 431 seconds. Studio recording." },
+      { "id": "mu-happyxmas-secs", "name": "Happy Xmas (War Is Over)", "emoji": "🕊️", "value": 210, "source": "Happy Xmas (War Is Over) (John Lennon, 1971): 3 minutes 30 seconds = 210 seconds." },
+      { "id": "mu-suppersready-secs", "name": "Supper's Ready", "emoji": "🌟", "value": 1374, "source": "Supper's Ready (Genesis, 1972): 22 minutes 54 seconds = 1,374 seconds. From Foxtrot." },
+      { "id": "mu-freebird-secs", "name": "Free Bird (live)", "emoji": "🐦", "value": 856, "source": "Free Bird live (Lynyrd Skynyrd, 1976): 14 minutes 16 seconds = 856 seconds. One More from the Road." },
+      { "id": "mu-americanpie-secs", "name": "American Pie", "emoji": "🥧", "value": 516, "source": "American Pie (Don McLean, 1971): 8 minutes 36 seconds = 516 seconds. Album version." }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Diameter of moons and dwarf planets",
+    "rule": "Smallest to largest diameter",
+    "unit": "km",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "sci-pluto-dia", "name": "Pluto", "emoji": "🔵", "value": 2376, "source": "Pluto (dwarf planet): 2,376 km mean diameter. NASA New Horizons flyby 2015." },
+      { "id": "sci-ceres-dia", "name": "Ceres", "emoji": "⚫", "value": 940, "source": "Ceres (dwarf planet in asteroid belt): ~940 km mean diameter. NASA Dawn mission." },
+      { "id": "sci-titan-dia", "name": "Titan (Saturn)", "emoji": "🟤", "value": 5151, "source": "Titan (largest moon of Saturn): 5,151 km diameter. NASA Cassini data." },
+      { "id": "sci-moon-dia", "name": "Moon (Earth)", "emoji": "🌙", "value": 3474, "source": "Earth's Moon: 3,474 km mean diameter. NASA Lunar Reconnaissance Orbiter data." },
+      { "id": "sci-europa-dia", "name": "Europa", "emoji": "🌐", "value": 3122, "source": "Europa (moon of Jupiter): 3,122 km diameter. Potential subsurface ocean. NASA." }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Mass of planets (Earth masses)",
+    "rule": "Lightest to heaviest planet mass",
+    "unit": "Earth masses",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "sci-uranus-mass", "name": "Uranus", "emoji": "🌀", "value": 14.5, "source": "Uranus: 14.536 Earth masses. NASA planetary fact sheet." },
+      { "id": "sci-mars-mass", "name": "Mars", "emoji": "🔴", "value": 0.107, "source": "Mars: 0.107 Earth masses. NASA planetary fact sheet." },
+      { "id": "sci-earth-mass", "name": "Earth", "emoji": "🌍", "value": 1, "source": "Earth: 1 Earth mass (reference body). 5.972 × 10²⁴ kg." },
+      { "id": "sci-jupiter-mass", "name": "Jupiter", "emoji": "🪐", "value": 318, "source": "Jupiter: 317.8 Earth masses. Most massive planet in the solar system. NASA." },
+      { "id": "sci-venus-mass", "name": "Venus", "emoji": "⭐", "value": 0.815, "source": "Venus: 0.815 Earth masses. Very similar in size to Earth. NASA." }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Distance from Sun",
+    "rule": "Closest to farthest from the Sun",
+    "unit": "AU",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "sci-neptune-au", "name": "Neptune", "emoji": "🔵", "value": 30.1, "source": "Neptune: 30.07 AU average distance from Sun. Farthest major planet. NASA." },
+      { "id": "sci-mercury-au", "name": "Mercury", "emoji": "⚫", "value": 0.39, "source": "Mercury: 0.387 AU average distance from Sun. Closest planet to the Sun. NASA." },
+      { "id": "sci-earth-au", "name": "Earth", "emoji": "🌍", "value": 1, "source": "Earth: 1 AU (by definition). 1 AU = approximately 149.6 million km." },
+      { "id": "sci-uranus-au", "name": "Uranus", "emoji": "🌀", "value": 19.2, "source": "Uranus: 19.19 AU average distance from Sun. NASA planetary fact sheet." },
+      { "id": "sci-jupiter-au", "name": "Jupiter", "emoji": "🪐", "value": 5.2, "source": "Jupiter: 5.20 AU average distance from Sun. NASA planetary fact sheet." }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Atomic number of elements",
+    "rule": "Lowest to highest atomic number",
+    "unit": "atomic number",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "sci-iron-atom", "name": "Iron", "emoji": "🔩", "value": 26, "source": "Iron (Fe): atomic number 26. Element essential for hemoglobin in blood." },
+      { "id": "sci-hydrogen-atom", "name": "Hydrogen", "emoji": "💧", "value": 1, "source": "Hydrogen (H): atomic number 1. Lightest element and most abundant in the universe." },
+      { "id": "sci-uranium-atom", "name": "Uranium", "emoji": "☢️", "value": 92, "source": "Uranium (U): atomic number 92. Heaviest naturally occurring element. Used in nuclear fuel." },
+      { "id": "sci-carbon-atom", "name": "Carbon", "emoji": "💎", "value": 6, "source": "Carbon (C): atomic number 6. Basis of all known organic chemistry." },
+      { "id": "sci-silicon-atom", "name": "Silicon", "emoji": "🖥️", "value": 14, "source": "Silicon (Si): atomic number 14. Used in computer chips and solar panels." }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Density of common materials",
+    "rule": "Lowest to highest density",
+    "unit": "g/cm³",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "sci-iron-dens", "name": "Iron", "emoji": "🔩", "value": 7.87, "source": "Iron: density 7.874 g/cm³ at room temperature. CRC Handbook of Chemistry and Physics." },
+      { "id": "sci-water-dens", "name": "Water", "emoji": "💧", "value": 1.0, "source": "Water (liquid, 4°C): density exactly 1.000 g/cm³. Reference standard for density." },
+      { "id": "sci-lead-dens", "name": "Lead", "emoji": "🏋️", "value": 11.34, "source": "Lead: density 11.34 g/cm³. Used in radiation shielding and batteries." },
+      { "id": "sci-oak-dens", "name": "Oak wood", "emoji": "🌳", "value": 0.75, "source": "Oak wood (dry): density ~0.75 g/cm³ (floats in water). CRC Handbook." },
+      { "id": "sci-aluminum-dens", "name": "Aluminum", "emoji": "✈️", "value": 2.7, "source": "Aluminum (Al): density 2.699 g/cm³. Light metal used in aerospace." }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Half-life of radioactive isotopes",
+    "rule": "Shortest to longest half-life",
+    "unit": "years",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      { "id": "sci-pu239-hl", "name": "Plutonium-239", "emoji": "☢️", "value": 24110, "source": "Plutonium-239: half-life 24,110 years. Used in nuclear weapons and reactors." },
+      { "id": "sci-radium226-hl", "name": "Radium-226", "emoji": "⚡", "value": 1600, "source": "Radium-226: half-life ~1,600 years. Discovered by Marie Curie in 1898." },
+      { "id": "sci-k40-hl", "name": "Potassium-40", "emoji": "🍌", "value": 1250000000, "source": "Potassium-40 (K-40): half-life 1.25 billion years. Present in bananas and human body." },
+      { "id": "sci-c14-hl", "name": "Carbon-14", "emoji": "🦴", "value": 5730, "source": "Carbon-14: half-life 5,730 years. Used in radiocarbon dating of organic material." },
+      { "id": "sci-u235-hl", "name": "Uranium-235", "emoji": "🔬", "value": 703800000, "source": "Uranium-235: half-life 703.8 million years. Fissile isotope used in nuclear reactors." }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "Population of major cities",
+    "rule": "Smallest to largest city population",
+    "unit": "million people",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "geo-tokyo-pop", "name": "Tokyo", "emoji": "🗼", "value": 13.96, "source": "Tokyo (special wards): ~13.96 million people (2022). Japan Statistics Bureau." },
+      { "id": "geo-vienna-pop", "name": "Vienna", "emoji": "🎼", "value": 1.8, "source": "Vienna: 1.8 million people (city proper, 2022). Statistics Austria." },
+      { "id": "geo-shanghai-pop", "name": "Shanghai", "emoji": "🌆", "value": 24.9, "source": "Shanghai: 24.9 million (municipality, 2020 census). China National Bureau of Statistics." },
+      { "id": "geo-singapore-pop", "name": "Singapore", "emoji": "🦁", "value": 5.8, "source": "Singapore: 5.8 million people (2022). Singapore Department of Statistics." },
+      { "id": "geo-london-pop", "name": "London", "emoji": "🎡", "value": 8.9, "source": "London (City of London + 32 boroughs): ~8.9 million (2021 census). Office for National Statistics." }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "Length of major rivers",
+    "rule": "Shortest to longest river length",
+    "unit": "km",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "geo-amazon-rv", "name": "Amazon", "emoji": "🌿", "value": 6400, "source": "Amazon River (South America): ~6,400 km. World's largest river by discharge." },
+      { "id": "geo-thames-rv", "name": "Thames", "emoji": "🎡", "value": 346, "source": "Thames River (England): 346 km. Flows through London." },
+      { "id": "geo-mekong-rv", "name": "Mekong", "emoji": "🌾", "value": 4350, "source": "Mekong River (Southeast Asia): ~4,350 km. Flows through 6 countries." },
+      { "id": "geo-rhine-rv", "name": "Rhine", "emoji": "🏰", "value": 1230, "source": "Rhine River (Europe): 1,230 km. Flows through Switzerland, Germany, Netherlands." },
+      { "id": "geo-volga-rv", "name": "Volga", "emoji": "🇷🇺", "value": 3690, "source": "Volga River (Russia): 3,690 km. Longest river in Europe." }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "Area of famous lakes",
+    "rule": "Smallest to largest lake area",
+    "unit": "km²",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "geo-titicaca-lake", "name": "Lake Titicaca", "emoji": "🏔️", "value": 8372, "source": "Lake Titicaca (Peru/Bolivia): 8,372 km². Highest navigable lake in the world." },
+      { "id": "geo-caspian-lake", "name": "Caspian Sea", "emoji": "🌊", "value": 371000, "source": "Caspian Sea: ~371,000 km². Largest lake in the world (landlocked)." },
+      { "id": "geo-superior-lake", "name": "Lake Superior", "emoji": "🏔️", "value": 82103, "source": "Lake Superior: 82,103 km². Largest of the Great Lakes by surface area." },
+      { "id": "geo-ontario-lake", "name": "Lake Ontario", "emoji": "💧", "value": 18960, "source": "Lake Ontario: 18,960 km². Smallest of the five Great Lakes by surface area." },
+      { "id": "geo-baikal-lake", "name": "Lake Baikal", "emoji": "❄️", "value": 31722, "source": "Lake Baikal (Russia): 31,722 km². World's deepest lake, holds 20% of Earth's fresh surface water." }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "UNESCO World Heritage Sites",
+    "rule": "Fewest to most World Heritage Sites",
+    "unit": "sites",
+    "difficulty": "easy",
+    "verified": false,
+    "items": [
+      { "id": "geo-germany-whs", "name": "Germany", "emoji": "🇩🇪", "value": 52, "source": "Germany: 52 UNESCO World Heritage Sites as of 2022. UNESCO World Heritage List." },
+      { "id": "geo-japan-whs", "name": "Japan", "emoji": "🇯🇵", "value": 25, "source": "Japan: 25 UNESCO World Heritage Sites as of 2022." },
+      { "id": "geo-italy-whs", "name": "Italy", "emoji": "🇮🇹", "value": 58, "source": "Italy: 58 UNESCO World Heritage Sites as of 2022. Most in Europe." },
+      { "id": "geo-india-whs", "name": "India", "emoji": "🇮🇳", "value": 42, "source": "India: 42 UNESCO World Heritage Sites as of 2022." },
+      { "id": "geo-mexico-whs", "name": "Mexico", "emoji": "🇲🇽", "value": 35, "source": "Mexico: 35 UNESCO World Heritage Sites as of 2022." }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "Coastline length by country",
+    "rule": "Shortest to longest coastline",
+    "unit": "km",
+    "difficulty": "medium",
+    "verified": false,
+    "items": [
+      { "id": "geo-usa-coast", "name": "United States", "emoji": "🇺🇸", "value": 19924, "source": "United States coastline: 19,924 km (general coastline, mainland). CIA World Factbook." },
+      { "id": "geo-germany-coast", "name": "Germany", "emoji": "🇩🇪", "value": 2389, "source": "Germany coastline: 2,389 km. Baltic and North Sea coasts. CIA World Factbook." },
+      { "id": "geo-japan-coast", "name": "Japan", "emoji": "🇯🇵", "value": 29750, "source": "Japan coastline: 29,751 km. Island nation with extensive coastline. CIA World Factbook." },
+      { "id": "geo-uk-coast", "name": "United Kingdom", "emoji": "🇬🇧", "value": 12429, "source": "United Kingdom coastline: 12,429 km. CIA World Factbook." },
+      { "id": "geo-denmark-coast", "name": "Denmark", "emoji": "🇩🇰", "value": 7314, "source": "Denmark coastline: 7,314 km (includes islands). CIA World Factbook." }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "Length of international land borders",
+    "rule": "Shortest to longest land border",
+    "unit": "km",
+    "difficulty": "hard",
+    "verified": false,
+    "items": [
+      { "id": "geo-russia-border", "name": "Russia", "emoji": "🇷🇺", "value": 22408, "source": "Russia: 22,408 km total land border. World's longest national land border. CIA World Factbook." },
+      { "id": "geo-andorra-border", "name": "Andorra", "emoji": "🏔️", "value": 120, "source": "Andorra: 120.3 km total land border (120 km France + 63 km Spain = borders 2 countries). CIA World Factbook." },
+      { "id": "geo-austria-border", "name": "Austria", "emoji": "🇦🇹", "value": 2524, "source": "Austria: 2,524 km total land border (8 neighboring countries). CIA World Factbook." },
+      { "id": "geo-liechtenstein-border", "name": "Liechtenstein", "emoji": "🏔️", "value": 160, "source": "Liechtenstein: 160 km total land border (Austria 34.9 km + Switzerland 41.1 km). CIA World Factbook." },
+      { "id": "geo-luxembourg-border", "name": "Luxembourg", "emoji": "🇱🇺", "value": 358, "source": "Luxembourg: 358 km total land border (Belgium, France, Germany). CIA World Factbook." }
+    ]
+  }
+]
