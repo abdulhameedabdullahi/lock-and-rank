@@ -1,4 +1,5 @@
 export const SLOT_COUNT = 5;
+export const HINT_COST = 5;
 
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
@@ -71,11 +72,20 @@ export type GameState = {
   phase: Phase;
   placements: PublicPlacement[];
   currentItem: PublicItem | null;
+  /** Final score after hint penalty. Present only when phase is complete. */
   score: number | null;
+  /** Raw score before hint penalty. Present only when phase is complete. */
+  rawScore: number | null;
+  /** Hint penalty applied (5 if hint used, 0 otherwise). Present only when phase is complete. */
+  hintPenalty: number | null;
   /** Present only when phase is complete, in the order items were shown. */
   results: ItemResult[] | null;
   /** Present only when phase is complete. */
   crowdData: Record<string, CrowdItem> | null;
+  /** Which item was hinted and which slots are crossed out. Null if unused. */
+  hintState: HintState | null;
+  /** True when a hint can still be requested (round active, not yet used, ≥4 slots open). */
+  hintAvailable: boolean;
 };
 
 export type InitResponse = GameState & {
@@ -148,6 +158,17 @@ export type ErrorResponse = {
   message: string;
 };
 
+export type HintState = {
+  itemIndex: number;
+  eliminatedSlots: number[];
+};
+
+export type HintResponse = {
+  type: 'hint';
+  eliminatedSlots: number[];
+  hintState: HintState;
+};
+
 export const MARK_SYMBOL: Record<ShareMark, string> = {
   check: '✓',
   diamond: '◆',
@@ -215,14 +236,16 @@ export function buildShareText(input: {
   category: string;
   score: number;
   marks: ShareMark[];
+  hintUsed?: boolean;
 }): string {
   const symbols = input.marks.map((mark) => MARK_SYMBOL[mark]).join(' ');
+  const emojiLine = input.hintUsed === true ? `${symbols} 💡` : symbols;
   return [
     `Lock & Rank #${input.roundNumber}`,
     `${formatUtcDate(input.date)} · ${input.category}`,
     `${input.score}/100`,
     '',
-    symbols,
+    emojiLine,
     '',
     '✓ exact · ◆ 1 off · ▲ 2 off · ✕ 3+',
   ].join('\n');

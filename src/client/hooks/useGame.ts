@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { showToast } from '@devvit/web/client';
 import type { GameState } from '../../shared/game';
-import { readError, requestInit, requestPlace, requestReset } from '../api';
+import { readError, requestHint, requestInit, requestPlace, requestReset } from '../api';
 
 export type Screen = 'prompt' | 'play' | 'reveal' | 'result';
 
@@ -93,5 +93,26 @@ export function useGame(topicId = 'mix') {
     [apply, session, topicId]
   );
 
-  return { session, screen, loading, pending, error, streak, load, start, showResult, lock };
+  const hint = useCallback(async () => {
+    if (!session?.hintAvailable || pendingRef.current) return;
+    pendingRef.current = true;
+    setPending(true);
+    setError(null);
+    try {
+      const result = await requestHint(topicId);
+      setSession((prev) => {
+        if (!prev) return prev;
+        return { ...prev, hintState: result.hintState, hintAvailable: false };
+      });
+    } catch (hintError) {
+      const message = readError(hintError, 'Could not use hint.');
+      setError(message);
+      showToast(message);
+    } finally {
+      pendingRef.current = false;
+      setPending(false);
+    }
+  }, [session, topicId]);
+
+  return { session, screen, loading, pending, error, streak, load, start, showResult, lock, hint };
 }

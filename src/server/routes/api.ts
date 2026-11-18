@@ -15,6 +15,7 @@ import {
   resetToday,
   resetTodayForTopic,
   setPreferences,
+  useHint,
 } from '../game/service';
 
 export const api = new Hono();
@@ -104,6 +105,16 @@ api.get('/leaderboard', async (c) => {
     const date = c.req.query('date');
     const entries = await getDailyLeaderboard(topicId, date);
     return c.json({ type: 'leaderboard', entries });
+  } catch (error) {
+    const failure = errorBody(error);
+    return c.json(failure.body, failure.status);
+  }
+});
+
+api.post('/hint', async (c) => {
+  try {
+    const topicId = c.req.query('category') ?? MIX_ID;
+    return c.json(await useHint(topicId));
   } catch (error) {
     const failure = errorBody(error);
     return c.json(failure.body, failure.status);

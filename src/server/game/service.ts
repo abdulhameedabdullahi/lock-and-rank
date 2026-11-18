@@ -5,6 +5,8 @@ import {
   type ArchiveListItem,
   type ArchiveRound,
   type GameState,
+  type HintResponse,
+  type HintState,
   type HomeResponse,
   type InitResponse,
   type PlaceRequest,
@@ -47,6 +49,7 @@ import {
   type StoredPlay,
 } from './store';
 import { context } from '@devvit/web/server';
+import { getOpenSlots, hintIsAvailable, selectEliminatedSlots } from './hint';
 
 function summaryFor(date: string, roundNumber: number, category: string, rule: string, unit: string, difficulty: RoundSummary['difficulty']): RoundSummary {
   return { date, roundNumber, category, rule, unit, difficulty };
@@ -87,30 +90,46 @@ async function stateFromPlay(
   const summary = summaryFor(date, roundNumber, round.category, round.rule, round.unit, round.difficulty);
   const placements = (play?.placements ?? []).map((placement) => toPublicPlacement(round, placement));
   if (play?.completed) {
-    const scored = scorePlacements(round, order, play.placements);
+    const scored = scorePlacements(round, order, play.placements, play.hintUsed);
     const ranks = trueRankById(round);
     const crowdItems = round.items.map((item) => ({ id: item.id, trueRank: ranks.get(item.id) ?? 0 }));
     const crowdData = await readCrowdData(date, round.topicId, crowdItems);
+    const hintState: HintState | null = play.hintUsed
+      ? { itemIndex: play.hintItemIndex, eliminatedSlots: play.hintEliminatedSlots }
+      : null;
     return {
       summary,
       phase: 'complete',
       placements,
       currentItem: null,
       score: scored.score,
+      rawScore: scored.rawScore,
+      hintPenalty: scored.hintPenalty,
       results: scored.results,
       crowdData,
+      hintState,
+      hintAvailable: false,
     };
   }
   const nextId = order[placements.length];
   if (!nextId) throw new GameError("Today's round is missing an item.", 500);
+  const openSlots = getOpenSlots(play?.placements ?? []);
+  const hintState: HintState | null = play?.hintUsed
+    ? { itemIndex: play.hintItemIndex, eliminatedSlots: play.hintEliminatedSlots }
+    : null;
+  const hintAvailable = !play?.hintUsed && hintIsAvailable(openSlots);
   return {
     summary,
     phase: placements.length === 0 ? 'ready' : 'playing',
     placements,
     currentItem: toPublicItem(round, nextId),
     score: null,
+    rawScore: null,
+    hintPenalty: null,
     results: null,
     crowdData: null,
+    hintState,
+    hintAvailable,
   };
 }
 
@@ -176,11 +195,23 @@ export async function placeItem(request: PlaceRequest, topicId: string = MIX_ID)
   }
   const placements = [...(play?.placements ?? []), { itemId: request.itemId, slot: request.slot }];
   const completed = placements.length === SLOT_COUNT;
-  const next: StoredPlay = { date, roundNumber, order, placements, completed };
+  const next: StoredPlay = {
+    date,
+    roundNumber,
+    order,
+    placements,
+    completed,
+    hintUsed: play?.hintUsed ?? false,
+    hintItemIndex: play?.hintItemIndex ?? -1,
+    hintEliminatedSlots: play?.hintEliminatedSlots ?? [],
+  };
   await writePlay(playerId, play, next, topicId);
-  void recordCrowdPlacement(date, topicId, request.itemId, request.slot);
+  const isHintedItem = play?.hintUsed === true && play.hintItemIndex === placedCount;
+  if (!isHintedItem) {
+    void recordCrowdPlacement(date, topicId, request.itemId, request.slot);
+  }
   if (completed) {
-    const scored = scorePlacements(round, order, placements);
+    const scored = scorePlacements(round, order, placements, next.hintUsed);
     void updateStats(playerId, date, scored.score);
     void addToLeaderboard(date, topicId, playerId, context.username ?? playerId, scored.score, Date.now());
   }
@@ -236,7 +267,7 @@ async function topicSummary(
   let score: number | null = null;
   if (completed && play) {
     const order = play.order;
-    const scored = scorePlacements(round, order, play.placements);
+    const scored = scorePlacements(round, order, play.placements, play.hintUsed);
     score = scored.score;
   }
   return {
@@ -291,6 +322,55 @@ export async function setPreferences(categoryIds: unknown): Promise<PreferencesR
   const playerId = currentPlayerId();
   await writePreferences(playerId, unique);
   return { type: 'preferences', categories: unique };
+}
+
+export async function useHint(topicId: string = MIX_ID): Promise<HintResponse> {
+  if (!isTopicId(topicId)) throw new GameError('Unknown topic.', 400);
+  const { playerId, date, roundNumber, round, play, order } = await loadPlay(topicId);
+
+  if (play?.completed) {
+    throw new GameError('The round is already finished.', 409);
+  }
+
+  const placedCount = play?.placements.length ?? 0;
+
+  if (play?.hintUsed) {
+    if (play.hintItemIndex === placedCount) {
+      const hintState: HintState = { itemIndex: play.hintItemIndex, eliminatedSlots: play.hintEliminatedSlots };
+      return { type: 'hint', eliminatedSlots: play.hintEliminatedSlots, hintState };
+    }
+    throw new GameError('You have already used your hint for this round.', 409);
+  }
+
+  const openSlots = getOpenSlots(play?.placements ?? []);
+  if (!hintIsAvailable(openSlots)) {
+    throw new GameError('Hint is not available when fewer than 4 slots are open.', 400);
+  }
+
+  const currentItemId = order[placedCount];
+  if (!currentItemId) throw new GameError("Today's round is in an invalid state.", 500);
+
+  const ranks = trueRankById(round);
+  const trueSlot = ranks.get(currentItemId);
+  if (trueSlot === undefined) throw new GameError("Today's round is in an invalid state.", 500);
+
+  const eliminatedSlots = selectEliminatedSlots(openSlots, trueSlot, playerId, topicId, date, placedCount);
+
+  const nextPlay: StoredPlay = {
+    date,
+    roundNumber,
+    order,
+    placements: play?.placements ?? [],
+    completed: false,
+    hintUsed: true,
+    hintItemIndex: placedCount,
+    hintEliminatedSlots: eliminatedSlots,
+  };
+
+  await writePlay(playerId, play, nextPlay, topicId);
+
+  const hintState: HintState = { itemIndex: placedCount, eliminatedSlots };
+  return { type: 'hint', eliminatedSlots, hintState };
 }
 
 export function listArchiveRounds(): ArchiveListItem[] {

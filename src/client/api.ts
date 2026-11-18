@@ -8,6 +8,8 @@ import {
   type CrowdItem,
   type Difficulty,
   type GameState,
+  type HintResponse,
+  type HintState,
   type HomeResponse,
   type InitResponse,
   type ItemResult,
@@ -114,6 +116,17 @@ function parseResult(value: unknown, unit: string): ItemResult | null {
   };
 }
 
+function parseHintState(value: unknown): HintState | null {
+  if (value === null || value === undefined) return null;
+  if (!isRecord(value)) return null;
+  if (typeof value.itemIndex !== 'number' || !Number.isInteger(value.itemIndex)) return null;
+  if (!Array.isArray(value.eliminatedSlots)) return null;
+  const eliminatedSlots = (value.eliminatedSlots as unknown[]).filter(
+    (s): s is number => typeof s === 'number' && Number.isInteger(s) && s >= 1 && s <= SLOT_COUNT
+  );
+  return { itemIndex: value.itemIndex, eliminatedSlots };
+}
+
 function parseCrowdData(value: unknown): Record<string, CrowdItem> | null {
   if (value === null || value === undefined) return null;
   if (!isRecord(value)) return null;
@@ -157,12 +170,22 @@ export function parseGameState(value: unknown): GameState | null {
     results = parsed;
   }
   const crowdData = value.phase === 'complete' ? parseCrowdData(value.crowdData) : null;
+  const hintState = parseHintState(value.hintState);
+  const hintAvailable = typeof value.hintAvailable === 'boolean' ? value.hintAvailable : false;
+  const rawScore =
+    typeof value.rawScore === 'number' && Number.isInteger(value.rawScore) && value.rawScore >= 0
+      ? value.rawScore
+      : null;
+  const hintPenalty =
+    typeof value.hintPenalty === 'number' && Number.isInteger(value.hintPenalty) && value.hintPenalty >= 0
+      ? value.hintPenalty
+      : null;
   if (value.phase === 'ready' && placements.length !== 0) return null;
   if (value.phase === 'playing' && (placements.length < 1 || placements.length >= SLOT_COUNT)) return null;
   if (value.phase === 'complete' && placements.length !== SLOT_COUNT) return null;
   if (value.phase === 'complete' && (results === null || score === null || currentItem !== null)) return null;
   if (value.phase !== 'complete' && (results !== null || score !== null || currentItem === null)) return null;
-  return { summary, phase: value.phase, placements, currentItem, score, results, crowdData };
+  return { summary, phase: value.phase, placements, currentItem, score, rawScore, hintPenalty, results, crowdData, hintState, hintAvailable };
 }
 
 async function readPayload(response: Response): Promise<unknown> {
@@ -286,6 +309,23 @@ export async function requestArchiveRound(index: number): Promise<ArchiveRound> 
     items.push(item);
   }
   return { date, roundNumber: r.roundNumber, category, rule, unit, difficulty: r.difficulty, order, items };
+}
+
+export async function requestHint(topicId = 'mix'): Promise<HintResponse> {
+  const response = await fetch(`/api/hint?category=${encodeURIComponent(topicId)}`, { method: 'POST' });
+  const payload = await readPayload(response);
+  if (!response.ok) {
+    throw new Error(messageFrom(payload) ?? 'Could not use hint.');
+  }
+  if (!isRecord(payload) || payload.type !== 'hint') {
+    throw new Error('Could not read hint response.');
+  }
+  const hintState = parseHintState(payload.hintState);
+  if (!hintState) throw new Error('Could not read hint state.');
+  const eliminatedSlots = Array.isArray(payload.eliminatedSlots)
+    ? (payload.eliminatedSlots as unknown[]).filter((s): s is number => typeof s === 'number' && Number.isInteger(s))
+    : [];
+  return { type: 'hint', eliminatedSlots, hintState };
 }
 
 export async function requestReset(topicId?: string): Promise<void> {

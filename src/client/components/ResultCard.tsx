@@ -16,6 +16,8 @@ type ResultCardProps = {
   score: number;
   results: ItemResult[];
   crowdData?: Record<string, CrowdItem> | null;
+  rawScore?: number | null;
+  hintPenalty?: number | null;
   topicEmoji?: string | undefined;
   topicLabel?: string | undefined;
   onPlayNext?: (() => void) | undefined;
@@ -57,6 +59,8 @@ export const ResultCard = ({
   score,
   results,
   crowdData,
+  rawScore,
+  hintPenalty,
   topicEmoji,
   topicLabel,
   onPlayNext,
@@ -70,6 +74,8 @@ export const ResultCard = ({
   const [copied, setCopied] = useState(false);
   const byRank = [...results].sort((a, b) => a.trueRank - b.trueRank);
 
+  const hintWasUsed = (hintPenalty ?? 0) > 0;
+
   const onCopy = () => {
     const text = buildShareText({
       date: summary.date,
@@ -77,6 +83,7 @@ export const ResultCard = ({
       category: summary.category,
       score,
       marks: results.map((result) => result.mark),
+      hintUsed: hintWasUsed,
     });
     void copyText(text).then((ok) => {
       setCopied(ok);
@@ -96,6 +103,11 @@ export const ResultCard = ({
             {score}
             <span className="text-xl font-bold text-ink-soft">/100</span>
           </p>
+          {hintWasUsed ? (
+            <p className="text-sm font-semibold text-ink-soft">
+              {rawScore !== null && rawScore !== undefined ? `${rawScore} raw` : ''} 💡 Hint used (−{hintPenalty} pts)
+            </p>
+          ) : null}
         </header>
         <ul className="mt-3 min-h-0 flex-1 overflow-y-auto">
           {byRank.map((result) => {

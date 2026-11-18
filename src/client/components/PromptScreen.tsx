@@ -26,7 +26,7 @@ export const PromptScreen = ({ summary, onStart, onBack }: PromptScreenProps) =>
         <p className="font-black">How to play</p>
         <p className="mt-1 text-sm leading-snug font-semibold">
           Five items appear one at a time. Lock each into a rank from 1 to 5 before the next one shows.
-          Used slots stay shut. No undo.
+          Used slots stay shut. No undo. Tap 💡 on the first two items to rule out wrong slots (costs 5 pts).
         </p>
       </div>
       <button

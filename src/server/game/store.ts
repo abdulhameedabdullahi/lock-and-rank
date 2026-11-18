@@ -16,6 +16,9 @@ export type StoredPlay = {
   order: string[];
   placements: StoredPlacement[];
   completed: boolean;
+  hintUsed: boolean;
+  hintItemIndex: number;        // index into order; -1 if not used
+  hintEliminatedSlots: number[];
 };
 
 function playKey(playerId: string, date: string, topicId: string): string {
@@ -55,12 +58,25 @@ function parseStoredPlay(raw: string): StoredPlay {
     }
     placements.push({ itemId: entry.itemId, slot: entry.slot });
   }
+  const hintUsed = typeof parsed.hintUsed === 'boolean' ? parsed.hintUsed : false;
+  const hintItemIndex =
+    typeof parsed.hintItemIndex === 'number' && Number.isInteger(parsed.hintItemIndex)
+      ? parsed.hintItemIndex
+      : -1;
+  const hintEliminatedSlots: number[] = Array.isArray(parsed.hintEliminatedSlots)
+    ? parsed.hintEliminatedSlots.filter(
+        (s): s is number => typeof s === 'number' && Number.isInteger(s)
+      )
+    : [];
   return {
     date: parsed.date,
     roundNumber: parsed.roundNumber,
     order,
     placements,
     completed: parsed.completed,
+    hintUsed,
+    hintItemIndex,
+    hintEliminatedSlots,
   };
 }
 
@@ -74,6 +90,9 @@ function samePlay(left: StoredPlay | null, right: StoredPlay | null): boolean {
   if (left === null || right === null) return left === right;
   if (left.date !== right.date || left.roundNumber !== right.roundNumber) return false;
   if (left.completed !== right.completed) return false;
+  if (left.hintUsed !== right.hintUsed) return false;
+  if (left.hintItemIndex !== right.hintItemIndex) return false;
+  if (left.hintEliminatedSlots.join(',') !== right.hintEliminatedSlots.join(',')) return false;
   if (left.order.join('|') !== right.order.join('|')) return false;
   if (left.placements.length !== right.placements.length) return false;
   return left.placements.every((placement, index) => {
@@ -253,12 +272,13 @@ export async function readCrowdData(
         weightedSum += count * slot;
         if (slot === item.trueRank) exactCount += count;
       }
-      if (total === 0) return null;
+      if (total === 0) continue;
       result[item.id] = {
         avgSlot: Math.round((weightedSum / total) * 10) / 10,
         pctCorrect: Math.round((exactCount / total) * 100),
       };
     }
+    if (Object.keys(result).length === 0) return null;
     return result;
   } catch {
     return null;

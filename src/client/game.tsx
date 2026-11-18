@@ -134,6 +134,10 @@ export const App = () => {
           pending={false}
           error={null}
           onLock={(slot) => archive.lock(slot)}
+          hintAvailable={false}
+          hintUsed={false}
+          hintEliminatedSlots={[]}
+          onHint={() => { /* archive has no hint */ }}
         />
       );
     }
@@ -259,6 +263,10 @@ export const App = () => {
   }
 
   if (game.screen === 'play' && session.currentItem) {
+    const hintEliminatedSlots =
+      session.hintState !== null && session.hintState.itemIndex === session.placements.length
+        ? session.hintState.eliminatedSlots
+        : [];
     return (
       <PlayScreen
         key={session.currentItem.id}
@@ -268,6 +276,10 @@ export const App = () => {
         pending={game.pending}
         error={game.error}
         onLock={(slot) => { void game.lock(slot); }}
+        hintAvailable={session.hintAvailable}
+        hintUsed={session.hintState !== null}
+        hintEliminatedSlots={hintEliminatedSlots}
+        onHint={() => { void game.hint(); }}
       />
     );
   }
@@ -287,6 +299,8 @@ export const App = () => {
         score={session.score}
         results={session.results}
         crowdData={session.crowdData}
+        rawScore={session.rawScore}
+        hintPenalty={session.hintPenalty}
         topicEmoji={topicEmoji}
         topicLabel={topicLabel}
         onPlayNext={nextUnplayed ? () => playTopic(nextUnplayed.topicId) : undefined}
