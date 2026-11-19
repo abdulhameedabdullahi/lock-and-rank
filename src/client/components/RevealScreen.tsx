@@ -52,7 +52,15 @@ export const RevealScreen = ({ summary, results, onDone }: RevealScreenProps) =>
               {result.emoji}
             </span>
             <span className="min-w-0 flex-1 truncate font-black">{result.name}</span>
-            <span className="shrink-0 text-sm font-bold">{formatValue(result.value, result.unit)}</span>
+            <span className="shrink-0 text-sm font-bold text-ink-soft">{formatValue(result.value, result.unit)}</span>
+            <span
+              className={`w-7 shrink-0 text-right text-sm font-black tabular-nums ${
+                result.chosenSlot === result.trueRank ? 'text-tangerine' : 'text-ink-soft'
+              }`}
+              aria-label={`you picked rank ${result.chosenSlot}`}
+            >
+              #{result.chosenSlot}
+            </span>
           </li>
         ))}
       </ol>

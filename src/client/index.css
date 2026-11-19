@@ -53,6 +53,12 @@ button {
   box-shadow: none;
 }
 
+@media (hover: hover) {
+  .press:not(:disabled):hover {
+    filter: brightness(0.94);
+  }
+}
+
 @keyframes progressBar {
   from { width: 0 }
   to { width: 100% }

@@ -18,7 +18,13 @@ export const PromptScreen = ({ summary, onStart, onBack }: PromptScreenProps) =>
         <p className="text-xs font-black tracking-[0.22em] text-tangerine uppercase">Today&apos;s round</p>
         <h1 className="mt-1 text-3xl leading-none font-black">{summary.category}</h1>
         <p className="mt-2 text-lg font-bold">{summary.rule}</p>
-        <p className="mt-1 text-sm font-semibold text-ink-soft">
+        <p className="mt-1 flex items-center gap-1.5 text-sm font-semibold text-ink-soft">
+          <span className="flex gap-0.5" aria-hidden="true">
+            {[1, 2, 3].map((n) => {
+              const filled = summary.difficulty === 'hard' || (summary.difficulty === 'medium' && n <= 2) || n === 1;
+              return <span key={n} className={`text-sm leading-none ${filled ? 'text-tangerine' : 'text-line'}`}>●</span>;
+            })}
+          </span>
           {difficultyLabel(summary.difficulty)} · Round {summary.roundNumber}
         </p>
       </header>

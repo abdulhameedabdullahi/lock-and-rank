@@ -1,5 +1,13 @@
 import { difficultyLabel, formatUtcDate, type HomeResponse, type TopicDailySummary } from '../../shared/game';
 
+function grade(s: number): string {
+  if (s >= 90) return 'S';
+  if (s >= 75) return 'A';
+  if (s >= 55) return 'B';
+  if (s >= 35) return 'C';
+  return 'D';
+}
+
 type HomeScreenProps = {
   home: HomeResponse;
   onPlay: (topicId: string) => void;
@@ -68,10 +76,15 @@ const TopicCard = ({ summary, label, emoji, onPlay }: TopicCardProps) => (
         <div className="shrink-0 text-right">
           <p className="text-xs font-black text-tangerine">Done ✓</p>
           {summary.score !== null ? (
-            <p className="text-xl font-black tabular-nums leading-none">
-              {summary.score}
-              <span className="text-sm font-bold text-ink-soft">/100</span>
-            </p>
+            <>
+              <p className="text-xl font-black tabular-nums leading-none">
+                {summary.score}
+                <span className="text-sm font-bold text-ink-soft">/100</span>
+              </p>
+              <p className={`text-sm font-black leading-none ${summary.score >= 75 ? 'text-tangerine' : 'text-ink-soft'}`}>
+                {grade(summary.score)}
+              </p>
+            </>
           ) : null}
         </div>
       ) : (
