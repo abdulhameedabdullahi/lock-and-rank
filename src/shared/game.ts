@@ -91,6 +91,13 @@ export type GameState = {
 export type InitResponse = GameState & {
   type: 'init';
   streak: number;
+  subredditName?: string;
+};
+
+export type ShareResponse = {
+  type: 'shared';
+  permalink: string;
+  commentUrl: string;
 };
 
 export type PlayerStats = {

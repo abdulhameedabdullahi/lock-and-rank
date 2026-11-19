@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { showToast } from '@devvit/web/client';
 import {
   MARK_LABEL,
@@ -10,6 +10,25 @@ import {
   type RoundSummary,
   type ShareMark,
 } from '../../shared/game';
+import { requestShare, requestSubscribe } from '../api';
+
+function useCountdown(): string {
+  const [label, setLabel] = useState('');
+  const compute = () => {
+    const now = new Date();
+    const midnight = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1));
+    const ms = Math.max(0, midnight.getTime() - now.getTime());
+    const h = Math.floor(ms / 3600000);
+    const m = Math.floor((ms % 3600000) / 60000);
+    return `${h}h ${String(m).padStart(2, '0')}m`;
+  };
+  useEffect(() => {
+    setLabel(compute());
+    const id = window.setInterval(() => setLabel(compute()), 60000);
+    return () => window.clearInterval(id);
+  }, []);
+  return label;
+}
 
 type ResultCardProps = {
   summary: RoundSummary;
@@ -20,6 +39,8 @@ type ResultCardProps = {
   hintPenalty?: number | null;
   topicEmoji?: string | undefined;
   topicLabel?: string | undefined;
+  topicId?: string | undefined;
+  subredditName?: string | undefined;
   onPlayNext?: (() => void) | undefined;
   nextTopicEmoji?: string | undefined;
   nextTopicLabel?: string | undefined;
@@ -63,6 +84,8 @@ export const ResultCard = ({
   hintPenalty,
   topicEmoji,
   topicLabel,
+  topicId,
+  subredditName,
   onPlayNext,
   nextTopicEmoji,
   nextTopicLabel,
@@ -72,6 +95,15 @@ export const ResultCard = ({
   onShowArchive,
 }: ResultCardProps) => {
   const [copied, setCopied] = useState(false);
+  const [shareOpen, setShareOpen] = useState(false);
+  const [caption, setCaption] = useState('');
+  const [sharing, setSharing] = useState(false);
+  const [sharedUrl, setSharedUrl] = useState<string | null>(null);
+  const [shareError, setShareError] = useState<string | null>(null);
+  const [subscribed, setSubscribed] = useState(false);
+  const [subscribing, setSubscribing] = useState(false);
+  const captionRef = useRef<HTMLTextAreaElement>(null);
+  const countdown = useCountdown();
   const byRank = [...results].sort((a, b) => a.trueRank - b.trueRank);
 
   const grade = score >= 90 ? 'S' : score >= 75 ? 'A' : score >= 55 ? 'B' : score >= 35 ? 'C' : 'D';
@@ -79,16 +111,59 @@ export const ResultCard = ({
 
   const hintWasUsed = (hintPenalty ?? 0) > 0;
 
+  const shareText = buildShareText({
+    date: summary.date,
+    roundNumber: summary.roundNumber,
+    category: summary.category,
+    score,
+    marks: results.map((r) => r.mark),
+    hintUsed: hintWasUsed,
+  });
+
+  const scoreSuggestions: string[] =
+    score >= 90
+      ? ['Nailed it! All 5 exact!', 'Perfect score 🔒', 'Got every rank right']
+      : score >= 55
+      ? ['Solid round!', 'Tricky one today', 'Better than the crowd?']
+      : ['This one got me', 'Harder than it looks!', 'Still learning the ranks'];
+
+  const openShare = () => {
+    setShareOpen(true);
+    setShareError(null);
+    setTimeout(() => captionRef.current?.focus(), 50);
+  };
+
+  const onShare = async () => {
+    if (sharing || !topicId) return;
+    setSharing(true);
+    setShareError(null);
+    try {
+      const result = await requestShare(topicId, caption);
+      setSharedUrl(result.commentUrl || result.permalink);
+      setShareOpen(false);
+    } catch (err) {
+      setShareError(err instanceof Error ? err.message : 'Could not post comment.');
+    } finally {
+      setSharing(false);
+    }
+  };
+
+  const onSubscribe = async () => {
+    if (subscribing) return;
+    setSubscribing(true);
+    try {
+      await requestSubscribe();
+      setSubscribed(true);
+      showToast(`Joined r/${subredditName ?? 'the community'}!`);
+    } catch {
+      showToast('Could not subscribe — try again.');
+    } finally {
+      setSubscribing(false);
+    }
+  };
+
   const onCopy = () => {
-    const text = buildShareText({
-      date: summary.date,
-      roundNumber: summary.roundNumber,
-      category: summary.category,
-      score,
-      marks: results.map((result) => result.mark),
-      hintUsed: hintWasUsed,
-    });
-    void copyText(text).then((ok) => {
+    void copyText(shareText).then((ok) => {
       setCopied(ok);
       showToast(ok ? 'Result copied' : 'Could not copy');
     });
@@ -158,6 +233,11 @@ export const ResultCard = ({
           <p className="mt-1 text-[11px] font-semibold text-ink-soft">
             ✓ exact · ◆ 1 off · ▲ 2 off · ✕ 3+
           </p>
+          {countdown ? (
+            <p className="mt-2 text-xs font-semibold text-ink-soft text-center">
+              Next round in {countdown}
+            </p>
+          ) : null}
           {onPlayNext ? (
             <button
               type="button"
@@ -167,9 +247,91 @@ export const ResultCard = ({
               {nextTopicEmoji} Next: {nextTopicLabel ?? 'Next topic'}
             </button>
           ) : null}
-          <button type="button" className="press chunk mt-2 w-full bg-tangerine font-black text-ink" onClick={onCopy}>
-            {copied ? 'Copied' : 'Copy result'}
-          </button>
+          {sharedUrl ? (
+            <a
+              href={sharedUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="press chunk mt-2 flex w-full items-center justify-center gap-1.5 bg-card font-black text-ink text-sm"
+            >
+              Shared ✓ — View comment
+            </a>
+          ) : shareOpen && topicId ? (
+            <div className="mt-2 chunk p-3 flex flex-col gap-2">
+              <p className="text-xs font-black text-tangerine uppercase tracking-[0.14em]">Post as comment</p>
+              <pre className="text-[10px] font-mono leading-snug text-ink-soft whitespace-pre-wrap break-words select-none bg-paper p-2 rounded">
+                {shareText}
+              </pre>
+              <div className="flex flex-wrap gap-1.5">
+                {scoreSuggestions.map((s) => (
+                  <button
+                    key={s}
+                    type="button"
+                    className="press rounded border border-line bg-paper px-2 py-0.5 text-xs font-semibold text-ink-soft"
+                    onClick={() => setCaption(s)}
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
+              <textarea
+                ref={captionRef}
+                className="w-full resize-none rounded border border-line bg-paper p-2 text-sm font-semibold text-ink placeholder:text-ink-soft focus:outline-none focus:border-tangerine"
+                rows={2}
+                maxLength={140}
+                placeholder="Add a caption… (optional)"
+                value={caption}
+                onChange={(e) => setCaption(e.target.value)}
+              />
+              <p className="text-right text-[10px] font-semibold text-ink-soft">{caption.length}/140</p>
+              {shareError ? <p className="text-xs font-semibold text-tangerine">{shareError}</p> : null}
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  className="press chunk flex-1 bg-tangerine font-black text-ink"
+                  disabled={sharing}
+                  onClick={() => void onShare()}
+                >
+                  {sharing ? 'Posting…' : 'Post comment'}
+                </button>
+                <button
+                  type="button"
+                  className="press chunk bg-card px-3 font-black text-ink"
+                  onClick={() => { setShareOpen(false); setShareError(null); }}
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          ) : topicId ? (
+            <div className="mt-2 flex gap-2">
+              <button type="button" className="press chunk flex-1 bg-tangerine font-black text-ink" onClick={openShare}>
+                Share to comments
+              </button>
+              <button type="button" className="press chunk bg-card px-3 font-black text-ink" onClick={onCopy}>
+                {copied ? '✓' : 'Copy'}
+              </button>
+            </div>
+          ) : (
+            <button type="button" className="press chunk mt-2 w-full bg-tangerine font-black text-ink" onClick={onCopy}>
+              {copied ? 'Copied' : 'Copy result'}
+            </button>
+          )}
+          {subredditName && !subscribed ? (
+            <div className="mt-2 flex items-center gap-2">
+              <p className="min-w-0 flex-1 truncate text-xs font-semibold text-ink-soft">
+                Join r/{subredditName} for daily rounds
+              </p>
+              <button
+                type="button"
+                className="press chunk shrink-0 bg-card px-3 py-1 text-xs font-black text-ink"
+                disabled={subscribing}
+                onClick={() => void onSubscribe()}
+              >
+                {subscribing ? '…' : 'Join'}
+              </button>
+            </div>
+          ) : null}
           {onMakeItYours ? (
             <div className="mt-3 border-t border-line pt-3">
               <p className="text-sm font-black">Make it yours</p>

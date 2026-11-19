@@ -15,6 +15,8 @@ import {
   resetToday,
   resetTodayForTopic,
   setPreferences,
+  shareResult,
+  subscribeToSub,
   useHint,
 } from '../game/service';
 
@@ -105,6 +107,34 @@ api.get('/leaderboard', async (c) => {
     const date = c.req.query('date');
     const entries = await getDailyLeaderboard(topicId, date);
     return c.json({ type: 'leaderboard', entries });
+  } catch (error) {
+    const failure = errorBody(error);
+    return c.json(failure.body, failure.status);
+  }
+});
+
+api.post('/share', async (c) => {
+  try {
+    const topicId = c.req.query('category') ?? MIX_ID;
+    let payload: unknown;
+    try {
+      payload = await c.req.json();
+    } catch {
+      payload = null;
+    }
+    const body = payload as Record<string, unknown> | null;
+    const caption = typeof body?.caption === 'string' ? body.caption : '';
+    return c.json(await shareResult(topicId, caption));
+  } catch (error) {
+    const failure = errorBody(error);
+    return c.json(failure.body, failure.status);
+  }
+});
+
+api.post('/subscribe', async (c) => {
+  try {
+    await subscribeToSub();
+    return c.json({ type: 'subscribed' });
   } catch (error) {
     const failure = errorBody(error);
     return c.json(failure.body, failure.status);

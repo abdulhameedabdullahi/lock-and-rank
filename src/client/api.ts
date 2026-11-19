@@ -21,6 +21,7 @@ import {
   type PublicPlacement,
   type RoundSummary,
   type ShareMark,
+  type ShareResponse,
   type TopicDailySummary,
 } from '../shared/game';
 
@@ -208,7 +209,10 @@ export async function requestInit(topicId = 'mix'): Promise<InitResponse> {
   const state = parseGameState(payload);
   if (!state) throw new Error('Could not read today\'s round.');
   const streak = typeof payload.streak === 'number' && Number.isInteger(payload.streak) ? payload.streak : 0;
-  return { type: 'init', ...state, streak };
+  const subredditName = typeof payload.subredditName === 'string' && payload.subredditName.length > 0
+    ? payload.subredditName
+    : undefined;
+  return { type: 'init', ...state, streak, subredditName };
 }
 
 export async function requestPlace(itemId: string, slot: number, topicId = 'mix'): Promise<PlaceResponse> {
@@ -409,6 +413,32 @@ export async function requestSetPreferences(categoryIds: string[]): Promise<Pref
     ? (payload.categories as unknown[]).filter((v): v is string => typeof v === 'string')
     : [];
   return { type: 'preferences', categories };
+}
+
+export async function requestShare(topicId: string, caption: string): Promise<ShareResponse> {
+  const response = await fetch(`/api/share?category=${encodeURIComponent(topicId)}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ caption }),
+  });
+  const payload = await readPayload(response);
+  if (!response.ok) {
+    throw new Error(messageFrom(payload) ?? 'Could not share result.');
+  }
+  if (!isRecord(payload) || payload.type !== 'shared') {
+    throw new Error('Could not read share response.');
+  }
+  const permalink = typeof payload.permalink === 'string' ? payload.permalink : '';
+  const commentUrl = typeof payload.commentUrl === 'string' ? payload.commentUrl : '';
+  return { type: 'shared', permalink, commentUrl };
+}
+
+export async function requestSubscribe(): Promise<void> {
+  const response = await fetch('/api/subscribe', { method: 'POST' });
+  if (!response.ok) {
+    const payload = await readPayload(response);
+    throw new Error(messageFrom(payload) ?? 'Could not subscribe.');
+  }
 }
 
 export function readError(error: unknown, fallback: string): string {

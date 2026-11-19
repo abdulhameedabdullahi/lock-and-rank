@@ -1,5 +1,6 @@
 import {
   SLOT_COUNT,
+  buildShareText,
   isRecord,
   isSlot,
   type ArchiveListItem,
@@ -14,6 +15,7 @@ import {
   type PlayerStats,
   type PreferencesResponse,
   type RoundSummary,
+  type ShareResponse,
   type TopicDailySummary,
 } from '../../shared/game';
 import { CATEGORIES, isSelectableCategoryId, isTopicId, MIX_ID } from '../../shared/categories';
@@ -41,14 +43,17 @@ import {
   readCrowdData,
   readPlay,
   readPreferences,
+  readShareLock,
   readStats,
   recordCrowdPlacement,
   updateStats,
   writePlay,
   writePreferences,
+  writeShareLock,
   type StoredPlay,
 } from './store';
-import { context } from '@devvit/web/server';
+import { context, reddit } from '@devvit/web/server';
+import { sanitizeCaption } from './sanitize';
 import { getOpenSlots, hintIsAvailable, selectEliminatedSlots } from './hint';
 
 function summaryFor(date: string, roundNumber: number, category: string, rule: string, unit: string, difficulty: RoundSummary['difficulty']): RoundSummary {
@@ -158,7 +163,7 @@ export async function getInit(topicId: string = MIX_ID): Promise<InitResponse> {
   const { playerId, date, roundNumber, round, play, order } = await loadPlay(topicId);
   const stats = await readStats(playerId);
   const state = await stateFromPlay(date, roundNumber, round, play, order);
-  return { type: 'init', ...state, streak: stats.streak };
+  return { type: 'init', ...state, streak: stats.streak, subredditName: context.subredditName };
 }
 
 export function parsePlaceRequest(value: unknown): PlaceRequest {
@@ -375,6 +380,48 @@ export async function useHint(topicId: string = MIX_ID): Promise<HintResponse> {
 
 export function listArchiveRounds(): ArchiveListItem[] {
   return archiveRoundList();
+}
+
+export async function shareResult(topicId: string = MIX_ID, caption: string): Promise<ShareResponse> {
+  if (!isTopicId(topicId)) throw new GameError('Unknown topic.', 400);
+  const { playerId, date, roundNumber, round, play, order } = await loadPlay(topicId);
+
+  if (!play?.completed) {
+    throw new GameError('Finish the round before sharing.', 409);
+  }
+
+  const existing = await readShareLock(playerId, date, topicId);
+  if (existing) {
+    throw new GameError('You have already shared this round.', 409);
+  }
+
+  const postId = context.postId;
+  if (!postId) throw new GameError('No post context — cannot share.', 400);
+
+  const scored = scorePlacements(round, order, play.placements, play.hintUsed);
+  const marks = scored.results.map((r) => r.mark);
+  const shareText = buildShareText({
+    date,
+    roundNumber,
+    category: round.category,
+    score: scored.score,
+    marks,
+    hintUsed: play.hintUsed,
+  });
+
+  const sanitized = sanitizeCaption(caption);
+  const commentText = sanitized.length > 0 ? `${shareText}\n\n${sanitized}` : shareText;
+
+  const comment = await reddit.submitComment({ id: postId, text: commentText, runAs: 'USER' });
+
+  await writeShareLock(playerId, date, topicId, comment.id);
+
+  return { type: 'shared', permalink: comment.permalink, commentUrl: comment.url };
+}
+
+export async function subscribeToSub(): Promise<void> {
+  if (!context.username) throw new GameError('Must be logged in to subscribe.', 400);
+  await reddit.subscribeToCurrentSubreddit();
 }
 
 export function getArchiveRound(index: number): ArchiveRound {

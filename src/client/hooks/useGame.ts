@@ -18,6 +18,7 @@ export function useGame(topicId = 'mix') {
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [streak, setStreak] = useState(0);
+  const [subredditName, setSubredditName] = useState<string | undefined>(undefined);
   const pendingRef = useRef(false);
 
   const apply = useCallback((state: GameState, revealOnComplete: boolean) => {
@@ -40,6 +41,7 @@ export function useGame(topicId = 'mix') {
         throw err;
       });
       setStreak(init.streak);
+      if (init.subredditName) setSubredditName(init.subredditName);
       apply(init, false);
     } catch (loadError) {
       setSession(null);
@@ -114,5 +116,5 @@ export function useGame(topicId = 'mix') {
     }
   }, [session, topicId]);
 
-  return { session, screen, loading, pending, error, streak, load, start, showResult, lock, hint };
+  return { session, screen, loading, pending, error, streak, subredditName, load, start, showResult, lock, hint };
 }

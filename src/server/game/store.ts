@@ -336,3 +336,16 @@ export async function getLeaderboard(date: string, topicId: string, limit = 10):
     return [];
   }
 }
+
+function shareLockKey(playerId: string, date: string, topicId: string): string {
+  return `lockrank:v1:shared:${date}:${topicId}:${playerId}`;
+}
+
+export async function readShareLock(playerId: string, date: string, topicId: string): Promise<string | null> {
+  const raw = await redis.get(shareLockKey(playerId, date, topicId));
+  return raw ?? null;
+}
+
+export async function writeShareLock(playerId: string, date: string, topicId: string, commentId: string): Promise<void> {
+  await redis.set(shareLockKey(playerId, date, topicId), commentId, { ex: 86400 * 7 });
+}

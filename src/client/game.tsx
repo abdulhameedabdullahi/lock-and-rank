@@ -303,6 +303,8 @@ export const App = () => {
         hintPenalty={session.hintPenalty}
         topicEmoji={topicEmoji}
         topicLabel={topicLabel}
+        topicId={activeTopicId}
+        subredditName={game.subredditName}
         onPlayNext={nextUnplayed ? () => playTopic(nextUnplayed.topicId) : undefined}
         nextTopicEmoji={nextUnplayed?.emoji}
         nextTopicLabel={nextUnplayed?.label}
