@@ -28,7 +28,9 @@ export const HomeScreen = ({ home, onPlay, onOpenPicker }: HomeScreenProps) => {
         </div>
         {home.streak > 0 ? (
           <p className="mt-1 text-sm font-black text-tangerine">{home.streak} day streak 🔥</p>
-        ) : null}
+        ) : (
+          <p className="mt-1 text-sm font-semibold text-ink-soft">Build a streak — play every day!</p>
+        )}
         <p className="mt-1 text-sm font-semibold text-ink-soft">{formatUtcDate(home.date)}</p>
       </header>
 

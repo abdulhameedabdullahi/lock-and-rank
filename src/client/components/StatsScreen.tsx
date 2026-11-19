@@ -48,15 +48,15 @@ export const StatsScreen = ({ onBack }: StatsScreenProps) => {
           <StatCell label="Current streak" value={`${stats.streak} 🔥`} />
           <StatCell label="Best streak" value={String(stats.longestStreak)} />
           <StatCell label="Best score" value={`${stats.bestScore}/100`} />
-          <StatCell label="Avg score" value={`${stats.averageScore}/100`} />
+          <StatCell label="Avg score" value={`${stats.averageScore}/100`} wide />
         </dl>
       ) : null}
     </section>
   );
 };
 
-const StatCell = ({ label, value }: { label: string; value: string }) => (
-  <div className="chunk flex flex-col items-center justify-center gap-1 p-3 text-center">
+const StatCell = ({ label, value, wide }: { label: string; value: string; wide?: boolean }) => (
+  <div className={`chunk flex flex-col items-center justify-center gap-1 p-3 text-center${wide ? ' col-span-2' : ''}`}>
     <dt className="text-xs font-black tracking-[0.14em] text-ink-soft uppercase">{label}</dt>
     <dd className="text-3xl leading-none font-black tabular-nums">{value}</dd>
   </div>

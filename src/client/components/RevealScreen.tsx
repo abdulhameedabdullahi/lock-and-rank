@@ -56,8 +56,13 @@ export const RevealScreen = ({ summary, results, onDone }: RevealScreenProps) =>
           </li>
         ))}
       </ol>
+      {!reducedMotion ? (
+        <div className="h-1 w-full shrink-0 overflow-hidden rounded-full bg-line">
+          <div className="h-full bg-tangerine" style={{ animation: 'progressBar 3.2s linear forwards' }} />
+        </div>
+      ) : null}
       <button type="button" className="press chunk shrink-0 bg-tangerine font-black text-ink" onClick={finish}>
-        {reducedMotion ? 'See your score' : 'Skip'}
+        {reducedMotion ? 'See your score' : 'Skip →'}
       </button>
     </section>
   );

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SLOT_COUNT, type PublicItem, type PublicPlacement, type RoundSummary } from '../../shared/game';
 
 type PlayScreenProps = {
@@ -31,6 +31,24 @@ export const PlayScreen = ({
   const used = new Map(placements.map((placement) => [placement.slot, placement]));
   const step = placements.length + 1;
   const slots = [1, 2, 3, 4, 5];
+  useEffect(() => {
+    const usedSlots = new Set(placements.map((p) => p.slot));
+    const handler = (e: KeyboardEvent) => {
+      if (pending || confirming) return;
+      const num = Number(e.key);
+      if (Number.isInteger(num) && num >= 1 && num <= 5 && !usedSlots.has(num) && !hintEliminatedSlots.includes(num)) {
+        setSelected(num);
+        return;
+      }
+      if ((e.key === 'Enter' || e.key === ' ') && selected !== null) {
+        e.preventDefault();
+        onLock(selected);
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [pending, confirming, placements, hintEliminatedSlots, selected, onLock]);
+
   const hintAnnouncement =
     hintEliminatedSlots.length > 0
       ? `Hint used. Rank slots ${hintEliminatedSlots.map((s) => `#${s}`).join(' and ')} ruled out.`
@@ -145,7 +163,9 @@ export const PlayScreen = ({
           {currentItem.emoji}
         </p>
         <h2 className="mt-2 text-2xl leading-tight font-black">{currentItem.name}</h2>
-        <p className="mt-1 text-sm font-semibold text-ink-soft">Tap a slot, then lock it in.</p>
+        {step === 1 ? (
+          <p className="mt-1 text-sm font-semibold text-ink-soft">Tap a slot, then lock it in.</p>
+        ) : null}
       </article>
       {error ? (
         <p role="alert" className="shrink-0 text-sm font-bold text-ink">

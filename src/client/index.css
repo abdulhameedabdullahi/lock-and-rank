@@ -52,6 +52,11 @@ button {
   box-shadow: none;
 }
 
+@keyframes progressBar {
+  from { width: 0 }
+  to { width: 100% }
+}
+
 @keyframes rise {
   from {
     opacity: 0;
