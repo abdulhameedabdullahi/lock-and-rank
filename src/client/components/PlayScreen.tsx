@@ -65,6 +65,16 @@ export const PlayScreen = ({
           Item {step} of {SLOT_COUNT} · 1 is first
         </p>
       </header>
+      <div className="flex shrink-0 gap-1" aria-hidden="true">
+        {slots.map((n) => (
+          <div
+            key={n}
+            className={`h-1.5 flex-1 rounded-full transition-colors duration-300 ${
+              n < step ? 'bg-ink' : n === step ? 'bg-tangerine' : 'bg-line'
+            }`}
+          />
+        ))}
+      </div>
       <p className="sr-only" aria-live="polite">
         Item {step} of {SLOT_COUNT}. {currentItem.name}. Choose a rank, then lock it in.
       </p>
@@ -159,7 +169,7 @@ export const PlayScreen = ({
       )}
       <article className="chunk flex min-h-0 flex-1 flex-col items-center justify-center px-3 text-center">
         <p className="text-xs font-black tracking-[0.18em] text-ink-soft uppercase">Lock this</p>
-        <p className="mt-1 text-5xl leading-none" aria-hidden="true">
+        <p className="mt-1 text-7xl leading-none" aria-hidden="true">
           {currentItem.emoji}
         </p>
         <h2 className="mt-2 text-2xl leading-tight font-black">{currentItem.name}</h2>

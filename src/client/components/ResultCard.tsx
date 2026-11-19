@@ -74,6 +74,9 @@ export const ResultCard = ({
   const [copied, setCopied] = useState(false);
   const byRank = [...results].sort((a, b) => a.trueRank - b.trueRank);
 
+  const grade = score >= 90 ? 'S' : score >= 75 ? 'A' : score >= 55 ? 'B' : score >= 35 ? 'C' : 'D';
+  const gradeClass = score >= 75 ? 'text-tangerine' : 'text-ink';
+
   const hintWasUsed = (hintPenalty ?? 0) > 0;
 
   const onCopy = () => {
@@ -99,13 +102,16 @@ export const ResultCard = ({
             {topicEmoji && topicLabel ? `${topicEmoji} ${topicLabel}` : `Round ${summary.roundNumber}`}
           </p>
           <h1 className="text-xl leading-tight font-black">{summary.category}</h1>
-          <p className="mt-1 text-5xl leading-none font-black tabular-nums">
-            {score}
-            <span className="text-xl font-bold text-ink-soft">/100</span>
-          </p>
+          <div className="mt-1 flex items-baseline gap-3">
+            <p className="text-5xl leading-none font-black tabular-nums">
+              {score}
+              <span className="text-xl font-bold text-ink-soft">/100</span>
+            </p>
+            <span className={`text-3xl leading-none font-black ${gradeClass}`}>{grade}</span>
+          </div>
           {hintWasUsed ? (
-            <p className="text-sm font-semibold text-ink-soft">
-              {rawScore !== null && rawScore !== undefined ? `${rawScore} raw` : ''} 💡 Hint used (−{hintPenalty} pts)
+            <p className="mt-0.5 text-sm font-semibold text-ink-soft">
+              💡 −{hintPenalty} hint{rawScore !== null && rawScore !== undefined ? ` · was ${rawScore}` : ''}
             </p>
           ) : null}
         </header>
