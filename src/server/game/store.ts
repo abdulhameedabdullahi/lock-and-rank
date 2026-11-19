@@ -1,5 +1,5 @@
 import { context, redis } from '@devvit/web/server';
-import { SLOT_COUNT, isRecord, isSlot, type CrowdItem } from '../../shared/game';
+import { SLOT_COUNT, isRecord, isSlot, type CrowdItem, type LeaderboardEntry } from '../../shared/game';
 import { ALL_TOPIC_IDS, isSelectableCategoryId } from '../../shared/categories';
 import { GameError } from './errors';
 
@@ -220,10 +220,22 @@ export async function readStats(playerId: string): Promise<StoredStats> {
 export async function updateStats(playerId: string, date: string, score: number): Promise<StoredStats> {
   const stats = await readStats(playerId);
   const yesterday = prevUtcDate(date);
+  const twoDaysAgo = prevUtcDate(yesterday);
   const isNewDay = stats.lastPlayedDate !== date;
-  const streak = isNewDay
-    ? (stats.lastPlayedDate === yesterday ? stats.streak + 1 : 1)
-    : stats.streak;
+
+  let streak: number;
+  if (!isNewDay) {
+    streak = stats.streak;
+  } else if (stats.lastPlayedDate === yesterday) {
+    streak = stats.streak + 1;
+  } else if (stats.streak > 0 && stats.lastPlayedDate === twoDaysAgo) {
+    // missed exactly one day — try to apply streak freeze
+    const froze = await checkAndConsumeFreeze(playerId, date);
+    streak = froze ? stats.streak + 1 : 1;
+  } else {
+    streak = 1;
+  }
+
   const updated: StoredStats = {
     gamesPlayed: stats.gamesPlayed + 1,
     totalScore: stats.totalScore + score,
@@ -287,12 +299,6 @@ export async function readCrowdData(
 
 // ── Leaderboard (scoped per topicId) ─────────────────────────────────────────
 
-export type LeaderboardEntry = {
-  rank: number;
-  username: string;
-  score: number;
-};
-
 function lbKey(date: string, topicId: string): string {
   return `lockrank:v1:lb:${date}:${topicId}`;
 }
@@ -348,4 +354,68 @@ export async function readShareLock(playerId: string, date: string, topicId: str
 
 export async function writeShareLock(playerId: string, date: string, topicId: string, commentId: string): Promise<void> {
   await redis.set(shareLockKey(playerId, date, topicId), commentId, { ex: 86400 * 7 });
+}
+
+// ── Score distribution ────────────────────────────────────────────────────────
+
+function distKey(date: string, topicId: string): string {
+  return `lockrank:v1:dist:${date}:${topicId}`;
+}
+
+/** Bucket = floor(score/10)*10, capped at 90 so 100 lands in the 90s bucket. */
+export async function recordScoreDistribution(date: string, topicId: string, score: number): Promise<void> {
+  try {
+    const bucket = Math.min(90, Math.floor(score / 10) * 10);
+    await redis.hIncrBy(distKey(date, topicId), String(bucket), 1);
+  } catch {
+    // best-effort
+  }
+}
+
+/** Returns 10 counts for buckets 0,10,20,...,90 and the total. */
+export async function readScoreDistribution(date: string, topicId: string): Promise<{ buckets: number[]; total: number }> {
+  try {
+    const raw = await redis.hGetAll(distKey(date, topicId));
+    const buckets = Array.from({ length: 10 }, (_, i) => Number(raw[String(i * 10)] ?? 0));
+    const total = buckets.reduce((s, v) => s + v, 0);
+    return { buckets, total };
+  } catch {
+    return { buckets: Array(10).fill(0) as number[], total: 0 };
+  }
+}
+
+// ── Streak freeze (one per ISO week) ─────────────────────────────────────────
+
+function isoWeekKey(date: string): string {
+  const d = new Date(date + 'T00:00:00Z');
+  const jan4 = new Date(Date.UTC(d.getUTCFullYear(), 0, 4));
+  const startOfWeek1 = new Date(jan4.getTime() - ((jan4.getUTCDay() + 6) % 7) * 86400000);
+  const week = Math.floor((d.getTime() - startOfWeek1.getTime()) / (7 * 86400000)) + 1;
+  return `${d.getUTCFullYear()}-W${String(week).padStart(2, '0')}`;
+}
+
+function freezeKey(playerId: string, weekKey: string): string {
+  return `lockrank:v1:freeze:${weekKey}:${playerId}`;
+}
+
+export async function isFreezeAvailable(playerId: string, date: string): Promise<boolean> {
+  try {
+    const used = await redis.get(freezeKey(playerId, isoWeekKey(date)));
+    return !used;
+  } catch {
+    return false;
+  }
+}
+
+/** Marks the freeze as used for this week and returns true if it was available. */
+export async function checkAndConsumeFreeze(playerId: string, date: string): Promise<boolean> {
+  try {
+    const key = freezeKey(playerId, isoWeekKey(date));
+    const used = await redis.get(key);
+    if (used) return false;
+    await redis.set(key, '1', { ex: 86400 * 10 });
+    return true;
+  } catch {
+    return false;
+  }
 }

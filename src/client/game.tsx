@@ -305,6 +305,7 @@ export const App = () => {
         topicLabel={topicLabel}
         topicId={activeTopicId}
         subredditName={game.subredditName}
+        leaderboard={game.leaderboard}
         onPlayNext={nextUnplayed ? () => playTopic(nextUnplayed.topicId) : undefined}
         nextTopicEmoji={nextUnplayed?.emoji}
         nextTopicLabel={nextUnplayed?.label}

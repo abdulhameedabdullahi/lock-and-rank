@@ -105,8 +105,8 @@ api.get('/leaderboard', async (c) => {
   try {
     const topicId = c.req.query('category') ?? MIX_ID;
     const date = c.req.query('date');
-    const entries = await getDailyLeaderboard(topicId, date);
-    return c.json({ type: 'leaderboard', entries });
+    const data = await getDailyLeaderboard(topicId, date);
+    return c.json({ type: 'leaderboard', ...data });
   } catch (error) {
     const failure = errorBody(error);
     return c.json(failure.body, failure.status);

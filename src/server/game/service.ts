@@ -40,12 +40,15 @@ import {
   clearPlay,
   currentPlayerId,
   getLeaderboard,
+  isFreezeAvailable,
   readCrowdData,
   readPlay,
   readPreferences,
+  readScoreDistribution,
   readShareLock,
   readStats,
   recordCrowdPlacement,
+  recordScoreDistribution,
   updateStats,
   writePlay,
   writePreferences,
@@ -219,6 +222,7 @@ export async function placeItem(request: PlaceRequest, topicId: string = MIX_ID)
     const scored = scorePlacements(round, order, placements, next.hintUsed);
     void updateStats(playerId, date, scored.score);
     void addToLeaderboard(date, topicId, playerId, context.username ?? playerId, scored.score, Date.now());
+    void recordScoreDistribution(date, topicId, scored.score);
   }
   const state = await stateFromPlay(date, roundNumber, round, next, order);
   return { type: 'placed', ...state };
@@ -240,7 +244,11 @@ export async function resetTodayForTopic(topicId: string): Promise<void> {
 
 export async function getStats(): Promise<PlayerStats> {
   const playerId = currentPlayerId();
-  const stored = await readStats(playerId);
+  const date = utcDateString(new Date());
+  const [stored, freezeAvailable] = await Promise.all([
+    readStats(playerId),
+    isFreezeAvailable(playerId, date),
+  ]);
   const averageScore =
     stored.gamesPlayed > 0 ? Math.round(stored.totalScore / stored.gamesPlayed) : 0;
   return {
@@ -249,13 +257,18 @@ export async function getStats(): Promise<PlayerStats> {
     bestScore: stored.bestScore,
     streak: stored.streak,
     longestStreak: stored.longestStreak,
+    freezeAvailable,
   };
 }
 
 export async function getDailyLeaderboard(topicId: string = MIX_ID, date?: string) {
   if (!isTopicId(topicId)) throw new GameError('Unknown topic.', 400);
   const d = date ?? utcDateString(new Date());
-  return getLeaderboard(d, topicId);
+  const [entries, dist] = await Promise.all([
+    getLeaderboard(d, topicId),
+    readScoreDistribution(d, topicId),
+  ]);
+  return { entries, distribution: dist.buckets, distributionTotal: dist.total };
 }
 
 async function topicSummary(

@@ -50,6 +50,14 @@ export const StatsScreen = ({ onBack }: StatsScreenProps) => {
           <StatCell label="Best score" value={`${stats.bestScore}/100`} />
           <StatCell label="Avg score" value={`${stats.averageScore}/100`} wide />
         </dl>
+        <div className="mt-3 chunk p-3 text-center">
+          <p className="text-sm font-black">🧊 Streak Freeze</p>
+          <p className="mt-0.5 text-xs font-semibold text-ink-soft leading-snug">
+            {stats.freezeAvailable
+              ? 'Available — skips one missed day per week automatically'
+              : 'Used this week · resets Monday'}
+          </p>
+        </div>
       ) : null}
     </section>
   );

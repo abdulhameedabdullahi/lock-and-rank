@@ -106,6 +106,13 @@ export type PlayerStats = {
   bestScore: number;
   streak: number;
   longestStreak: number;
+  freezeAvailable: boolean;
+};
+
+export type LeaderboardEntry = {
+  rank: number;
+  username: string;
+  score: number;
 };
 
 export type StatsResponse = {

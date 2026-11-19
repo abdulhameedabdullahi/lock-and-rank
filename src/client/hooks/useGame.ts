@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { showToast } from '@devvit/web/client';
 import type { GameState } from '../../shared/game';
-import { readError, requestHint, requestInit, requestPlace, requestReset } from '../api';
+import { readError, requestHint, requestInit, requestLeaderboard, requestPlace, requestReset, type LeaderboardData } from '../api';
 
 export type Screen = 'prompt' | 'play' | 'reveal' | 'result';
 
@@ -19,6 +19,7 @@ export function useGame(topicId = 'mix') {
   const [error, setError] = useState<string | null>(null);
   const [streak, setStreak] = useState(0);
   const [subredditName, setSubredditName] = useState<string | undefined>(undefined);
+  const [leaderboard, setLeaderboard] = useState<LeaderboardData | null>(null);
   const pendingRef = useRef(false);
 
   const apply = useCallback((state: GameState, revealOnComplete: boolean) => {
@@ -54,6 +55,13 @@ export function useGame(topicId = 'mix') {
   useEffect(() => {
     void load();
   }, [load]);
+
+  const phase = session?.phase;
+  const summaryDate = session?.summary.date;
+  useEffect(() => {
+    if (phase !== 'complete' || !summaryDate) return;
+    requestLeaderboard(topicId, summaryDate).then(setLeaderboard).catch(() => {});
+  }, [phase, topicId, summaryDate]);
 
   const start = useCallback(() => {
     if (session?.phase === 'ready' && session.currentItem) setScreen('play');
@@ -116,5 +124,5 @@ export function useGame(topicId = 'mix') {
     }
   }, [session, topicId]);
 
-  return { session, screen, loading, pending, error, streak, subredditName, load, start, showResult, lock, hint };
+  return { session, screen, loading, pending, error, streak, subredditName, leaderboard, load, start, showResult, lock, hint };
 }

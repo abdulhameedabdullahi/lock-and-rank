@@ -10,7 +10,7 @@ import {
   type RoundSummary,
   type ShareMark,
 } from '../../shared/game';
-import { requestShare, requestSubscribe } from '../api';
+import { requestShare, requestSubscribe, type LeaderboardData } from '../api';
 
 function useCountdown(): string {
   const [label, setLabel] = useState('');
@@ -41,6 +41,7 @@ type ResultCardProps = {
   topicLabel?: string | undefined;
   topicId?: string | undefined;
   subredditName?: string | undefined;
+  leaderboard?: LeaderboardData | null;
   onPlayNext?: (() => void) | undefined;
   nextTopicEmoji?: string | undefined;
   nextTopicLabel?: string | undefined;
@@ -57,7 +58,7 @@ const markClass: Record<ShareMark, string> = {
   cross: 'border-2 border-dashed border-ink bg-paper text-ink',
 };
 
-async function copyText(text: string): Promise<boolean> {
+async function clipboardCopy(text: string): Promise<boolean> {
   try {
     await navigator.clipboard.writeText(text);
     return true;
@@ -69,10 +70,23 @@ async function copyText(text: string): Promise<boolean> {
     area.style.left = '-9999px';
     document.body.appendChild(area);
     area.select();
-    const copied = document.execCommand('copy');
+    const ok = document.execCommand('copy');
     area.remove();
-    return copied;
+    return ok;
   }
+}
+
+async function shareOrCopy(text: string): Promise<'shared' | 'copied' | 'failed'> {
+  if ('share' in navigator) {
+    try {
+      await (navigator as Navigator & { share: (d: { text: string; title: string }) => Promise<void> })
+        .share({ text, title: 'Lock & Rank' });
+      return 'shared';
+    } catch {
+      // user cancelled or share failed — fall through to clipboard
+    }
+  }
+  return (await clipboardCopy(text)) ? 'copied' : 'failed';
 }
 
 export const ResultCard = ({
@@ -86,6 +100,7 @@ export const ResultCard = ({
   topicLabel,
   topicId,
   subredditName,
+  leaderboard,
   onPlayNext,
   nextTopicEmoji,
   nextTopicLabel,
@@ -163,9 +178,9 @@ export const ResultCard = ({
   };
 
   const onCopy = () => {
-    void copyText(shareText).then((ok) => {
-      setCopied(ok);
-      showToast(ok ? 'Result copied' : 'Could not copy');
+    void shareOrCopy(shareText).then((result) => {
+      setCopied(result !== 'failed');
+      showToast(result === 'shared' ? 'Shared!' : result === 'copied' ? 'Result copied' : 'Could not copy');
     });
   };
 
@@ -233,6 +248,50 @@ export const ResultCard = ({
           <p className="mt-1 text-[11px] font-semibold text-ink-soft">
             ✓ exact · ◆ 1 off · ▲ 2 off · ✕ 3+
           </p>
+          {leaderboard && leaderboard.distributionTotal > 0 ? (
+            <div className="mt-3">
+              <p className="text-[11px] font-black tracking-[0.14em] text-ink-soft uppercase">
+                Score distribution · {leaderboard.distributionTotal} player{leaderboard.distributionTotal !== 1 ? 's' : ''}
+              </p>
+              <div className="mt-1 flex h-8 items-end gap-px" aria-label="Score distribution histogram">
+                {leaderboard.distribution.map((count, i) => {
+                  const maxCount = Math.max(...leaderboard.distribution, 1);
+                  const heightPct = Math.max(8, Math.round((count / maxCount) * 100));
+                  const myBucket = Math.min(9, Math.floor(score / 10));
+                  const isMe = i === myBucket;
+                  return (
+                    <div
+                      key={i}
+                      className="flex flex-1 flex-col items-center justify-end"
+                      title={`${i * 10}–${i === 9 ? 100 : i * 10 + 9}: ${count}`}
+                    >
+                      <div
+                        className={`w-full rounded-t-sm ${isMe ? 'bg-tangerine' : 'bg-line'}`}
+                        style={{ height: `${heightPct}%` }}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="mt-0.5 flex justify-between text-[9px] font-semibold text-ink-soft">
+                <span>0</span><span>50</span><span>100</span>
+              </div>
+            </div>
+          ) : null}
+          {leaderboard && leaderboard.entries.length > 0 ? (
+            <div className="mt-3">
+              <p className="text-[11px] font-black tracking-[0.14em] text-ink-soft uppercase">Today's top scores</p>
+              <ol className="mt-1">
+                {leaderboard.entries.slice(0, 5).map((entry) => (
+                  <li key={entry.rank} className="flex items-center gap-2 border-b border-line py-1 text-sm">
+                    <span className="w-4 shrink-0 text-right text-xs font-black tabular-nums text-ink-soft">{entry.rank}</span>
+                    <span className="min-w-0 flex-1 truncate font-semibold">{entry.username}</span>
+                    <span className="shrink-0 font-black tabular-nums">{entry.score}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          ) : null}
           {countdown ? (
             <p className="mt-2 text-xs font-semibold text-ink-soft text-center">
               Next round in {countdown}
@@ -309,12 +368,12 @@ export const ResultCard = ({
                 Share to comments
               </button>
               <button type="button" className="press chunk bg-card px-3 font-black text-ink" onClick={onCopy}>
-                {copied ? '✓' : 'Copy'}
+                {copied ? '✓' : '⬆︎'}
               </button>
             </div>
           ) : (
             <button type="button" className="press chunk mt-2 w-full bg-tangerine font-black text-ink" onClick={onCopy}>
-              {copied ? 'Copied' : 'Copy result'}
+              {copied ? 'Shared ✓' : 'Share result'}
             </button>
           )}
           {subredditName && !subscribed ? (

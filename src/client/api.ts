@@ -13,6 +13,7 @@ import {
   type HomeResponse,
   type InitResponse,
   type ItemResult,
+  type LeaderboardEntry,
   type Phase,
   type PlaceResponse,
   type PlayerStats,
@@ -24,6 +25,12 @@ import {
   type ShareResponse,
   type TopicDailySummary,
 } from '../shared/game';
+
+export type LeaderboardData = {
+  entries: LeaderboardEntry[];
+  distribution: number[];
+  distributionTotal: number;
+};
 
 function messageFrom(value: unknown): string | null {
   if (!isRecord(value) || value.status !== 'error' || typeof value.message !== 'string') return null;
@@ -249,6 +256,7 @@ export async function requestStats(): Promise<PlayerStats> {
     bestScore: typeof s.bestScore === 'number' ? Math.max(0, Math.trunc(s.bestScore)) : 0,
     streak: typeof s.streak === 'number' ? Math.max(0, Math.trunc(s.streak)) : 0,
     longestStreak: typeof s.longestStreak === 'number' ? Math.max(0, Math.trunc(s.longestStreak)) : 0,
+    freezeAvailable: typeof s.freezeAvailable === 'boolean' ? s.freezeAvailable : false,
   };
 }
 
@@ -413,6 +421,34 @@ export async function requestSetPreferences(categoryIds: string[]): Promise<Pref
     ? (payload.categories as unknown[]).filter((v): v is string => typeof v === 'string')
     : [];
   return { type: 'preferences', categories };
+}
+
+export async function requestLeaderboard(topicId: string, date: string): Promise<LeaderboardData> {
+  const response = await fetch(
+    `/api/leaderboard?category=${encodeURIComponent(topicId)}&date=${encodeURIComponent(date)}`
+  );
+  const payload = await readPayload(response);
+  if (!response.ok) {
+    throw new Error(messageFrom(payload) ?? 'Could not load leaderboard.');
+  }
+  if (!isRecord(payload) || payload.type !== 'leaderboard') {
+    throw new Error('Could not read leaderboard.');
+  }
+  const entries: LeaderboardEntry[] = Array.isArray(payload.entries)
+    ? (payload.entries as unknown[]).flatMap((e) => {
+        if (!isRecord(e)) return [];
+        const username = readText(e, 'username', 60);
+        if (!username || typeof e.rank !== 'number' || typeof e.score !== 'number') return [];
+        return [{ rank: Math.trunc(e.rank), username, score: Math.trunc(e.score) }];
+      })
+    : [];
+  const distribution: number[] = Array.isArray(payload.distribution)
+    ? (payload.distribution as unknown[]).map((v) => (typeof v === 'number' ? Math.max(0, Math.trunc(v)) : 0))
+    : Array(10).fill(0) as number[];
+  const distributionTotal = typeof payload.distributionTotal === 'number'
+    ? Math.max(0, Math.trunc(payload.distributionTotal))
+    : 0;
+  return { entries, distribution, distributionTotal };
 }
 
 export async function requestShare(topicId: string, caption: string): Promise<ShareResponse> {
