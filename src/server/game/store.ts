@@ -419,3 +419,26 @@ export async function checkAndConsumeFreeze(playerId: string, date: string): Pro
     return false;
   }
 }
+
+// ── Daily player count ────────────────────────────────────────────────────────
+
+function playsKey(date: string): string {
+  return `lockrank:v1:plays:${date}`;
+}
+
+export async function incrPlayersToday(date: string): Promise<void> {
+  try {
+    await redis.incrBy(playsKey(date), 1);
+  } catch {
+    // best-effort
+  }
+}
+
+export async function readPlayersToday(date: string): Promise<number> {
+  try {
+    const val = await redis.get(playsKey(date));
+    return val ? parseInt(val, 10) : 0;
+  } catch {
+    return 0;
+  }
+}

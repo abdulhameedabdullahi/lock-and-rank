@@ -286,6 +286,7 @@ export type HomeResponse = {
   preferences: string[];
   mix: TopicDailySummary;
   topics: TopicDailySummary[];
+  playersToday?: number;
 };
 
 /** Response from GET /api/preferences. */

@@ -4378,5 +4378,593 @@
       { "id": "geo-liechtenstein-border", "name": "Liechtenstein", "emoji": "🏔️", "value": 160, "source": "Liechtenstein: 160 km total land border (Austria 34.9 km + Switzerland 41.1 km). CIA World Factbook." },
       { "id": "geo-luxembourg-border", "name": "Luxembourg", "emoji": "🇱🇺", "value": 358, "source": "Luxembourg: 358 km total land border (Belgium, France, Germany). CIA World Factbook." }
     ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Human body bone count",
+    "rule": "Most to fewest bones",
+    "unit": "bones",
+    "difficulty": "hard",
+    "items": [
+      { "id": "hb-adult", "name": "Adult human", "emoji": "🦴", "value": 206, "source": "Adults have 206 bones; some sources say 205–207 depending on sesamoids." },
+      { "id": "hb-newborn", "name": "Newborn baby", "emoji": "👶", "value": 270, "source": "Newborns have ~270 bones; many fuse during childhood." },
+      { "id": "hb-cat", "name": "House cat", "emoji": "🐱", "value": 244, "source": "Cats have ~244 bones (some variation by tail length)." },
+      { "id": "hb-python", "name": "Ball python", "emoji": "🐍", "value": 400, "source": "Ball pythons have ~400 bones (mostly vertebrae and ribs)." },
+      { "id": "hb-shark", "name": "Great white shark", "emoji": "🦈", "value": 0, "source": "Sharks have 0 bones — their skeleton is cartilage, not bone." }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "World language speakers",
+    "rule": "Most to fewest native speakers",
+    "unit": "million",
+    "difficulty": "medium",
+    "items": [
+      { "id": "lang-mandarin", "name": "Mandarin Chinese", "emoji": "🇨🇳", "value": 920, "source": "Ethnologue 2023. ~920 million native speakers." },
+      { "id": "lang-spanish", "name": "Spanish", "emoji": "🇪🇸", "value": 475, "source": "Ethnologue 2023. ~475 million native speakers." },
+      { "id": "lang-english", "name": "English", "emoji": "🇬🇧", "value": 373, "source": "Ethnologue 2023. ~373 million native speakers." },
+      { "id": "lang-hindi", "name": "Hindi", "emoji": "🇮🇳", "value": 344, "source": "Ethnologue 2023. ~344 million native speakers." },
+      { "id": "lang-arabic", "name": "Arabic", "emoji": "🇸🇦", "value": 274, "source": "Ethnologue 2023. ~274 million native speakers." }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Volcano height",
+    "rule": "Tallest to shortest",
+    "unit": "m",
+    "difficulty": "medium",
+    "items": [
+      { "id": "volc-ojos", "name": "Ojos del Salado", "emoji": "🌋", "value": 6893, "source": "Chile/Argentina. 6,893 m. Highest active volcano on Earth." },
+      { "id": "volc-kilimanjaro", "name": "Kilimanjaro", "emoji": "⛰️", "value": 5895, "source": "Tanzania. 5,895 m. Dormant stratovolcano." },
+      { "id": "volc-elbrus", "name": "Mount Elbrus", "emoji": "🏔️", "value": 5642, "source": "Russia. 5,642 m. Dormant volcano, highest peak in Europe." },
+      { "id": "volc-fuji", "name": "Mount Fuji", "emoji": "🗻", "value": 3776, "source": "Japan. 3,776 m. Iconic active stratovolcano." },
+      { "id": "volc-etna", "name": "Mount Etna", "emoji": "🔥", "value": 3350, "source": "Sicily, Italy. ~3,350 m. Most active volcano in Europe." }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Olympic gold medals all-time",
+    "rule": "Most to fewest all-time Summer Olympic golds",
+    "unit": "golds",
+    "difficulty": "hard",
+    "items": [
+      { "id": "olym-usa", "name": "United States", "emoji": "🇺🇸", "value": 1061, "source": "Through Paris 2024. USA leads all-time Summer Olympic gold count." },
+      { "id": "olym-ussr", "name": "Soviet Union", "emoji": "🇷🇺", "value": 395, "source": "USSR competed 1952–1988, won ~395 Summer gold medals total." },
+      { "id": "olym-uk", "name": "Great Britain", "emoji": "🇬🇧", "value": 285, "source": "Through Paris 2024. ~285 Summer Olympic golds." },
+      { "id": "olym-china", "name": "China", "emoji": "🇨🇳", "value": 263, "source": "Through Paris 2024. ~263 Summer Olympic golds." },
+      { "id": "olym-germany", "name": "Germany", "emoji": "🇩🇪", "value": 191, "source": "Through Paris 2024, combined (FRG + GDR + unified). ~191 Summer golds." }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Deepest ocean trench",
+    "rule": "Deepest to shallowest",
+    "unit": "m",
+    "difficulty": "medium",
+    "items": [
+      { "id": "trench-mariana", "name": "Mariana Trench", "emoji": "🌊", "value": 11034, "source": "Pacific Ocean. Challenger Deep at ~11,034 m. Deepest known point on Earth." },
+      { "id": "trench-tonga", "name": "Tonga Trench", "emoji": "🌊", "value": 10800, "source": "Pacific Ocean. ~10,800 m depth." },
+      { "id": "trench-philippine", "name": "Philippine Trench", "emoji": "🌊", "value": 10540, "source": "Pacific Ocean. ~10,540 m depth." },
+      { "id": "trench-kuril", "name": "Kuril–Kamchatka Trench", "emoji": "🌊", "value": 10542, "source": "Pacific Ocean. ~10,542 m at deepest." },
+      { "id": "trench-puerto", "name": "Puerto Rico Trench", "emoji": "🌊", "value": 8376, "source": "Atlantic Ocean. 8,376 m. Deepest point in Atlantic." }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Movie runtime",
+    "rule": "Longest to shortest",
+    "unit": "min",
+    "difficulty": "medium",
+    "items": [
+      { "id": "film-gone", "name": "Gone with the Wind", "emoji": "🎬", "value": 221, "source": "1939. 221 minutes including intermission." },
+      { "id": "film-tt", "name": "The Dark Knight", "emoji": "🦇", "value": 152, "source": "2008 Christopher Nolan film. 152 minutes." },
+      { "id": "film-titanic", "name": "Titanic", "emoji": "🚢", "value": 194, "source": "1997 James Cameron. 194 minutes." },
+      { "id": "film-parasite", "name": "Parasite", "emoji": "🏠", "value": 132, "source": "2019 Bong Joon-ho. 132 minutes." },
+      { "id": "film-goodfellas", "name": "Goodfellas", "emoji": "🤵", "value": 146, "source": "1990 Martin Scorsese. 146 minutes." }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Currency exchange rate to USD",
+    "rule": "Fewest to most units per 1 USD",
+    "unit": "units",
+    "difficulty": "hard",
+    "items": [
+      { "id": "fx-gbp", "name": "British Pound (GBP)", "emoji": "🇬🇧", "value": 0, "source": "GBP ~0.79 per USD — deliberately set to 0 for relative ordering vs others." },
+      { "id": "fx-eur", "name": "Euro (EUR)", "emoji": "🇪🇺", "value": 1, "source": "~0.92 EUR per USD as of 2024. Rounded for ordering." },
+      { "id": "fx-jpy", "name": "Japanese Yen (JPY)", "emoji": "🇯🇵", "value": 150, "source": "~150 JPY per USD as of late 2024." },
+      { "id": "fx-inr", "name": "Indian Rupee (INR)", "emoji": "🇮🇳", "value": 84, "source": "~84 INR per USD as of late 2024." },
+      { "id": "fx-ngn", "name": "Nigerian Naira (NGN)", "emoji": "🇳🇬", "value": 1600, "source": "~1,600 NGN per USD as of late 2024." }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Carbon dioxide in atmosphere",
+    "rule": "Highest to lowest CO₂ concentration",
+    "unit": "ppm",
+    "difficulty": "hard",
+    "items": [
+      { "id": "co2-venus", "name": "Venus atmosphere", "emoji": "🌟", "value": 965000, "source": "Venus: ~96.5% CO₂ — 965,000 ppm." },
+      { "id": "co2-mars", "name": "Mars atmosphere", "emoji": "🔴", "value": 950000, "source": "Mars: ~95% CO₂ — ~950,000 ppm (atmosphere very thin)." },
+      { "id": "co2-submarine", "name": "Submarine air limit", "emoji": "🤿", "value": 8000, "source": "US Navy submarine acceptable limit ~8,000 ppm CO₂." },
+      { "id": "co2-earth2024", "name": "Earth 2024", "emoji": "🌍", "value": 422, "source": "NOAA 2024 Mauna Loa reading: ~422 ppm CO₂." },
+      { "id": "co2-preindustrial", "name": "Pre-industrial Earth", "emoji": "🌿", "value": 280, "source": "Before 1750: ~280 ppm CO₂ (ice core records)." }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Human organ weight",
+    "rule": "Heaviest to lightest",
+    "unit": "g",
+    "difficulty": "medium",
+    "items": [
+      { "id": "org-skin", "name": "Skin", "emoji": "🧬", "value": 10886, "source": "Average adult skin weighs ~10–11 kg (~10,886 g)." },
+      { "id": "org-liver", "name": "Liver", "emoji": "🫁", "value": 1500, "source": "Average adult liver ~1,500 g." },
+      { "id": "org-brain", "name": "Brain", "emoji": "🧠", "value": 1400, "source": "Average adult brain ~1,400 g." },
+      { "id": "org-heart", "name": "Heart", "emoji": "❤️", "value": 310, "source": "Average adult heart ~310 g." },
+      { "id": "org-kidney", "name": "Kidney (one)", "emoji": "🫘", "value": 150, "source": "One adult kidney ~150 g." }
+    ]
+  },
+  {
+    "topicId": "mix",
+    "category": "Tallest waterfalls",
+    "rule": "Tallest to shortest",
+    "unit": "m",
+    "difficulty": "medium",
+    "items": [
+      { "id": "fall-angel", "name": "Angel Falls", "emoji": "💧", "value": 979, "source": "Venezuela. 979 m — world's tallest uninterrupted waterfall." },
+      { "id": "fall-tugela", "name": "Tugela Falls", "emoji": "🌊", "value": 948, "source": "South Africa. 948 m — tallest waterfall in Africa." },
+      { "id": "fall-cataratas", "name": "Cataratas las Tres Hermanas", "emoji": "🏞️", "value": 914, "source": "Peru. 914 m three-tiered waterfall." },
+      { "id": "fall-olo", "name": "Olo'upena Falls", "emoji": "🌺", "value": 900, "source": "Hawaii, USA. ~900 m." },
+      { "id": "fall-niagara", "name": "Niagara Falls", "emoji": "🇨🇦", "value": 57, "source": "Canada/USA. ~57 m (Horseshoe Falls). Famous for volume, not height." }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Programming language creation year",
+    "rule": "Oldest to newest",
+    "unit": "year",
+    "difficulty": "medium",
+    "items": [
+      { "id": "pl-fortran", "name": "Fortran", "emoji": "💻", "value": 1957, "source": "IBM Fortran first released 1957." },
+      { "id": "pl-c", "name": "C", "emoji": "⚙️", "value": 1972, "source": "C developed by Dennis Ritchie at Bell Labs, 1972." },
+      { "id": "pl-python", "name": "Python", "emoji": "🐍", "value": 1991, "source": "Python 0.9.0 released by Guido van Rossum, 1991." },
+      { "id": "pl-java", "name": "Java", "emoji": "☕", "value": 1995, "source": "Java 1.0 released by Sun Microsystems, 1995." },
+      { "id": "pl-ts", "name": "TypeScript", "emoji": "🔷", "value": 2012, "source": "TypeScript 0.8 released by Microsoft, October 2012." }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Most GitHub stars (repos)",
+    "rule": "Most to fewest GitHub stars",
+    "unit": "k stars",
+    "difficulty": "hard",
+    "items": [
+      { "id": "gh-linux", "name": "linux/linux", "emoji": "🐧", "value": 184, "source": "Linux kernel repo. ~184k stars as of 2024." },
+      { "id": "gh-react", "name": "facebook/react", "emoji": "⚛️", "value": 228, "source": "React.js. ~228k GitHub stars as of 2024." },
+      { "id": "gh-vscode", "name": "microsoft/vscode", "emoji": "💙", "value": 162, "source": "VS Code. ~162k stars as of 2024." },
+      { "id": "gh-flutter", "name": "flutter/flutter", "emoji": "🦋", "value": 165, "source": "Flutter. ~165k GitHub stars as of 2024." },
+      { "id": "gh-tensorflow", "name": "tensorflow/tensorflow", "emoji": "🤖", "value": 185, "source": "TensorFlow. ~185k GitHub stars as of 2024." }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "CPU transistor count",
+    "rule": "Most to fewest transistors",
+    "unit": "billion",
+    "difficulty": "hard",
+    "items": [
+      { "id": "cpu-m3ultra", "name": "Apple M3 Ultra", "emoji": "🍎", "value": 192, "source": "Apple M3 Ultra (2024): 192 billion transistors." },
+      { "id": "cpu-m2ultra", "name": "Apple M2 Ultra", "emoji": "🍏", "value": 134, "source": "Apple M2 Ultra (2023): 134 billion transistors." },
+      { "id": "cpu-a17pro", "name": "Apple A17 Pro", "emoji": "📱", "value": 19, "source": "Apple A17 Pro (2023, iPhone 15 Pro): 19 billion transistors." },
+      { "id": "cpu-snapdragon8g3", "name": "Snapdragon 8 Gen 3", "emoji": "📡", "value": 10, "source": "Qualcomm Snapdragon 8 Gen 3 (2023): ~10 billion transistors." },
+      { "id": "cpu-intelatom", "name": "Intel Atom Z5xx (2008)", "emoji": "🔲", "value": 0, "source": "Intel Atom Z5xx (2008): ~47 million = ~0.05 billion transistors." }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "Data storage unit size",
+    "rule": "Largest to smallest",
+    "unit": "relative",
+    "difficulty": "easy",
+    "items": [
+      { "id": "ds-petabyte", "name": "Petabyte", "emoji": "💾", "value": 1000000000000000, "source": "1 PB = 10^15 bytes." },
+      { "id": "ds-terabyte", "name": "Terabyte", "emoji": "💿", "value": 1000000000000, "source": "1 TB = 10^12 bytes." },
+      { "id": "ds-gigabyte", "name": "Gigabyte", "emoji": "📀", "value": 1000000000, "source": "1 GB = 10^9 bytes." },
+      { "id": "ds-megabyte", "name": "Megabyte", "emoji": "📁", "value": 1000000, "source": "1 MB = 10^6 bytes." },
+      { "id": "ds-kilobyte", "name": "Kilobyte", "emoji": "📄", "value": 1000, "source": "1 KB = 10^3 bytes." }
+    ]
+  },
+  {
+    "topicId": "tech",
+    "category": "World's fastest supercomputers (peak FLOPS)",
+    "rule": "Fastest to slowest",
+    "unit": "PetaFLOPS",
+    "difficulty": "hard",
+    "items": [
+      { "id": "sc-frontier", "name": "Frontier (ORNL, USA)", "emoji": "🖥️", "value": 1194, "source": "Frontier: ~1,194 PetaFLOPS (1.19 ExaFLOPS). Top500 #1 as of 2024." },
+      { "id": "sc-aurora", "name": "Aurora (ANL, USA)", "emoji": "⚡", "value": 1012, "source": "Aurora: ~1,012 PetaFLOPS. Became top-2 in 2024." },
+      { "id": "sc-eagle", "name": "Eagle (Microsoft Azure)", "emoji": "☁️", "value": 561, "source": "Eagle: ~561 PetaFLOPS. Top500 cloud entry." },
+      { "id": "sc-fugaku", "name": "Fugaku (Japan)", "emoji": "🇯🇵", "value": 442, "source": "Fugaku: ~442 PetaFLOPS. RIKEN/Fujitsu." },
+      { "id": "sc-summit", "name": "Summit (ORNL, USA)", "emoji": "🏔️", "value": 200, "source": "Summit: ~200 PetaFLOPS. IBM system at Oak Ridge." }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Element atomic number",
+    "rule": "Highest to lowest atomic number",
+    "unit": "protons",
+    "difficulty": "medium",
+    "items": [
+      { "id": "el-uranium", "name": "Uranium", "emoji": "⚛️", "value": 92, "source": "Uranium: atomic number 92." },
+      { "id": "el-gold", "name": "Gold", "emoji": "🥇", "value": 79, "source": "Gold: atomic number 79." },
+      { "id": "el-iron", "name": "Iron", "emoji": "🔩", "value": 26, "source": "Iron: atomic number 26." },
+      { "id": "el-carbon", "name": "Carbon", "emoji": "💎", "value": 6, "source": "Carbon: atomic number 6." },
+      { "id": "el-helium", "name": "Helium", "emoji": "🎈", "value": 2, "source": "Helium: atomic number 2." }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Speed of light vs other speeds",
+    "rule": "Fastest to slowest",
+    "unit": "km/s",
+    "difficulty": "hard",
+    "items": [
+      { "id": "spd-light", "name": "Speed of light", "emoji": "✨", "value": 299792, "source": "299,792 km/s in vacuum." },
+      { "id": "spd-solar-wind", "name": "Fast solar wind", "emoji": "☀️", "value": 800, "source": "Fast solar wind streams ~800 km/s." },
+      { "id": "spd-iss", "name": "ISS orbital speed", "emoji": "🚀", "value": 8, "source": "ISS orbits Earth at ~7.7 km/s (~28,000 km/h)." },
+      { "id": "spd-sound-air", "name": "Sound in air", "emoji": "🔊", "value": 0, "source": "Sound in air ~343 m/s = 0.343 km/s." },
+      { "id": "spd-continental", "name": "Continental drift", "emoji": "🌍", "value": 0, "source": "~0.000000003 km/s (~3 cm/yr). Effectively 0 at km/s scale." }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Nobel Physics Prize year",
+    "rule": "Earliest to latest",
+    "unit": "year",
+    "difficulty": "hard",
+    "items": [
+      { "id": "nph-roentgen", "name": "Röntgen (X-rays)", "emoji": "☢️", "value": 1901, "source": "Wilhelm Röntgen: Nobel Physics 1901 for X-ray discovery." },
+      { "id": "nph-einstein", "name": "Einstein (photoelectric)", "emoji": "🧠", "value": 1921, "source": "Albert Einstein: Nobel Physics 1921 (awarded 1922) for photoelectric effect." },
+      { "id": "nph-heisenberg", "name": "Heisenberg (quantum)", "emoji": "🔬", "value": 1932, "source": "Werner Heisenberg: Nobel Physics 1932 for quantum mechanics." },
+      { "id": "nph-higgs", "name": "Higgs & Englert (boson)", "emoji": "⚛️", "value": 2013, "source": "Peter Higgs & François Englert: Nobel Physics 2013 for Higgs mechanism." },
+      { "id": "nph-ai2024", "name": "Hopfield & Hinton (AI)", "emoji": "🤖", "value": 2024, "source": "John Hopfield & Geoffrey Hinton: Nobel Physics 2024 for foundational AI discoveries." }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Planet surface temperature",
+    "rule": "Hottest to coldest mean surface temperature",
+    "unit": "°C",
+    "difficulty": "medium",
+    "items": [
+      { "id": "temp-venus", "name": "Venus", "emoji": "🌟", "value": 464, "source": "Venus mean surface ~464°C due to runaway greenhouse effect." },
+      { "id": "temp-mercury-day", "name": "Mercury (dayside)", "emoji": "☿️", "value": 430, "source": "Mercury dayside up to ~430°C." },
+      { "id": "temp-earth", "name": "Earth", "emoji": "🌍", "value": 15, "source": "Earth global mean surface ~15°C." },
+      { "id": "temp-mars", "name": "Mars", "emoji": "🔴", "value": -60, "source": "Mars mean surface ~-60°C." },
+      { "id": "temp-pluto", "name": "Pluto", "emoji": "🌑", "value": -229, "source": "Pluto surface ~-229°C." }
+    ]
+  },
+  {
+    "topicId": "science",
+    "category": "Chemical boiling point",
+    "rule": "Highest to lowest boiling point",
+    "unit": "°C",
+    "difficulty": "hard",
+    "items": [
+      { "id": "bp-tungsten", "name": "Tungsten", "emoji": "⚙️", "value": 5555, "source": "Tungsten boiling point: 5,555°C. Highest of all elements." },
+      { "id": "bp-iron", "name": "Iron", "emoji": "🔩", "value": 2862, "source": "Iron boiling point: 2,862°C." },
+      { "id": "bp-water", "name": "Water", "emoji": "💧", "value": 100, "source": "Water boiling point at 1 atm: 100°C." },
+      { "id": "bp-ethanol", "name": "Ethanol", "emoji": "🍷", "value": 78, "source": "Ethanol boiling point: 78.4°C." },
+      { "id": "bp-nitrogen", "name": "Liquid nitrogen", "emoji": "🧊", "value": -196, "source": "Nitrogen boils at -195.8°C (rounded to -196)." }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Box office gross (worldwide)",
+    "rule": "Highest to lowest worldwide gross",
+    "unit": "bn USD",
+    "difficulty": "medium",
+    "items": [
+      { "id": "bo-avatar", "name": "Avatar (2009)", "emoji": "🌿", "value": 2923, "source": "Avatar (James Cameron, 2009): $2.923 billion worldwide." },
+      { "id": "bo-avengerseg", "name": "Avengers: Endgame", "emoji": "🦸", "value": 2799, "source": "Avengers: Endgame (2019): $2.799 billion worldwide." },
+      { "id": "bo-titanic", "name": "Titanic (1997)", "emoji": "🚢", "value": 2264, "source": "Titanic (James Cameron, 1997): $2.264 billion worldwide (re-releases included)." },
+      { "id": "bo-spiderman", "name": "Spider-Man: No Way Home", "emoji": "🕷️", "value": 1922, "source": "Spider-Man: No Way Home (2021): $1.922 billion worldwide." },
+      { "id": "bo-lion", "name": "The Lion King (2019)", "emoji": "🦁", "value": 1664, "source": "The Lion King (2019 live action): $1.664 billion worldwide." }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Academy Award Best Picture year",
+    "rule": "Earliest to latest",
+    "unit": "year",
+    "difficulty": "hard",
+    "items": [
+      { "id": "oscar-wings", "name": "Wings", "emoji": "✈️", "value": 1927, "source": "Wings won the first Best Picture at the 1st Academy Awards (1927/28)." },
+      { "id": "oscar-godfather", "name": "The Godfather", "emoji": "🤵", "value": 1972, "source": "The Godfather won Best Picture at the 45th Academy Awards (1972)." },
+      { "id": "oscar-schindler", "name": "Schindler's List", "emoji": "📜", "value": 1993, "source": "Schindler's List won Best Picture at the 66th Academy Awards (1993)." },
+      { "id": "oscar-parasite", "name": "Parasite", "emoji": "🏠", "value": 2019, "source": "Parasite won Best Picture at the 92nd Academy Awards (2019)." },
+      { "id": "oscar-oppenheimer", "name": "Oppenheimer", "emoji": "☢️", "value": 2023, "source": "Oppenheimer won Best Picture at the 96th Academy Awards (2023)." }
+    ]
+  },
+  {
+    "topicId": "movies",
+    "category": "Director highest-grossing film",
+    "rule": "Highest to lowest single film gross",
+    "unit": "bn USD",
+    "difficulty": "hard",
+    "items": [
+      { "id": "dir-cameron", "name": "James Cameron (Avatar)", "emoji": "🌿", "value": 2923, "source": "Avatar (2009): $2.923B, highest-grossing Cameron film." },
+      { "id": "dir-russo", "name": "Russo Bros. (Endgame)", "emoji": "🦸", "value": 2799, "source": "Avengers: Endgame (2019): $2.799B, highest-grossing Russo Brothers film." },
+      { "id": "dir-favreau", "name": "Jon Favreau (Lion King)", "emoji": "🦁", "value": 1664, "source": "The Lion King (2019): $1.664B, highest-grossing Favreau film." },
+      { "id": "dir-nolan", "name": "Christopher Nolan (Oppenheimer)", "emoji": "☢️", "value": 952, "source": "Oppenheimer (2023): $952M, highest-grossing Nolan film." },
+      { "id": "dir-tarantino", "name": "Quentin Tarantino (Django)", "emoji": "🤠", "value": 426, "source": "Django Unchained (2012): ~$426M, Tarantino's highest-grossing film." }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Album sales (certified)",
+    "rule": "Best-selling to lowest",
+    "unit": "million copies",
+    "difficulty": "medium",
+    "items": [
+      { "id": "alb-thriller", "name": "Thriller – Michael Jackson", "emoji": "🕺", "value": 70, "source": "Thriller: best-selling album ever, ~70 million certified copies." },
+      { "id": "alb-backstreet", "name": "Millennium – Backstreet Boys", "emoji": "🎤", "value": 40, "source": "Millennium (1999): ~40 million copies." },
+      { "id": "alb-21adele", "name": "21 – Adele", "emoji": "🎵", "value": 31, "source": "21 (2011): ~31 million copies." },
+      { "id": "alb-hybrid", "name": "Hybrid Theory – Linkin Park", "emoji": "🎸", "value": 27, "source": "Hybrid Theory (2000): ~27 million copies." },
+      { "id": "alb-abbey", "name": "Abbey Road – The Beatles", "emoji": "🎼", "value": 14, "source": "Abbey Road (1969): ~14 million certified copies." }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Grammy Awards wins (artists)",
+    "rule": "Most to fewest career Grammy wins",
+    "unit": "Grammys",
+    "difficulty": "hard",
+    "items": [
+      { "id": "grm-beyonce", "name": "Beyoncé", "emoji": "👑", "value": 32, "source": "Beyoncé: 32 Grammy wins through 2024 — all-time record." },
+      { "id": "grm-taylor", "name": "Taylor Swift", "emoji": "🌟", "value": 14, "source": "Taylor Swift: 14 Grammy wins through 2024." },
+      { "id": "grm-uptonelton", "name": "Elton John", "emoji": "🎹", "value": 5, "source": "Elton John: 5 Grammy wins." },
+      { "id": "grm-adele", "name": "Adele", "emoji": "🎤", "value": 15, "source": "Adele: 15 Grammy wins through 2023." },
+      { "id": "grm-michaelj", "name": "Michael Jackson", "emoji": "🕺", "value": 13, "source": "Michael Jackson: 13 Grammy wins during his lifetime." }
+    ]
+  },
+  {
+    "topicId": "music",
+    "category": "Chart weeks at #1 (Billboard Hot 100)",
+    "rule": "Most to fewest weeks at #1",
+    "unit": "weeks",
+    "difficulty": "hard",
+    "items": [
+      { "id": "bb1-oldtown", "name": "Old Town Road – Lil Nas X", "emoji": "🤠", "value": 19, "source": "Old Town Road: 19 weeks at #1 on Billboard Hot 100 (2019). All-time record." },
+      { "id": "bb1-blinding", "name": "Blinding Lights – The Weeknd", "emoji": "🌃", "value": 1, "source": "Blinding Lights spent 1 week at #1 but 57 weeks in the top 10 — record." },
+      { "id": "bb1-shape", "name": "Shape of You – Ed Sheeran", "emoji": "🎵", "value": 12, "source": "Shape of You: 12 weeks at #1 (2017)." },
+      { "id": "bb1-uptown", "name": "Uptown Funk – Bruno Mars", "emoji": "🕺", "value": 14, "source": "Uptown Funk: 14 weeks at #1 (2015)." },
+      { "id": "bb1-wap", "name": "WAP – Cardi B ft. Megan", "emoji": "🎤", "value": 4, "source": "WAP: 4 weeks at #1 (2020)." }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Best-selling video games",
+    "rule": "Best-selling to lowest",
+    "unit": "million copies",
+    "difficulty": "medium",
+    "items": [
+      { "id": "vg-minecraft", "name": "Minecraft", "emoji": "⛏️", "value": 300, "source": "Minecraft: 300+ million copies sold across all platforms as of 2023." },
+      { "id": "vg-gta5", "name": "GTA V", "emoji": "🚗", "value": 195, "source": "GTA V: ~195 million copies sold as of 2024." },
+      { "id": "vg-tetris", "name": "Tetris (all versions)", "emoji": "🧱", "value": 520, "source": "Tetris: ~520 million copies including paid mobile versions." },
+      { "id": "vg-wii-sports", "name": "Wii Sports", "emoji": "🎾", "value": 83, "source": "Wii Sports: ~83 million (bundled with Wii)." },
+      { "id": "vg-pubg", "name": "PUBG: Battlegrounds", "emoji": "🎯", "value": 75, "source": "PUBG: ~75 million paid copies sold on PC/console." }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Game franchise age",
+    "rule": "Oldest to newest (first game release year)",
+    "unit": "year",
+    "difficulty": "medium",
+    "items": [
+      { "id": "gf-pong", "name": "Pong (Atari)", "emoji": "🏓", "value": 1972, "source": "Pong released by Atari, November 1972." },
+      { "id": "gf-pacman", "name": "Pac-Man", "emoji": "👾", "value": 1980, "source": "Pac-Man released by Namco in Japan, May 1980." },
+      { "id": "gf-mario", "name": "Mario (Donkey Kong)", "emoji": "🍄", "value": 1981, "source": "Mario first appeared in Donkey Kong, 1981." },
+      { "id": "gf-zelda", "name": "The Legend of Zelda", "emoji": "🗡️", "value": 1986, "source": "The Legend of Zelda for Famicom Disk System, 1986." },
+      { "id": "gf-minecraft-yr", "name": "Minecraft", "emoji": "⛏️", "value": 2009, "source": "Minecraft alpha released by Markus Persson, 2009." }
+    ]
+  },
+  {
+    "topicId": "games",
+    "category": "Esports prize pool (all-time)",
+    "rule": "Largest to smallest total prize pool",
+    "unit": "million USD",
+    "difficulty": "hard",
+    "items": [
+      { "id": "esp-dota2", "name": "Dota 2 (The International)", "emoji": "🏆", "value": 40, "source": "Dota 2 The International 2021: ~$40M prize pool. Largest single esports event." },
+      { "id": "esp-fortnite", "name": "Fortnite World Cup", "emoji": "🎯", "value": 30, "source": "Fortnite World Cup 2019: $30M total prize pool." },
+      { "id": "esp-csgo", "name": "CS:GO (Majors cumulative)", "emoji": "🔫", "value": 25, "source": "CS:GO PGL Major: individual Majors up to $1M–$2M; cumulative prize all-time ~$25M+." },
+      { "id": "esp-lol", "name": "LoL Worlds 2023", "emoji": "🌍", "value": 2, "source": "LoL World Championship 2023: ~$2.2M prize pool." },
+      { "id": "esp-valorant", "name": "Valorant Champions 2023", "emoji": "🎮", "value": 1, "source": "Valorant Champions 2023: ~$1M prize pool." }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "NBA career points leaders",
+    "rule": "Most to fewest career points",
+    "unit": "points",
+    "difficulty": "medium",
+    "items": [
+      { "id": "nba-lebron", "name": "LeBron James", "emoji": "👑", "value": 40000, "source": "LeBron James: passed 40,000 career points in 2024 — all-time NBA record." },
+      { "id": "nba-jabbar", "name": "Kareem Abdul-Jabbar", "emoji": "🏀", "value": 38387, "source": "Kareem Abdul-Jabbar: 38,387 points. Was all-time leader until LeBron." },
+      { "id": "nba-malone", "name": "Karl Malone", "emoji": "💪", "value": 36928, "source": "Karl Malone: 36,928 points. 3rd all-time." },
+      { "id": "nba-kobe", "name": "Kobe Bryant", "emoji": "🐍", "value": 33643, "source": "Kobe Bryant: 33,643 points. 4th all-time." },
+      { "id": "nba-jordan", "name": "Michael Jordan", "emoji": "🌟", "value": 32292, "source": "Michael Jordan: 32,292 career points. 5th all-time." }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "NBA Finals wins by franchise",
+    "rule": "Most to fewest championships",
+    "unit": "titles",
+    "difficulty": "medium",
+    "items": [
+      { "id": "nba-celtics", "name": "Boston Celtics", "emoji": "🍀", "value": 18, "source": "Boston Celtics: 18 NBA Championships through 2024." },
+      { "id": "nba-lakers", "name": "Los Angeles Lakers", "emoji": "💜", "value": 17, "source": "Los Angeles Lakers: 17 NBA Championships." },
+      { "id": "nba-warriors", "name": "Golden State Warriors", "emoji": "💛", "value": 7, "source": "Golden State Warriors: 7 NBA Championships through 2022." },
+      { "id": "nba-bulls", "name": "Chicago Bulls", "emoji": "🐂", "value": 6, "source": "Chicago Bulls: 6 NBA Championships (all in Jordan era)." },
+      { "id": "nba-spurs", "name": "San Antonio Spurs", "emoji": "🤠", "value": 5, "source": "San Antonio Spurs: 5 NBA Championships." }
+    ]
+  },
+  {
+    "topicId": "basketball",
+    "category": "NBA single-season scoring record",
+    "rule": "Highest to lowest points per game average",
+    "unit": "pts/game",
+    "difficulty": "hard",
+    "items": [
+      { "id": "pts-wilt", "name": "Wilt Chamberlain 1961–62", "emoji": "🏀", "value": 50, "source": "Wilt Chamberlain averaged 50.4 PPG in 1961–62. All-time single-season record." },
+      { "id": "pts-wilt6364", "name": "Wilt Chamberlain 1963–64", "emoji": "🏀", "value": 36, "source": "Wilt Chamberlain averaged 36.9 PPG in 1963–64." },
+      { "id": "pts-jordan8687", "name": "Michael Jordan 1986–87", "emoji": "🌟", "value": 37, "source": "Michael Jordan averaged 37.1 PPG in 1986–87." },
+      { "id": "pts-curry2015", "name": "Stephen Curry 2015–16", "emoji": "💫", "value": 30, "source": "Stephen Curry averaged 30.1 PPG in MVP season 2015–16." },
+      { "id": "pts-lebron", "name": "LeBron James 2005–06", "emoji": "👑", "value": 31, "source": "LeBron James averaged 31.4 PPG in 2005–06." }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Anime episode count",
+    "rule": "Most to fewest episodes",
+    "unit": "episodes",
+    "difficulty": "easy",
+    "items": [
+      { "id": "ani-sazae", "name": "Sazae-san", "emoji": "🐚", "value": 7700, "source": "Sazae-san: 7,700+ episodes since 1969. Longest-running animated series." },
+      { "id": "ani-doraemon", "name": "Doraemon (1979)", "emoji": "🤖", "value": 1787, "source": "Doraemon (1979–2005 Shin-Ei version): ~1,787 episodes." },
+      { "id": "ani-onepiece", "name": "One Piece", "emoji": "🏴‍☠️", "value": 1100, "source": "One Piece: 1,100+ episodes as of 2024." },
+      { "id": "ani-naruto-all", "name": "Naruto + Shippuden", "emoji": "🍥", "value": 720, "source": "Naruto (220) + Naruto Shippuden (500) = 720 episodes total." },
+      { "id": "ani-db-all", "name": "Dragon Ball franchise", "emoji": "⭐", "value": 639, "source": "Dragon Ball + Z + GT + Super ≈ 639 episodes." }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "Manga volume count (ongoing/completed)",
+    "rule": "Most to fewest volumes",
+    "unit": "volumes",
+    "difficulty": "medium",
+    "items": [
+      { "id": "mg-golgo", "name": "Golgo 13", "emoji": "🎯", "value": 207, "source": "Golgo 13: 207+ volumes. Longest-running manga as of 2024." },
+      { "id": "mg-kochikame", "name": "Kochikame", "emoji": "👮", "value": 201, "source": "Kochikame: 201 volumes (1976–2016). Completed." },
+      { "id": "mg-onepiece-mg", "name": "One Piece manga", "emoji": "🏴‍☠️", "value": 108, "source": "One Piece manga: 108+ volumes as of 2024." },
+      { "id": "mg-conan", "name": "Detective Conan", "emoji": "🔍", "value": 103, "source": "Detective Conan: 103+ volumes as of 2024." },
+      { "id": "mg-naruto-mg", "name": "Naruto manga", "emoji": "🍥", "value": 72, "source": "Naruto manga: 72 volumes. Completed." }
+    ]
+  },
+  {
+    "topicId": "anime",
+    "category": "MyAnimeList top-rated scores",
+    "rule": "Highest to lowest MAL score",
+    "unit": "score ×100",
+    "difficulty": "medium",
+    "items": [
+      { "id": "mal-fullmetal", "name": "Fullmetal Alchemist: Brotherhood", "emoji": "⚗️", "value": 918, "source": "FMA: Brotherhood: MAL score ~9.09 (×100 = 909). Consistently #1." },
+      { "id": "mal-steins", "name": "Steins;Gate", "emoji": "⏱️", "value": 905, "source": "Steins;Gate: MAL score ~9.05. Top-3 all time." },
+      { "id": "mal-gintama", "name": "Gintama° (2015)", "emoji": "🗡️", "value": 909, "source": "Gintama° season: MAL score ~9.09. Disputed #1 with FMA:B." },
+      { "id": "mal-clannad", "name": "Clannad: After Story", "emoji": "🌸", "value": 893, "source": "Clannad: After Story: MAL score ~8.93." },
+      { "id": "mal-aot", "name": "Attack on Titan Final Season", "emoji": "⚔️", "value": 891, "source": "AoT Final Season Part 2: MAL score ~8.91." }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Animal gestation period",
+    "rule": "Longest to shortest",
+    "unit": "days",
+    "difficulty": "medium",
+    "items": [
+      { "id": "gest-elephant", "name": "African Elephant", "emoji": "🐘", "value": 660, "source": "African elephant gestation: ~22 months (~660 days). Longest of any land mammal." },
+      { "id": "gest-giraffe", "name": "Giraffe", "emoji": "🦒", "value": 460, "source": "Giraffe gestation: ~15 months (~460 days)." },
+      { "id": "gest-horse", "name": "Horse", "emoji": "🐴", "value": 335, "source": "Horse gestation: ~11 months (~335 days)." },
+      { "id": "gest-human", "name": "Human", "emoji": "👶", "value": 280, "source": "Human pregnancy: ~40 weeks (~280 days)." },
+      { "id": "gest-hamster", "name": "Hamster", "emoji": "🐹", "value": 16, "source": "Hamster gestation: ~16 days. One of shortest of any mammal." }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Animal venom lethality (LD50)",
+    "rule": "Most to least venomous (lower LD50 = more potent)",
+    "unit": "µg/kg LD50",
+    "difficulty": "hard",
+    "items": [
+      { "id": "vn-inland-taipan", "name": "Inland Taipan", "emoji": "🐍", "value": 1, "source": "Inland Taipan: LD50 ~1 µg/kg (subcutaneous). Most venomous snake." },
+      { "id": "vn-blue-ringed", "name": "Blue-ringed Octopus", "emoji": "🐙", "value": 10, "source": "Blue-ringed Octopus venom (tetrodotoxin): LD50 ~10 µg/kg." },
+      { "id": "vn-king-cobra", "name": "King Cobra", "emoji": "👑", "value": 1800, "source": "King Cobra: LD50 ~1,800 µg/kg but delivers enormous venom volume." },
+      { "id": "vn-deathstalker", "name": "Deathstalker Scorpion", "emoji": "🦂", "value": 500, "source": "Deathstalker scorpion: LD50 ~500 µg/kg. Most dangerous scorpion." },
+      { "id": "vn-box-jellyfish", "name": "Box Jellyfish", "emoji": "🪼", "value": 40, "source": "Box jellyfish venom: LD50 ~40 µg/kg. Most venomous marine animal." }
+    ]
+  },
+  {
+    "topicId": "wildfacts",
+    "category": "Animal sleep duration",
+    "rule": "Most to fewest hours of sleep per day",
+    "unit": "hrs/day",
+    "difficulty": "easy",
+    "items": [
+      { "id": "slp-koala", "name": "Koala", "emoji": "🐨", "value": 22, "source": "Koalas sleep ~22 hours/day due to low-energy eucalyptus diet." },
+      { "id": "slp-lion", "name": "Lion", "emoji": "🦁", "value": 20, "source": "Lions sleep ~20 hours/day." },
+      { "id": "slp-cat", "name": "House Cat", "emoji": "🐱", "value": 15, "source": "Domestic cats sleep ~12–16 hours/day, avg ~15." },
+      { "id": "slp-human", "name": "Human", "emoji": "🧑", "value": 8, "source": "Adult humans sleep ~8 hours/day (recommended)." },
+      { "id": "slp-giraffe", "name": "Giraffe", "emoji": "🦒", "value": 2, "source": "Giraffes sleep only ~2 hours/day — one of the least of any mammal." }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "Country population density",
+    "rule": "Most to fewest people per km²",
+    "unit": "people/km²",
+    "difficulty": "medium",
+    "items": [
+      { "id": "gpd-monaco", "name": "Monaco", "emoji": "🇲🇨", "value": 26337, "source": "Monaco: ~26,337 people/km². Most densely populated country." },
+      { "id": "gpd-singapore", "name": "Singapore", "emoji": "🇸🇬", "value": 7804, "source": "Singapore: ~7,804 people/km²." },
+      { "id": "gpd-bangladesh", "name": "Bangladesh", "emoji": "🇧🇩", "value": 1265, "source": "Bangladesh: ~1,265 people/km²." },
+      { "id": "gpd-india-geo", "name": "India", "emoji": "🇮🇳", "value": 464, "source": "India: ~464 people/km²." },
+      { "id": "gpd-canada-geo", "name": "Canada", "emoji": "🇨🇦", "value": 4, "source": "Canada: ~4 people/km². One of the least dense large countries." }
+    ]
+  },
+  {
+    "topicId": "geography",
+    "category": "Continent area",
+    "rule": "Largest to smallest",
+    "unit": "million km²",
+    "difficulty": "easy",
+    "items": [
+      { "id": "cont-asia", "name": "Asia", "emoji": "🌏", "value": 44579, "source": "Asia: ~44.6 million km². Largest continent." },
+      { "id": "cont-africa", "name": "Africa", "emoji": "🌍", "value": 30370, "source": "Africa: ~30.4 million km²." },
+      { "id": "cont-namerica", "name": "North America", "emoji": "🌎", "value": 24709, "source": "North America: ~24.7 million km²." },
+      { "id": "cont-samerica", "name": "South America", "emoji": "🌎", "value": 17840, "source": "South America: ~17.8 million km²." },
+      { "id": "cont-europe", "name": "Europe", "emoji": "🌍", "value": 10530, "source": "Europe: ~10.5 million km²." }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "FIFA World Cup wins",
+    "rule": "Most to fewest World Cup titles",
+    "unit": "titles",
+    "difficulty": "easy",
+    "items": [
+      { "id": "wcw-brazil", "name": "Brazil", "emoji": "🇧🇷", "value": 5, "source": "Brazil: 5 World Cup titles (1958, 1962, 1970, 1994, 2002)." },
+      { "id": "wcw-germany", "name": "Germany", "emoji": "🇩🇪", "value": 4, "source": "Germany: 4 World Cup titles (1954, 1974, 1990, 2014)." },
+      { "id": "wcw-italy", "name": "Italy", "emoji": "🇮🇹", "value": 4, "source": "Italy: 4 World Cup titles (1934, 1938, 1982, 2006). Tied with Germany." },
+      { "id": "wcw-argentina", "name": "Argentina", "emoji": "🇦🇷", "value": 3, "source": "Argentina: 3 World Cup titles (1978, 1986, 2022)." },
+      { "id": "wcw-france", "name": "France", "emoji": "🇫🇷", "value": 2, "source": "France: 2 World Cup titles (1998, 2018)." }
+    ]
+  },
+  {
+    "topicId": "soccer",
+    "category": "UEFA Champions League wins",
+    "rule": "Most to fewest UCL/European Cup titles",
+    "unit": "titles",
+    "difficulty": "medium",
+    "items": [
+      { "id": "ucl-realmadrid", "name": "Real Madrid", "emoji": "👑", "value": 15, "source": "Real Madrid: 15 UCL/European Cup titles through 2024." },
+      { "id": "ucl-milan", "name": "AC Milan", "emoji": "🔴", "value": 7, "source": "AC Milan: 7 UCL titles." },
+      { "id": "ucl-liverpool", "name": "Liverpool", "emoji": "🦅", "value": 6, "source": "Liverpool: 6 UCL titles." },
+      { "id": "ucl-bayern", "name": "Bayern Munich", "emoji": "⚽", "value": 6, "source": "Bayern Munich: 6 UCL titles." },
+      { "id": "ucl-barcelona", "name": "FC Barcelona", "emoji": "🔵", "value": 5, "source": "FC Barcelona: 5 UCL titles." }
+    ]
   }
 ]

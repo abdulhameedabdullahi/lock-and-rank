@@ -38,6 +38,11 @@ export const Splash = () => {
         {mix?.completed && mix.score !== null ? (
           <p className="mt-1 text-sm font-black">Scored {mix.score}/100</p>
         ) : null}
+        {home && home.playersToday != null && home.playersToday > 0 ? (
+          <p className="mt-1 text-sm font-semibold text-ink-soft">
+            {home.playersToday.toLocaleString()} {home.playersToday === 1 ? 'player' : 'players'} today
+          </p>
+        ) : null}
         {savedTopics.length > 0 ? (
           <p className="mt-1 text-sm font-semibold text-ink-soft">
             Also today: {savedTopics.map((t) => `${t.emoji} ${t.label}`).join(' · ')}

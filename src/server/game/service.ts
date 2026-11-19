@@ -40,9 +40,11 @@ import {
   clearPlay,
   currentPlayerId,
   getLeaderboard,
+  incrPlayersToday,
   isFreezeAvailable,
   readCrowdData,
   readPlay,
+  readPlayersToday,
   readPreferences,
   readScoreDistribution,
   readShareLock,
@@ -223,6 +225,7 @@ export async function placeItem(request: PlaceRequest, topicId: string = MIX_ID)
     void updateStats(playerId, date, scored.score);
     void addToLeaderboard(date, topicId, playerId, context.username ?? playerId, scored.score, Date.now());
     void recordScoreDistribution(date, topicId, scored.score);
+    void incrPlayersToday(date);
   }
   const state = await stateFromPlay(date, roundNumber, round, next, order);
   return { type: 'placed', ...state };
@@ -303,7 +306,11 @@ async function topicSummary(
 export async function getHomeData(): Promise<HomeResponse> {
   const playerId = currentPlayerId();
   const date = utcDateString(new Date());
-  const [stats, prefs] = await Promise.all([readStats(playerId), readPreferences(playerId)]);
+  const [stats, prefs, playersToday] = await Promise.all([
+    readStats(playerId),
+    readPreferences(playerId),
+    readPlayersToday(date),
+  ]);
 
   const mix = await topicSummary(playerId, date, MIX_ID, 'Daily Mix', '🎲');
   if (!mix) throw new GameError('No Daily Mix round for today.', 500);
@@ -320,6 +327,7 @@ export async function getHomeData(): Promise<HomeResponse> {
     preferences: prefs,
     mix,
     topics,
+    playersToday,
   };
 }
 

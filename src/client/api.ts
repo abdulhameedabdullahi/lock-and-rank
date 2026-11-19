@@ -386,7 +386,8 @@ export async function requestHome(): Promise<HomeResponse> {
       if (topic) topics.push(topic);
     }
   }
-  return { type: 'home', date, streak, preferences, mix, topics };
+  const playersToday = typeof payload.playersToday === 'number' ? payload.playersToday : undefined;
+  return { type: 'home', date, streak, preferences, mix, topics, playersToday };
 }
 
 export async function requestPreferences(): Promise<PreferencesResponse> {
