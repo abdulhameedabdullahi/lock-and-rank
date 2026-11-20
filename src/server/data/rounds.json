@@ -4613,8 +4613,8 @@
       { "id": "spd-light", "name": "Speed of light", "emoji": "✨", "value": 299792, "source": "299,792 km/s in vacuum." },
       { "id": "spd-solar-wind", "name": "Fast solar wind", "emoji": "☀️", "value": 800, "source": "Fast solar wind streams ~800 km/s." },
       { "id": "spd-iss", "name": "ISS orbital speed", "emoji": "🚀", "value": 8, "source": "ISS orbits Earth at ~7.7 km/s (~28,000 km/h)." },
-      { "id": "spd-sound-air", "name": "Sound in air", "emoji": "🔊", "value": 0, "source": "Sound in air ~343 m/s = 0.343 km/s." },
-      { "id": "spd-continental", "name": "Continental drift", "emoji": "🌍", "value": 0, "source": "~0.000000003 km/s (~3 cm/yr). Effectively 0 at km/s scale." }
+      { "id": "spd-earth-orbit", "name": "Earth's orbit", "emoji": "🌍", "value": 30, "source": "Earth orbits the Sun at ~29.8 km/s." },
+      { "id": "spd-voyager", "name": "Voyager 1", "emoji": "🛸", "value": 17, "source": "Voyager 1 travels at ~17 km/s — fastest man-made object." }
     ]
   },
   {
@@ -4948,7 +4948,7 @@
     "items": [
       { "id": "wcw-brazil", "name": "Brazil", "emoji": "🇧🇷", "value": 5, "source": "Brazil: 5 World Cup titles (1958, 1962, 1970, 1994, 2002)." },
       { "id": "wcw-germany", "name": "Germany", "emoji": "🇩🇪", "value": 4, "source": "Germany: 4 World Cup titles (1954, 1974, 1990, 2014)." },
-      { "id": "wcw-italy", "name": "Italy", "emoji": "🇮🇹", "value": 4, "source": "Italy: 4 World Cup titles (1934, 1938, 1982, 2006). Tied with Germany." },
+      { "id": "wcw-spain", "name": "Spain", "emoji": "🇪🇸", "value": 1, "source": "Spain: 1 World Cup title (2010)." },
       { "id": "wcw-argentina", "name": "Argentina", "emoji": "🇦🇷", "value": 3, "source": "Argentina: 3 World Cup titles (1978, 1986, 2022)." },
       { "id": "wcw-france", "name": "France", "emoji": "🇫🇷", "value": 2, "source": "France: 2 World Cup titles (1998, 2018)." }
     ]
@@ -4962,7 +4962,7 @@
     "items": [
       { "id": "ucl-realmadrid", "name": "Real Madrid", "emoji": "👑", "value": 15, "source": "Real Madrid: 15 UCL/European Cup titles through 2024." },
       { "id": "ucl-milan", "name": "AC Milan", "emoji": "🔴", "value": 7, "source": "AC Milan: 7 UCL titles." },
-      { "id": "ucl-liverpool", "name": "Liverpool", "emoji": "🦅", "value": 6, "source": "Liverpool: 6 UCL titles." },
+      { "id": "ucl-juventus", "name": "Juventus", "emoji": "⚫", "value": 2, "source": "Juventus: 2 UCL/European Cup titles (1985, 1996)." },
       { "id": "ucl-bayern", "name": "Bayern Munich", "emoji": "⚽", "value": 6, "source": "Bayern Munich: 6 UCL titles." },
       { "id": "ucl-barcelona", "name": "FC Barcelona", "emoji": "🔵", "value": 5, "source": "FC Barcelona: 5 UCL titles." }
     ]
