@@ -1,7 +1,30 @@
+/* Font imports — resolved by Vite from node_modules (index.css uses unicode-range so browsers only fetch the Latin subset) */
+@import '@fontsource-variable/big-shoulders-display';
+@import '@fontsource-variable/bricolage-grotesque';
+
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  /* ── Typefaces ──────────────────────────────────────────────── */
+  --font-display: 'Big Shoulders Display Variable', 'Big Shoulders Display', sans-serif;
+  --font-sans: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', ui-sans-serif, sans-serif;
+
+  /* ── Board palette ──────────────────────────────────────────── */
+  --color-bg: #151B45;
+  --color-board: #25306B;
+  --color-tile: #F2F4FA;
+  --color-signal: #FFCB2E;
+  --color-miss: #E23D7A;
+  --color-soft: #8B9BC8;
+  --color-groove: #1E2860;
+
+  /* ── Custom type steps ──────────────────────────────────────── */
+  --text-tile: 1.25rem;
+  --text-tile--line-height: 1;
+  --text-score: 3.5rem;
+  --text-score--line-height: 1;
+
+  /* ── Legacy palette (kept — existing screens reference these) ── */
   --color-paper: #f3ecdf;
   --color-card: #fffaf4;
   --color-ink: #1a140f;
@@ -9,6 +32,14 @@
   --color-line: #ddcfc0;
   --color-tangerine: #ef5a12;
   --color-tangerine-deep: #c2410c;
+}
+
+:root {
+  --radius-btn: 2px;
+  --radius-surface: 4px;
+  --shadow-tile: 0 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-btn: 0 1px 0 rgba(0, 0, 0, 0.4);
+  --shadow-board: inset 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 html,
@@ -45,6 +76,70 @@ button {
 
   .rise {
     animation: rise 0.35s ease both;
+  }
+
+  /* ── Board primitives (Phase 2 restyling will apply these) ── */
+
+  /* Split-flap tile row: hard-edged (0 radius), board-indigo face */
+  .flap {
+    background: var(--color-board);
+    color: var(--color-tile);
+    min-height: 44px;
+    border-bottom: 1px solid var(--color-groove);
+    box-shadow: var(--shadow-tile);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .flap--locked {
+    background: var(--color-tile);
+    color: var(--color-bg);
+  }
+
+  .flap--selected {
+    background: var(--color-signal);
+    color: var(--color-bg);
+  }
+
+  .flap--eliminated {
+    background: var(--color-groove);
+    color: var(--color-soft);
+    opacity: 0.6;
+  }
+
+  /* Board container with inset depth shadow */
+  .board {
+    background: var(--color-board);
+    box-shadow: var(--shadow-board);
+  }
+
+  /* Primary CTA button */
+  .btn-primary {
+    background: var(--color-signal);
+    color: var(--color-bg);
+    border-radius: var(--radius-btn);
+    min-height: 44px;
+    box-shadow: var(--shadow-btn);
+    font-weight: 700;
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.4;
+    box-shadow: none;
+  }
+
+  /* Secondary / ghost button */
+  .btn-secondary {
+    background: var(--color-board);
+    color: var(--color-tile);
+    border-radius: var(--radius-btn);
+    min-height: 44px;
+    font-weight: 700;
+  }
+
+  /* Content surface (card / panel) */
+  .surface {
+    background: var(--color-board);
+    border-radius: var(--radius-surface);
   }
 }
 
