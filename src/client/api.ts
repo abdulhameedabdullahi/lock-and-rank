@@ -219,7 +219,7 @@ export async function requestInit(topicId = 'mix'): Promise<InitResponse> {
   const subredditName = typeof payload.subredditName === 'string' && payload.subredditName.length > 0
     ? payload.subredditName
     : undefined;
-  return { type: 'init', ...state, streak, subredditName };
+  return { type: 'init', ...state, streak, ...(subredditName !== undefined && { subredditName }) };
 }
 
 export async function requestPlace(itemId: string, slot: number, topicId = 'mix'): Promise<PlaceResponse> {
@@ -387,7 +387,7 @@ export async function requestHome(): Promise<HomeResponse> {
     }
   }
   const playersToday = typeof payload.playersToday === 'number' ? payload.playersToday : undefined;
-  return { type: 'home', date, streak, preferences, mix, topics, playersToday };
+  return { type: 'home', date, streak, preferences, mix, topics, ...(playersToday !== undefined && { playersToday }) };
 }
 
 export async function requestPreferences(): Promise<PreferencesResponse> {

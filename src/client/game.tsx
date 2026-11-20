@@ -34,7 +34,7 @@ export const App = () => {
   useEffect(() => {
     if (homeLoading || mode !== 'loading') return;
     if (home && home.preferences.length > 0) {
-      setMode('home');
+      setMode('home'); // eslint-disable-line react-hooks/set-state-in-effect
     } else {
       setMode('playing');
     }

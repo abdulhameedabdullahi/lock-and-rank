@@ -10,6 +10,7 @@ export default defineConfig([
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['src/server/**/*.{ts,tsx,mjs,cjs,js}'],
+    ignores: ['src/**/*.test.ts'],
     languageOptions: {
       ecmaVersion: 2023,
       globals: globals.node,
@@ -17,6 +18,20 @@ export default defineConfig([
         project: ['./tools/tsconfig.server.json'],
         tsconfigRootDir: import.meta.dirname,
       },
+    },
+  },
+  {
+    files: ['src/**/*.test.ts'],
+    languageOptions: {
+      ecmaVersion: 2023,
+      globals: globals.node,
+      parserOptions: {
+        project: ['./tools/tsconfig.test.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+    rules: {
+      '@typescript-eslint/no-floating-promises': 'off',
     },
   },
   {
@@ -69,6 +84,7 @@ export default defineConfig([
       'eslint.config.js',
       '**/vite.config.ts',
       'devvit.config.ts',
+      'src/**/*.test.ts',
     ],
     languageOptions: {
       parserOptions: {

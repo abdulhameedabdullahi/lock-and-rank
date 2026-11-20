@@ -13,7 +13,6 @@ import {
 import { requestShare, requestSubscribe, type LeaderboardData } from '../api';
 
 function useCountdown(): string {
-  const [label, setLabel] = useState('');
   const compute = () => {
     const now = new Date();
     const midnight = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1));
@@ -22,8 +21,8 @@ function useCountdown(): string {
     const m = Math.floor((ms % 3600000) / 60000);
     return `${h}h ${String(m).padStart(2, '0')}m`;
   };
+  const [label, setLabel] = useState(compute);
   useEffect(() => {
-    setLabel(compute());
     const id = window.setInterval(() => setLabel(compute()), 60000);
     return () => window.clearInterval(id);
   }, []);

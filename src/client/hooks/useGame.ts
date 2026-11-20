@@ -53,6 +53,7 @@ export function useGame(topicId = 'mix') {
   }, [apply, topicId]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     void load();
   }, [load]);
 

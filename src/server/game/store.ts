@@ -353,7 +353,7 @@ export async function readShareLock(playerId: string, date: string, topicId: str
 }
 
 export async function writeShareLock(playerId: string, date: string, topicId: string, commentId: string): Promise<void> {
-  await redis.set(shareLockKey(playerId, date, topicId), commentId, { ex: 86400 * 7 });
+  await redis.set(shareLockKey(playerId, date, topicId), commentId, { expiration: new Date(Date.now() + 86400 * 7 * 1000) });
 }
 
 // ── Score distribution ────────────────────────────────────────────────────────
@@ -413,7 +413,7 @@ export async function checkAndConsumeFreeze(playerId: string, date: string): Pro
     const key = freezeKey(playerId, isoWeekKey(date));
     const used = await redis.get(key);
     if (used) return false;
-    await redis.set(key, '1', { ex: 86400 * 10 });
+    await redis.set(key, '1', { expiration: new Date(Date.now() + 86400 * 10 * 1000) });
     return true;
   } catch {
     return false;
