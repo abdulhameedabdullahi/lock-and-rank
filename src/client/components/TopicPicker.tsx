@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { HomeResponse } from '../../shared/game';
 import { readError, requestSetPreferences } from '../api';
+import { Btn } from './primitives';
 
 type TopicPickerProps = {
   home: HomeResponse;
@@ -46,7 +47,7 @@ export const TopicPicker = ({ home, initialSelected, showHint, onSaved, onDismis
       await requestSetPreferences(ids);
       onSaved(ids);
     } catch (err) {
-      setSaveError(readError(err, 'Could not save. Try again.'));
+      setSaveError(readError(err, 'Could not save topics. Try again.'));
     } finally {
       setSaving(false);
     }
@@ -55,24 +56,24 @@ export const TopicPicker = ({ home, initialSelected, showHint, onSaved, onDismis
   const selectedCount = selected.size;
 
   return (
-    <section className="flex h-full flex-col overflow-hidden px-4 pt-4 pb-[max(16px,env(safe-area-inset-bottom))]">
+    <section className="flex h-full flex-col overflow-hidden bg-bg px-4 pt-4 pb-[max(16px,env(safe-area-inset-bottom))]">
       <header className="shrink-0">
-        <button type="button" className="mb-3 text-sm font-black text-tangerine" onClick={onDismiss}>
+        <button type="button" className="press mb-3 text-sm font-bold text-signal" onClick={onDismiss}>
           ← Back
         </button>
-        <h1 className="text-3xl leading-none font-black">Your topics</h1>
-        <p className="mt-1 text-sm font-semibold text-ink-soft">
+        <h1 className="text-3xl leading-none font-black text-tile font-display">Your topics</h1>
+        <p className="mt-1 text-sm font-medium text-soft">
           A fresh round for each topic alongside Daily Mix every day.
         </p>
       </header>
 
       {showHint && !hintDismissed ? (
-        <div className="mt-3 shrink-0 chunk p-3">
-          <p className="text-sm font-black">Pick what you know</p>
-          <p className="mt-0.5 text-xs font-semibold text-ink-soft leading-snug">
-            Tap topics to toggle them on or off. You&apos;ll get one extra round per picked topic.
+        <div className="mt-3 shrink-0 surface p-3">
+          <p className="text-sm font-black text-tile">Pick what you know</p>
+          <p className="mt-0.5 text-xs font-medium text-soft leading-snug">
+            Tap topics to toggle. Each topic adds one extra round per day.
           </p>
-          <button type="button" className="mt-2 text-xs font-black text-tangerine" onClick={dismissHint}>
+          <button type="button" className="mt-2 text-xs font-bold text-signal" onClick={dismissHint}>
             Got it
           </button>
         </div>
@@ -87,17 +88,19 @@ export const TopicPicker = ({ home, initialSelected, showHint, onSaved, onDismis
                 key={topic.topicId}
                 type="button"
                 aria-pressed={on}
-                className={`press flex items-center gap-2 border-2 border-ink p-3 text-left ${
-                  on ? 'bg-ink text-paper' : 'bg-card text-ink'
+                className={`press flex min-h-[44px] items-center gap-2 rounded-[8px] border-2 p-3 text-left font-bold ${
+                  on
+                    ? 'bg-signal text-bg border-signal'
+                    : 'bg-board text-tile border-soft'
                 }`}
                 onClick={() => toggle(topic.topicId)}
               >
                 <span className="text-lg leading-none" aria-hidden="true">
                   {topic.emoji}
                 </span>
-                <span className="flex-1 text-sm font-black leading-tight">{topic.label}</span>
+                <span className="flex-1 text-sm leading-tight">{topic.label}</span>
                 {on ? (
-                  <span className="text-xs font-black" aria-hidden="true">✓</span>
+                  <span className="shrink-0 text-xs font-black" aria-hidden="true">✓</span>
                 ) : null}
               </button>
             );
@@ -106,18 +109,16 @@ export const TopicPicker = ({ home, initialSelected, showHint, onSaved, onDismis
       </div>
 
       <div className="mt-4 shrink-0 flex flex-col gap-2">
-        {saveError ? <p role="alert" className="text-sm font-bold">{saveError}</p> : null}
-        <button
-          type="button"
-          className="press chunk bg-card font-black text-ink"
+        {saveError ? <p role="alert" className="text-sm font-bold text-miss">{saveError}</p> : null}
+        <Btn
+          variant="secondary"
           onClick={selectAll}
           disabled={saving}
         >
-          Surprise me (all topics)
-        </button>
-        <button
-          type="button"
-          className="press chunk bg-tangerine font-black text-ink disabled:opacity-50 disabled:shadow-none"
+          Pick all topics
+        </Btn>
+        <Btn
+          variant="primary"
           onClick={() => void handleSave()}
           disabled={saving}
         >
@@ -126,7 +127,7 @@ export const TopicPicker = ({ home, initialSelected, showHint, onSaved, onDismis
             : selectedCount === 0
             ? 'Save (Daily Mix only)'
             : `Save ${selectedCount} topic${selectedCount !== 1 ? 's' : ''}`}
-        </button>
+        </Btn>
       </div>
     </section>
   );

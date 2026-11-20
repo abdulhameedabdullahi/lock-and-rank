@@ -11,6 +11,7 @@ import {
   type ShareMark,
 } from '../../shared/game';
 import { requestShare, requestSubscribe, type LeaderboardData } from '../api';
+import { Btn, Surface } from './primitives';
 
 function useCountdown(): string {
   const compute = () => {
@@ -50,11 +51,11 @@ type ResultCardProps = {
   onShowArchive?: (() => void) | undefined;
 };
 
-const markClass: Record<ShareMark, string> = {
-  check: 'bg-tangerine text-ink',
-  diamond: 'bg-ink text-paper',
-  triangle: 'border-2 border-ink bg-card text-ink',
-  cross: 'border-2 border-dashed border-ink bg-paper text-ink',
+const markTileClass: Record<ShareMark, string> = {
+  check:    'bg-signal text-bg',
+  diamond:  'bg-tile text-bg',
+  triangle: 'bg-board text-tile border border-soft',
+  cross:    'bg-miss text-tile',
 };
 
 async function clipboardCopy(text: string): Promise<boolean> {
@@ -121,8 +122,6 @@ export const ResultCard = ({
   const byRank = [...results].sort((a, b) => a.trueRank - b.trueRank);
 
   const grade = score >= 90 ? 'S' : score >= 75 ? 'A' : score >= 55 ? 'B' : score >= 35 ? 'C' : 'D';
-  const gradeClass = score >= 75 ? 'text-tangerine' : 'text-ink';
-
   const hintWasUsed = (hintPenalty ?? 0) > 0;
 
   const shareText = buildShareText({
@@ -136,7 +135,7 @@ export const ResultCard = ({
 
   const scoreSuggestions: string[] =
     score >= 90
-      ? ['Nailed it! All 5 exact!', 'Perfect score 🔒', 'Got every rank right']
+      ? ['Nailed it! All 5 exact!', 'Perfect score', 'Got every rank right']
       : score >= 55
       ? ['Solid round!', 'Tricky one today', 'Better than the crowd?']
       : ['This one got me', 'Harder than it looks!', 'Still learning the ranks'];
@@ -184,72 +183,81 @@ export const ResultCard = ({
   };
 
   return (
-    <div className="flex h-full flex-col overflow-hidden px-3 pt-3 pb-[max(12px,env(safe-area-inset-bottom))]">
-      <article className="chunk flex min-h-0 flex-1 flex-col p-3">
+    <div className="flex h-full flex-col overflow-hidden bg-bg px-3 pt-3 pb-[max(12px,env(safe-area-inset-bottom))]">
+      <Surface className="flex min-h-0 flex-1 flex-col p-3">
+
+        {/* Score header */}
         <header className="shrink-0">
-          <p className="text-xs font-black tracking-[0.18em] text-tangerine uppercase">
+          <p className="text-xs font-bold text-soft">
             {topicEmoji && topicLabel ? `${topicEmoji} ${topicLabel}` : `Round ${summary.roundNumber}`}
           </p>
-          <h1 className="text-xl leading-tight font-black">{summary.category}</h1>
+          <h1 className="text-lg leading-tight font-black text-tile">{summary.category}</h1>
           <div className="mt-1 flex items-baseline gap-3">
-            <p className="text-5xl leading-none font-black tabular-nums">
+            <p className="font-display font-black tabular-nums text-tile" style={{ fontSize: '3.5rem', lineHeight: 1 }}>
               {score}
-              <span className="text-xl font-bold text-ink-soft">/100</span>
+              <span className="text-xl font-bold text-soft">/100</span>
             </p>
-            <span className={`text-3xl leading-none font-black ${gradeClass}`}>{grade}</span>
+            <span className={`text-3xl leading-none font-black font-display ${score >= 75 ? 'text-signal' : 'text-soft'}`}>
+              {grade}
+            </span>
           </div>
           {hintWasUsed ? (
-            <p className="mt-0.5 text-sm font-semibold text-ink-soft">
-              💡 −{hintPenalty} hint{rawScore !== null && rawScore !== undefined ? ` · was ${rawScore}` : ''}
+            <p className="mt-0.5 text-sm font-medium text-soft">
+              Hint used −{hintPenalty}{rawScore !== null && rawScore !== undefined ? ` (was ${rawScore})` : ''}
             </p>
           ) : null}
         </header>
+
+        {/* Results list */}
         <ul className="mt-3 min-h-0 flex-1 overflow-y-auto">
           {byRank.map((result) => {
             const crowd = crowdData?.[result.itemId];
+            const diff = Math.abs(result.chosenSlot - result.trueRank);
+            const offsetLabel = diff === 0 ? 'Exact' : diff === 1 ? '1 off' : `${diff} off`;
             return (
-              <li key={result.itemId} className="flex items-center gap-2 border-b border-line py-1.5">
-                <span
-                  className={`flex h-8 w-8 shrink-0 items-center justify-center text-sm font-black ${markClass[result.mark]}`}
+              <li key={result.itemId} className="flex items-center gap-2 border-b border-groove py-2">
+                <div
+                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-black ${markTileClass[result.mark]}`}
                   aria-label={MARK_LABEL[result.mark]}
                 >
                   {MARK_SYMBOL[result.mark]}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block truncate text-sm font-black">
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-sm font-black text-tile">
                     {result.emoji} {result.name}
-                  </span>
-                  <span className="block text-xs font-semibold text-ink-soft">
-                    {formatValue(result.value, result.unit)} · true #{result.trueRank} · you #{result.chosenSlot} ·{' '}
-                    {result.points} pts
-                    {crowd ? ` · crowd avg #${crowd.avgSlot} · ${crowd.pctCorrect}% right` : ''}
-                  </span>
-                </span>
+                  </p>
+                  <p className="text-xs font-medium text-soft">
+                    {formatValue(result.value, result.unit)} · {offsetLabel} · {result.points} pts
+                    {crowd ? ` · crowd #${crowd.avgSlot}` : ''}
+                  </p>
+                </div>
               </li>
             );
           })}
         </ul>
+
+        {/* Share grid */}
         <div className="mt-3 shrink-0">
-          <p className="text-xs font-black tracking-[0.14em] text-ink-soft uppercase">
-            Share · order you saw them
-          </p>
+          <p className="text-xs font-bold text-soft">Spoiler-free result</p>
           <div className="mt-1 grid grid-cols-5 gap-1.5" aria-label="Spoiler-free result">
             {results.map((result) => (
               <div
                 key={result.itemId}
-                className={`flex h-11 items-center justify-center text-lg font-black ${markClass[result.mark]}`}
+                className={`flex h-10 items-center justify-center rounded-lg text-base font-black ${markTileClass[result.mark]}`}
                 aria-label={MARK_LABEL[result.mark]}
               >
                 {MARK_SYMBOL[result.mark]}
               </div>
             ))}
           </div>
-          <p className="mt-1 text-[11px] font-semibold text-ink-soft">
+          <p className="mt-1 text-[11px] font-medium text-soft">
             ✓ exact · ◆ 1 off · ▲ 2 off · ✕ 3+
           </p>
+
+          {/* Score histogram */}
           {leaderboard && leaderboard.distributionTotal > 0 ? (
             <div className="mt-3">
-              <p className="text-[11px] font-black tracking-[0.14em] text-ink-soft uppercase">
+              <p className="text-[11px] font-bold text-soft">
                 Score distribution · {leaderboard.distributionTotal} player{leaderboard.distributionTotal !== 1 ? 's' : ''}
               </p>
               <div className="mt-1 flex h-8 items-end gap-px" aria-label="Score distribution histogram">
@@ -265,59 +273,62 @@ export const ResultCard = ({
                       title={`${i * 10}–${i === 9 ? 100 : i * 10 + 9}: ${count}`}
                     >
                       <div
-                        className={`w-full rounded-t-sm ${isMe ? 'bg-tangerine' : 'bg-line'}`}
-                        style={{ height: `${heightPct}%` }}
+                        className={`w-full rounded-t-sm ${isMe ? 'bg-signal' : 'bg-soft'}`}
+                        style={{ height: `${heightPct}%`, opacity: isMe ? 1 : 0.4 }}
                       />
                     </div>
                   );
                 })}
               </div>
-              <div className="mt-0.5 flex justify-between text-[9px] font-semibold text-ink-soft">
+              <div className="mt-0.5 flex justify-between text-[9px] font-medium text-soft">
                 <span>0</span><span>50</span><span>100</span>
               </div>
             </div>
           ) : null}
+
+          {/* Leaderboard */}
           {leaderboard && leaderboard.entries.length > 0 ? (
             <div className="mt-3">
-              <p className="text-[11px] font-black tracking-[0.14em] text-ink-soft uppercase">Today's top scores</p>
+              <p className="text-[11px] font-bold text-soft">Today's top scores</p>
               <ol className="mt-1">
                 {leaderboard.entries.slice(0, 5).map((entry) => (
-                  <li key={entry.rank} className="flex items-center gap-2 border-b border-line py-1 text-sm">
-                    <span className="w-4 shrink-0 text-right text-xs font-black tabular-nums text-ink-soft">{entry.rank}</span>
-                    <span className="min-w-0 flex-1 truncate font-semibold">{entry.username}</span>
-                    <span className="shrink-0 font-black tabular-nums">{entry.score}</span>
+                  <li key={entry.rank} className="flex items-center gap-2 border-b border-groove py-1 text-sm">
+                    <span className="w-4 shrink-0 text-right text-xs font-black tabular-nums text-soft">{entry.rank}</span>
+                    <span className="min-w-0 flex-1 truncate font-medium text-tile">{entry.username}</span>
+                    <span className="shrink-0 font-black tabular-nums text-tile">{entry.score}</span>
                   </li>
                 ))}
               </ol>
             </div>
           ) : null}
+
           {countdown ? (
-            <p className="mt-2 text-xs font-semibold text-ink-soft text-center">
+            <p className="mt-2 text-xs font-medium text-soft text-center">
               Next round in {countdown}
             </p>
           ) : null}
+
+          {/* Play next */}
           {onPlayNext ? (
-            <button
-              type="button"
-              className="press chunk mt-2 w-full bg-tangerine text-base font-black text-ink"
-              onClick={onPlayNext}
-            >
-              {nextTopicEmoji} Next: {nextTopicLabel ?? 'Next topic'}
-            </button>
+            <Btn variant="primary" className="mt-2" onClick={onPlayNext}>
+              {nextTopicEmoji} Play {nextTopicLabel ?? 'next topic'}
+            </Btn>
           ) : null}
+
+          {/* Share to comments */}
           {sharedUrl ? (
             <a
               href={sharedUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="press chunk mt-2 flex w-full items-center justify-center gap-1.5 bg-card font-black text-ink text-sm"
+              className="press surface mt-2 flex w-full items-center justify-center gap-1.5 p-2 font-bold text-tile text-sm"
             >
-              Shared ✓ — View comment
+              Shared — view comment
             </a>
           ) : shareOpen && topicId ? (
-            <div className="mt-2 chunk p-3 flex flex-col gap-2">
-              <p className="text-xs font-black text-tangerine uppercase tracking-[0.14em]">Post as comment</p>
-              <pre className="text-[10px] font-mono leading-snug text-ink-soft whitespace-pre-wrap break-words select-none bg-paper p-2 rounded">
+            <div className="mt-2 surface p-3 flex flex-col gap-2">
+              <p className="text-xs font-bold text-soft">Post as comment</p>
+              <pre className="text-[10px] leading-snug text-soft whitespace-pre-wrap break-words select-none bg-groove rounded-lg p-2">
                 {shareText}
               </pre>
               <div className="flex flex-wrap gap-1.5">
@@ -325,7 +336,7 @@ export const ResultCard = ({
                   <button
                     key={s}
                     type="button"
-                    className="press rounded border border-line bg-paper px-2 py-0.5 text-xs font-semibold text-ink-soft"
+                    className="press rounded-lg border border-soft bg-groove px-2 py-1 text-xs font-medium text-tile"
                     onClick={() => setCaption(s)}
                   >
                     {s}
@@ -334,27 +345,23 @@ export const ResultCard = ({
               </div>
               <textarea
                 ref={captionRef}
-                className="w-full resize-none rounded border border-line bg-paper p-2 text-sm font-semibold text-ink placeholder:text-ink-soft focus:outline-none focus:border-tangerine"
+                className="w-full resize-none rounded-lg border border-soft bg-groove p-2 text-sm font-medium text-tile placeholder:text-soft focus:outline-none focus:border-signal"
                 rows={2}
                 maxLength={140}
                 placeholder="Add a caption… (optional)"
                 value={caption}
                 onChange={(e) => setCaption(e.target.value)}
               />
-              <p className="text-right text-[10px] font-semibold text-ink-soft">{caption.length}/140</p>
-              {shareError ? <p className="text-xs font-semibold text-tangerine">{shareError}</p> : null}
+              <p className="text-right text-[10px] font-medium text-soft">{caption.length}/140</p>
+              {shareError ? <p className="text-xs font-medium text-miss">{shareError}</p> : null}
               <div className="flex gap-2">
-                <button
-                  type="button"
-                  className="press chunk flex-1 bg-tangerine font-black text-ink"
-                  disabled={sharing}
-                  onClick={() => void onShare()}
-                >
+                <Btn variant="primary" className="flex-1" disabled={sharing} onClick={() => void onShare()}>
                   {sharing ? 'Posting…' : 'Post comment'}
-                </button>
+                </Btn>
                 <button
                   type="button"
-                  className="press chunk bg-card px-3 font-black text-ink"
+                  className="press btn-secondary px-4 text-sm font-bold"
+                  style={{ width: 'auto' }}
                   onClick={() => { setShareOpen(false); setShareError(null); }}
                 >
                   Cancel
@@ -363,69 +370,78 @@ export const ResultCard = ({
             </div>
           ) : topicId ? (
             <div className="mt-2 flex gap-2">
-              <button type="button" className="press chunk flex-1 bg-tangerine font-black text-ink" onClick={openShare}>
+              <Btn variant="primary" className="flex-1" onClick={openShare}>
                 Share to comments
-              </button>
-              <button type="button" className="press chunk bg-card px-3 font-black text-ink" onClick={onCopy}>
-                {copied ? '✓' : '⬆︎'}
+              </Btn>
+              <button
+                type="button"
+                className="press btn-secondary px-3 text-sm font-bold"
+                style={{ width: 'auto' }}
+                aria-label="Copy result"
+                onClick={onCopy}
+              >
+                {copied ? '✓' : 'Copy'}
               </button>
             </div>
           ) : (
-            <button type="button" className="press chunk mt-2 w-full bg-tangerine font-black text-ink" onClick={onCopy}>
-              {copied ? 'Shared ✓' : 'Share result'}
-            </button>
+            <Btn variant="primary" className="mt-2" onClick={onCopy}>
+              {copied ? 'Shared' : 'Share result'}
+            </Btn>
           )}
+
+          {/* Join subreddit */}
           {subredditName && !subscribed ? (
             <div className="mt-2 flex items-center gap-2">
-              <p className="min-w-0 flex-1 truncate text-xs font-semibold text-ink-soft">
+              <p className="min-w-0 flex-1 truncate text-xs font-medium text-soft">
                 Join r/{subredditName} for daily rounds
               </p>
               <button
                 type="button"
-                className="press chunk shrink-0 bg-card px-3 py-1 text-xs font-black text-ink"
+                className="press btn-secondary shrink-0 px-3 py-1 text-xs font-bold"
+                style={{ minHeight: 36, width: 'auto', borderRadius: 8 }}
                 disabled={subscribing}
                 onClick={() => void onSubscribe()}
               >
-                {subscribing ? '…' : 'Join'}
+                {subscribing ? '…' : `Join r/${subredditName}`}
               </button>
             </div>
           ) : null}
+
+          {/* Make it yours (new player CTA) */}
           {onMakeItYours ? (
-            <div className="mt-3 border-t border-line pt-3">
-              <p className="text-sm font-black">Make it yours</p>
-              <p className="mt-0.5 text-xs font-semibold text-ink-soft leading-snug">
+            <div className="mt-3 border-t border-groove pt-3">
+              <p className="text-sm font-black text-tile">Make it yours</p>
+              <p className="mt-0.5 text-xs font-medium text-soft leading-snug">
                 Pick topics you care about and get a custom round each day.
               </p>
-              <button
-                type="button"
-                className="press chunk mt-2 w-full bg-tangerine font-black text-ink"
-                onClick={onMakeItYours}
-              >
-                Choose my topics →
-              </button>
+              <Btn variant="primary" className="mt-2" onClick={onMakeItYours}>
+                Choose my topics
+              </Btn>
             </div>
           ) : null}
+
+          {/* Nav buttons */}
           {(onBackToHome || onShowStats || onShowArchive) ? (
             <div className="mt-2 flex gap-2">
               {onBackToHome ? (
-                <button type="button" className="press chunk flex-1 bg-card font-black text-ink" onClick={onBackToHome}>
+                <button type="button" className="press surface flex-1 py-2 text-sm font-bold text-tile" onClick={onBackToHome}>
                   Home
                 </button>
               ) : null}
               {onShowStats ? (
-                <button type="button" className="press chunk flex-1 bg-card font-black text-ink" onClick={onShowStats}>
-                  My Stats
+                <button type="button" className="press surface flex-1 py-2 text-sm font-bold text-tile" onClick={onShowStats}>
+                  My stats
                 </button>
               ) : null}
               {onShowArchive ? (
-                <button type="button" className="press chunk flex-1 bg-card font-black text-ink" onClick={onShowArchive}>
-                  Archive
+                <button type="button" className="press surface flex-1 py-2 text-sm font-bold text-tile" onClick={onShowArchive}>
+                  Past rounds
                 </button>
               ) : null}
             </div>
           ) : null}
         </div>
-      </article>
+      </Surface>
     </div>
   );
 };

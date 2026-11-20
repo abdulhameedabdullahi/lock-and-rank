@@ -1,196 +1,198 @@
-/* Font imports — resolved by Vite from node_modules (index.css uses unicode-range so browsers only fetch the Latin subset) */
+/* Fonts via Fontsource variable packages — unicode-range keeps downloads to Latin subset */
 @import '@fontsource-variable/big-shoulders-display';
 @import '@fontsource-variable/bricolage-grotesque';
 
 @import 'tailwindcss';
 
 @theme {
-  /* ── Typefaces ──────────────────────────────────────────────── */
-  --font-display: 'Big Shoulders Display Variable', 'Big Shoulders Display', sans-serif;
-  --font-sans: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', ui-sans-serif, sans-serif;
+  /* ── Typefaces ───────────────────────────────────────────────────────── */
+  --font-display: 'Big Shoulders Display Variable', Impact, 'Arial Narrow', sans-serif;
+  --font-sans: 'Bricolage Grotesque Variable', 'Segoe UI', sans-serif;
 
-  /* ── Board palette ──────────────────────────────────────────── */
-  --color-bg: #151B45;
-  --color-board: #25306B;
-  --color-tile: #F2F4FA;
-  --color-signal: #FFCB2E;
-  --color-miss: #E23D7A;
-  --color-soft: #8B9BC8;
-  --color-groove: #1E2860;
+  /* ── Brand palette ───────────────────────────────────────────────────── */
+  --color-bg:     #151B45;   /* deep indigo — page background, text on signal/tile */
+  --color-board:  #25306B;   /* raised surfaces — boards, cards, hinge dots */
+  --color-tile:   #F2F4FA;   /* light tiles — primary text on dark, locked state */
+  --color-signal: #FFCB2E;   /* signal yellow — primary CTA, exact match, locked */
+  --color-miss:   #E23D7A;   /* miss pink — 3+ off; large/bold text only */
+  /* Derived tints (only two) */
+  --color-soft:   #8B9BC8;   /* lighter indigo — muted text, borders (6.3:1 on bg) */
+  --color-groove: #1E2860;   /* deeper indigo — dividers, recessed rows, board gaps */
 
-  /* ── Custom type steps ──────────────────────────────────────── */
+  /* ── Custom type steps ───────────────────────────────────────────────── */
   --text-tile: 1.25rem;
   --text-tile--line-height: 1;
   --text-score: 3.5rem;
   --text-score--line-height: 1;
-
-  /* ── Legacy palette (kept — existing screens reference these) ── */
-  --color-paper: #f3ecdf;
-  --color-card: #fffaf4;
-  --color-ink: #1a140f;
-  --color-ink-soft: #5c5148;
-  --color-line: #ddcfc0;
-  --color-tangerine: #ef5a12;
-  --color-tangerine-deep: #c2410c;
 }
 
 :root {
-  --radius-btn: 2px;
-  --radius-surface: 4px;
-  --shadow-tile: 0 2px 0 rgba(0, 0, 0, 0.5);
-  --shadow-btn: 0 1px 0 rgba(0, 0, 0, 0.4);
-  --shadow-board: inset 0 2px 8px rgba(0, 0, 0, 0.5);
+  --radius-tile:    12px;   /* flap tiles — mechanical but rounded */
+  --radius-btn:     8px;    /* buttons — human, slightly rounded */
+  --radius-surface: 16px;   /* cards / panels — most contained */
 }
 
-html,
-body,
-#root {
-  height: 100%;
-}
+html, body, #root { height: 100%; }
 
 body {
   margin: 0;
   overflow: hidden;
-  background: var(--color-paper);
-  color: var(--color-ink);
+  background: var(--color-bg);
+  color: var(--color-tile);
   font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+/* One consistent focus ring across all interactive elements */
+:focus-visible {
+  outline: 3px solid var(--color-signal);
+  outline-offset: 2px;
 }
 
 button {
   font: inherit;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  transition: background-color 0.12s ease, color 0.12s ease, opacity 0.12s ease, box-shadow 0.12s ease;
+  /* no hover transitions — only tap/active response */
 }
 
 @layer components {
-  .chunk {
-    border: 2px solid var(--color-ink);
-    background: var(--color-card);
-    box-shadow: 4px 4px 0 var(--color-ink);
-  }
 
-  .press {
-    min-height: 44px;
-  }
-
-  .rise {
-    animation: rise 0.35s ease both;
-  }
-
-  /* ── Board primitives (Phase 2 restyling will apply these) ── */
-
-  /* Split-flap tile row: hard-edged (0 radius), board-indigo face */
-  .flap {
-    background: var(--color-board);
-    color: var(--color-tile);
-    min-height: 44px;
-    border-bottom: 1px solid var(--color-groove);
-    box-shadow: var(--shadow-tile);
+  /* ── Flap tile ─────────────────────────────────────────────────────────
+     The core visual unit. Split line + hinge dots are encoded in
+     background-image so they layer on top of any background-color. */
+  .flap-tile {
+    position: relative;
+    border-radius: var(--radius-tile);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    font-family: var(--font-display);
+    font-weight: 900;
     font-variant-numeric: tabular-nums;
+    /* Split line (4px, --color-bg) + hinge dots (--color-board) */
+    background-image:
+      radial-gradient(circle at 10px 50%, var(--color-board) 5px, transparent 5px),
+      radial-gradient(circle at calc(100% - 10px) 50%, var(--color-board) 5px, transparent 5px),
+      linear-gradient(
+        transparent calc(50% - 2px),
+        var(--color-bg) calc(50% - 2px),
+        var(--color-bg) calc(50% + 2px),
+        transparent calc(50% + 2px)
+      );
+    background-repeat: no-repeat, no-repeat, no-repeat;
   }
 
-  .flap--locked {
-    background: var(--color-tile);
-    color: var(--color-bg);
-  }
-
-  .flap--selected {
-    background: var(--color-signal);
-    color: var(--color-bg);
-  }
-
-  .flap--eliminated {
-    background: var(--color-groove);
-    color: var(--color-soft);
-    opacity: 0.6;
-  }
-
-  /* Board container with inset depth shadow */
+  /* ── Board container ───────────────────────────────────────────────────
+     Wraps the stacked slot rows with a groove-colored gap between rows. */
   .board {
-    background: var(--color-board);
-    box-shadow: var(--shadow-board);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: var(--color-groove);
+    border-radius: var(--radius-surface);
+    overflow: hidden;
+    padding: 3px;
   }
 
-  /* Primary CTA button */
+  /* ── Surface (card / panel) ────────────────────────────────────────────
+     Containers: board background with border for separation. */
+  .surface {
+    background: var(--color-board);
+    border-radius: var(--radius-surface);
+    border: 1px solid var(--color-soft);
+  }
+
+  /* ── Buttons ───────────────────────────────────────────────────────────
+     primary = signal yellow fill; secondary = transparent + tile border */
   .btn-primary {
     background: var(--color-signal);
     color: var(--color-bg);
     border-radius: var(--radius-btn);
-    min-height: 44px;
-    box-shadow: var(--shadow-btn);
+    min-height: 48px;
     font-weight: 700;
+    font-family: var(--font-sans);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .btn-primary:disabled {
     opacity: 0.4;
-    box-shadow: none;
   }
 
-  /* Secondary / ghost button */
   .btn-secondary {
-    background: var(--color-board);
+    background: transparent;
     color: var(--color-tile);
+    border: 2px solid var(--color-tile);
     border-radius: var(--radius-btn);
-    min-height: 44px;
+    min-height: 48px;
     font-weight: 700;
+    font-family: var(--font-sans);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* Content surface (card / panel) */
-  .surface {
+  .btn-secondary:disabled {
+    opacity: 0.4;
+  }
+
+  /* ── Press: 44px tap target + active translate ────────────────────────── */
+  .press {
+    min-height: 44px;
+  }
+
+  /* ── Chunk: backward-compat alias → surface during transition ───────── */
+  .chunk {
     background: var(--color-board);
     border-radius: var(--radius-surface);
+    border: 1px solid var(--color-soft);
   }
 }
 
-.press:active {
-  transform: translate(2px, 2px);
-  box-shadow: none;
+/* Active press states — translate down only, no box-shadow games */
+.press:active,
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(2px);
 }
 
-@media (hover: hover) {
-  .press:not(:disabled):hover {
-    filter: brightness(0.94);
-  }
+/* ── Reveal flip keyframes ─────────────────────────────────────────────── */
+@keyframes flap-flip-out {
+  from { transform: perspective(600px) rotateX(0deg); }
+  to   { transform: perspective(600px) rotateX(-90deg); }
+}
+
+@keyframes flap-flip-in {
+  from { transform: perspective(600px) rotateX(90deg); }
+  to   { transform: perspective(600px) rotateX(0deg); }
+}
+
+/* Lock snap feedback (play screen confirmation) */
+@keyframes flap-snap {
+  0%, 100% { transform: scaleY(1); }
+  50%       { transform: scaleY(0.92); }
 }
 
 @keyframes progressBar {
   from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-paper: #1a1310;
-    --color-card: #241c14;
-    --color-ink: #f0e9dc;
-    --color-ink-soft: #b8a89a;
-    --color-line: #3a2a1e;
-  }
+  to   { width: 100% }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 
-  .press:active {
+  .press:active,
+  .btn-primary:active,
+  .btn-secondary:active {
     transform: none;
   }
 }

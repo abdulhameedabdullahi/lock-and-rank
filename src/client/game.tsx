@@ -86,7 +86,7 @@ export const App = () => {
   // ── Loading ──────────────────────────────────────────────────────────────
   if (mode === 'loading') {
     return (
-      <div className="flex h-full items-center justify-center bg-paper px-4 text-ink">
+      <div className="flex h-full items-center justify-center bg-bg px-4 text-tile">
         <p className="text-lg font-black">Loading…</p>
       </div>
     );
@@ -96,28 +96,28 @@ export const App = () => {
   if (mode === 'archive-game') {
     if (archiveLoading) {
       return (
-        <div className="flex h-full items-center justify-center bg-paper px-4 text-ink">
+        <div className="flex h-full items-center justify-center bg-bg px-4 text-tile">
           <p className="text-lg font-black">Loading round…</p>
         </div>
       );
     }
     if (archiveError || !archive.summary) {
       return (
-        <div className="flex h-full flex-col items-start justify-center gap-4 bg-paper px-4 text-ink">
-          <h1 className="text-3xl font-black">Lock &amp; Rank</h1>
-          <p className="font-semibold">{archiveError ?? 'Could not load archive round.'}</p>
-          <button type="button" className="press chunk bg-tangerine px-4 font-black text-ink" onClick={() => setMode('archive-list')}>
-            ← Archive
+        <div className="flex h-full flex-col items-start justify-center gap-4 bg-bg px-4 text-tile">
+          <h1 className="text-3xl font-black font-display">Lock &amp; Rank</h1>
+          <p className="font-medium text-soft">{archiveError ?? 'Could not load archive round.'}</p>
+          <button type="button" className="press btn-primary px-6 font-bold" onClick={() => setMode('archive-list')}>
+            ← Past rounds
           </button>
         </div>
       );
     }
     if (archive.screen === 'prompt') {
       return (
-        <div className="flex h-full flex-col overflow-hidden">
+        <div className="flex h-full flex-col overflow-hidden bg-bg">
           <div className="shrink-0 px-4 pt-3">
-            <button type="button" className="text-sm font-black text-tangerine" onClick={() => setMode('archive-list')}>
-              ← Archive
+            <button type="button" className="press text-sm font-bold text-signal" onClick={() => setMode('archive-list')}>
+              ← Past rounds
             </button>
           </div>
           <PromptScreen summary={archive.summary} onStart={archive.start} />
@@ -146,7 +146,7 @@ export const App = () => {
     }
     if (archive.screen === 'result' && archive.results && archive.score !== null) {
       return (
-        <div className="flex h-full flex-col overflow-hidden">
+        <div className="flex h-full flex-col overflow-hidden bg-bg">
           <ResultCard
             summary={archive.summary}
             score={archive.score}
@@ -158,10 +158,10 @@ export const App = () => {
           <div className="shrink-0 px-3 pb-[max(12px,env(safe-area-inset-bottom))]">
             <button
               type="button"
-              className="press w-full bg-card font-black text-ink"
+              className="press surface w-full py-2 font-bold text-tile text-sm"
               onClick={() => { archive.reset(); setMode('archive-list'); }}
             >
-              ← Archive list
+              ← Past rounds
             </button>
           </div>
         </div>
@@ -188,7 +188,7 @@ export const App = () => {
   if (mode === 'picker') {
     if (!home) {
       return (
-        <div className="flex h-full items-center justify-center bg-paper px-4 text-ink">
+        <div className="flex h-full items-center justify-center bg-bg px-4 text-tile">
           <p className="text-lg font-black">Loading…</p>
         </div>
       );
@@ -215,7 +215,7 @@ export const App = () => {
   if (mode === 'home') {
     if (!home) {
       return (
-        <div className="flex h-full items-center justify-center bg-paper px-4 text-ink">
+        <div className="flex h-full items-center justify-center bg-bg px-4 text-tile">
           <p className="text-lg font-black">Loading…</p>
         </div>
       );
@@ -232,7 +232,7 @@ export const App = () => {
   // ── Playing a round ───────────────────────────────────────────────────────
   if (game.loading) {
     return (
-      <div className="flex h-full items-center justify-center bg-paper px-4 text-ink">
+      <div className="flex h-full items-center justify-center bg-bg px-4 text-tile">
         <p className="text-lg font-black">Loading today&apos;s round…</p>
       </div>
     );
@@ -242,10 +242,10 @@ export const App = () => {
 
   if (!session) {
     return (
-      <div className="flex h-full flex-col items-start justify-center gap-4 bg-paper px-4 text-ink">
-        <h1 className="text-3xl font-black">Lock &amp; Rank</h1>
-        <p className="font-semibold">{game.error ?? "Could not load today's round."}</p>
-        <button type="button" className="press chunk bg-tangerine px-4 font-black text-ink" onClick={() => void game.load()}>
+      <div className="flex h-full flex-col items-start justify-center gap-4 bg-bg px-4 text-tile">
+        <h1 className="text-3xl font-black font-display">Lock &amp; Rank</h1>
+        <p className="font-medium text-soft">{game.error ?? "Could not load today's round."}</p>
+        <button type="button" className="press btn-primary px-6 font-bold" onClick={() => void game.load()}>
           Try again
         </button>
       </div>
@@ -318,8 +318,8 @@ export const App = () => {
   }
 
   return (
-    <div className="flex h-full items-center justify-center bg-paper px-4 text-ink">
-      <button type="button" className="press chunk bg-tangerine px-4 font-black text-ink" onClick={() => void game.load()}>
+    <div className="flex h-full items-center justify-center bg-bg px-4 text-tile">
+      <button type="button" className="press btn-primary px-6 font-bold" onClick={() => void game.load()}>
         Reload round
       </button>
     </div>

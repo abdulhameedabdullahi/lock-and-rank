@@ -1,4 +1,80 @@
-# Lock & Rank — Design Plan (Phase 1)
+# Lock & Rank — Design Plan (Phase 2 — implemented)
+
+## Final token table with contrast ratios
+
+All ratios are against `--color-bg` (#151B45) unless noted.
+
+| Token | Hex | Contrast on bg | Role |
+|---|---|---|---|
+| `--color-bg` | `#151B45` | — | Deep indigo background |
+| `--color-board` | `#25306B` | 1.5:1 ⚠ never text | Board surfaces, hinge dots |
+| `--color-tile` | `#F2F4FA` | **15.1:1** ✓✓ | Light tiles, primary text |
+| `--color-signal` | `#FFCB2E` | **11.0:1** ✓✓ | CTA, exact match, locked |
+| `--color-miss` | `#E23D7A` | **4.2:1** — large/bold only | 3+ off result, error |
+| `--color-soft` | `#8B9BC8` (derived) | **6.3:1** ✓ | Muted text, borders |
+| `--color-groove` | `#1E2860` (derived) | 1.2:1 ⚠ never text | Dividers, recessed rows |
+
+Additional pairs:
+- `--color-tile` on `--color-board`: **10.2:1** ✓✓
+- `--color-soft` on `--color-board`: **4.2:1** — large/bold only
+- `--color-bg` on `--color-signal`: **11.0:1** ✓✓
+
+## Font bundle
+
+Packages: `@fontsource-variable/big-shoulders-display` + `@fontsource-variable/bricolage-grotesque`.
+Both OFL licensed. Latin subset via `unicode-range` (browser downloads only what's needed).
+Estimated woff2 download: ~35 KB + ~40 KB = **~75 KB total**, well under 150 KB.
+Fallback stacks: `Impact, 'Arial Narrow', sans-serif` and `'Segoe UI', sans-serif`.
+
+## Primitives
+
+| Component | File | Description |
+|---|---|---|
+| `FlapTile` | `primitives.tsx` | Rounded rect with split line + hinge dots in background-image |
+| `Btn` | `primitives.tsx` | Primary (signal yellow) or secondary (outlined) button |
+| `Surface` | `primitives.tsx` | Board-colored card/panel with soft border |
+
+## CSS classes
+
+| Class | Description |
+|---|---|
+| `.flap-tile` | Base flap tile styles; combine with `bg-*` and `text-*` utilities |
+| `.board` | Stacked-row container with groove-colored gaps |
+| `.surface` | Panel/card container (`--board` bg, `--soft` border) |
+| `.btn-primary` | Signal yellow fill, 48px min-height |
+| `.btn-secondary` | Transparent, `--tile` border, 48px min-height |
+| `.press` | 44px min-height; active → translateY(2px) |
+| `.chunk` | Backward-compat alias for `.surface` |
+
+## Radius scale (encodes hierarchy)
+
+| Value | Used on |
+|---|---|
+| `--radius-tile: 12px` | Flap tiles (mechanical, most precise) |
+| `--radius-btn: 8px` | Buttons (human, slightly warmer) |
+| `--radius-surface: 16px` | Cards / panels (most contained) |
+
+## Reveal motion spec
+
+Per-row CSS animation stagger: row `n` starts at `(n-1) × 400ms`.
+- Flip out: `flap-flip-out` keyframe, 180ms ease-in (`rotateX(0°→-90°)`)
+- Content swaps when phase transitions from `flipping-out` to `flipping-in`
+- Flip in: `flap-flip-in` keyframe, 180ms ease-out (`rotateX(90°→0°)`)
+- Total reveal: 4 × 400 + 360 = **1,960ms**; auto-advance at **2,300ms**
+- Under `prefers-reduced-motion`: all rows initialize to `'after'` phase; no animation runs
+
+## How to test at phone width
+
+Open the playtest link (from `devvit playtest`) and size the browser to ~390px wide (Chrome → DevTools → iPhone 14 preset).
+
+1. **Splash**: deep indigo bg, "LOCK & RANK" flap tiles row (white/yellow), round title, "Play today's round" yellow button — nothing else visible.
+2. **Home**: title in display font, streak in signal yellow (or muted if 0), date in soft grey, topic cards with Surface borders, "Play" yellow badges on unplayed.
+3. **Topic picker**: 2-column grid; tap a chip — it turns signal yellow with ✓; "Pick all topics" secondary button; "Save N topics" primary button.
+4. **Full round with hint**: play screen shows current item tag above a stacked 5-row board; slot rows highlight yellow on tap; lock CTA says "Lock into rank N"; on item 1 or 2, tap "Hint (−5 pts)" then confirm — two rows turn muted with ✕; complete the round.
+5. **Reveal (normal motion)**: rows flip one by one staggered ~400ms apart; each row transitions to its result color (yellow = exact, white = 1 off, board = 2 off, pink = 3+) with mark symbol; progress line depletes; screen auto-advances at 2.3s or tap "Tap to skip".
+6. **Reveal (reduced motion)**: enable in OS settings or Chrome DevTools → Rendering → prefers-reduced-motion; all rows show final state immediately; button reads "See your score".
+7. **Result card**: score in large display numerals, grade letter beside it, two-line result rows (name / value · offset · pts), spoiler grid, histogram (if players), "Share to comments" primary CTA, secondary "Copy" button.
+8. **Stats**: sentence-case labels, tabular numerals in display font, streak freeze surface card at bottom.
 
 ## Screen & component audit
 

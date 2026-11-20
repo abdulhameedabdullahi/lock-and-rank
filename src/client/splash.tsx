@@ -6,6 +6,27 @@ import { createRoot } from 'react-dom/client';
 import { readError, requestHome } from './api';
 import { formatUtcDate, type HomeResponse } from '../shared/game';
 
+const TITLE_CHARS = ['L', 'O', 'C', 'K', '&', 'R', 'A', 'N', 'K'];
+const AMP_INDEX = 4; // the "&" tile gets signal yellow
+
+const TitleTiles = () => (
+  <div className="flex items-center gap-1" aria-label="Lock and Rank" role="heading" aria-level={1}>
+    {TITLE_CHARS.map((ch, i) => {
+      const isAmp = i === AMP_INDEX;
+      const isGap = i === AMP_INDEX - 1; // gap before &
+      return (
+        <div
+          key={i}
+          className={`flap-tile text-xl font-display w-9 h-12 ${isAmp ? 'bg-signal text-bg' : 'bg-tile text-bg'} ${isGap ? 'mr-1' : ''}`}
+          aria-hidden="true"
+        >
+          {ch}
+        </div>
+      );
+    })}
+  </div>
+);
+
 export const Splash = () => {
   const [home, setHome] = useState<HomeResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -17,42 +38,28 @@ export const Splash = () => {
   }, []);
 
   const mix = home?.mix;
-  const savedTopics = home
-    ? home.topics.filter((t) => home.preferences.includes(t.topicId))
-    : [];
-  const buttonLabel = mix?.completed ? "See today's score" : 'Play';
+  const buttonLabel = mix?.completed ? "See today's score" : "Play today's round";
 
   return (
-    <div className="flex h-full flex-col justify-center gap-3 overflow-hidden bg-paper px-4 py-3 text-ink">
+    <div className="flex h-full flex-col justify-center gap-4 overflow-hidden bg-bg px-4 py-4">
+      <TitleTiles />
+
       <div>
-        <p className="text-xs font-black tracking-[0.22em] text-tangerine uppercase">Daily game</p>
-        <h1 className="text-[2rem] leading-none font-black">Lock &amp; Rank</h1>
-        {home && home.streak > 0 ? (
-          <p className="mt-1 text-sm font-black text-tangerine">{home.streak} day streak 🔥</p>
-        ) : null}
+        {home ? (
+          <>
+            <p className="text-sm text-soft font-medium">{formatUtcDate(home.date)}</p>
+            <p className="mt-1 text-lg leading-tight font-black text-tile">{mix?.roundTitle ?? '…'}</p>
+          </>
+        ) : error ? (
+          <p className="text-sm font-bold text-miss">{error}</p>
+        ) : (
+          <p className="text-sm text-soft">Loading…</p>
+        )}
       </div>
-      <div>
-        <p className="text-sm font-bold">{home ? formatUtcDate(home.date) : "Loading today's round"}</p>
-        <p className="mt-1 text-xl leading-tight font-black">{mix?.roundTitle ?? '…'}</p>
-        <p className="text-sm font-semibold text-ink-soft">{mix?.rule ?? ''}</p>
-        {mix?.completed && mix.score !== null ? (
-          <p className="mt-1 text-sm font-black">Scored {mix.score}/100</p>
-        ) : null}
-        {home && home.playersToday != null && home.playersToday > 0 ? (
-          <p className="mt-1 text-sm font-semibold text-ink-soft">
-            {home.playersToday.toLocaleString()} {home.playersToday === 1 ? 'player' : 'players'} today
-          </p>
-        ) : null}
-        {savedTopics.length > 0 ? (
-          <p className="mt-1 text-sm font-semibold text-ink-soft">
-            Also today: {savedTopics.map((t) => `${t.emoji} ${t.label}`).join(' · ')}
-          </p>
-        ) : null}
-        {error ? <p className="mt-1 text-sm font-bold">{error}</p> : null}
-      </div>
+
       <button
         type="button"
-        className="press chunk w-full bg-tangerine text-base font-black text-ink"
+        className="press btn-primary w-full font-bold text-base"
         onClick={(event) => requestExpandedMode(event.nativeEvent, 'game')}
       >
         {buttonLabel}
