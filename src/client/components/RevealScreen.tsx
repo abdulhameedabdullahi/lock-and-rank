@@ -7,7 +7,7 @@ type RowPhase = 'before' | 'flipping-out' | 'flipping-in' | 'after';
 const markRowClass: Record<string, string> = {
   check:    'bg-signal text-bg',
   diamond:  'bg-tile text-bg',
-  triangle: 'bg-board text-tile',
+  triangle: 'bg-groove text-soft',
   cross:    'bg-miss text-tile',
 };
 
@@ -114,7 +114,7 @@ export const RevealScreen = ({ summary, results, onDone }: RevealScreenProps) =>
               {/* Rank numeral tile */}
               <div
                 className={`flap-tile h-full w-12 shrink-0 text-lg font-black ${isAfter && result.mark === 'check' ? 'bg-signal text-bg' : 'bg-board text-soft'}`}
-                style={{ borderRadius: 10, minHeight: 0, backgroundImage: 'none' }}
+                style={{ borderRadius: 10, minHeight: 0 }}
                 aria-hidden="true"
               >
                 {result.trueRank}

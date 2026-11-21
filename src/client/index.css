@@ -58,9 +58,8 @@ button {
 
 @layer components {
 
-  /* ── Flap tile ─────────────────────────────────────────────────────────
-     The core visual unit. Split line + hinge dots are encoded in
-     background-image so they layer on top of any background-color. */
+  /* ── Flap tile ────────────────────────────────────────────────────────
+     The core visual unit. Solid rounded rect — color comes from bg utility. */
   .flap-tile {
     position: relative;
     border-radius: var(--radius-tile);
@@ -72,17 +71,6 @@ button {
     font-family: var(--font-display);
     font-weight: 900;
     font-variant-numeric: tabular-nums;
-    /* Split line (4px, --color-bg) + hinge dots (--color-board) */
-    background-image:
-      radial-gradient(circle at 10px 50%, var(--color-board) 5px, transparent 5px),
-      radial-gradient(circle at calc(100% - 10px) 50%, var(--color-board) 5px, transparent 5px),
-      linear-gradient(
-        transparent calc(50% - 2px),
-        var(--color-bg) calc(50% - 2px),
-        var(--color-bg) calc(50% + 2px),
-        transparent calc(50% + 2px)
-      );
-    background-repeat: no-repeat, no-repeat, no-repeat;
   }
 
   /* ── Board container ───────────────────────────────────────────────────

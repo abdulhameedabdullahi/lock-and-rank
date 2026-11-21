@@ -64,7 +64,7 @@ export const PlayScreen = ({
       : '';
 
   return (
-    <section className="flex h-full flex-col gap-2 overflow-hidden bg-bg px-3 pt-3 pb-[max(12px,env(safe-area-inset-bottom))]">
+    <section className="flex h-full flex-col gap-1.5 overflow-hidden bg-bg px-3 pt-3 pb-[max(12px,env(safe-area-inset-bottom))]">
       {/* Header */}
       <header className="shrink-0">
         <p className="text-sm font-medium text-soft">{summary.category}</p>
@@ -96,8 +96,8 @@ export const PlayScreen = ({
 
       {/* Current item tag — above the board */}
       <div
-        className="shrink-0 flap-tile bg-tile text-bg px-4 h-16 flex items-center gap-3"
-        style={{ borderRadius: 16 }}
+        className="shrink-0 flap-tile bg-tile text-bg px-4 h-14 flex items-center gap-3"
+        style={{ borderRadius: 16, backgroundImage: 'none' }}
         aria-label={`Lock this: ${currentItem.name}`}
       >
         <span className="text-4xl leading-none shrink-0" aria-hidden="true">{currentItem.emoji}</span>
@@ -122,7 +122,7 @@ export const PlayScreen = ({
             return (
               <div
                 key={slot}
-                className="flex h-12 items-center gap-2 overflow-hidden rounded-[10px]"
+                className="flex h-10 items-center gap-2 overflow-hidden rounded-[10px]"
                 aria-label={`Rank ${slot}, ${filled.name}, locked`}
               >
                 {/* Rank numeral tile */}
@@ -143,7 +143,7 @@ export const PlayScreen = ({
             return (
               <div
                 key={slot}
-                className="flex h-12 items-center gap-2 overflow-hidden rounded-[10px]"
+                className="flex h-10 items-center gap-2 overflow-hidden rounded-[10px]"
                 aria-label={`Rank ${slot}, ruled out by hint`}
                 aria-disabled="true"
               >
@@ -165,7 +165,7 @@ export const PlayScreen = ({
               disabled={pending}
               aria-pressed={isSelected}
               aria-label={`Rank ${slot}${isSelected ? ', selected' : ''}`}
-              className="press flex h-12 w-full items-center gap-2 overflow-hidden rounded-[10px] text-left"
+              className="press flex h-10 w-full items-center gap-2 overflow-hidden rounded-[10px] text-left"
               onClick={() => setSelected(slot)}
             >
               <div
@@ -219,7 +219,7 @@ export const PlayScreen = ({
         </div>
       ) : (
         <div
-          className="shrink-0 w-full flex items-center justify-center rounded-[8px] border-2 border-groove text-sm font-medium text-groove opacity-60"
+          className="shrink-0 w-full flex items-center justify-center rounded-[8px] border-2 border-soft/30 text-sm font-medium text-soft/40"
           style={{ minHeight: 44 }}
           aria-disabled="true"
         >

@@ -146,25 +146,14 @@ export const App = () => {
     }
     if (archive.screen === 'result' && archive.results && archive.score !== null) {
       return (
-        <div className="flex h-full flex-col overflow-hidden bg-bg">
-          <ResultCard
-            summary={archive.summary}
-            score={archive.score}
-            results={archive.results}
-            crowdData={null}
-            onShowStats={() => setMode('stats')}
-            onShowArchive={() => setMode('archive-list')}
-          />
-          <div className="shrink-0 px-3 pb-[max(12px,env(safe-area-inset-bottom))]">
-            <button
-              type="button"
-              className="press surface w-full py-2 font-bold text-tile text-sm"
-              onClick={() => { archive.reset(); setMode('archive-list'); }}
-            >
-              ← Past rounds
-            </button>
-          </div>
-        </div>
+        <ResultCard
+          summary={archive.summary}
+          score={archive.score}
+          results={archive.results}
+          crowdData={null}
+          onShowStats={() => setMode('stats')}
+          onShowArchive={() => { archive.reset(); setMode('archive-list'); }}
+        />
       );
     }
   }

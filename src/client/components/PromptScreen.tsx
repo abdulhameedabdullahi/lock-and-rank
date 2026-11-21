@@ -17,8 +17,7 @@ export const PromptScreen = ({ summary, onStart, onBack }: PromptScreenProps) =>
       ) : null}
       <header>
         <p className="text-sm font-medium text-soft">{summary.category}</p>
-        <h1 className="mt-1 text-3xl leading-none font-black text-tile font-display">{summary.category}</h1>
-        <p className="mt-2 text-lg font-bold text-tile">{summary.rule}</p>
+        <h1 className="mt-1 text-3xl leading-tight font-black text-tile font-display">{summary.rule}</h1>
         <p className="mt-1 flex items-center gap-1.5 text-sm font-medium text-soft">
           <span className="flex gap-0.5" aria-hidden="true">
             {[1, 2, 3].map((n) => {
@@ -26,7 +25,7 @@ export const PromptScreen = ({ summary, onStart, onBack }: PromptScreenProps) =>
               return (
                 <span
                   key={n}
-                  className={`text-sm leading-none ${filled ? 'text-signal' : 'text-groove'}`}
+                  className={`text-sm leading-none ${filled ? 'text-signal' : 'text-soft/30'}`}
                 >
                   ●
                 </span>

@@ -54,7 +54,7 @@ type ResultCardProps = {
 const markTileClass: Record<ShareMark, string> = {
   check:    'bg-signal text-bg',
   diamond:  'bg-tile text-bg',
-  triangle: 'bg-board text-tile border border-soft',
+  triangle: 'bg-groove text-soft',
   cross:    'bg-miss text-tile',
 };
 
@@ -184,7 +184,7 @@ export const ResultCard = ({
 
   return (
     <div className="flex h-full flex-col overflow-hidden bg-bg px-3 pt-3 pb-[max(12px,env(safe-area-inset-bottom))]">
-      <Surface className="flex min-h-0 flex-1 flex-col p-3">
+      <Surface className="min-h-0 flex-1 overflow-y-auto p-3">
 
         {/* Score header */}
         <header className="shrink-0">
@@ -209,7 +209,7 @@ export const ResultCard = ({
         </header>
 
         {/* Results list */}
-        <ul className="mt-3 min-h-0 flex-1 overflow-y-auto">
+        <ul className="mt-3">
           {byRank.map((result) => {
             const crowd = crowdData?.[result.itemId];
             const diff = Math.abs(result.chosenSlot - result.trueRank);
@@ -237,7 +237,7 @@ export const ResultCard = ({
         </ul>
 
         {/* Share grid */}
-        <div className="mt-3 shrink-0">
+        <div className="mt-3">
           <p className="text-xs font-bold text-soft">Spoiler-free result</p>
           <div className="mt-1 grid grid-cols-5 gap-1.5" aria-label="Spoiler-free result">
             {results.map((result) => (
