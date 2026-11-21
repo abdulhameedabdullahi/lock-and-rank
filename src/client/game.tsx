@@ -302,6 +302,7 @@ export const App = () => {
         onBackToHome={hasHome ? goHome : undefined}
         onShowStats={() => setMode('stats')}
         onShowArchive={() => setMode('archive-list')}
+        onReset={() => { void game.reset(); }}
       />
     );
   }

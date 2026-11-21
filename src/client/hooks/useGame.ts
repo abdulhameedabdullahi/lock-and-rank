@@ -125,5 +125,10 @@ export function useGame(topicId = 'mix') {
     }
   }, [session, topicId]);
 
-  return { session, screen, loading, pending, error, streak, subredditName, leaderboard, load, start, showResult, lock, hint };
+  const reset = useCallback(async () => {
+    try { await requestReset(topicId); } catch { /* best-effort */ }
+    void load();
+  }, [topicId, load]);
+
+  return { session, screen, loading, pending, error, streak, subredditName, leaderboard, load, start, showResult, lock, hint, reset };
 }

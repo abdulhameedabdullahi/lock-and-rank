@@ -49,6 +49,7 @@ type ResultCardProps = {
   onBackToHome?: (() => void) | undefined;
   onShowStats?: (() => void) | undefined;
   onShowArchive?: (() => void) | undefined;
+  onReset?: (() => void) | undefined;
 };
 
 const markTileClass: Record<ShareMark, string> = {
@@ -108,6 +109,7 @@ export const ResultCard = ({
   onBackToHome,
   onShowStats,
   onShowArchive,
+  onReset,
 }: ResultCardProps) => {
   const [copied, setCopied] = useState(false);
   const [shareOpen, setShareOpen] = useState(false);
@@ -418,6 +420,17 @@ export const ResultCard = ({
                 Choose my topics
               </Btn>
             </div>
+          ) : null}
+
+          {/* Reset / play again */}
+          {onReset ? (
+            <button
+              type="button"
+              className="press btn-secondary mt-2 w-full py-2 text-sm font-bold"
+              onClick={onReset}
+            >
+              ↺ Play again
+            </button>
           ) : null}
 
           {/* Nav buttons */}
