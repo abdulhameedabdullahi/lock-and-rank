@@ -251,18 +251,16 @@ export function buildShareText(input: {
   score: number;
   marks: ShareMark[];
   hintUsed?: boolean;
+  streak?: number;
 }): string {
   const symbols = input.marks.map((mark) => MARK_SYMBOL[mark]).join(' ');
-  const emojiLine = input.hintUsed === true ? `${symbols} 💡` : symbols;
-  return [
-    `Lock & Rank #${input.roundNumber}`,
-    `${formatUtcDate(input.date)} · ${input.category}`,
-    `${input.score}/100`,
-    '',
-    emojiLine,
-    '',
-    '✓ exact · ◆ 1 off · ▲ 2 off · ✕ 3+',
-  ].join('\n');
+  const hint = input.hintUsed === true ? '  💡' : '';
+  const lines = [
+    `Lock & Rank #${input.roundNumber} · ${input.score}/100`,
+    `${symbols}${hint}`,
+  ];
+  if (input.streak && input.streak >= 2) lines.push(`🔥 ${input.streak} day streak`);
+  return lines.join('\n');
 }
 
 /** Summary of one topic's daily round for the home view (no item values). */

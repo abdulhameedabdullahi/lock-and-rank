@@ -298,6 +298,7 @@ export const App = () => {
         onPlayNext={nextUnplayed ? () => playTopic(nextUnplayed.topicId) : undefined}
         nextTopicEmoji={nextUnplayed?.emoji}
         nextTopicLabel={nextUnplayed?.label}
+        streak={game.streak}
         onMakeItYours={activeTopicId === 'mix' && isNewPlayer ? () => { setPickerFromPost(true); setMode('picker'); } : undefined}
         onBackToHome={hasHome ? goHome : undefined}
         onShowStats={() => setMode('stats')}

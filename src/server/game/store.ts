@@ -356,6 +356,42 @@ export async function writeShareLock(playerId: string, date: string, topicId: st
   await redis.set(shareLockKey(playerId, date, topicId), commentId, { expiration: new Date(Date.now() + 86400 * 7 * 1000) });
 }
 
+// ── Share rate limiting ───────────────────────────────────────────────────────
+
+const SHARE_DAILY_LIMIT = 3;
+const SHARE_COOLDOWN_MS = 61_000; // 61s so a 60s gap is always safe
+
+function shareCooldownKey(playerId: string): string {
+  return `lockrank:v1:sharecool:${playerId}`;
+}
+
+function dailyShareCountKey(playerId: string, date: string): string {
+  return `lockrank:v1:dailyshares:${date}:${playerId}`;
+}
+
+export async function checkShareRateLimit(playerId: string, date: string): Promise<void> {
+  const [coolRaw, countRaw] = await Promise.all([
+    redis.get(shareCooldownKey(playerId)),
+    redis.get(dailyShareCountKey(playerId, date)),
+  ]);
+  if (coolRaw) throw new GameError('Wait 60 seconds between posts.', 409);
+  const count = countRaw ? parseInt(countRaw, 10) : 0;
+  if (count >= SHARE_DAILY_LIMIT) throw new GameError('You have reached the 3-post daily limit.', 409);
+}
+
+export async function recordSharePost(playerId: string, date: string): Promise<void> {
+  const countRaw = await redis.get(dailyShareCountKey(playerId, date));
+  const count = countRaw ? parseInt(countRaw, 10) : 0;
+  await Promise.all([
+    redis.set(shareCooldownKey(playerId), '1', {
+      expiration: new Date(Date.now() + SHARE_COOLDOWN_MS),
+    }),
+    redis.set(dailyShareCountKey(playerId, date), String(count + 1), {
+      expiration: new Date(Date.now() + 48 * 3600_000),
+    }),
+  ]);
+}
+
 // ── Score distribution ────────────────────────────────────────────────────────
 
 function distKey(date: string, topicId: string): string {

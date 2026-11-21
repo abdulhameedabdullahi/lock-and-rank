@@ -46,6 +46,7 @@ type ResultCardProps = {
   nextTopicEmoji?: string | undefined;
   nextTopicLabel?: string | undefined;
   onMakeItYours?: (() => void) | undefined;
+  streak?: number | undefined;
   onBackToHome?: (() => void) | undefined;
   onShowStats?: (() => void) | undefined;
   onShowArchive?: (() => void) | undefined;
@@ -64,30 +65,8 @@ async function clipboardCopy(text: string): Promise<boolean> {
     await navigator.clipboard.writeText(text);
     return true;
   } catch {
-    const area = document.createElement('textarea');
-    area.value = text;
-    area.setAttribute('readonly', 'true');
-    area.style.position = 'fixed';
-    area.style.left = '-9999px';
-    document.body.appendChild(area);
-    area.select();
-    const ok = document.execCommand('copy');
-    area.remove();
-    return ok;
+    return false;
   }
-}
-
-async function shareOrCopy(text: string): Promise<'shared' | 'copied' | 'failed'> {
-  if ('share' in navigator) {
-    try {
-      await (navigator as Navigator & { share: (d: { text: string; title: string }) => Promise<void> })
-        .share({ text, title: 'Lock & Rank' });
-      return 'shared';
-    } catch {
-      // user cancelled or share failed — fall through to clipboard
-    }
-  }
-  return (await clipboardCopy(text)) ? 'copied' : 'failed';
 }
 
 export const ResultCard = ({
@@ -106,12 +85,14 @@ export const ResultCard = ({
   nextTopicEmoji,
   nextTopicLabel,
   onMakeItYours,
+  streak,
   onBackToHome,
   onShowStats,
   onShowArchive,
   onReset,
 }: ResultCardProps) => {
   const [copied, setCopied] = useState(false);
+  const [copyFallback, setCopyFallback] = useState(false);
   const [shareOpen, setShareOpen] = useState(false);
   const [caption, setCaption] = useState('');
   const [sharing, setSharing] = useState(false);
@@ -120,6 +101,7 @@ export const ResultCard = ({
   const [subscribed, setSubscribed] = useState(false);
   const [subscribing, setSubscribing] = useState(false);
   const captionRef = useRef<HTMLTextAreaElement>(null);
+  const copyTextRef = useRef<HTMLTextAreaElement>(null);
   const countdown = useCountdown();
   const byRank = [...results].sort((a, b) => a.trueRank - b.trueRank);
 
@@ -133,14 +115,8 @@ export const ResultCard = ({
     score,
     marks: results.map((r) => r.mark),
     hintUsed: hintWasUsed,
+    ...(streak !== undefined && { streak }),
   });
-
-  const scoreSuggestions: string[] =
-    score >= 90
-      ? ['Nailed it! All 5 exact!', 'Perfect score', 'Got every rank right']
-      : score >= 55
-      ? ['Solid round!', 'Tricky one today', 'Better than the crowd?']
-      : ['This one got me', 'Harder than it looks!', 'Still learning the ranks'];
 
   const openShare = () => {
     setShareOpen(true);
@@ -178,9 +154,14 @@ export const ResultCard = ({
   };
 
   const onCopy = () => {
-    void shareOrCopy(shareText).then((result) => {
-      setCopied(result !== 'failed');
-      showToast(result === 'shared' ? 'Shared!' : result === 'copied' ? 'Result copied' : 'Could not copy');
+    void clipboardCopy(shareText).then((ok) => {
+      if (ok) {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 3000);
+      } else {
+        setCopyFallback(true);
+        setTimeout(() => copyTextRef.current?.select(), 50);
+      }
     });
   };
 
@@ -317,79 +298,84 @@ export const ResultCard = ({
             </Btn>
           ) : null}
 
-          {/* Share to comments */}
-          {sharedUrl ? (
-            <a
-              href={sharedUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="press surface mt-2 flex w-full items-center justify-center gap-1.5 p-2 font-bold text-tile text-sm"
-            >
-              Shared — view comment
-            </a>
-          ) : shareOpen && topicId ? (
+          {/* Copy result — primary action */}
+          {copyFallback ? (
             <div className="mt-2 surface p-3 flex flex-col gap-2">
-              <p className="text-xs font-bold text-soft">Post as comment</p>
-              <pre className="text-[10px] leading-snug text-soft whitespace-pre-wrap break-words select-none bg-groove rounded-lg p-2">
-                {shareText}
-              </pre>
-              <div className="flex flex-wrap gap-1.5">
-                {scoreSuggestions.map((s) => (
-                  <button
-                    key={s}
-                    type="button"
-                    className="press rounded-lg border border-soft bg-groove px-2 py-1 text-xs font-medium text-tile"
-                    onClick={() => setCaption(s)}
-                  >
-                    {s}
-                  </button>
-                ))}
-              </div>
+              <p className="text-xs font-bold text-soft">Press Ctrl+C / ⌘C to copy:</p>
               <textarea
-                ref={captionRef}
-                className="w-full resize-none rounded-lg border border-soft bg-groove p-2 text-sm font-medium text-tile placeholder:text-soft focus:outline-none focus:border-signal"
-                rows={2}
-                maxLength={140}
-                placeholder="Add a caption… (optional)"
-                value={caption}
-                onChange={(e) => setCaption(e.target.value)}
+                ref={copyTextRef}
+                readOnly
+                value={shareText}
+                className="w-full resize-none rounded-lg border border-soft bg-groove p-2 text-xs font-medium text-tile focus:outline-none"
+                rows={3}
+                onFocus={(e) => e.target.select()}
               />
-              <p className="text-right text-[10px] font-medium text-soft">{caption.length}/140</p>
-              {shareError ? <p className="text-xs font-medium text-miss">{shareError}</p> : null}
-              <div className="flex gap-2">
-                <Btn variant="primary" className="flex-1" disabled={sharing} onClick={() => void onShare()}>
-                  {sharing ? 'Posting…' : 'Post comment'}
-                </Btn>
-                <button
-                  type="button"
-                  className="press btn-secondary px-4 text-sm font-bold"
-                  style={{ width: 'auto' }}
-                  onClick={() => { setShareOpen(false); setShareError(null); }}
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          ) : topicId ? (
-            <div className="mt-2 flex gap-2">
-              <Btn variant="primary" className="flex-1" onClick={openShare}>
-                Share to comments
-              </Btn>
-              <button
-                type="button"
-                className="press btn-secondary px-3 text-sm font-bold"
-                style={{ width: 'auto' }}
-                aria-label="Copy result"
-                onClick={onCopy}
-              >
-                {copied ? '✓' : 'Copy'}
+              <button type="button" className="press text-xs font-bold text-signal self-end" onClick={() => setCopyFallback(false)}>
+                Dismiss
               </button>
             </div>
           ) : (
             <Btn variant="primary" className="mt-2" onClick={onCopy}>
-              {copied ? 'Shared' : 'Share result'}
+              {copied ? '✓ Copied!' : 'Copy result'}
             </Btn>
           )}
+
+          {/* Post to thread — secondary, optional */}
+          {topicId ? (
+            sharedUrl ? (
+              <a
+                href={sharedUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="press surface mt-2 flex w-full items-center justify-center gap-1.5 p-2 font-bold text-tile text-sm"
+              >
+                Posted — view comment
+              </a>
+            ) : shareOpen ? (
+              <div className="mt-2 surface p-3 flex flex-col gap-2">
+                <p className="text-xs font-bold text-soft">Post to thread</p>
+                <textarea
+                  ref={captionRef}
+                  className="w-full resize-none rounded-lg border border-soft bg-groove p-2 text-sm font-medium text-tile placeholder:text-soft focus:outline-none focus:border-signal"
+                  rows={3}
+                  maxLength={200}
+                  placeholder="What do you think of this round?"
+                  value={caption}
+                  onChange={(e) => setCaption(e.target.value)}
+                />
+                <p className={`text-right text-[10px] font-medium ${caption.trim().length < 10 ? 'text-miss' : 'text-soft'}`}>
+                  {caption.trim().length}/200 · 10 min
+                </p>
+                {shareError ? <p className="text-xs font-medium text-miss">{shareError}</p> : null}
+                <div className="flex gap-2">
+                  <Btn
+                    variant="primary"
+                    className="flex-1"
+                    disabled={sharing || caption.trim().length < 10}
+                    onClick={() => void onShare()}
+                  >
+                    {sharing ? 'Posting…' : 'Post to thread'}
+                  </Btn>
+                  <button
+                    type="button"
+                    className="press btn-secondary px-4 text-sm font-bold"
+                    style={{ width: 'auto' }}
+                    onClick={() => { setShareOpen(false); setShareError(null); }}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <button
+                type="button"
+                className="press btn-secondary mt-2 w-full py-2 text-sm font-bold"
+                onClick={openShare}
+              >
+                Post to thread
+              </button>
+            )
+          ) : null}
 
           {/* Join subreddit */}
           {subredditName && !subscribed ? (

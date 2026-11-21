@@ -1,6 +1,5 @@
 import {
   SLOT_COUNT,
-  buildShareText,
   isRecord,
   isSlot,
   type ArchiveListItem,
@@ -36,6 +35,7 @@ import {
 } from './rounds';
 import {
   addToLeaderboard,
+  checkShareRateLimit,
   clearAllPlays,
   clearPlay,
   currentPlayerId,
@@ -51,6 +51,7 @@ import {
   readStats,
   recordCrowdPlacement,
   recordScoreDistribution,
+  recordSharePost,
   updateStats,
   writePlay,
   writePreferences,
@@ -58,7 +59,7 @@ import {
   type StoredPlay,
 } from './store';
 import { context, reddit } from '@devvit/web/server';
-import { sanitizeCaption } from './sanitize';
+import { buildResultLine, sanitizeCaption } from './sanitize';
 import { getOpenSlots, hintIsAvailable, selectEliminatedSlots } from './hint';
 
 function summaryFor(date: string, roundNumber: number, category: string, rule: string, unit: string, difficulty: RoundSummary['difficulty']): RoundSummary {
@@ -405,37 +406,34 @@ export function listArchiveRounds(): ArchiveListItem[] {
 
 export async function shareResult(topicId: string = MIX_ID, caption: string): Promise<ShareResponse> {
   if (!isTopicId(topicId)) throw new GameError('Unknown topic.', 400);
-  const { playerId, date, roundNumber, round, play, order } = await loadPlay(topicId);
+  const { playerId, date, round, play, order } = await loadPlay(topicId);
 
-  if (!play?.completed) {
-    throw new GameError('Finish the round before sharing.', 409);
-  }
+  if (!play?.completed) throw new GameError('Finish the round before sharing.', 409);
 
   const existing = await readShareLock(playerId, date, topicId);
-  if (existing) {
-    throw new GameError('You have already shared this round.', 409);
-  }
+  if (existing) throw new GameError('You have already shared this round.', 409);
+
+  // Server-side rate limits: 60s cooldown + 3 posts per day across all topics
+  await checkShareRateLimit(playerId, date);
 
   const postId = context.postId;
   if (!postId) throw new GameError('No post context — cannot share.', 400);
 
+  // Caption is required; sanitize first so length check is on the clean text
+  const sanitized = sanitizeCaption(caption);
+  if (sanitized.length < 10) throw new GameError('Your comment must be at least 10 characters.', 400);
+
   const scored = scorePlacements(round, order, play.placements, play.hintUsed);
   const marks = scored.results.map((r) => r.mark);
-  const shareText = buildShareText({
-    date,
-    roundNumber,
-    category: round.category,
-    score: scored.score,
-    marks,
-    hintUsed: play.hintUsed,
-  });
-
-  const sanitized = sanitizeCaption(caption);
-  const commentText = sanitized.length > 0 ? `${shareText}\n\n${sanitized}` : shareText;
+  const resultLine = buildResultLine(scored.score, marks, play.hintUsed);
+  const commentText = `${sanitized}\n\n${resultLine}`;
 
   const comment = await reddit.submitComment({ id: postId, text: commentText, runAs: 'USER' });
 
-  await writeShareLock(playerId, date, topicId, comment.id);
+  await Promise.all([
+    writeShareLock(playerId, date, topicId, comment.id),
+    recordSharePost(playerId, date),
+  ]);
 
   return { type: 'shared', permalink: comment.permalink, commentUrl: comment.url };
 }
