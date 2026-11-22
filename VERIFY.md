@@ -567,7 +567,8 @@ All have `"verified": false`. Format: **Round # · Category** · `difficulty` ·
 | science | 10 (4E/4M/2H) | ✓ 4 original + 6 new |
 | geography | 10 (4E/4M/2H) | ✓ 4 original + 6 new |
 | space | 10 (3E/3M/4H) | ✓ all new |
-| **TOTAL** | **140 rounds** | **140/140 pass validation** |
+| food | 10 (1E/6M/3H) | ✓ all new |
+| **TOTAL** | **150 rounds** | **150/150 pass validation** |
 
 ---
 
@@ -682,3 +683,117 @@ Rule: oldest to newest (rank 1 = earliest launch year)
 | Voyager 1 | 1977 | year | Launched September 5, 1977, by NASA. | ✅ yes |
 | Curiosity | 2011 | year | Mars Science Laboratory (Curiosity rover). Launched November 26, 2011, by NASA. | ✅ yes |
 | Perseverance | 2020 | year | Mars 2020 (Perseverance rover). Launched July 30, 2020, by NASA. | ✅ yes |
+
+---
+
+## FOOD
+
+### Food 1 — Calories per 100g, raw (easy)
+Rule: highest to lowest calorie count per 100g, raw
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Cassava | 160 | kcal/100g | USDA FDC. Cassava, raw: 160 kcal per 100g. | ✅ yes |
+| Yam | 118 | kcal/100g | USDA FDC. Yam, raw: 118 kcal per 100g. | ✅ yes |
+| Banana | 89 | kcal/100g | USDA FDC. Bananas, raw: 89 kcal per 100g. | ✅ yes |
+| Apple | 52 | kcal/100g | USDA FDC. Apples, raw, with skin: 52 kcal per 100g. | ✅ yes |
+| Cucumber | 15 | kcal/100g | USDA FDC. Cucumber, with peel, raw: 15 kcal per 100g. | ✅ yes |
+
+### Food 2 — Protein per 100g (medium)
+Rule: highest to lowest protein content per 100g
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Pumpkin Seeds | 30.2 | g/100g | USDA FDC. Seeds, pumpkin/squash kernels, dried: 30.23g protein. Note: dried, not fresh-raw. | ⚠️ dried basis |
+| Chicken Breast | 23.1 | g/100g | USDA FDC. Chicken, broilers, breast, raw: 23.1g protein. | ✅ yes |
+| Egg | 12.6 | g/100g | USDA FDC. Egg, whole, raw, fresh: 12.56g protein. | ✅ yes |
+| Plantain | 1.3 | g/100g | USDA FDC. Plantains, raw: 1.30g protein. | ✅ yes |
+| Apple | 0.3 | g/100g | USDA FDC. Apples, raw, with skin: 0.26g protein. | ✅ yes |
+
+### Food 3 — Sugars per 100g, raw (hard)
+Rule: fewest to most sugars per 100g, raw
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Yam | 0.5 | g/100g | USDA FDC. Yam, raw: 0.5g total sugars. | ✅ yes |
+| Cassava | 1.7 | g/100g | USDA FDC. Cassava, raw: 1.7g total sugars. | ✅ yes |
+| Papaya | 7.8 | g/100g | USDA FDC. Papayas, raw: 7.82g total sugars. | ✅ yes |
+| Orange | 9.4 | g/100g | USDA FDC. Oranges, raw, navels: 9.35g total sugars. | ✅ yes |
+| Banana | 12.2 | g/100g | USDA FDC. Bananas, raw: 12.23g total sugars. | ✅ yes |
+
+### Food 4 — Fat per 100g, raw (medium)
+Rule: highest to lowest fat content per 100g, raw
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Peanuts | 49.2 | g/100g | USDA FDC. Peanuts, all types, raw: 49.24g total fat. | ✅ yes |
+| Coconut | 33.5 | g/100g | USDA FDC. Coconut meat, raw: 33.49g total fat. | ✅ yes |
+| Avocado | 14.7 | g/100g | USDA FDC. Avocados, raw, all commercial varieties: 14.66g total fat. | ✅ yes |
+| Egg | 9.5 | g/100g | USDA FDC. Egg, whole, raw, fresh: 9.51g total fat. | ✅ yes |
+| Yam | 0.2 | g/100g | USDA FDC. Yam, raw: 0.17g total fat, rounded to 0.2g. | ✅ yes |
+
+### Food 5 — Dietary Fiber per 100g (medium)
+Rule: highest to lowest dietary fiber per 100g
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Almonds | 12.5 | g/100g | USDA FDC. Nuts, almonds: 12.5g dietary fiber. | ✅ yes |
+| Coconut | 9.0 | g/100g | USDA FDC. Coconut meat, raw: 9.0g dietary fiber. | ✅ yes |
+| Yam | 4.1 | g/100g | USDA FDC. Yam, raw: 4.1g dietary fiber. | ✅ yes |
+| Banana | 2.6 | g/100g | USDA FDC. Bananas, raw: 2.6g dietary fiber. | ✅ yes |
+| Watermelon | 0.4 | g/100g | USDA FDC. Watermelon, raw: 0.4g dietary fiber. | ✅ yes |
+
+### Food 6 — Carbohydrates per 100g, raw (medium)
+Rule: highest to lowest carbohydrate content per 100g, raw
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Cassava | 38.1 | g/100g | USDA FDC. Cassava, raw: 38.06g total carbohydrate. | ✅ yes |
+| Plantain | 31.9 | g/100g | USDA FDC. Plantains, raw: 31.89g total carbohydrate. | ✅ yes |
+| Yam | 27.9 | g/100g | USDA FDC. Yam, raw: 27.88g total carbohydrate. | ✅ yes |
+| Banana | 23.0 | g/100g | USDA FDC. Bananas, raw: 22.84g total carbohydrate. | ✅ yes |
+| Watermelon | 7.6 | g/100g | USDA FDC. Watermelon, raw: 7.55g total carbohydrate. | ✅ yes |
+
+### Food 7 — Iron per 100g (hard)
+Rule: highest to lowest iron content per 100g
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Black-Eye Peas | 8.2 | mg/100g | USDA FDC. Cowpeas, common (blackeyes), mature seeds, raw: 8.22mg iron. | ⚠️ verify |
+| Lentils | 6.5 | mg/100g | USDA FDC. Lentils, raw: 6.51mg iron. | ✅ yes |
+| Spinach | 2.7 | mg/100g | USDA FDC. Spinach, raw: 2.71mg iron. | ✅ yes |
+| Yam | 0.5 | mg/100g | USDA FDC. Yam, raw: 0.54mg iron. | ✅ yes |
+| Banana | 0.3 | mg/100g | USDA FDC. Bananas, raw: 0.26mg iron. | ✅ yes |
+
+### Food 8 — Potassium per 100g, raw (medium)
+Rule: highest to lowest potassium content per 100g, raw
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Spinach | 558 | mg/100g | USDA FDC. Spinach, raw: 558mg potassium. | ✅ yes |
+| Avocado | 485 | mg/100g | USDA FDC. Avocados, raw, all commercial varieties: 485mg potassium. | ✅ yes |
+| Banana | 358 | mg/100g | USDA FDC. Bananas, raw: 358mg potassium. | ✅ yes |
+| Cassava | 271 | mg/100g | USDA FDC. Cassava, raw: 271mg potassium. | ⚠️ verify |
+| Apple | 107 | mg/100g | USDA FDC. Apples, raw, with skin: 107mg potassium. | ✅ yes |
+
+### Food 9 — Vitamin C per 100g, raw (medium)
+Rule: highest to lowest vitamin C content per 100g, raw
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Guava | 228.3 | mg/100g | USDA FDC. Guavas, common, raw: 228.3mg vitamin C. | ✅ yes |
+| Kiwi | 92.7 | mg/100g | USDA FDC. Kiwifruit, green, raw: 92.7mg vitamin C. | ✅ yes |
+| Orange | 53.2 | mg/100g | USDA FDC. Oranges, raw, all commercial varieties: 53.2mg vitamin C. | ✅ yes |
+| Mango | 36.4 | mg/100g | USDA FDC. Mangos, raw: 36.4mg vitamin C. | ✅ yes |
+| Apple | 4.6 | mg/100g | USDA FDC. Apples, raw, with skin: 4.6mg vitamin C. | ✅ yes |
+
+### Food 10 — Calcium per 100g (hard)
+Rule: highest to lowest calcium content per 100g
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Sesame Seeds | 975 | mg/100g | USDA FDC. Seeds, sesame seeds, whole, dried: 975mg calcium. | ✅ yes |
+| Almonds | 264 | mg/100g | USDA FDC. Nuts, almonds: 264mg calcium. | ✅ yes |
+| Spinach | 99 | mg/100g | USDA FDC. Spinach, raw: 99mg calcium. | ✅ yes |
+| Cassava | 16 | mg/100g | USDA FDC. Cassava, raw: 16mg calcium. | ✅ yes |
+| Apple | 6 | mg/100g | USDA FDC. Apples, raw, with skin: 6mg calcium. | ✅ yes |

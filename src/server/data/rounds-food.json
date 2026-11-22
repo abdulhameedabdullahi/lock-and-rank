@@ -1,0 +1,442 @@
+[
+  {
+    "topicId": "food",
+    "category": "Calories per 100g, raw",
+    "rule": "Rank highest to lowest calorie count per 100g, raw",
+    "unit": "kcal per 100g",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "cucumber",
+        "name": "Cucumber",
+        "emoji": "🥒",
+        "value": 15,
+        "source": "USDA FoodData Central. Cucumber, with peel, raw: 15 kcal per 100g."
+      },
+      {
+        "id": "apple",
+        "name": "Apple",
+        "emoji": "🍎",
+        "value": 52,
+        "source": "USDA FoodData Central. Apples, raw, with skin: 52 kcal per 100g."
+      },
+      {
+        "id": "banana",
+        "name": "Banana",
+        "emoji": "🍌",
+        "value": 89,
+        "source": "USDA FoodData Central. Bananas, raw: 89 kcal per 100g."
+      },
+      {
+        "id": "yam",
+        "name": "Yam",
+        "emoji": "🍠",
+        "value": 118,
+        "source": "USDA FoodData Central. Yam, raw: 118 kcal per 100g."
+      },
+      {
+        "id": "cassava",
+        "name": "Cassava",
+        "emoji": "🥔",
+        "value": 160,
+        "source": "USDA FoodData Central. Cassava, raw: 160 kcal per 100g."
+      }
+    ]
+  },
+  {
+    "topicId": "food",
+    "category": "Protein per 100g",
+    "rule": "Rank highest to lowest protein content per 100g",
+    "unit": "g protein per 100g",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "apple",
+        "name": "Apple",
+        "emoji": "🍎",
+        "value": 0.3,
+        "source": "USDA FoodData Central. Apples, raw, with skin: 0.26g protein per 100g, rounded to 0.3g."
+      },
+      {
+        "id": "plantain",
+        "name": "Plantain",
+        "emoji": "🍌",
+        "value": 1.3,
+        "source": "USDA FoodData Central. Plantains, raw: 1.30g protein per 100g."
+      },
+      {
+        "id": "egg",
+        "name": "Egg",
+        "emoji": "🥚",
+        "value": 12.6,
+        "source": "USDA FoodData Central. Egg, whole, raw, fresh: 12.56g protein per 100g, rounded to 12.6g."
+      },
+      {
+        "id": "chicken_breast",
+        "name": "Chicken Breast",
+        "emoji": "🍗",
+        "value": 23.1,
+        "source": "USDA FoodData Central. Chicken, broilers, breast, raw: 23.1g protein per 100g."
+      },
+      {
+        "id": "pumpkin_seeds",
+        "name": "Pumpkin Seeds",
+        "emoji": "🎃",
+        "value": 30.2,
+        "source": "USDA FoodData Central. Seeds, pumpkin and squash seed kernels, dried: 30.23g protein per 100g, rounded to 30.2g."
+      }
+    ]
+  },
+  {
+    "topicId": "food",
+    "category": "Sugars per 100g, raw",
+    "rule": "Rank fewest to most sugars per 100g, raw",
+    "unit": "g sugar per 100g",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "yam",
+        "name": "Yam",
+        "emoji": "🍠",
+        "value": 0.5,
+        "source": "USDA FoodData Central. Yam, raw: 0.5g total sugars per 100g."
+      },
+      {
+        "id": "cassava",
+        "name": "Cassava",
+        "emoji": "🥔",
+        "value": 1.7,
+        "source": "USDA FoodData Central. Cassava, raw: 1.7g total sugars per 100g."
+      },
+      {
+        "id": "papaya",
+        "name": "Papaya",
+        "emoji": "🍈",
+        "value": 7.8,
+        "source": "USDA FoodData Central. Papayas, raw: 7.82g total sugars per 100g, rounded to 7.8g."
+      },
+      {
+        "id": "orange",
+        "name": "Orange",
+        "emoji": "🍊",
+        "value": 9.4,
+        "source": "USDA FoodData Central. Oranges, raw, navels: 9.35g total sugars per 100g, rounded to 9.4g."
+      },
+      {
+        "id": "banana",
+        "name": "Banana",
+        "emoji": "🍌",
+        "value": 12.2,
+        "source": "USDA FoodData Central. Bananas, raw: 12.23g total sugars per 100g, rounded to 12.2g."
+      }
+    ]
+  },
+  {
+    "topicId": "food",
+    "category": "Fat per 100g, raw",
+    "rule": "Rank highest to lowest fat content per 100g, raw",
+    "unit": "g fat per 100g",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "yam",
+        "name": "Yam",
+        "emoji": "🍠",
+        "value": 0.2,
+        "source": "USDA FoodData Central. Yam, raw: 0.17g total fat per 100g, rounded to 0.2g."
+      },
+      {
+        "id": "egg",
+        "name": "Egg",
+        "emoji": "🥚",
+        "value": 9.5,
+        "source": "USDA FoodData Central. Egg, whole, raw, fresh: 9.51g total fat per 100g, rounded to 9.5g."
+      },
+      {
+        "id": "avocado",
+        "name": "Avocado",
+        "emoji": "🥑",
+        "value": 14.7,
+        "source": "USDA FoodData Central. Avocados, raw, all commercial varieties: 14.66g total fat per 100g, rounded to 14.7g."
+      },
+      {
+        "id": "coconut",
+        "name": "Coconut",
+        "emoji": "🥥",
+        "value": 33.5,
+        "source": "USDA FoodData Central. Coconut meat, raw: 33.49g total fat per 100g, rounded to 33.5g."
+      },
+      {
+        "id": "peanuts",
+        "name": "Peanuts",
+        "emoji": "🥜",
+        "value": 49.2,
+        "source": "USDA FoodData Central. Peanuts, all types, raw: 49.24g total fat per 100g, rounded to 49.2g."
+      }
+    ]
+  },
+  {
+    "topicId": "food",
+    "category": "Dietary Fiber per 100g",
+    "rule": "Rank highest to lowest dietary fiber per 100g",
+    "unit": "g fiber per 100g",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "watermelon",
+        "name": "Watermelon",
+        "emoji": "🍉",
+        "value": 0.4,
+        "source": "USDA FoodData Central. Watermelon, raw: 0.4g dietary fiber per 100g."
+      },
+      {
+        "id": "banana",
+        "name": "Banana",
+        "emoji": "🍌",
+        "value": 2.6,
+        "source": "USDA FoodData Central. Bananas, raw: 2.6g dietary fiber per 100g."
+      },
+      {
+        "id": "yam",
+        "name": "Yam",
+        "emoji": "🍠",
+        "value": 4.1,
+        "source": "USDA FoodData Central. Yam, raw: 4.1g dietary fiber per 100g."
+      },
+      {
+        "id": "coconut",
+        "name": "Coconut",
+        "emoji": "🥥",
+        "value": 9.0,
+        "source": "USDA FoodData Central. Coconut meat, raw: 9.0g dietary fiber per 100g."
+      },
+      {
+        "id": "almonds",
+        "name": "Almonds",
+        "emoji": "🌰",
+        "value": 12.5,
+        "source": "USDA FoodData Central. Nuts, almonds: 12.5g dietary fiber per 100g."
+      }
+    ]
+  },
+  {
+    "topicId": "food",
+    "category": "Carbohydrates per 100g, raw",
+    "rule": "Rank highest to lowest carbohydrate content per 100g, raw",
+    "unit": "g carbs per 100g",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "watermelon",
+        "name": "Watermelon",
+        "emoji": "🍉",
+        "value": 7.6,
+        "source": "USDA FoodData Central. Watermelon, raw: 7.55g total carbohydrate per 100g, rounded to 7.6g."
+      },
+      {
+        "id": "banana",
+        "name": "Banana",
+        "emoji": "🍌",
+        "value": 23.0,
+        "source": "USDA FoodData Central. Bananas, raw: 22.84g total carbohydrate per 100g, rounded to 23.0g."
+      },
+      {
+        "id": "yam",
+        "name": "Yam",
+        "emoji": "🍠",
+        "value": 27.9,
+        "source": "USDA FoodData Central. Yam, raw: 27.88g total carbohydrate per 100g, rounded to 27.9g."
+      },
+      {
+        "id": "plantain",
+        "name": "Plantain",
+        "emoji": "🍌",
+        "value": 31.9,
+        "source": "USDA FoodData Central. Plantains, raw: 31.89g total carbohydrate per 100g, rounded to 31.9g."
+      },
+      {
+        "id": "cassava",
+        "name": "Cassava",
+        "emoji": "🥔",
+        "value": 38.1,
+        "source": "USDA FoodData Central. Cassava, raw: 38.06g total carbohydrate per 100g, rounded to 38.1g."
+      }
+    ]
+  },
+  {
+    "topicId": "food",
+    "category": "Iron per 100g",
+    "rule": "Rank highest to lowest iron content per 100g",
+    "unit": "mg iron per 100g",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "banana",
+        "name": "Banana",
+        "emoji": "🍌",
+        "value": 0.3,
+        "source": "USDA FoodData Central. Bananas, raw: 0.26mg iron per 100g, rounded to 0.3mg."
+      },
+      {
+        "id": "yam",
+        "name": "Yam",
+        "emoji": "🍠",
+        "value": 0.5,
+        "source": "USDA FoodData Central. Yam, raw: 0.54mg iron per 100g, rounded to 0.5mg."
+      },
+      {
+        "id": "spinach",
+        "name": "Spinach",
+        "emoji": "🥬",
+        "value": 2.7,
+        "source": "USDA FoodData Central. Spinach, raw: 2.71mg iron per 100g, rounded to 2.7mg."
+      },
+      {
+        "id": "lentils",
+        "name": "Lentils",
+        "emoji": "🫘",
+        "value": 6.5,
+        "source": "USDA FoodData Central. Lentils, raw: 6.51mg iron per 100g, rounded to 6.5mg."
+      },
+      {
+        "id": "blackeye_peas",
+        "name": "Black-Eye Peas",
+        "emoji": "🫛",
+        "value": 8.2,
+        "source": "USDA FoodData Central. Cowpeas, common (blackeyes), mature seeds, raw: 8.22mg iron per 100g, rounded to 8.2mg."
+      }
+    ]
+  },
+  {
+    "topicId": "food",
+    "category": "Potassium per 100g, raw",
+    "rule": "Rank highest to lowest potassium content per 100g, raw",
+    "unit": "mg potassium per 100g",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "apple",
+        "name": "Apple",
+        "emoji": "🍎",
+        "value": 107,
+        "source": "USDA FoodData Central. Apples, raw, with skin: 107mg potassium per 100g."
+      },
+      {
+        "id": "cassava",
+        "name": "Cassava",
+        "emoji": "🥔",
+        "value": 271,
+        "source": "USDA FoodData Central. Cassava, raw: 271mg potassium per 100g."
+      },
+      {
+        "id": "banana",
+        "name": "Banana",
+        "emoji": "🍌",
+        "value": 358,
+        "source": "USDA FoodData Central. Bananas, raw: 358mg potassium per 100g."
+      },
+      {
+        "id": "avocado",
+        "name": "Avocado",
+        "emoji": "🥑",
+        "value": 485,
+        "source": "USDA FoodData Central. Avocados, raw, all commercial varieties: 485mg potassium per 100g."
+      },
+      {
+        "id": "spinach",
+        "name": "Spinach",
+        "emoji": "🥬",
+        "value": 558,
+        "source": "USDA FoodData Central. Spinach, raw: 558mg potassium per 100g."
+      }
+    ]
+  },
+  {
+    "topicId": "food",
+    "category": "Vitamin C per 100g, raw",
+    "rule": "Rank highest to lowest vitamin C content per 100g, raw",
+    "unit": "mg vitamin C per 100g",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "apple",
+        "name": "Apple",
+        "emoji": "🍎",
+        "value": 4.6,
+        "source": "USDA FoodData Central. Apples, raw, with skin: 4.6mg vitamin C per 100g."
+      },
+      {
+        "id": "mango",
+        "name": "Mango",
+        "emoji": "🥭",
+        "value": 36.4,
+        "source": "USDA FoodData Central. Mangos, raw: 36.4mg vitamin C per 100g."
+      },
+      {
+        "id": "orange",
+        "name": "Orange",
+        "emoji": "🍊",
+        "value": 53.2,
+        "source": "USDA FoodData Central. Oranges, raw, all commercial varieties: 53.2mg vitamin C per 100g."
+      },
+      {
+        "id": "kiwi",
+        "name": "Kiwi",
+        "emoji": "🥝",
+        "value": 92.7,
+        "source": "USDA FoodData Central. Kiwifruit, green, raw: 92.7mg vitamin C per 100g."
+      },
+      {
+        "id": "guava",
+        "name": "Guava",
+        "emoji": "🍏",
+        "value": 228.3,
+        "source": "USDA FoodData Central. Guavas, common, raw: 228.3mg vitamin C per 100g."
+      }
+    ]
+  },
+  {
+    "topicId": "food",
+    "category": "Calcium per 100g",
+    "rule": "Rank highest to lowest calcium content per 100g",
+    "unit": "mg calcium per 100g",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "apple",
+        "name": "Apple",
+        "emoji": "🍎",
+        "value": 6,
+        "source": "USDA FoodData Central. Apples, raw, with skin: 6mg calcium per 100g."
+      },
+      {
+        "id": "cassava",
+        "name": "Cassava",
+        "emoji": "🥔",
+        "value": 16,
+        "source": "USDA FoodData Central. Cassava, raw: 16mg calcium per 100g."
+      },
+      {
+        "id": "spinach",
+        "name": "Spinach",
+        "emoji": "🥬",
+        "value": 99,
+        "source": "USDA FoodData Central. Spinach, raw: 99mg calcium per 100g."
+      },
+      {
+        "id": "almonds",
+        "name": "Almonds",
+        "emoji": "🌰",
+        "value": 264,
+        "source": "USDA FoodData Central. Nuts, almonds: 264mg calcium per 100g."
+      },
+      {
+        "id": "sesame_seeds",
+        "name": "Sesame Seeds",
+        "emoji": "🫘",
+        "value": 975,
+        "source": "USDA FoodData Central. Seeds, sesame seeds, whole, dried: 975mg calcium per 100g."
+      }
+    ]
+  }
+]
