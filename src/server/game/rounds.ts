@@ -1,4 +1,5 @@
 import rawRounds from '../data/rounds.json';
+import rawSpaceRounds from '../data/rounds-space.json';
 import {
   HINT_COST,
   SLOT_COUNT,
@@ -80,7 +81,7 @@ export function parseRounds(value: unknown): Round[] {
   return value.map((entry, index) => parseRound(entry, index));
 }
 
-export const rounds = parseRounds(rawRounds);
+export const rounds = parseRounds([...(rawRounds as unknown[]), ...(rawSpaceRounds as unknown[])]);
 
 export function utcDateString(now: Date): string {
   return now.toISOString().slice(0, 10);

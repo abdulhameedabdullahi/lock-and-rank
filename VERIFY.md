@@ -566,4 +566,119 @@ All have `"verified": false`. Format: **Round # · Category** · `difficulty` ·
 | music | 10 (4E/4M/2H) | ✓ 4 original + 6 new |
 | science | 10 (4E/4M/2H) | ✓ 4 original + 6 new |
 | geography | 10 (4E/4M/2H) | ✓ 4 original + 6 new |
-| **TOTAL** | **130 rounds** | **130/130 pass validation** |
+| space | 10 (3E/3M/4H) | ✓ all new |
+| **TOTAL** | **140 rounds** | **140/140 pass validation** |
+
+---
+
+## SPACE
+
+### Space 1 — Planets: mean diameter (easy)
+Rule: largest to smallest (rank 1 = largest mean diameter)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Jupiter | 139,820 | km | NASA SSE fact sheet. Mean radius 69,911 km → diameter 139,822 km. | ✅ yes |
+| Saturn | 116,460 | km | NASA SSE fact sheet. Mean radius 58,232 km → diameter 116,464 km. | ✅ yes |
+| Uranus | 50,724 | km | NASA SSE fact sheet. Mean radius 25,362 km. | ✅ yes |
+| Earth | 12,742 | km | NASA SSE fact sheet. Mean radius 6,371 km. | ✅ yes |
+| Mars | 6,779 | km | NASA SSE fact sheet. Mean radius 3,389.5 km. | ✅ yes |
+
+### Space 2 — Planets: distance from the Sun (easy)
+Rule: shortest to longest (rank 1 = nearest to Sun)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Mercury | 57.9 | million km | NASA SSE. Mean distance 57,909,227 km (0.387 AU). | ✅ yes |
+| Venus | 108.2 | million km | NASA SSE. Mean distance 108,209,475 km (0.723 AU). | ✅ yes |
+| Earth | 149.6 | million km | NASA SSE. Mean distance 149,597,870 km (1.000 AU). | ✅ yes |
+| Mars | 227.9 | million km | NASA SSE. Mean distance 227,936,637 km (1.524 AU). | ✅ yes |
+| Jupiter | 778.5 | million km | NASA SSE. Mean distance 778,479,000 km (5.203 AU). | ✅ yes |
+
+### Space 3 — Planets: orbital period (medium)
+Rule: longest to shortest (rank 1 = longest year)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Neptune | 60,195 | Earth days | NASA SSE. 164.8 Earth years = 60,195 days. | ✅ yes |
+| Saturn | 10,759 | Earth days | NASA SSE. 29.4 Earth years = 10,759 days. | ✅ yes |
+| Jupiter | 4,333 | Earth days | NASA SSE. 11.86 Earth years = 4,333 days. | ✅ yes |
+| Mars | 687 | Earth days | NASA SSE. 686.97 days ≈ 687. | ✅ yes |
+| Venus | 225 | Earth days | NASA SSE. 224.7 days ≈ 225. | ✅ yes |
+
+### Space 4 — Planets: average orbital speed (hard)
+Rule: fastest to slowest (rank 1 = highest km/s)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Mercury | 47.9 | km/s | NASA SSE. Mean orbital speed 47.87 km/s. | ✅ yes |
+| Venus | 35.0 | km/s | NASA SSE. Mean orbital speed 35.02 km/s. | ✅ yes |
+| Earth | 29.8 | km/s | NASA SSE. Mean orbital speed 29.78 km/s. | ✅ yes |
+| Mars | 24.1 | km/s | NASA SSE. Mean orbital speed 24.08 km/s. | ✅ yes |
+| Jupiter | 13.1 | km/s | NASA SSE. Mean orbital speed 13.07 km/s. | ✅ yes |
+
+### Space 5 — Solar system bodies: surface gravity (medium)
+Rule: highest to lowest (rank 1 = strongest gravity)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Jupiter | 24.79 | m/s² | NASA SSE fact sheets. Surface gravity at 1-bar reference level: 24.79 m/s². | ✅ yes |
+| Neptune | 11.15 | m/s² | NASA SSE fact sheets. Surface gravity at 1-bar reference level: 11.15 m/s². | ✅ yes |
+| Uranus | 8.87 | m/s² | NASA SSE fact sheets. Surface gravity at 1-bar reference level: 8.87 m/s². | ✅ yes |
+| Mars | 3.72 | m/s² | NASA SSE fact sheets. Mars surface gravity: 3.72 m/s². | ✅ yes |
+| Moon | 1.62 | m/s² | NASA SSE fact sheets. Earth's Moon surface gravity: 1.62 m/s². | ✅ yes |
+
+### Space 6 — Space telescopes: launch year (easy)
+Rule: oldest to newest (rank 1 = earliest launch)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Hubble | 1990 | year | Launched April 24, 1990, Space Shuttle Discovery. NASA. | ✅ yes |
+| Chandra | 1999 | year | Launched July 23, 1999, Space Shuttle Columbia. NASA. | ✅ yes |
+| Spitzer | 2003 | year | Launched August 25, 2003. NASA. | ✅ yes |
+| Kepler | 2009 | year | Launched March 7, 2009. NASA. | ✅ yes |
+| James Webb | 2021 | year | Launched December 25, 2021. NASA/ESA/CSA. | ✅ yes |
+
+### Space 7 — Famous stars: distance from Earth (hard)
+Rule: shortest to longest distance (rank 1 = nearest)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Sirius | 8.65 | ly | Alpha Canis Majoris. Hipparcos catalogue ~8.65 ly. | ✅ yes |
+| Vega | 25.0 | ly | Alpha Lyrae. Hipparcos 25.05 ly. | ✅ yes |
+| Capella | 42.9 | ly | Alpha Aurigae. Hipparcos ~42.9 ly. | ✅ yes |
+| Regulus | 77.5 | ly | Alpha Leonis, brightest star in Leo. Hipparcos parallax ~42.09 mas → 23.76 pc → ~77.5 ly. | ✅ yes |
+| Polaris | 433.0 | ly | Alpha Ursae Minoris. Hipparcos 2007 revised catalogue ~433 ly. | ✅ yes |
+
+### Space 8 — Solar system bodies: escape velocity (hard)
+Rule: highest to lowest (rank 1 = highest escape velocity)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Jupiter | 59.5 | km/s | NASA SSE. Jupiter escape velocity 59.5 km/s. | ✅ yes |
+| Saturn | 35.5 | km/s | NASA SSE. Saturn escape velocity 35.5 km/s. | ✅ yes |
+| Earth | 11.2 | km/s | NASA SSE. 11.19 km/s rounded to 11.2. | ✅ yes |
+| Mercury | 4.3 | km/s | NASA SSE. 4.25 km/s rounded to 4.3. | ✅ yes |
+| Moon | 2.4 | km/s | NASA SSE. Earth's Moon 2.38 km/s rounded to 2.4. | ✅ yes |
+
+### Space 9 — Solar system bodies: average surface temperature (medium)
+Rule: hottest to coldest (rank 1 = highest °C)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Venus | 464 | °C | NASA SSE. Mean surface temperature 464°C (737 K). | ✅ yes |
+| Mercury | 167 | °C | NASA SSE. Mean surface temperature 167°C (440 K), averaged across full surface. | ✅ yes |
+| Earth | 15 | °C | NASA/NOAA. Global mean surface temperature ~15°C (288 K). | ✅ yes |
+| Mars | -65 | °C | NASA SSE. Mean surface temperature -65°C (210 K). | ✅ yes |
+| Pluto | -229 | °C | NASA New Horizons mission data. Mean surface temperature ~-229°C (44 K). | ✅ yes |
+
+### Space 10 — Famous space missions: launch year (easy)
+Rule: oldest to newest (rank 1 = earliest launch year)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Sputnik 1 | 1957 | year | Launched October 4, 1957, by the Soviet Union. First artificial satellite. | ✅ yes |
+| Apollo 11 | 1969 | year | Launched July 16, 1969, by NASA. First crewed Moon landing. | ✅ yes |
+| Voyager 1 | 1977 | year | Launched September 5, 1977, by NASA. | ✅ yes |
+| Curiosity | 2011 | year | Mars Science Laboratory (Curiosity rover). Launched November 26, 2011, by NASA. | ✅ yes |
+| Perseverance | 2020 | year | Mars 2020 (Perseverance rover). Launched July 30, 2020, by NASA. | ✅ yes |

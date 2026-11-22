@@ -22,6 +22,7 @@ export const CATEGORIES: Category[] = [
   { id: 'geography', label: 'Geography & World', emoji: '🌍' },
   { id: 'basketball', label: 'Basketball', emoji: '🏀' },
   { id: 'wildfacts', label: 'Wild Facts', emoji: '🤯' },
+  { id: 'space', label: 'Space', emoji: '🚀' },
 ];
 
 /** All valid topicId values including "mix". */

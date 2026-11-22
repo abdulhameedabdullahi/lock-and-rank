@@ -1,0 +1,442 @@
+[
+  {
+    "topicId": "space",
+    "category": "Planets: mean diameter",
+    "rule": "Largest to smallest",
+    "unit": "km",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "jupiter",
+        "name": "Jupiter",
+        "emoji": "🟠",
+        "value": 139820,
+        "source": "NASA Solar System Exploration fact sheets. Jupiter mean radius 69,911 km → mean diameter 139,822 km, rounded to 139,820 km."
+      },
+      {
+        "id": "saturn",
+        "name": "Saturn",
+        "emoji": "🪐",
+        "value": 116460,
+        "source": "NASA Solar System Exploration fact sheets. Saturn mean radius 58,232 km → mean diameter 116,464 km, rounded to 116,460 km."
+      },
+      {
+        "id": "uranus",
+        "name": "Uranus",
+        "emoji": "🔵",
+        "value": 50724,
+        "source": "NASA Solar System Exploration fact sheets. Uranus mean radius 25,362 km → mean diameter 50,724 km."
+      },
+      {
+        "id": "earth",
+        "name": "Earth",
+        "emoji": "🌍",
+        "value": 12742,
+        "source": "NASA Solar System Exploration fact sheets. Earth mean radius 6,371 km → mean diameter 12,742 km."
+      },
+      {
+        "id": "mars",
+        "name": "Mars",
+        "emoji": "🔴",
+        "value": 6779,
+        "source": "NASA Solar System Exploration fact sheets. Mars mean radius 3,389.5 km → mean diameter 6,779 km."
+      }
+    ]
+  },
+  {
+    "topicId": "space",
+    "category": "Planets: distance from the Sun",
+    "rule": "Shortest to longest",
+    "unit": "million km",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "mercury",
+        "name": "Mercury",
+        "emoji": "⚫",
+        "value": 57.9,
+        "source": "NASA Solar System Exploration. Mercury mean distance from Sun 57,909,227 km ≈ 57.9 million km (0.387 AU)."
+      },
+      {
+        "id": "venus",
+        "name": "Venus",
+        "emoji": "🟡",
+        "value": 108.2,
+        "source": "NASA Solar System Exploration. Venus mean distance from Sun 108,209,475 km ≈ 108.2 million km (0.723 AU)."
+      },
+      {
+        "id": "earth",
+        "name": "Earth",
+        "emoji": "🌍",
+        "value": 149.6,
+        "source": "NASA Solar System Exploration. Earth mean distance from Sun 149,597,870 km ≈ 149.6 million km (1.000 AU)."
+      },
+      {
+        "id": "mars",
+        "name": "Mars",
+        "emoji": "🔴",
+        "value": 227.9,
+        "source": "NASA Solar System Exploration. Mars mean distance from Sun 227,936,637 km ≈ 227.9 million km (1.524 AU)."
+      },
+      {
+        "id": "jupiter",
+        "name": "Jupiter",
+        "emoji": "🟠",
+        "value": 778.5,
+        "source": "NASA Solar System Exploration. Jupiter mean distance from Sun 778,479,000 km ≈ 778.5 million km (5.203 AU)."
+      }
+    ]
+  },
+  {
+    "topicId": "space",
+    "category": "Planets: orbital period",
+    "rule": "Longest to shortest",
+    "unit": "Earth days",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "neptune",
+        "name": "Neptune",
+        "emoji": "💙",
+        "value": 60195,
+        "source": "NASA Solar System Exploration. Neptune sidereal orbital period 164.8 years = 60,195 Earth days."
+      },
+      {
+        "id": "saturn",
+        "name": "Saturn",
+        "emoji": "🪐",
+        "value": 10759,
+        "source": "NASA Solar System Exploration. Saturn sidereal orbital period 29.4 years = 10,759 Earth days."
+      },
+      {
+        "id": "jupiter",
+        "name": "Jupiter",
+        "emoji": "🟠",
+        "value": 4333,
+        "source": "NASA Solar System Exploration. Jupiter sidereal orbital period 11.86 years = 4,333 Earth days."
+      },
+      {
+        "id": "mars",
+        "name": "Mars",
+        "emoji": "🔴",
+        "value": 687,
+        "source": "NASA Solar System Exploration. Mars sidereal orbital period 686.97 days ≈ 687 Earth days."
+      },
+      {
+        "id": "venus",
+        "name": "Venus",
+        "emoji": "🟡",
+        "value": 225,
+        "source": "NASA Solar System Exploration. Venus sidereal orbital period 224.7 days ≈ 225 Earth days."
+      }
+    ]
+  },
+  {
+    "topicId": "space",
+    "category": "Planets: average orbital speed",
+    "rule": "Fastest to slowest",
+    "unit": "km/s",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "mercury",
+        "name": "Mercury",
+        "emoji": "⚫",
+        "value": 47.9,
+        "source": "NASA Solar System Exploration. Mercury mean orbital speed 47.87 km/s ≈ 47.9 km/s."
+      },
+      {
+        "id": "venus",
+        "name": "Venus",
+        "emoji": "🟡",
+        "value": 35.0,
+        "source": "NASA Solar System Exploration. Venus mean orbital speed 35.02 km/s ≈ 35.0 km/s."
+      },
+      {
+        "id": "earth",
+        "name": "Earth",
+        "emoji": "🌍",
+        "value": 29.8,
+        "source": "NASA Solar System Exploration. Earth mean orbital speed 29.78 km/s ≈ 29.8 km/s."
+      },
+      {
+        "id": "mars",
+        "name": "Mars",
+        "emoji": "🔴",
+        "value": 24.1,
+        "source": "NASA Solar System Exploration. Mars mean orbital speed 24.08 km/s ≈ 24.1 km/s."
+      },
+      {
+        "id": "jupiter",
+        "name": "Jupiter",
+        "emoji": "🟠",
+        "value": 13.1,
+        "source": "NASA Solar System Exploration. Jupiter mean orbital speed 13.07 km/s ≈ 13.1 km/s."
+      }
+    ]
+  },
+  {
+    "topicId": "space",
+    "category": "Solar system bodies: surface gravity",
+    "rule": "Highest to lowest",
+    "unit": "m/s²",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "jupiter",
+        "name": "Jupiter",
+        "emoji": "🟠",
+        "value": 24.79,
+        "source": "NASA Solar System Exploration fact sheets. Jupiter surface gravity at 1-bar reference level: 24.79 m/s²."
+      },
+      {
+        "id": "neptune",
+        "name": "Neptune",
+        "emoji": "💙",
+        "value": 11.15,
+        "source": "NASA Solar System Exploration fact sheets. Neptune surface gravity at 1-bar reference level: 11.15 m/s²."
+      },
+      {
+        "id": "uranus",
+        "name": "Uranus",
+        "emoji": "🔵",
+        "value": 8.87,
+        "source": "NASA Solar System Exploration fact sheets. Uranus surface gravity at 1-bar reference level: 8.87 m/s²."
+      },
+      {
+        "id": "mars",
+        "name": "Mars",
+        "emoji": "🔴",
+        "value": 3.72,
+        "source": "NASA Solar System Exploration fact sheets. Mars surface gravity: 3.72 m/s²."
+      },
+      {
+        "id": "moon",
+        "name": "Moon",
+        "emoji": "🌕",
+        "value": 1.62,
+        "source": "NASA Solar System Exploration fact sheets. Earth's Moon surface gravity: 1.62 m/s²."
+      }
+    ]
+  },
+  {
+    "topicId": "space",
+    "category": "Space telescopes: launch year",
+    "rule": "Oldest to newest",
+    "unit": "year",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "hubble",
+        "name": "Hubble",
+        "emoji": "🔭",
+        "value": 1990,
+        "source": "Hubble Space Telescope launched April 24, 1990, aboard Space Shuttle Discovery. NASA."
+      },
+      {
+        "id": "chandra",
+        "name": "Chandra",
+        "emoji": "✨",
+        "value": 1999,
+        "source": "Chandra X-ray Observatory launched July 23, 1999, aboard Space Shuttle Columbia. NASA."
+      },
+      {
+        "id": "spitzer",
+        "name": "Spitzer",
+        "emoji": "🌡️",
+        "value": 2003,
+        "source": "Spitzer Space Telescope launched August 25, 2003. NASA."
+      },
+      {
+        "id": "kepler",
+        "name": "Kepler",
+        "emoji": "🌟",
+        "value": 2009,
+        "source": "Kepler Space Telescope launched March 7, 2009. NASA."
+      },
+      {
+        "id": "james-webb",
+        "name": "James Webb",
+        "emoji": "🌌",
+        "value": 2021,
+        "source": "James Webb Space Telescope launched December 25, 2021. NASA/ESA/CSA."
+      }
+    ]
+  },
+  {
+    "topicId": "space",
+    "category": "Famous stars: distance from Earth",
+    "rule": "Shortest to longest distance",
+    "unit": "ly",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "sirius",
+        "name": "Sirius",
+        "emoji": "⭐",
+        "value": 8.65,
+        "source": "Sirius (Alpha Canis Majoris), brightest star in the night sky. Distance ~8.65 light-years per Hipparcos catalogue."
+      },
+      {
+        "id": "vega",
+        "name": "Vega",
+        "emoji": "🌟",
+        "value": 25.0,
+        "source": "Vega (Alpha Lyrae). Distance ~25.05 light-years per Hipparcos catalogue. NASA Sky View."
+      },
+      {
+        "id": "capella",
+        "name": "Capella",
+        "emoji": "⭐",
+        "value": 42.9,
+        "source": "Capella (Alpha Aurigae), quadruple star system. Distance ~42.9 light-years per Hipparcos catalogue."
+      },
+      {
+        "id": "regulus",
+        "name": "Regulus",
+        "emoji": "🦁",
+        "value": 77.5,
+        "source": "Regulus (Alpha Leonis), brightest star in Leo. Distance ~77.5 light-years per Hipparcos catalogue (parallax ~42.09 mas → ~23.76 pc)."
+      },
+      {
+        "id": "polaris",
+        "name": "Polaris",
+        "emoji": "🌠",
+        "value": 433.0,
+        "source": "Polaris (Alpha Ursae Minoris), the North Star. Distance ~433 light-years per Hipparcos 2007 revised catalogue."
+      }
+    ]
+  },
+  {
+    "topicId": "space",
+    "category": "Solar system bodies: escape velocity",
+    "rule": "Highest to lowest",
+    "unit": "km/s",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "jupiter",
+        "name": "Jupiter",
+        "emoji": "🟠",
+        "value": 59.5,
+        "source": "NASA Solar System Exploration. Jupiter escape velocity 59.5 km/s."
+      },
+      {
+        "id": "saturn",
+        "name": "Saturn",
+        "emoji": "🪐",
+        "value": 35.5,
+        "source": "NASA Solar System Exploration. Saturn escape velocity 35.5 km/s."
+      },
+      {
+        "id": "earth",
+        "name": "Earth",
+        "emoji": "🌍",
+        "value": 11.2,
+        "source": "NASA Solar System Exploration. Earth escape velocity 11.19 km/s, rounded to 11.2 km/s."
+      },
+      {
+        "id": "mercury",
+        "name": "Mercury",
+        "emoji": "⚫",
+        "value": 4.3,
+        "source": "NASA Solar System Exploration. Mercury escape velocity 4.25 km/s, rounded to 4.3 km/s."
+      },
+      {
+        "id": "moon",
+        "name": "Moon",
+        "emoji": "🌕",
+        "value": 2.4,
+        "source": "NASA Solar System Exploration. Earth's Moon escape velocity 2.38 km/s, rounded to 2.4 km/s."
+      }
+    ]
+  },
+  {
+    "topicId": "space",
+    "category": "Solar system bodies: average surface temperature",
+    "rule": "Hottest to coldest",
+    "unit": "°C",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "venus",
+        "name": "Venus",
+        "emoji": "🟡",
+        "value": 464,
+        "source": "NASA Solar System Exploration. Venus mean surface temperature 464°C (737 K), highest in the solar system due to greenhouse effect."
+      },
+      {
+        "id": "mercury",
+        "name": "Mercury",
+        "emoji": "⚫",
+        "value": 167,
+        "source": "NASA Solar System Exploration. Mercury mean surface temperature 167°C (440 K), averaged across the whole surface."
+      },
+      {
+        "id": "earth",
+        "name": "Earth",
+        "emoji": "🌍",
+        "value": 15,
+        "source": "NASA/NOAA. Earth global mean surface temperature ~15°C (288 K)."
+      },
+      {
+        "id": "mars",
+        "name": "Mars",
+        "emoji": "🔴",
+        "value": -65,
+        "source": "NASA Solar System Exploration. Mars mean surface temperature -65°C (210 K)."
+      },
+      {
+        "id": "pluto",
+        "name": "Pluto",
+        "emoji": "⚪",
+        "value": -229,
+        "source": "NASA New Horizons mission data. Pluto mean surface temperature ~-229°C (44 K)."
+      }
+    ]
+  },
+  {
+    "topicId": "space",
+    "category": "Famous space missions: launch year",
+    "rule": "Oldest to newest",
+    "unit": "year",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "sputnik-1",
+        "name": "Sputnik 1",
+        "emoji": "📡",
+        "value": 1957,
+        "source": "Sputnik 1, world's first artificial satellite. Launched October 4, 1957, by the Soviet Union."
+      },
+      {
+        "id": "apollo-11",
+        "name": "Apollo 11",
+        "emoji": "🚀",
+        "value": 1969,
+        "source": "Apollo 11, first crewed Moon landing. Launched July 16, 1969, by NASA."
+      },
+      {
+        "id": "voyager-1",
+        "name": "Voyager 1",
+        "emoji": "🛸",
+        "value": 1977,
+        "source": "Voyager 1, now the most distant human-made object. Launched September 5, 1977, by NASA."
+      },
+      {
+        "id": "curiosity",
+        "name": "Curiosity",
+        "emoji": "🤖",
+        "value": 2011,
+        "source": "Mars Science Laboratory (Curiosity rover). Launched November 26, 2011, by NASA."
+      },
+      {
+        "id": "perseverance",
+        "name": "Perseverance",
+        "emoji": "🦾",
+        "value": 2020,
+        "source": "Mars 2020 (Perseverance rover). Launched July 30, 2020, by NASA."
+      }
+    ]
+  }
+]
