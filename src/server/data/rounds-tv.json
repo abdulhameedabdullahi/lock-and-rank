@@ -1,0 +1,442 @@
+[
+  {
+    "topicId": "tv",
+    "category": "Dramas: premiere year",
+    "rule": "Rank oldest to newest premiere year",
+    "unit": "year",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "seinfeld",
+        "name": "Seinfeld",
+        "emoji": "🗽",
+        "value": 1989,
+        "source": "Wikipedia. Seinfeld, NBC, premiered July 5, 1989. Ended May 14, 1998."
+      },
+      {
+        "id": "friends",
+        "name": "Friends",
+        "emoji": "☕",
+        "value": 1994,
+        "source": "Wikipedia. Friends, NBC, premiered September 22, 1994. Ended May 6, 2004."
+      },
+      {
+        "id": "sopranos",
+        "name": "The Sopranos",
+        "emoji": "🎵",
+        "value": 1999,
+        "source": "Wikipedia. The Sopranos, HBO, premiered January 10, 1999. Ended June 10, 2007."
+      },
+      {
+        "id": "wire",
+        "name": "The Wire",
+        "emoji": "📡",
+        "value": 2002,
+        "source": "Wikipedia. The Wire, HBO, premiered June 2, 2002. Ended March 9, 2008."
+      },
+      {
+        "id": "breaking_bad",
+        "name": "Breaking Bad",
+        "emoji": "⚗️",
+        "value": 2008,
+        "source": "Wikipedia. Breaking Bad, AMC, premiered January 20, 2008. Ended September 29, 2013."
+      }
+    ]
+  },
+  {
+    "topicId": "tv",
+    "category": "Dramas: total seasons",
+    "rule": "Rank fewest to most seasons",
+    "unit": "seasons",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "breaking_bad",
+        "name": "Breaking Bad",
+        "emoji": "⚗️",
+        "value": 5,
+        "source": "Wikipedia/IMDb. Breaking Bad: 5 seasons (2008–2013), AMC."
+      },
+      {
+        "id": "lost",
+        "name": "Lost",
+        "emoji": "✈️",
+        "value": 6,
+        "source": "Wikipedia/IMDb. Lost: 6 seasons (2004–2010), ABC."
+      },
+      {
+        "id": "seinfeld",
+        "name": "Seinfeld",
+        "emoji": "🗽",
+        "value": 9,
+        "source": "Wikipedia/IMDb. Seinfeld: 9 seasons (1989–1998), NBC."
+      },
+      {
+        "id": "frasier",
+        "name": "Frasier",
+        "emoji": "🎙️",
+        "value": 11,
+        "source": "Wikipedia/IMDb. Frasier: 11 seasons (1993–2004), NBC."
+      },
+      {
+        "id": "er",
+        "name": "ER",
+        "emoji": "🏥",
+        "value": 15,
+        "source": "Wikipedia/IMDb. ER: 15 seasons (1994–2009), NBC."
+      }
+    ]
+  },
+  {
+    "topicId": "tv",
+    "category": "Dramas: total episodes",
+    "rule": "Rank fewest to most total episodes",
+    "unit": "episodes",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "breaking_bad",
+        "name": "Breaking Bad",
+        "emoji": "⚗️",
+        "value": 62,
+        "source": "Wikipedia/IMDb. Breaking Bad: 5 seasons, 62 episodes. S1:7, S2:13, S3:13, S4:13, S5:16."
+      },
+      {
+        "id": "sopranos",
+        "name": "The Sopranos",
+        "emoji": "🎵",
+        "value": 86,
+        "source": "Wikipedia/IMDb. The Sopranos: 6 seasons, 86 episodes. S1–S5: 13 each; S6: 21."
+      },
+      {
+        "id": "seinfeld",
+        "name": "Seinfeld",
+        "emoji": "🗽",
+        "value": 180,
+        "source": "Wikipedia/IMDb. Seinfeld: 9 seasons, 180 episodes. S1:5, S2:12, S3:23, S4:24, S5:22, S6:24, S7:24, S8:22, S9:24."
+      },
+      {
+        "id": "friends",
+        "name": "Friends",
+        "emoji": "☕",
+        "value": 236,
+        "source": "Wikipedia/IMDb. Friends: 10 seasons, 236 episodes. S1–S9: 24 each; S10: 18."
+      },
+      {
+        "id": "er",
+        "name": "ER",
+        "emoji": "🏥",
+        "value": 331,
+        "source": "Wikipedia/IMDb. ER: 15 seasons, 331 episodes total."
+      }
+    ]
+  },
+  {
+    "topicId": "tv",
+    "category": "Classic series: premiere year",
+    "rule": "Rank oldest to newest premiere year",
+    "unit": "year",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "i_love_lucy",
+        "name": "I Love Lucy",
+        "emoji": "🎪",
+        "value": 1951,
+        "source": "Wikipedia. I Love Lucy, CBS, premiered October 15, 1951. Ended May 6, 1957."
+      },
+      {
+        "id": "star_trek_tos",
+        "name": "Star Trek",
+        "emoji": "🖖",
+        "value": 1966,
+        "source": "Wikipedia. Star Trek (TOS), NBC, premiered September 8, 1966. Ended June 3, 1969."
+      },
+      {
+        "id": "cheers",
+        "name": "Cheers",
+        "emoji": "🍺",
+        "value": 1982,
+        "source": "Wikipedia. Cheers, NBC, premiered September 30, 1982. Ended May 20, 1993."
+      },
+      {
+        "id": "buffy",
+        "name": "Buffy the Vampire Slayer",
+        "emoji": "🧛",
+        "value": 1997,
+        "source": "Wikipedia. Buffy the Vampire Slayer, The WB/UPN, premiered March 10, 1997. Ended May 20, 2003."
+      },
+      {
+        "id": "mad_men",
+        "name": "Mad Men",
+        "emoji": "🥃",
+        "value": 2007,
+        "source": "Wikipedia. Mad Men, AMC, premiered July 19, 2007. Ended May 17, 2015."
+      }
+    ]
+  },
+  {
+    "topicId": "tv",
+    "category": "Sitcoms: premiere year",
+    "rule": "Rank oldest to newest premiere year",
+    "unit": "year",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "gilligans_island",
+        "name": "Gilligan's Island",
+        "emoji": "🏝️",
+        "value": 1964,
+        "source": "Wikipedia. Gilligan's Island, CBS, premiered September 26, 1964. Ended April 17, 1967."
+      },
+      {
+        "id": "mash",
+        "name": "M*A*S*H",
+        "emoji": "🚁",
+        "value": 1972,
+        "source": "Wikipedia. M*A*S*H, CBS, premiered September 17, 1972. Ended February 28, 1983."
+      },
+      {
+        "id": "the_office",
+        "name": "The Office",
+        "emoji": "💼",
+        "value": 2005,
+        "source": "Wikipedia. The Office (US), NBC, premiered March 24, 2005. Ended May 16, 2013."
+      },
+      {
+        "id": "parks_and_rec",
+        "name": "Parks and Recreation",
+        "emoji": "🏛️",
+        "value": 2009,
+        "source": "Wikipedia. Parks and Recreation, NBC, premiered April 9, 2009. Ended February 24, 2015."
+      },
+      {
+        "id": "brooklyn_99",
+        "name": "Brooklyn Nine-Nine",
+        "emoji": "🚔",
+        "value": 2013,
+        "source": "Wikipedia. Brooklyn Nine-Nine, Fox/NBC, premiered September 17, 2013. Ended September 16, 2021."
+      }
+    ]
+  },
+  {
+    "topicId": "tv",
+    "category": "Classic series: total episodes",
+    "rule": "Rank fewest to most total episodes",
+    "unit": "episodes",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "star_trek_tos",
+        "name": "Star Trek",
+        "emoji": "🖖",
+        "value": 79,
+        "source": "Wikipedia/IMDb. Star Trek (TOS): 3 seasons, 79 episodes. S1:29, S2:26, S3:24."
+      },
+      {
+        "id": "twilight_zone",
+        "name": "The Twilight Zone",
+        "emoji": "🌀",
+        "value": 156,
+        "source": "Wikipedia/IMDb. The Twilight Zone (original): 5 seasons, 156 episodes. S1:36, S2:29, S3:37, S4:18, S5:36."
+      },
+      {
+        "id": "i_love_lucy",
+        "name": "I Love Lucy",
+        "emoji": "🎪",
+        "value": 180,
+        "source": "Wikipedia/IMDb. I Love Lucy: 6 seasons, 180 episodes. S1:35, S2:31, S3:31, S4:30, S5:26, S6:27."
+      },
+      {
+        "id": "mash",
+        "name": "M*A*S*H",
+        "emoji": "🚁",
+        "value": 256,
+        "source": "Wikipedia/IMDb. M*A*S*H: 11 seasons, 256 episodes (1972–1983), CBS."
+      },
+      {
+        "id": "gunsmoke",
+        "name": "Gunsmoke",
+        "emoji": "🤠",
+        "value": 635,
+        "source": "Wikipedia/IMDb. Gunsmoke: 20 seasons, 635 episodes (1955–1975), CBS."
+      }
+    ]
+  },
+  {
+    "topicId": "tv",
+    "category": "Series: total seasons",
+    "rule": "Rank fewest to most seasons",
+    "unit": "seasons",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "gilligans_island",
+        "name": "Gilligan's Island",
+        "emoji": "🏝️",
+        "value": 3,
+        "source": "Wikipedia/IMDb. Gilligan's Island: 3 seasons (1964–1967), CBS."
+      },
+      {
+        "id": "downton_abbey",
+        "name": "Downton Abbey",
+        "emoji": "🏰",
+        "value": 6,
+        "source": "Wikipedia/IMDb. Downton Abbey: 6 series (2010–2015), ITV."
+      },
+      {
+        "id": "mad_men",
+        "name": "Mad Men",
+        "emoji": "🥃",
+        "value": 7,
+        "source": "Wikipedia/IMDb. Mad Men: 7 seasons (2007–2015), AMC."
+      },
+      {
+        "id": "cheers",
+        "name": "Cheers",
+        "emoji": "🍺",
+        "value": 11,
+        "source": "Wikipedia/IMDb. Cheers: 11 seasons (1982–1993), NBC."
+      },
+      {
+        "id": "gunsmoke",
+        "name": "Gunsmoke",
+        "emoji": "🤠",
+        "value": 20,
+        "source": "Wikipedia/IMDb. Gunsmoke: 20 seasons (1955–1975), CBS."
+      }
+    ]
+  },
+  {
+    "topicId": "tv",
+    "category": "Sci-fi series: premiere year",
+    "rule": "Rank oldest to newest premiere year",
+    "unit": "year",
+    "difficulty": "medium",
+    "items": [
+      {
+        "id": "twilight_zone",
+        "name": "The Twilight Zone",
+        "emoji": "🌀",
+        "value": 1959,
+        "source": "Wikipedia. The Twilight Zone (original), CBS, premiered October 2, 1959. Ended June 19, 1964."
+      },
+      {
+        "id": "x_files",
+        "name": "The X-Files",
+        "emoji": "👽",
+        "value": 1993,
+        "source": "Wikipedia. The X-Files, Fox, premiered September 10, 1993. Final episode aired March 21, 2018."
+      },
+      {
+        "id": "lost",
+        "name": "Lost",
+        "emoji": "✈️",
+        "value": 2004,
+        "source": "Wikipedia. Lost, ABC, premiered September 22, 2004. Ended May 23, 2010."
+      },
+      {
+        "id": "fringe",
+        "name": "Fringe",
+        "emoji": "🔬",
+        "value": 2008,
+        "source": "Wikipedia. Fringe, Fox, premiered September 9, 2008. Ended January 18, 2013."
+      },
+      {
+        "id": "person_of_interest",
+        "name": "Person of Interest",
+        "emoji": "📷",
+        "value": 2011,
+        "source": "Wikipedia. Person of Interest, CBS, premiered September 22, 2011. Ended June 21, 2016."
+      }
+    ]
+  },
+  {
+    "topicId": "tv",
+    "category": "Comedies: total episodes",
+    "rule": "Rank fewest to most total episodes",
+    "unit": "episodes",
+    "difficulty": "hard",
+    "items": [
+      {
+        "id": "fawlty_towers",
+        "name": "Fawlty Towers",
+        "emoji": "🏨",
+        "value": 12,
+        "source": "Wikipedia/IMDb. Fawlty Towers: 2 series × 6 episodes = 12 total (1975, 1979), BBC."
+      },
+      {
+        "id": "arrested_development",
+        "name": "Arrested Development",
+        "emoji": "🍌",
+        "value": 84,
+        "source": "Wikipedia/IMDb. Arrested Development: 5 seasons, 84 episodes. S1:22, S2:18, S3:13, S4:15, S5:16."
+      },
+      {
+        "id": "parks_and_rec",
+        "name": "Parks and Recreation",
+        "emoji": "🏛️",
+        "value": 125,
+        "source": "Wikipedia/IMDb. Parks and Recreation: 7 seasons, 125 episodes. S1:6, S2:24, S3:16, S4:22, S5:22, S6:22, S7:13."
+      },
+      {
+        "id": "brooklyn_99",
+        "name": "Brooklyn Nine-Nine",
+        "emoji": "🚔",
+        "value": 153,
+        "source": "Wikipedia/IMDb. Brooklyn Nine-Nine: 8 seasons, 153 episodes. S1:22, S2:23, S3:23, S4:22, S5:22, S6:18, S7:13, S8:10."
+      },
+      {
+        "id": "frasier",
+        "name": "Frasier",
+        "emoji": "🎙️",
+        "value": 264,
+        "source": "Wikipedia/IMDb. Frasier: 11 seasons, 264 episodes (1993–2004), NBC."
+      }
+    ]
+  },
+  {
+    "topicId": "tv",
+    "category": "Series: finale year",
+    "rule": "Rank oldest to newest finale year",
+    "unit": "year",
+    "difficulty": "easy",
+    "items": [
+      {
+        "id": "i_love_lucy",
+        "name": "I Love Lucy",
+        "emoji": "🎪",
+        "value": 1957,
+        "source": "Wikipedia. I Love Lucy final episode aired May 6, 1957, CBS."
+      },
+      {
+        "id": "mash",
+        "name": "M*A*S*H",
+        "emoji": "🚁",
+        "value": 1983,
+        "source": "Wikipedia. M*A*S*H finale 'Goodbye, Farewell and Amen' aired February 28, 1983, CBS."
+      },
+      {
+        "id": "seinfeld",
+        "name": "Seinfeld",
+        "emoji": "🗽",
+        "value": 1998,
+        "source": "Wikipedia. Seinfeld finale aired May 14, 1998, NBC."
+      },
+      {
+        "id": "lost",
+        "name": "Lost",
+        "emoji": "✈️",
+        "value": 2010,
+        "source": "Wikipedia. Lost finale aired May 23, 2010, ABC."
+      },
+      {
+        "id": "breaking_bad",
+        "name": "Breaking Bad",
+        "emoji": "⚗️",
+        "value": 2013,
+        "source": "Wikipedia. Breaking Bad finale aired September 29, 2013, AMC."
+      }
+    ]
+  }
+]

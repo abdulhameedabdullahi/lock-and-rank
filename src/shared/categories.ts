@@ -24,6 +24,7 @@ export const CATEGORIES: Category[] = [
   { id: 'wildfacts', label: 'Wild Facts', emoji: '🤯' },
   { id: 'space', label: 'Space', emoji: '🚀' },
   { id: 'food', label: 'Food', emoji: '🍲' },
+  { id: 'tv', label: 'TV Shows', emoji: '📺' },
 ];
 
 /** All valid topicId values including "mix". */

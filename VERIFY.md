@@ -568,7 +568,8 @@ All have `"verified": false`. Format: **Round # · Category** · `difficulty` ·
 | geography | 10 (4E/4M/2H) | ✓ 4 original + 6 new |
 | space | 10 (3E/3M/4H) | ✓ all new |
 | food | 10 (1E/6M/3H) | ✓ all new |
-| **TOTAL** | **150 rounds** | **150/150 pass validation** |
+| tv | 10 (2E/5M/3H) | ✓ all new |
+| **TOTAL** | **160 rounds** | **160/160 pass validation** |
 
 ---
 
@@ -797,3 +798,117 @@ Rule: highest to lowest calcium content per 100g
 | Spinach | 99 | mg/100g | USDA FDC. Spinach, raw: 99mg calcium. | ✅ yes |
 | Cassava | 16 | mg/100g | USDA FDC. Cassava, raw: 16mg calcium. | ✅ yes |
 | Apple | 6 | mg/100g | USDA FDC. Apples, raw, with skin: 6mg calcium. | ✅ yes |
+
+---
+
+## TV SHOWS
+
+### TV 1 — Dramas: premiere year (easy)
+Rule: oldest to newest premiere year (rank 1 = oldest)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Seinfeld | 1989 | year | NBC, premiered July 5, 1989. Ended 1998. | ✅ yes |
+| Friends | 1994 | year | NBC, premiered September 22, 1994. Ended 2004. | ✅ yes |
+| The Sopranos | 1999 | year | HBO, premiered January 10, 1999. Ended 2007. | ✅ yes |
+| The Wire | 2002 | year | HBO, premiered June 2, 2002. Ended 2008. | ✅ yes |
+| Breaking Bad | 2008 | year | AMC, premiered January 20, 2008. Ended 2013. | ✅ yes |
+
+### TV 2 — Dramas: total seasons (medium)
+Rule: fewest to most seasons (rank 1 = fewest)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Breaking Bad | 5 | seasons | AMC, 5 seasons 2008–2013. | ✅ yes |
+| Lost | 6 | seasons | ABC, 6 seasons 2004–2010. | ✅ yes |
+| Seinfeld | 9 | seasons | NBC, 9 seasons 1989–1998. | ✅ yes |
+| Frasier | 11 | seasons | NBC, 11 seasons 1993–2004. | ✅ yes |
+| ER | 15 | seasons | NBC, 15 seasons 1994–2009. | ✅ yes |
+
+### TV 3 — Dramas: total episodes (hard)
+Rule: fewest to most total episodes (rank 1 = fewest)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Breaking Bad | 62 | episodes | S1:7, S2:13, S3:13, S4:13, S5:16 = 62. | ✅ yes |
+| The Sopranos | 86 | episodes | S1–S5: 13 each = 65; S6: 21 = 86. | ✅ yes |
+| Seinfeld | 180 | episodes | S1:5, S2:12, S3:23, S4:24, S5:22, S6:24, S7:24, S8:22, S9:24 = 180. | ✅ yes |
+| Friends | 236 | episodes | 10 seasons; S1–S9: ~24 each, S10:18 = 236. | ✅ yes |
+| ER | 331 | episodes | 15 seasons, 331 total. Wikipedia/IMDb. | ✅ yes |
+
+### TV 4 — Classic series: premiere year (medium)
+Rule: oldest to newest premiere year (rank 1 = oldest)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| I Love Lucy | 1951 | year | CBS, premiered October 15, 1951. Ended 1957. | ✅ yes |
+| Star Trek | 1966 | year | NBC (TOS), premiered September 8, 1966. Ended 1969. | ✅ yes |
+| Cheers | 1982 | year | NBC, premiered September 30, 1982. Ended 1993. | ✅ yes |
+| Buffy the Vampire Slayer | 1997 | year | The WB, premiered March 10, 1997. Ended 2003. | ✅ yes |
+| Mad Men | 2007 | year | AMC, premiered July 19, 2007. Ended 2015. | ✅ yes |
+
+### TV 5 — Sitcoms: premiere year (medium)
+Rule: oldest to newest premiere year (rank 1 = oldest)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Gilligan's Island | 1964 | year | CBS, premiered September 26, 1964. Ended 1967. | ✅ yes |
+| M*A*S*H | 1972 | year | CBS, premiered September 17, 1972. Ended 1983. | ✅ yes |
+| The Office (US) | 2005 | year | NBC, premiered March 24, 2005. Ended 2013. | ✅ yes |
+| Parks and Recreation | 2009 | year | NBC, premiered April 9, 2009. Ended 2015. | ✅ yes |
+| Brooklyn Nine-Nine | 2013 | year | Fox/NBC, premiered September 17, 2013. Ended 2021. | ✅ yes |
+
+### TV 6 — Classic series: total episodes (hard)
+Rule: fewest to most total episodes (rank 1 = fewest)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Star Trek | 79 | episodes | TOS, 3 seasons. S1:29, S2:26, S3:24 = 79. | ✅ yes |
+| The Twilight Zone | 156 | episodes | Original, 5 seasons. S1:36, S2:29, S3:37, S4:18, S5:36 = 156. | ✅ yes |
+| I Love Lucy | 180 | episodes | 6 seasons. S1:35, S2:31, S3:31, S4:30, S5:26, S6:27 = 180. | ✅ yes |
+| M*A*S*H | 256 | episodes | 11 seasons (1972–1983), CBS. Wikipedia/IMDb. | ✅ yes |
+| Gunsmoke | 635 | episodes | 20 seasons (1955–1975), CBS. Wikipedia/IMDb. | ⚠️ verify |
+
+### TV 7 — Series: total seasons (medium)
+Rule: fewest to most seasons (rank 1 = fewest)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Gilligan's Island | 3 | seasons | CBS, 3 seasons 1964–1967. | ✅ yes |
+| Downton Abbey | 6 | seasons | ITV, 6 series 2010–2015. | ✅ yes |
+| Mad Men | 7 | seasons | AMC, 7 seasons 2007–2015. | ✅ yes |
+| Cheers | 11 | seasons | NBC, 11 seasons 1982–1993. | ✅ yes |
+| Gunsmoke | 20 | seasons | CBS, 20 seasons 1955–1975. | ✅ yes |
+
+### TV 8 — Sci-fi series: premiere year (medium)
+Rule: oldest to newest premiere year (rank 1 = oldest)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| The Twilight Zone | 1959 | year | CBS, premiered October 2, 1959. Ended 1964. | ✅ yes |
+| The X-Files | 1993 | year | Fox, premiered September 10, 1993. Final episode 2018. | ✅ yes |
+| Lost | 2004 | year | ABC, premiered September 22, 2004. Ended 2010. | ✅ yes |
+| Fringe | 2008 | year | Fox, premiered September 9, 2008. Ended 2013. | ✅ yes |
+| Person of Interest | 2011 | year | CBS, premiered September 22, 2011. Ended 2016. | ✅ yes |
+
+### TV 9 — Comedies: total episodes (hard)
+Rule: fewest to most total episodes (rank 1 = fewest)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| Fawlty Towers | 12 | episodes | BBC, 2 series × 6 episodes = 12 (1975, 1979). | ✅ yes |
+| Arrested Development | 84 | episodes | S1:22, S2:18, S3:13, S4:15, S5:16 = 84. Fox/Netflix. | ✅ yes |
+| Parks and Recreation | 125 | episodes | NBC, 7 seasons. S1:6, S2:24, S3:16, S4:22, S5:22, S6:22, S7:13 = 125. | ✅ yes |
+| Brooklyn Nine-Nine | 153 | episodes | Fox/NBC, 8 seasons. S1:22, S2:23, S3:23, S4:22, S5:22, S6:18, S7:13, S8:10 = 153. | ✅ yes |
+| Frasier | 264 | episodes | NBC, 11 seasons 1993–2004. Wikipedia/IMDb. | ⚠️ verify |
+
+### TV 10 — Series: finale year (easy)
+Rule: oldest to newest finale year (rank 1 = oldest)
+
+| Item | Value | Unit | Source note | Confident? |
+|------|-------|------|-------------|-----------|
+| I Love Lucy | 1957 | year | Final episode May 6, 1957, CBS. | ✅ yes |
+| M*A*S*H | 1983 | year | Finale "Goodbye, Farewell and Amen" aired February 28, 1983, CBS. | ✅ yes |
+| Seinfeld | 1998 | year | Finale aired May 14, 1998, NBC. | ✅ yes |
+| Lost | 2010 | year | Finale aired May 23, 2010, ABC. | ✅ yes |
+| Breaking Bad | 2013 | year | Finale aired September 29, 2013, AMC. | ✅ yes |
